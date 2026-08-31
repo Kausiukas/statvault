@@ -1415,19 +1415,38 @@
 
                     current3DObject = gltf.scene;
 
-                    // Normalize scale based on standard canonical character height (1.90 units matching PBR master)
-                    const box = new THREE.Box3().setFromObject(current3DObject);
-                    const size = box.getSize(new THREE.Vector3());
-                    const naturalHeight = size.y || 1.9;
-                    const targetHeight = 1.90; // Standardized vertical height across all models
+                    // Determine true geometry bounding box (independent of bone armature hierarchies)
+                    let maxGeoHeight = 0;
+                    let geoBounds = new THREE.Box3();
+                    let foundMesh = false;
+
+                    current3DObject.traverse((node) => {
+                        if (node.isMesh && node.geometry) {
+                            node.geometry.computeBoundingBox();
+                            const box = node.geometry.boundingBox;
+                            const h = box.max.y - box.min.y;
+                            if (h > maxGeoHeight) {
+                                maxGeoHeight = h;
+                                geoBounds.copy(box);
+                                foundMesh = true;
+                            }
+                        }
+                    });
+
+                    const naturalHeight = maxGeoHeight || 1.90;
+                    const targetHeight = 1.90; // Standardized vertical height matching Space Marine PBR master
                     const scale = targetHeight / naturalHeight;
+
                     current3DObject.scale.set(scale, scale, scale);
 
-                    // Recalculate box after scale to align feet with ground grid at y = -1.0
-                    box.setFromObject(current3DObject);
-                    current3DObject.position.x = - (box.min.x + box.max.x) / 2;
-                    current3DObject.position.y = - box.min.y - 1.0;
-                    current3DObject.position.z = - (box.min.z + box.max.z) / 2;
+                    // Position feet precisely on the grid at y = -1.0
+                    if (foundMesh) {
+                        current3DObject.position.x = - ((geoBounds.min.x + geoBounds.max.x) / 2) * scale;
+                        current3DObject.position.y = - 1.0 - (geoBounds.min.y * scale);
+                        current3DObject.position.z = - ((geoBounds.min.z + geoBounds.max.z) / 2) * scale;
+                    } else {
+                        current3DObject.position.set(0, -1.0, 0);
+                    }
 
                     let totalTris = 0;
                     current3DObject.traverse((node) => {
