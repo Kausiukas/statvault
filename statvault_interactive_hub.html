@@ -1131,7 +1131,83 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                        <!-- Hand Grip & Socket Alignment Studio -->
+                        <div class="bg-dataslate-900 text-white p-4 rounded-xl border border-gold-500/40 space-y-3 text-xs shadow-lg">
+                            <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+                                <span class="font-bold text-gold-400 uppercase tracking-wider flex items-center gap-1.5">
+                                    <span>🦾</span> Hand Grip & Socket Alignment
+                                </span>
+                                <div class="flex gap-1">
+                                    <button onclick="equipCurrentWeaponToCharacter()" class="px-2.5 py-1 bg-gold-500 hover:bg-gold-600 font-bold rounded text-white text-[11px] transition-all">
+                                        ⚔️ Live Equip
+                                    </button>
+                                    <button onclick="unequipRigidWeapon()" class="px-2 py-1 bg-red-900/60 hover:bg-red-800 border border-red-700 text-red-200 font-bold rounded text-[11px] transition-all">
+                                        ❌ Unequip
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Target Hand & Grip Presets -->
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <label class="text-slate-300 font-bold text-[11px]">Attachment Socket:</label>
+                                    <select id="socket-target-hand" onchange="onSocketTransformChange()" class="bg-slate-800 border border-slate-600 text-white text-xs font-bold rounded px-2 py-1">
+                                        <option value="right" selected>Right Hand Palm</option>
+                                        <option value="left">Left Hand Palm</option>
+                                        <option value="back">Back Scabbard / Holster</option>
+                                    </select>
+                                </div>
+
+                                <div class="flex flex-wrap gap-1.5 pt-1">
+                                    <span class="text-[10px] text-slate-400 font-mono w-full">Grip Presets:</span>
+                                    <button onclick="applyGripPreset('stride')" class="px-2 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 rounded text-[10px] font-bold">
+                                        ⚔️ Forward Strike
+                                    </button>
+                                    <button onclick="applyGripPreset('guard')" class="px-2 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 rounded text-[10px] font-bold">
+                                        🛡️ Combat Guard
+                                    </button>
+                                    <button onclick="applyGripPreset('aim')" class="px-2 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 rounded text-[10px] font-bold">
+                                        🎯 Aim Forward
+                                    </button>
+                                    <button onclick="applyGripPreset('holstered')" class="px-2 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 rounded text-[10px] font-bold">
+                                        🎒 Holstered
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Precision Alignment Sliders -->
+                            <div class="grid grid-cols-2 gap-2.5 pt-1">
+                                <div>
+                                    <div class="flex justify-between text-[10px] text-slate-300 font-mono">
+                                        <span>Pitch (X Angle):</span>
+                                        <span id="val-rot-x" class="text-gold-400">-55°</span>
+                                    </div>
+                                    <input type="range" id="socket-rot-x" min="-180" max="180" value="-55" oninput="onSocketTransformChange()" class="w-full accent-gold-500 cursor-pointer h-1.5 bg-slate-700 rounded" />
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-[10px] text-slate-300 font-mono">
+                                        <span>Yaw (Y Angle):</span>
+                                        <span id="val-rot-y" class="text-gold-400">-20°</span>
+                                    </div>
+                                    <input type="range" id="socket-rot-y" min="-180" max="180" value="-20" oninput="onSocketTransformChange()" class="w-full accent-gold-500 cursor-pointer h-1.5 bg-slate-700 rounded" />
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-[10px] text-slate-300 font-mono">
+                                        <span>Forward (Z Offset):</span>
+                                        <span id="val-pos-z" class="text-gold-400">0.0</span>
+                                    </div>
+                                    <input type="range" id="socket-pos-z" min="-50" max="50" value="0" oninput="onSocketTransformChange()" class="w-full accent-gold-500 cursor-pointer h-1.5 bg-slate-700 rounded" />
+                                </div>
+                                <div>
+                                    <div class="flex justify-between text-[10px] text-slate-300 font-mono">
+                                        <span>Scale:</span>
+                                        <span id="val-scale" class="text-gold-400">0.85x</span>
+                                    </div>
+                                    <input type="range" id="socket-scale" min="30" max="150" value="85" oninput="onSocketTransformChange()" class="w-full accent-gold-500 cursor-pointer h-1.5 bg-slate-700 rounded" />
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
 
@@ -3016,24 +3092,154 @@
             equipCurrentWeaponToCharacter();
         }
 
+        // ==========================================
+        // WEAPON SOCKET & GRIP ALIGNMENT ENGINE
+        // ==========================================
+
+        function findHandBone(object, handSide = 'right') {
+            if (!object) return null;
+            let targetBone = null;
+            const rightKeywords = ['righthand', 'right_hand', 'hand_r', 'hand.r', 'mixamorigrighthand', 'bip01_r_hand', 'r_hand', 'wrist_r', 'socket_r_hand', 'rightwrist'];
+            const leftKeywords = ['lefthand', 'left_hand', 'hand_l', 'hand.l', 'mixamoriglefthand', 'bip01_l_hand', 'l_hand', 'wrist_l', 'socket_l_hand', 'leftwrist'];
+            const keywords = handSide === 'right' ? rightKeywords : leftKeywords;
+
+            object.traverse((node) => {
+                if (targetBone) return;
+                if (node.isBone || node.type === 'Bone') {
+                    const nameLower = (node.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+                    for (const kw of keywords) {
+                        if (nameLower.includes(kw.replace(/[^a-z0-9]/g, ''))) {
+                            targetBone = node;
+                            break;
+                        }
+                    }
+                }
+            });
+            return targetBone;
+        }
+
+        function unequipRigidWeapon() {
+            if (!current3DObject) return;
+            // Traverse and remove any equipped weapon mesh from the scene or any attached bone
+            current3DObject.traverse((node) => {
+                if (node.name === "rigid_equipped_weapon") {
+                    if (node.parent) node.parent.remove(node);
+                }
+            });
+        }
+
+        function applyGripPreset(preset) {
+            const rotX = document.getElementById('socket-rot-x');
+            const rotY = document.getElementById('socket-rot-y');
+            const posZ = document.getElementById('socket-pos-z');
+            const scale = document.getElementById('socket-scale');
+
+            if (preset === 'stride') {
+                // Forward Combat Strike / Stride (Natural sword angle pointing forward-up)
+                rotX.value = -65;
+                rotY.value = -15;
+                posZ.value = 5;
+                scale.value = 85;
+            } else if (preset === 'guard') {
+                // Defensive High Parry Guard
+                rotX.value = -25;
+                rotY.value = -35;
+                posZ.value = 0;
+                scale.value = 85;
+            } else if (preset === 'aim') {
+                // Level Forward Aim (Rifles & Pistols)
+                rotX.value = -5;
+                rotY.value = -10;
+                posZ.value = 0;
+                scale.value = 80;
+            } else if (preset === 'holstered') {
+                // Sheathed / Holstered at Hip or Back
+                rotX.value = 80;
+                rotY.value = 90;
+                posZ.value = -15;
+                scale.value = 80;
+            }
+
+            onSocketTransformChange();
+        }
+
+        function onSocketTransformChange() {
+            const rx = parseFloat(document.getElementById('socket-rot-x').value);
+            const ry = parseFloat(document.getElementById('socket-rot-y').value);
+            const pz = parseFloat(document.getElementById('socket-pos-z').value) / 100;
+            const sc = parseFloat(document.getElementById('socket-scale').value) / 100;
+            const handSide = document.getElementById('socket-target-hand').value;
+
+            document.getElementById('val-rot-x').innerText = `${rx}°`;
+            document.getElementById('val-rot-y').innerText = `${ry}°`;
+            document.getElementById('val-pos-z').innerText = pz.toFixed(2);
+            document.getElementById('val-scale').innerText = `${sc.toFixed(2)}x`;
+
+            // Find any currently equipped weapon instance and update its live transform
+            if (!current3DObject) return;
+            let equipped = null;
+            current3DObject.traverse((node) => {
+                if (node.name === "rigid_equipped_weapon") equipped = node;
+            });
+
+            if (equipped) {
+                equipped.scale.set(sc, sc, sc);
+                equipped.rotation.x = rx * (Math.PI / 180);
+                equipped.rotation.y = ry * (Math.PI / 180);
+                
+                // If attached to root object instead of bone, adjust relative hand position
+                if (equipped.parent === current3DObject) {
+                    if (handSide === 'left') {
+                        equipped.position.set(-0.45, 0.85, 0.35 + pz);
+                    } else if (handSide === 'back') {
+                        equipped.position.set(0, 1.15, -0.35 + pz);
+                    } else {
+                        equipped.position.set(0.45, 0.85, 0.35 + pz);
+                    }
+                } else {
+                    equipped.position.set(0, -0.15, pz);
+                }
+            } else {
+                equipCurrentWeaponToCharacter();
+            }
+        }
+
         function equipCurrentWeaponToCharacter() {
             if (!current3DObject || !currentRigidWeaponMesh) return;
 
             // Remove any previously equipped rigid weapon prop
-            const existing = current3DObject.getObjectByName("rigid_equipped_weapon");
-            if (existing) current3DObject.remove(existing);
+            unequipRigidWeapon();
+
+            const handSide = document.getElementById('socket-target-hand').value;
+            const rx = parseFloat(document.getElementById('socket-rot-x').value);
+            const ry = parseFloat(document.getElementById('socket-rot-y').value);
+            const pz = parseFloat(document.getElementById('socket-pos-z').value) / 100;
+            const sc = parseFloat(document.getElementById('socket-scale').value) / 100;
 
             // Clone current weapon mesh
             const weaponClone = currentRigidWeaponMesh.clone(true);
             weaponClone.name = "rigid_equipped_weapon";
-            weaponClone.scale.set(0.85, 0.85, 0.85);
+            weaponClone.scale.set(sc, sc, sc);
+            weaponClone.rotation.set(rx * (Math.PI / 180), ry * (Math.PI / 180), 0);
 
-            // Position rigidly at the Space Marine's right hand position
-            weaponClone.position.set(0.35, 0.85, 0.35);
-            weaponClone.rotation.set(0, -Math.PI / 6, 0);
+            // Check if character model has a skeletal bone for the target hand
+            const handBone = findHandBone(current3DObject, handSide);
 
-            current3DObject.add(weaponClone);
-            alert(`⚔️ ${WEAPON_PRESETS[activeWeaponPreset].name} equipped to Character Hand Socket! Rigid un-deformed attachment active.`);
+            if (handBone && handSide !== 'back') {
+                // Attach directly to the skeletal hand bone for synchronized animation!
+                weaponClone.position.set(0, -0.15, pz);
+                handBone.add(weaponClone);
+            } else {
+                // Attach to root character model at the designated palm coordinates
+                if (handSide === 'left') {
+                    weaponClone.position.set(-0.45, 0.85, 0.35 + pz);
+                } else if (handSide === 'back') {
+                    weaponClone.position.set(0, 1.15, -0.35 + pz);
+                } else {
+                    weaponClone.position.set(0.45, 0.85, 0.35 + pz);
+                }
+                current3DObject.add(weaponClone);
+            }
         }
 
         // ==========================================
