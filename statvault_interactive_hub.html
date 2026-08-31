@@ -415,108 +415,6 @@
         </section>
 
 
-        <!-- TAB 4: 3D ASSET & VRAM INSPECTOR -->
-        <section id="section-pipeline" class="space-y-6 hidden">
-            <!-- Context Banner -->
-            <div class="bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
-                    <h2 class="text-xl font-extrabold text-dataslate-900 flex items-center gap-2">
-                        <span>🎲</span> Interactive 3D Model Viewport & Meshy AI Generation Studio
-                    </h2>
-                    <p class="text-sm text-dataslate-700 mt-1 leading-relaxed">
-                        Inspect real-time rigged & animated 3D unit models in WebGL, test **Google Draco / KTX2 VRAM optimization**, or generate fresh 3D unit meshes and skeletal animations on-demand using the **Meshy AI API**.
-                    </p>
-                </div>
-                <span class="bg-gold-50 text-gold-700 border border-gold-300 text-xs font-mono font-bold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-sm">
-                    ⚡ Meshy v2 API Integrated
-                </span>
-            </div>
-
-            <!-- Top Grid: 3D Viewport & Active Model Controls -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <!-- 3D Canvas Viewport Container (7 Columns) -->
-                <div class="lg:col-span-7 bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm flex flex-col justify-between space-y-3">
-                    <div class="flex justify-between items-center border-b border-dataslate-100 pb-2">
-                        <div class="flex items-center gap-2">
-                            <h3 class="text-base font-bold text-dataslate-900 flex items-center gap-1.5">
-                                <span>🎮</span> Live WebGL 3D Viewport
-                            </h3>
-                            <span id="model-badge" class="text-[10px] bg-imperium-blue/10 text-imperium-blue border border-imperium-blue/30 font-mono font-bold px-2 py-0.5 rounded">
-                                Space Marine (Tactical Sprint)
-                            </span>
-                        </div>
-                        <div class="flex items-center gap-1 text-xs">
-                            <span class="h-2 w-2 rounded-full bg-imperium-green animate-pulse"></span>
-                            <span class="font-mono text-dataslate-700 text-[11px]">WebGL 2.0 Active</span>
-                        </div>
-                    </div>
-
-                    <!-- Three.js Canvas Div -->
-                    <div id="three-container" class="w-full h-96 bg-dataslate-950 rounded-xl relative overflow-hidden flex items-center justify-center cursor-grab active:cursor-grabbing border border-dataslate-800 shadow-inner">
-                        <div id="three-loading" class="absolute inset-0 bg-dataslate-950/90 flex flex-col items-center justify-center text-white text-xs font-mono gap-2 z-10">
-                            <div class="w-8 h-8 border-2 border-gold-500 border-t-transparent rounded-full animate-spin"></div>
-                            <span id="three-loading-text">Initializing Three.js WebGL & Loading 3D Mesh...</span>
-                        </div>
-                        <!-- Viewport Overlay Badges -->
-                        <div class="absolute top-3 left-3 bg-dataslate-900/80 backdrop-blur text-gold-400 font-mono text-[10px] px-2.5 py-1 rounded border border-gold-500/30 flex items-center gap-2">
-                            <span>FPS: <strong id="viewport-fps" class="text-white">60</strong></span>
-                            <span>•</span>
-                            <span>Tris: <strong id="viewport-polycount" class="text-white">24.5k</strong></span>
-                        </div>
-                    </div>
-
-                    <!-- 3D Interactive Controls & Animation Playback Bar -->
-                    <div class="space-y-2.5 pt-1 text-xs">
-                        <div class="flex flex-wrap items-center justify-between gap-2">
-                            <!-- Animation Controls -->
-                            <div class="flex items-center gap-1.5 bg-dataslate-50 p-1.5 rounded-lg border border-dataslate-200">
-                                <button id="anim-play-btn" onclick="toggleAnimationPlayback()" class="px-2.5 py-1 bg-gold-500 hover:bg-gold-600 font-bold text-white rounded text-xs transition-all shadow-sm">
-                                    ⏸️ Pause
-                                </button>
-                                <label class="text-[11px] font-bold text-dataslate-700 px-1">Speed:</label>
-                                <select id="anim-speed-select" onchange="setAnimationSpeed(this.value)" class="bg-white border border-dataslate-300 text-dataslate-900 text-xs font-bold rounded p-1">
-                                    <option value="0.5">0.5x</option>
-                                    <option value="1.0" selected>1.0x (Normal)</option>
-                                    <option value="1.5">1.5x (Sprint)</option>
-                                    <option value="2.0">2.0x (Hyper)</option>
-                                </select>
-                            </div>
-
-                            <!-- View & Lighting Controls -->
-                            <div class="flex items-center gap-1.5">
-                                <button onclick="toggle3DWireframe()" id="wireframe-btn" class="px-2.5 py-1.5 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 font-bold rounded text-dataslate-800 transition-all">
-                                    🕸️ Wireframe
-                                </button>
-                                <button onclick="cycleLightingRig()" class="px-2.5 py-1.5 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 font-bold rounded text-dataslate-800 transition-all">
-                                    💡 Lighting: <span id="lighting-label" class="font-mono text-gold-600">Forge</span>
-                                </button>
-                                <button onclick="reset3DCamera()" class="px-2.5 py-1.5 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 font-bold rounded text-dataslate-800 transition-all">
-                                    🔄 Reset View
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Preset Model Loaders -->
-                        <!-- Preset Model Loaders & File Input -->
-                        <div class="flex flex-wrap items-center gap-2 pt-1 border-t border-dataslate-100">
-                            <span class="text-[11px] font-bold text-dataslate-700 uppercase tracking-wider">Quick Presets:</span>
-                            <button onclick="loadPresetModel('running')" class="px-2.5 py-1 bg-imperium-blue/10 hover:bg-imperium-blue/20 border border-imperium-blue/30 text-imperium-blue font-bold rounded text-[11px] transition-all">
-                                🏃 Space Marine (Sprint)
-                            </button>
-                            <button onclick="loadPresetModel('walking')" class="px-2.5 py-1 bg-imperium-green/10 hover:bg-imperium-green/20 border border-imperium-green/30 text-imperium-green font-bold rounded text-[11px] transition-all">
-                                🚶 Space Marine (Walk)
-                            </button>
-                            <button onclick="loadPresetModel('pbr')" class="px-2.5 py-1 bg-gold-50 hover:bg-gold-100 border border-gold-300 text-gold-700 font-bold rounded text-[11px] transition-all">
-                                🛡️ Space Marine (PBR)
-                            </button>
-                            <button onclick="loadPresetModel('ork_boy')" class="px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 font-bold rounded text-[11px] transition-all">
-                                🧟 Ork Boy (3D Mesh)
-                            </button>
-                            <label class="cursor-pointer px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-800 font-bold rounded text-[11px] transition-all flex items-center gap-1">
-                                <span>📁 Load File (.glb)</span>
-                                <input type="file" accept=".glb,.gltf" onchange="loadLocalFileGLB(event)" class="hidden" />
-                            </label>
-                            <button onclick="loadPresetModel('procedural')" class="px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-700 font-bold rounded text-[11px] transition-all">
         <!-- TAB 4: 3D ASSET & VRAM INSPECTOR & CUSTOMIZATION SUITE -->
         <section id="section-pipeline" class="space-y-6 hidden">
             <!-- Context Banner -->
@@ -562,7 +460,7 @@
             <div id="studio-panel-viewport" class="space-y-4">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     <!-- 3D Canvas Viewport Container (8 Columns) -->
-                    <div class="lg:col-span-8 bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm flex flex-col justify-between space-y-3">
+                    <div id="viewport-card-container" class="lg:col-span-8 bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm flex flex-col justify-between space-y-3 transition-all duration-300">
                         <div class="flex justify-between items-center border-b border-dataslate-100 pb-2">
                             <div class="flex items-center gap-2">
                                 <h3 class="text-base font-bold text-dataslate-900 flex items-center gap-1.5">
@@ -572,9 +470,14 @@
                                     Space Marine (PBR Refined Master)
                                 </span>
                             </div>
-                            <div class="flex items-center gap-1 text-xs">
-                                <span class="h-2 w-2 rounded-full bg-imperium-green animate-pulse"></span>
-                                <span class="font-mono text-dataslate-700 text-[11px]">WebGL 2.0 PBR Active</span>
+                            <div class="flex items-center gap-2 text-xs">
+                                <button onclick="toggle3DViewportFullscreen()" id="expand-viewport-btn" class="px-2.5 py-1 bg-gold-50 hover:bg-gold-100 border border-gold-300 font-bold rounded text-gold-800 text-[11px] transition-all flex items-center gap-1 shadow-sm">
+                                    <span>⛶</span> <span id="expand-btn-text">Expand Window</span>
+                                </button>
+                                <div class="hidden sm:flex items-center gap-1">
+                                    <span class="h-2 w-2 rounded-full bg-imperium-green animate-pulse"></span>
+                                    <span class="font-mono text-dataslate-700 text-[11px]">WebGL 2.0 PBR Active</span>
+                                </div>
                             </div>
                         </div>
 
@@ -1108,14 +1011,19 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                     <!-- Left: Isolated 3D Weapon Canvas (7 Cols) -->
-                    <div class="lg:col-span-7 bg-dataslate-950 p-4 rounded-xl border border-dataslate-800 flex flex-col justify-between space-y-3">
+                    <div id="weapon-card-container" class="lg:col-span-7 bg-dataslate-950 p-4 rounded-xl border border-dataslate-800 flex flex-col justify-between space-y-3 transition-all duration-300">
                         <div class="flex justify-between items-center text-xs">
                             <span class="text-gold-400 font-mono font-bold flex items-center gap-1">
                                 <span>🔍</span> Standalone Rigid 3D Weapon Inspector
                             </span>
-                            <span id="weapon-badge" class="bg-dataslate-800 text-white font-mono text-[10px] px-2 py-0.5 rounded border border-slate-700">
-                                Godwyn Bolt Rifle
-                            </span>
+                            <div class="flex items-center gap-2">
+                                <span id="weapon-badge" class="bg-dataslate-800 text-white font-mono text-[10px] px-2 py-0.5 rounded border border-slate-700">
+                                    Godwyn Bolt Rifle
+                                </span>
+                                <button onclick="toggleWeaponFullscreen()" class="px-2 py-0.5 bg-dataslate-800 hover:bg-dataslate-700 text-gold-400 border border-slate-700 font-bold rounded text-[10px] transition-all flex items-center gap-1">
+                                    <span>⛶</span> <span id="weapon-expand-btn-text">Expand</span>
+                                </button>
+                            </div>
                         </div>
 
                         <!-- 3D Weapon Canvas -->
@@ -3112,6 +3020,98 @@
             current3DObject.add(weaponClone);
             alert(`⚔️ ${WEAPON_PRESETS[activeWeaponPreset].name} equipped to Character Hand Socket! Rigid un-deformed attachment active.`);
         }
+
+        // ==========================================
+        // EXPAND / FULLSCREEN VIEWPORT ENGINE
+        // ==========================================
+
+        let is3DFullscreen = false;
+        let isWeaponFullscreen = false;
+
+        function toggle3DViewportFullscreen() {
+            const card = document.getElementById('viewport-card-container');
+            const container = document.getElementById('three-container');
+            const btnText = document.getElementById('expand-btn-text');
+            const btn = document.getElementById('expand-viewport-btn');
+            is3DFullscreen = !is3DFullscreen;
+
+            if (is3DFullscreen) {
+                card.className = "fixed inset-0 z-50 w-screen h-screen bg-dataslate-950 p-6 flex flex-col justify-between space-y-3 overflow-hidden shadow-2xl transition-all duration-300";
+                container.style.height = "calc(100vh - 180px)";
+                btnText.innerText = "Collapse Window (Esc)";
+                btn.className = "px-3 py-1 bg-red-600 hover:bg-red-700 text-white font-bold rounded text-xs transition-all flex items-center gap-1 shadow-lg";
+            } else {
+                card.className = "lg:col-span-8 bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm flex flex-col justify-between space-y-3 transition-all duration-300";
+                container.style.height = "";
+                btnText.innerText = "Expand Window";
+                btn.className = "px-2.5 py-1 bg-gold-50 hover:bg-gold-100 border border-gold-300 font-bold rounded text-gold-800 text-[11px] transition-all flex items-center gap-1 shadow-sm";
+            }
+
+            setTimeout(() => {
+                if (renderer && camera && container) {
+                    const w = container.clientWidth;
+                    const h = container.clientHeight;
+                    camera.aspect = w / h;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(w, h);
+                }
+            }, 100);
+        }
+
+        function toggleWeaponFullscreen() {
+            const card = document.getElementById('weapon-card-container');
+            const container = document.getElementById('weapon-three-container');
+            const btnText = document.getElementById('weapon-expand-btn-text');
+            isWeaponFullscreen = !isWeaponFullscreen;
+
+            if (isWeaponFullscreen) {
+                card.className = "fixed inset-0 z-50 w-screen h-screen bg-dataslate-950 p-6 flex flex-col justify-between space-y-3 overflow-hidden shadow-2xl transition-all duration-300";
+                container.style.height = "calc(100vh - 160px)";
+                if (btnText) btnText.innerText = "Collapse (Esc)";
+            } else {
+                card.className = "lg:col-span-7 bg-dataslate-950 p-4 rounded-xl border border-dataslate-800 flex flex-col justify-between space-y-3 transition-all duration-300";
+                container.style.height = "";
+                if (btnText) btnText.innerText = "Expand";
+            }
+
+            setTimeout(() => {
+                if (weaponRenderer && weaponCamera && container) {
+                    const w = container.clientWidth;
+                    const h = container.clientHeight;
+                    weaponCamera.aspect = w / h;
+                    weaponCamera.updateProjectionMatrix();
+                    weaponRenderer.setSize(w, h);
+                }
+            }, 100);
+        }
+
+        // Global Esc key listener to collapse expanded viewports
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (is3DFullscreen) toggle3DViewportFullscreen();
+                if (isWeaponFullscreen) toggleWeaponFullscreen();
+            }
+        });
+
+        // Window resize listener
+        window.addEventListener('resize', () => {
+            if (renderer && camera) {
+                const container = document.getElementById('three-container');
+                if (container) {
+                    camera.aspect = container.clientWidth / container.clientHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(container.clientWidth, container.clientHeight);
+                }
+            }
+            if (weaponRenderer && weaponCamera) {
+                const container = document.getElementById('weapon-three-container');
+                if (container) {
+                    weaponCamera.aspect = container.clientWidth / container.clientHeight;
+                    weaponCamera.updateProjectionMatrix();
+                    weaponRenderer.setSize(container.clientWidth, container.clientHeight);
+                }
+            }
+        });
 
         // Render Patch History Table
         function renderPatchHistory() {
