@@ -1415,15 +1415,15 @@
 
                     current3DObject = gltf.scene;
 
-                    // Normalize bounding box & center model
+                    // Normalize scale based on standard canonical character height (1.90 units matching PBR master)
                     const box = new THREE.Box3().setFromObject(current3DObject);
-                    const center = box.getCenter(new THREE.Vector3());
                     const size = box.getSize(new THREE.Vector3());
-                    const maxDim = Math.max(size.x, size.y, size.z);
-                    const scale = 2.4 / (maxDim || 1);
+                    const naturalHeight = size.y || 1.9;
+                    const targetHeight = 1.90; // Standardized vertical height across all models
+                    const scale = targetHeight / naturalHeight;
                     current3DObject.scale.set(scale, scale, scale);
 
-                    // Recalculate box after scale to align feet with grid at y = -1.0
+                    // Recalculate box after scale to align feet with ground grid at y = -1.0
                     box.setFromObject(current3DObject);
                     current3DObject.position.x = - (box.min.x + box.max.x) / 2;
                     current3DObject.position.y = - box.min.y - 1.0;
