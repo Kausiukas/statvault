@@ -530,28 +530,49 @@
                                 </div>
                             </div>
 
-                            <!-- Preset Model Loaders & File Input -->
-                            <div class="flex flex-wrap items-center gap-2 pt-1 border-t border-dataslate-100">
-                                <span class="text-[11px] font-bold text-dataslate-700 uppercase tracking-wider">Showcase Models:</span>
-                                <button onclick="loadPresetModel('dual_pbr')" class="px-2.5 py-1 bg-gold-500 text-white hover:bg-gold-600 font-bold rounded text-[11px] transition-all shadow-sm">
-                                    ⚔️ Dual-Wield Veteran (PBR Master)
-                                </button>
-                                <button onclick="loadPresetModel('dual_sprint')" class="px-2.5 py-1 bg-imperium-blue/10 hover:bg-imperium-blue/20 border border-imperium-blue/30 text-imperium-blue font-bold rounded text-[11px] transition-all">
-                                    🏃 Dual-Wield Sprint (Rigid Arms)
-                                </button>
-                                <button onclick="loadPresetModel('dual_walk')" class="px-2.5 py-1 bg-imperium-green/10 hover:bg-imperium-green/20 border border-imperium-green/30 text-imperium-green font-bold rounded text-[11px] transition-all">
-                                    🚶 Dual-Wield Walk (Rigid Arms)
-                                </button>
-                                <button onclick="loadPresetModel('pbr')" class="px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-800 font-bold rounded text-[11px] transition-all">
-                                    🛡️ Tactical Marine (PBR)
-                                </button>
-                                <button onclick="loadPresetModel('ork_boy')" class="px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 font-bold rounded text-[11px] transition-all">
-                                    🧟 Ork Boy
-                                </button>
-                                <label class="cursor-pointer px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-800 font-bold rounded text-[11px] transition-all flex items-center gap-1">
-                                    <span>📁 Load File (.glb)</span>
-                                    <input type="file" accept=".glb,.gltf" onchange="loadLocalFileGLB(event)" class="hidden" />
-                                </label>
+                            <!-- Multi-Faction 3D Model Showcase Bar -->
+                            <div class="space-y-2 pt-2 border-t border-dataslate-100">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-[11px] font-bold text-dataslate-700 uppercase tracking-wider flex items-center gap-1">
+                                        <span>⚔️</span> Faction 3D Rosters:
+                                    </span>
+                                    <div class="flex gap-1 text-[10px]">
+                                        <button onclick="filterFactionModels('all')" id="faction-filter-all" class="px-2 py-0.5 rounded bg-dataslate-900 text-white font-bold transition-all">All</button>
+                                        <button onclick="filterFactionModels('imperium')" id="faction-filter-imperium" class="px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all">Imperium</button>
+                                        <button onclick="filterFactionModels('chaos')" id="faction-filter-chaos" class="px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all">Chaos</button>
+                                        <button onclick="filterFactionModels('xenos')" id="faction-filter-xenos" class="px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all">Xenos</button>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap items-center gap-1.5" id="faction-models-container">
+                                    <!-- Imperium -->
+                                    <button onclick="loadPresetModel('dual_pbr')" class="model-item imperium px-2.5 py-1 bg-gold-500 text-white hover:bg-gold-600 font-bold rounded text-[11px] transition-all shadow-sm">
+                                        ⚔️ Astartes Assault Veteran (Dual-Wield)
+                                    </button>
+                                    <button onclick="loadPresetModel('dual_sprint')" class="model-item imperium px-2.5 py-1 bg-imperium-blue/10 hover:bg-imperium-blue/20 border border-imperium-blue/30 text-imperium-blue font-bold rounded text-[11px] transition-all">
+                                        🏃 Assault Sprint Cycle
+                                    </button>
+                                    <button onclick="loadPresetModel('cadian')" class="model-item imperium px-2.5 py-1 bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-900 font-bold rounded text-[11px] transition-all">
+                                        🪖 Cadian Shock Trooper (Chainsword & Laspistol)
+                                    </button>
+                                    <button onclick="loadPresetModel('pbr')" class="model-item imperium px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-800 font-bold rounded text-[11px] transition-all">
+                                        🛡️ Tactical Marine (Boltgun)
+                                    </button>
+                                    <!-- Chaos -->
+                                    <button onclick="loadPresetModel('chaos_chosen')" class="model-item chaos px-2.5 py-1 bg-red-50 hover:bg-red-100 border border-red-300 text-red-800 font-bold rounded text-[11px] transition-all">
+                                        💀 Chaos Chosen (Daemon Axe & Plasma)
+                                    </button>
+                                    <!-- Xenos -->
+                                    <button onclick="loadPresetModel('ork_boy')" class="model-item xenos px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 font-bold rounded text-[11px] transition-all">
+                                        🧟 Ork Boy (Choppa & Slugga)
+                                    </button>
+                                    <button onclick="loadPresetModel('necron_warrior')" class="model-item xenos px-2.5 py-1 bg-cyan-50 hover:bg-cyan-100 border border-cyan-300 text-cyan-900 font-bold rounded text-[11px] transition-all">
+                                        ⚡ Necron Immortal (Gauss Blaster)
+                                    </button>
+                                    <label class="cursor-pointer px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-800 font-bold rounded text-[11px] transition-all flex items-center gap-1">
+                                        <span>📁 Load File (.glb)</span>
+                                        <input type="file" accept=".glb,.gltf" onchange="loadLocalFileGLB(event)" class="hidden" />
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1053,39 +1074,74 @@
                     <!-- Right: Arsenal Catalog & Weapon Customizer (5 Cols) -->
                     <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-xs font-bold text-dataslate-700 uppercase tracking-wider mb-2">Select Arsenal Preset:</h4>
-                            <div class="grid grid-cols-2 gap-2 text-xs">
-                                <button onclick="selectRigidWeaponPreset('bolt_rifle')" class="weapon-preset-btn p-2 rounded-lg border-2 border-gold-500 bg-gold-50 font-bold text-dataslate-900 text-left">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="text-xs font-bold text-dataslate-700 uppercase tracking-wider">Faction Weapon Catalog:</h4>
+                                <div class="flex gap-1 text-[10px]">
+                                    <button onclick="filterWeaponPresets('all')" id="wep-filter-all" class="px-2 py-0.5 rounded bg-dataslate-900 text-white font-bold transition-all">All</button>
+                                    <button onclick="filterWeaponPresets('astartes')" id="wep-filter-astartes" class="px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all">Astartes</button>
+                                    <button onclick="filterWeaponPresets('guard')" id="wep-filter-guard" class="px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all">Guard</button>
+                                    <button onclick="filterWeaponPresets('chaos')" id="wep-filter-chaos" class="px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all">Chaos</button>
+                                    <button onclick="filterWeaponPresets('orks')" id="wep-filter-orks" class="px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all">Orks</button>
+                                    <button onclick="filterWeaponPresets('necrons')" id="wep-filter-necrons" class="px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all">Necrons</button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 text-xs max-h-56 overflow-y-auto pr-1" id="weapon-preset-list">
+                                <!-- Astartes -->
+                                <button onclick="selectRigidWeaponPreset('bolt_rifle')" class="weapon-preset-btn astartes p-2 rounded-lg border-2 border-gold-500 bg-gold-50 font-bold text-dataslate-900 text-left transition-all">
                                     <span class="block">💥 Godwyn Bolt Rifle</span>
                                     <span class="text-[10px] text-dataslate-700 font-mono">0.75 cal Mass-Reactive</span>
                                 </button>
-                                <button onclick="selectRigidWeaponPreset('stalker_bolter')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
-                                    <span class="block">🎯 Stalker Bolt Rifle</span>
-                                    <span class="text-[10px] text-dataslate-700 font-mono">High-Mag Sniper</span>
-                                </button>
-                                <button onclick="selectRigidWeaponPreset('auto_bolter')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
-                                    <span class="block">⚡ Auto Bolt Rifle</span>
-                                    <span class="text-[10px] text-dataslate-700 font-mono">High-Capacity Drum</span>
-                                </button>
-                                <button onclick="selectRigidWeaponPreset('chainsword')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
+                                <button onclick="selectRigidWeaponPreset('chainsword')" class="weapon-preset-btn astartes p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
                                     <span class="block">🗡️ Astartes Chainsword</span>
                                     <span class="text-[10px] text-dataslate-700 font-mono">Adamantine Teeth</span>
                                 </button>
-                                <button onclick="selectRigidWeaponPreset('power_sword')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
-                                    <span class="block">✨ Power Sword</span>
+                                <button onclick="selectRigidWeaponPreset('power_sword')" class="weapon-preset-btn astartes p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">✨ Master Power Sword</span>
                                     <span class="text-[10px] text-dataslate-700 font-mono">Disruption Field</span>
                                 </button>
-                                <button onclick="selectRigidWeaponPreset('plasma_gun')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
+                                <button onclick="selectRigidWeaponPreset('plasma_gun')" class="weapon-preset-btn astartes p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
                                     <span class="block">🔵 Plasma Incinerator</span>
-                                    <span class="text-[10px] text-dataslate-700 font-mono">Overcharged Coil</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Overcharged Coils</span>
                                 </button>
-                                <button onclick="selectRigidWeaponPreset('melta_gun')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
-                                    <span class="block">🔥 Multi-Melta</span>
-                                    <span class="text-[10px] text-dataslate-700 font-mono">Thermal Blast</span>
+                                <button onclick="selectRigidWeaponPreset('heavy_bolter')" class="weapon-preset-btn astartes p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">🛡️ Heavy Bolter</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Sustained Firepower</span>
                                 </button>
-                                <button onclick="selectRigidWeaponPreset('lasgun')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
-                                    <span class="block">⚡ Kantrael Lasgun</span>
-                                    <span class="text-[10px] text-dataslate-700 font-mono">Standard Imperial</span>
+                                <!-- Guard -->
+                                <button onclick="selectRigidWeaponPreset('lasgun')" class="weapon-preset-btn guard p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">⚡ Kantrael M36 Lasgun</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Standard Issue Rifle</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('hotshot_lasgun')" class="weapon-preset-btn guard p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">🔥 Kasrkin Hot-shot Gun</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">High-Yield AP Laser</span>
+                                </button>
+                                <!-- Chaos -->
+                                <button onclick="selectRigidWeaponPreset('daemon_chainaxe')" class="weapon-preset-btn chaos p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">🪓 Daemon Chainaxe</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Khornate Warp Edge</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('chaos_bolter')" class="weapon-preset-btn chaos p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">💀 Combi-Bolter</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Twin Barrels</span>
+                                </button>
+                                <!-- Orks -->
+                                <button onclick="selectRigidWeaponPreset('choppa')" class="weapon-preset-btn orks p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">🔪 'Eavy Choppa</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Serrated Cleaver</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('slugga')" class="weapon-preset-btn orks p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">🔫 'Eavy Slugga</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Scrap Hand Cannon</span>
+                                </button>
+                                <!-- Necrons -->
+                                <button onclick="selectRigidWeaponPreset('gauss_flayer')" class="weapon-preset-btn necrons p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">⚡ Gauss Flayer</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Molecular Flayer</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('hyperphase_blade')" class="weapon-preset-btn necrons p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all">
+                                    <span class="block">🗡️ Hyperphase Blade</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Dimensional Cut</span>
                                 </button>
                             </div>
                         </div>
@@ -2082,37 +2138,78 @@
             });
         }
 
-        // Cloud CDN Hosted 3D Models (Open CORS for direct browser streaming)
+        // Multi-Faction Cloud CDN Hosted 3D Models (Open CORS for direct browser streaming)
         const PRESET_3D_MODELS = {
+            // Adeptus Astartes (Space Marines)
             dual_pbr: {
+                faction: "imperium",
                 name: "Space Marine Assault Veteran (Dual-Wield PBR Master)",
                 url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05999-2c91-71bc-9603-f57adcab5016/output/model.glb?Expires=4941734400&Signature=BKFrXjMLEkp10Ziolpexn1Yv9ZLcrv7ZzeR7AYWGs3kRWneTtU~Lc6SDnnWEyfZPciEn~liF29RNUKATiPU7E8YLJiiHxQxtsYiK0pLMOiiBP1S0XiiNGnmaJ9Wh3K5TKx0BzkaG01DfRqcumKghhR2HkYWwiBcW9gpvqpfJNb1HaDN5J~qWnIuYKhqZc7nnOz40NRJQWzruT-Y6DO1eHTCs2ygdX2Kh8XlbS5-9TyKTsSm9GLX-29vx5lleg2BRmX3Tyvd~pBptIlNTEoSf99Lqv1sqTYH0kV1v0myRwbSK5o3d99c~JWTDklrCJYGxnc6xFKxjCsrC5XdyQWSwOQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
             },
             dual_sprint: {
-                name: "Assault Marine (Dual-Wield Sprint - Rigid Arm Cycles)",
+                faction: "imperium",
+                name: "Assault Marine (Dual-Wield Sprint Cycle)",
                 url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05998-f0d2-7351-818d-bbd9902d1868/output/Animation_Running_withSkin.glb?Expires=1788469025&Signature=Evfy2jC5lqSh3mwA2d9LSCtWSVxWmyJqtczlu7HRwkH8uACLfVH9HoAosYbT1S4url-pYJNOdc5LaTOmRdnlpJ5w3QymgfuAt7pG9gv1PGhIV9bIIQL0-P0tJvEuTd9B7VFHSSlYZ~oJ8o2JCJVruTIq1r5UoYv2zVsSc~ZhS1gGZ2leNFMswy4aUAEy1w43cLx5OoS6U5eNMzrj6nQWoZRBsVh4WMQwEJzAtt7rSv2EofkZ-1x-Lni20Hmp3OERTgq6cmtyA49QePhiZGJU8OrBQkzUGnf9qYRBlhVLzIVzGLRXFgZt8QNHJx6iKanoY-E7yo0fCAFFPqRAy2Zdvg__&Key-Pair-Id=K1VGYTHIYLM9UM"
             },
             dual_walk: {
-                name: "Assault Marine (Dual-Wield Walk - Rigid Arm Cycles)",
+                faction: "imperium",
+                name: "Assault Marine (Dual-Wield Walk Cycle)",
                 url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05998-f0d2-7351-818d-bbd9902d1868/output/Animation_Walking_withSkin.glb?Expires=1788469025&Signature=bnituoiP7YBIl52gb4RQd-Xwa1bzBrIlkELs-VbqZia-bcL0RtuUTMZlFH2D5OR3U9tquErGb7Z0QY0W4wZ0hS0367MPtZVYNQ50k3F4yx60h20qV5fsoxpIFZ9s8iqNtFInYOYC-ocDG0rIIPvnm12CLAcdUptYdd5Ae4QiYR32OuimC~979vHrKTqJ5Vd5XELDi6FGG18WIBhoV1leRdRoYz2bgKOvgGQgYQSb~4s5I2fyVZWctBri4Luf-T~hJR-j-hovYk80EnPUIIH~c1RpR7AS-qRuiq~~XhvzZiuOXos4fFSJyi4lX1OMEfSOn~Fvr8n2BDfLMEFp~wIFSw__&Key-Pair-Id=K1VGYTHIYLM9UM"
             },
             pbr: {
-                name: "Tactical Marine (Boltgun PBR Master)",
+                faction: "imperium",
+                name: "Tactical Marine (Godwyn Boltgun PBR Master)",
                 url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05966-5a32-7753-857e-31f6e845809f/output/model.glb?Expires=4941734400&Signature=Ui082GPFEL~yIktZbhDRBvVyNq6Yp8TeATMA-wYqYkFkYEwRC0Pe0s3gngJo5J~4vapbggGRUpMyGb8WV8h23ydepjO6h3oIEJDDYVnJBetXVQJwM7-1z7lJNk6ljpXjXatqkSZWxpWYQEBZ0vOUV3KLw8x5hxQRhCwfxUt8DuSSQGPDpSsEBzml9rGiPXPKTAgbk0OKxbM5iFSKKnR9tCML7fWiAp3LHLQwF08LpyEKtrR~xCgKFfxY89j9xwJ~eCG2ha--xnTDhTyqPjmPdcDkUHtcTYsxAnUMfe6-DevG7SebTb0hr0NvGhJqvo4WH9UerZl5yopo9Z5ZNDTmvQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
             },
-            running: {
-                name: "Tactical Marine (Two-Handed Sprint)",
-                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05967-7591-726f-9a30-9ee87b5a6a2c/output/Animation_Running_withSkin.glb?Expires=1788465779&Signature=cI6jEPvr27AYmLrKVJBZrhk~lXy7fR~Qf2uaA~Nkn3j4KMci1m0Euq-xyt8Qgbsz6TtCxbbm-uC91qrqyBtNuEpo3Y5SICdxsyAd0woM5ZGEpOf2AIKXDG4LluqCZe5vCZUn2nAkorsVyD1JZmSdHf8hLP5fwRNsIslvsDNAQJyH64fhTMzfEBgCzN4WnCGpHYTpjXfATpkW-V9-1Fvy~LU~3t29pLVqPRSU0N1xqN7kl2LSZimVOeI59TxXKptyHGGszVYEs6BW06RnF6KWY1BARiBL8-xcRrFoAod7D0ZxteMGkFx2-ZmphVZirvrE6embXt9JSVhgtreIg33Elw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            // Astra Militarum (Imperial Guard)
+            cadian: {
+                faction: "imperium",
+                name: "Astra Militarum Cadian Sergeant (Chainsword & Laspistol)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a059ac-d581-73fd-a38b-a5b29bbf4b3f/output/model.glb?Expires=4941734400&Signature=oJumCoThplNKP5kybCFTzHmkyBEzpRSmaeGWKMSgk8VX9aBVD8qXpJiLjCTwVKqUjfL-7uJtGDCiaaLfxYORdePZywbjp8pE5cXxUoL9pvXX~6ahEMhrshy0~Em9lbZx4QQW~7pH~09e862zW1hPiFSxK1ljQVHNBNd-aaPvX2wLzCz1H3xxH3nv2~78cXSAvUXd9J8~yfsYO-74b0QHln2jp9TCn25VF8Wtfp4UpeNI4kwXNHUT5qGyrhQYxXUuW60A6u6XpHvwO-pQvfEZX1CKPr~PMdOehvKolneIlZRb-Z6wqgyZQJwme2jdaoDmuYYbxTdbnznngVYPpnIyvQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
             },
-            walking: {
-                name: "Tactical Marine (Two-Handed Walk)",
-                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05967-7591-726f-9a30-9ee87b5a6a2c/output/Animation_Walking_withSkin.glb?Expires=1788465779&Signature=XOAXnobs0vlAkaUNoWlISPDkDjg86Jo-W-u5bomNgU9YLuuikgMY3F-SAW6w4gUIcCUP~qH24Z2vyT5S-176BXyjgwIb3gYC4BVU6IrHBL3hcsutqtSjrc6KVRixJjIBbrTp3wLfybNn8d08xOxgHLiUhsxCWvnH3ojVDVtwe~3zJgeizOshV7atrReM~ERd6~7pzYN~BhVlI90awmqYNNIsb8mocRRrnQzf92r6YA9vI1~WkMgymfMIdz0vNDJM0LFVwN01ZNcS5mUnbo6PBKu5CQMHMN3PwF6Pvfm~40Jo5bULfxfIndmKINrI-Cl6rc7psiKF6RxEtXJZat9jBg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            // Chaos Space Marines
+            chaos_chosen: {
+                faction: "chaos",
+                name: "Chaos Chosen Champion (Daemon Chainaxe & Plasma)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a059ac-db20-77fe-b763-4d2ee0205f38/output/model.glb?Expires=4941734400&Signature=J1WvvQYblMlZpQtiOmdpuwip0EpRwsutE3P8f614LzJpz19uMBArviM7ZxeVeqXTQQmT0HvQ5Bb1u76Ew6XPIwZl19ALTa9~5R8DR-ODVIy-RzpMwGXumPjhY0-g1vpUHcrA7fb0AQ1f1LHkcP3FPmuU8QFIgmHfELmTYlzi3y3sCmtynB0JakOPLgODTH~RoeoGyvILWZRU-PUfJJ2bqKcvcTWqFGGvVtynM2Or13bXtKVg9SFTaW31LneZ1rR7oV3ybV-WVluSb~77EX981lIHjCyWy3QTqTdgaCh9RPX1RKHjFGq1ZRy8N5v7EVbnvW9M5zJWtrAmQmLSEeZsJA__&Key-Pair-Id=K1VGYTHIYLM9UM"
             },
+            // Orks (Greenskins)
             ork_boy: {
-                name: "Ork Boy (Choppa & Slugga 3D Mesh)",
+                faction: "xenos",
+                name: "Ork Boy (Choppa & Heavy Slugga)",
                 url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a0597c-6e62-724e-afad-bac10f687d96/output/model.glb?Expires=4941734400&Signature=H-de~wt-w-hfaN5QGnWIm-4dbgh27Y-s9I1Xi~jGrvQUUf6sQwX22qpaL5XyqoNQZwPcH4XFVS5sUtgVYoRkfQaM0W7vjxmqHxrgzQNFZFhaKDJf4ZkOuTiCJ5pL~ZQyrb7w41f9gEaP-QQorKsckcy-~fDZlaeH7hMtIgtEHY~3KpVQc2fEx0cQkQkUFNlhShGdhJaO9HYInzJV6-smv94Ohh7SguurR6H11rXNHYOg9XFb0vDy~9MRYX3~93ms-Z3AB3CW0esb0jvktp9l~KMDmt9bARryQVlQfRfW2mUc3-anpyR3pZ7Aw23HAyGk9bIR-D8Xq1M4ZRy-JucCLA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            },
+            // Necrons
+            necron_warrior: {
+                faction: "xenos",
+                name: "Necron Immortal (Gauss Blaster)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a059ac-df92-7746-81c6-0af64242c279/output/model.glb?Expires=4941734400&Signature=JVRdKqY0zdzGiz6LUegbA5CrzvFKPrwt8CTBP7fDb65bBs0LEtgephU-yH9EeZrqOOApxK3NIm16emVpNhRLLp53XsrmTWdHAPMLmHf9L29HLHMgzvFax0OFSuldfxTB5v1NOMv17f7dS4wpcsuSa8ARrYib5HMLA8fquEVFya9A7ak4PH9Il~nPdOMhfPkxLTX~TCU~uraX5XlExdgvhP4brfAeZJSyJb-H8OsYtPv6erTcGHhRC3LYyPAem9bXM2zbw8WX2vlb7eDCcRrXtOLF4f-2J0RZS9ZP-YPhLZ6ubwQN5vgiacA0z2f9mPyG-7VrxkF8OkmSgJkrU8uQFw__&Key-Pair-Id=K1VGYTHIYLM9UM"
             }
         };
+
+        function filterFactionModels(faction) {
+            const container = document.getElementById('faction-models-container');
+            if (!container) return;
+
+            ['all', 'imperium', 'chaos', 'xenos'].forEach(f => {
+                const btn = document.getElementById(`faction-filter-${f}`);
+                if (btn) {
+                    if (f === faction) {
+                        btn.className = "px-2 py-0.5 rounded bg-dataslate-900 text-white font-bold transition-all";
+                    } else {
+                        btn.className = "px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all";
+                    }
+                }
+            });
+
+            container.querySelectorAll('.model-item').forEach(item => {
+                if (faction === 'all' || item.classList.contains(faction)) {
+                    item.style.display = 'inline-flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
 
         // Load Local File (.glb) from User Disk (Bypasses Browser CORS)
         function loadLocalFileGLB(event) {
@@ -2834,15 +2931,49 @@
         let weaponScene, weaponCamera, weaponRenderer, weaponControls, currentRigidWeaponMesh;
 
         const WEAPON_PRESETS = {
-            bolt_rifle: { name: "Godwyn Pattern Bolt Rifle", dmg: 45, ap: 25, rpm: 360, class: "bolter", color: "#DC2626" },
-            stalker_bolter: { name: "Stalker Pattern Bolt Rifle", dmg: 75, ap: 40, rpm: 120, class: "stalker", color: "#1E293B" },
-            auto_bolter: { name: "Auto Bolt Rifle (Drum)", dmg: 38, ap: 18, rpm: 600, class: "auto", color: "#DC2626" },
-            chainsword: { name: "Astartes Chainsword", dmg: 65, ap: 15, rpm: 800, class: "chainsword", color: "#D4AF37" },
-            power_sword: { name: "Master Power Sword", dmg: 95, ap: 60, rpm: 100, class: "power_sword", color: "#38BDF8" },
-            plasma_gun: { name: "Plasma Incinerator", dmg: 120, ap: 70, rpm: 180, class: "plasma", color: "#06B6D4" },
-            melta_gun: { name: "Multi-Melta", dmg: 220, ap: 90, rpm: 80, class: "melta", color: "#F59E0B" },
-            lasgun: { name: "Kantrael Pattern Lasgun", dmg: 20, ap: 5, rpm: 450, class: "lasgun", color: "#4B5563" }
+            // Adeptus Astartes
+            bolt_rifle: { faction: "astartes", name: "Godwyn Pattern Bolt Rifle", dmg: 45, ap: 25, rpm: 360, class: "bolter", color: "#DC2626" },
+            chainsword: { faction: "astartes", name: "Astartes Chainsword", dmg: 65, ap: 15, rpm: 800, class: "chainsword", color: "#D4AF37" },
+            power_sword: { faction: "astartes", name: "Master Power Sword", dmg: 95, ap: 60, rpm: 100, class: "power_sword", color: "#38BDF8" },
+            plasma_gun: { faction: "astartes", name: "Plasma Incinerator", dmg: 120, ap: 70, rpm: 180, class: "plasma", color: "#06B6D4" },
+            heavy_bolter: { faction: "astartes", name: "Heavy Bolter", dmg: 85, ap: 35, rpm: 450, class: "heavy_bolter", color: "#1E293B" },
+            // Astra Militarum
+            lasgun: { faction: "guard", name: "Kantrael Pattern M36 Lasgun", dmg: 20, ap: 5, rpm: 450, class: "lasgun", color: "#4B5563" },
+            hotshot_lasgun: { faction: "guard", name: "Kasrkin Hot-shot Gun", dmg: 35, ap: 30, rpm: 500, class: "hotshot", color: "#047857" },
+            // Chaos Space Marines
+            daemon_chainaxe: { faction: "chaos", name: "Khornate Daemon Chainaxe", dmg: 85, ap: 40, rpm: 750, class: "daemon_axe", color: "#991B1B" },
+            chaos_bolter: { faction: "chaos", name: "Legionary Combi-Bolter", dmg: 55, ap: 28, rpm: 400, class: "chaos_bolter", color: "#18181B" },
+            // Orks
+            choppa: { faction: "orks", name: "Ork 'Eavy Choppa", dmg: 60, ap: 20, rpm: 600, class: "choppa", color: "#78716C" },
+            slugga: { faction: "orks", name: "Ork 'Eavy Slugga", dmg: 40, ap: 10, rpm: 300, class: "slugga", color: "#44403C" },
+            // Necrons
+            gauss_flayer: { faction: "necrons", name: "Gauss Flayer Rifle", dmg: 50, ap: 45, rpm: 320, class: "gauss", color: "#10B981" },
+            hyperphase_blade: { faction: "necrons", name: "Hyperphase Blade", dmg: 110, ap: 65, rpm: 120, class: "hyperphase", color: "#34D399" }
         };
+
+        function filterWeaponPresets(category) {
+            const list = document.getElementById('weapon-preset-list');
+            if (!list) return;
+
+            ['all', 'astartes', 'guard', 'chaos', 'orks', 'necrons'].forEach(c => {
+                const btn = document.getElementById(`wep-filter-${c}`);
+                if (btn) {
+                    if (c === category) {
+                        btn.className = "px-2 py-0.5 rounded bg-dataslate-900 text-white font-bold transition-all";
+                    } else {
+                        btn.className = "px-2 py-0.5 rounded bg-dataslate-100 text-dataslate-700 hover:bg-dataslate-200 font-bold transition-all";
+                    }
+                }
+            });
+
+            list.querySelectorAll('.weapon-preset-btn').forEach(btn => {
+                if (category === 'all' || btn.classList.contains(category)) {
+                    btn.style.display = 'block';
+                } else {
+                    btn.style.display = 'none';
+                }
+            });
+        }
 
         function initWeaponInspector() {
             const container = document.getElementById('weapon-three-container');
@@ -2906,10 +3037,11 @@
             document.getElementById('wep-stat-rpm').innerText = w.rpm;
 
             document.querySelectorAll('.weapon-preset-btn').forEach(btn => {
-                btn.className = "weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left";
+                btn.className = "weapon-preset-btn " + (btn.className.match(/(astartes|guard|chaos|orks|necrons)/)?.[0] || '') + " p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left transition-all";
             });
             if (event && event.currentTarget) {
-                event.currentTarget.className = "weapon-preset-btn p-2 rounded-lg border-2 border-gold-500 bg-gold-50 font-bold text-dataslate-900 text-left";
+                const cat = (event.currentTarget.className.match(/(astartes|guard|chaos|orks|necrons)/)?.[0] || '');
+                event.currentTarget.className = `weapon-preset-btn ${cat} p-2 rounded-lg border-2 border-gold-500 bg-gold-50 font-bold text-dataslate-900 text-left transition-all`;
             }
 
             buildRigidWeapon3DMesh(w);
@@ -2925,6 +3057,9 @@
             const steelMat = new THREE.MeshStandardMaterial({ color: 0x222226, metalness: 0.9, roughness: 0.25 });
             const casingMat = new THREE.MeshStandardMaterial({ color: new THREE.Color(casingColor), metalness: 0.6, roughness: 0.35 });
             const goldMat = new THREE.MeshStandardMaterial({ color: 0xD4AF37, metalness: 0.95, roughness: 0.2 });
+            const chaosBronzeMat = new THREE.MeshStandardMaterial({ color: 0x854d0e, metalness: 0.85, roughness: 0.4 });
+            const glowingGreenMat = new THREE.MeshStandardMaterial({ color: 0x10b981, emissive: 0x059669, emissiveIntensity: 1.4, roughness: 0.1 });
+            const glowingRedMat = new THREE.MeshStandardMaterial({ color: 0xef4444, emissive: 0xb91c1c, emissiveIntensity: 1.2, roughness: 0.1 });
 
             if (weaponData.class === 'chainsword') {
                 // Chainsword Body
@@ -2953,6 +3088,45 @@
                 hilt.position.set(0, -0.35, 0);
                 group.add(hilt);
 
+            } else if (weaponData.class === 'daemon_axe') {
+                // Chaos Daemon Chainaxe
+                const haftGeo = new THREE.CylinderGeometry(0.045, 0.045, 1.1, 16);
+                const haft = new THREE.Mesh(haftGeo, steelMat);
+                haft.position.set(0, 0.1, 0);
+                group.add(haft);
+
+                // Spiked Axe Head
+                const headGeo = new THREE.BoxGeometry(0.14, 0.55, 0.38);
+                const head = new THREE.Mesh(headGeo, casingMat);
+                head.position.set(0, 0.45, 0.18);
+                group.add(head);
+
+                // Glowing Daemon Teeth
+                const teethGeo = new THREE.BoxGeometry(0.05, 0.52, 0.08);
+                const teeth = new THREE.Mesh(teethGeo, glowingRedMat);
+                teeth.position.set(0, 0.45, 0.36);
+                group.add(teeth);
+
+                // Chaos Star Pommel
+                const starGeo = new THREE.CylinderGeometry(0.1, 0.1, 0.08, 8);
+                const star = new THREE.Mesh(starGeo, chaosBronzeMat);
+                star.position.set(0, -0.45, 0);
+                group.add(star);
+
+            } else if (weaponData.class === 'choppa') {
+                // Ork Heavy Choppa (Serrated Scrap Iron)
+                const bladeGeo = new THREE.BoxGeometry(0.08, 0.85, 0.32);
+                const blade = new THREE.Mesh(bladeGeo, steelMat);
+                blade.position.set(0, 0.35, 0.1);
+                group.add(blade);
+
+                // Rough Wrapped Grip
+                const gripGeo = new THREE.CylinderGeometry(0.05, 0.05, 0.45, 12);
+                const gripMat = new THREE.MeshStandardMaterial({ color: 0xb45309, roughness: 0.9 });
+                const grip = new THREE.Mesh(gripGeo, gripMat);
+                grip.position.set(0, -0.25, 0);
+                group.add(grip);
+
             } else if (weaponData.class === 'power_sword') {
                 // Power Blade
                 const bladeGeo = new THREE.BoxGeometry(0.04, 1.2, 0.18);
@@ -2967,16 +3141,80 @@
                 blade.position.set(0, 0.5, 0);
                 group.add(blade);
 
-                // Guard
                 const guardGeo = new THREE.BoxGeometry(0.45, 0.06, 0.1);
                 const guard = new THREE.Mesh(guardGeo, goldMat);
                 guard.position.set(0, -0.12, 0);
                 group.add(guard);
 
-                // Grip
                 const gripGeo = new THREE.CylinderGeometry(0.035, 0.035, 0.3, 12);
                 const grip = new THREE.Mesh(gripGeo, steelMat);
                 grip.position.set(0, -0.3, 0);
+                group.add(grip);
+
+            } else if (weaponData.class === 'gauss') {
+                // Necron Gauss Flayer
+                const bodyGeo = new THREE.BoxGeometry(0.12, 0.22, 1.1);
+                const body = new THREE.Mesh(bodyGeo, steelMat);
+                group.add(body);
+
+                // Glowing Green Dynastic Energy Rod
+                const rodGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.65, 16);
+                const rod = new THREE.Mesh(rodGeo, glowingGreenMat);
+                rod.position.set(0, 0.08, 0.1);
+                rod.rotation.x = Math.PI / 2;
+                group.add(rod);
+
+                // Curved Bayonet Blade
+                const bayonetGeo = new THREE.BoxGeometry(0.03, 0.3, 0.18);
+                const bayonet = new THREE.Mesh(bayonetGeo, glowingGreenMat);
+                bayonet.position.set(0, -0.18, 0.55);
+                group.add(bayonet);
+
+            } else if (weaponData.class === 'hyperphase') {
+                // Necron Hyperphase Blade
+                const bladeGeo = new THREE.BoxGeometry(0.04, 1.35, 0.24);
+                const blade = new THREE.Mesh(bladeGeo, glowingGreenMat);
+                blade.position.set(0, 0.55, 0);
+                group.add(blade);
+
+                const hiltGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.45, 16);
+                const hilt = new THREE.Mesh(hiltGeo, steelMat);
+                hilt.position.set(0, -0.3, 0);
+                group.add(hilt);
+
+            } else if (weaponData.class === 'heavy_bolter') {
+                // Space Marine Heavy Bolter
+                const recGeo = new THREE.BoxGeometry(0.24, 0.38, 1.1);
+                const rec = new THREE.Mesh(recGeo, casingMat);
+                group.add(rec);
+
+                const barrelGeo = new THREE.CylinderGeometry(0.09, 0.09, 0.55, 16);
+                const barrel = new THREE.Mesh(barrelGeo, steelMat);
+                barrel.position.set(0, 0.05, 0.7);
+                barrel.rotation.x = Math.PI / 2;
+                group.add(barrel);
+
+                const ammoBoxGeo = new THREE.BoxGeometry(0.3, 0.32, 0.28);
+                const ammoBox = new THREE.Mesh(ammoBoxGeo, steelMat);
+                ammoBox.position.set(0.18, -0.1, -0.1);
+                group.add(ammoBox);
+
+            } else if (weaponData.class === 'slugga') {
+                // Ork Heavy Slugga (Hand Cannon)
+                const recGeo = new THREE.BoxGeometry(0.16, 0.26, 0.48);
+                const rec = new THREE.Mesh(recGeo, steelMat);
+                group.add(rec);
+
+                const bGeo = new THREE.CylinderGeometry(0.07, 0.07, 0.3, 16);
+                const b = new THREE.Mesh(bGeo, steelMat);
+                b.position.set(0, 0.04, 0.32);
+                b.rotation.x = Math.PI / 2;
+                group.add(b);
+
+                const gripGeo = new THREE.BoxGeometry(0.1, 0.24, 0.12);
+                const grip = new THREE.Mesh(gripGeo, casingMat);
+                grip.position.set(0, -0.2, -0.1);
+                grip.rotation.x = -Math.PI / 8;
                 group.add(grip);
 
             } else if (weaponData.class === 'plasma') {
@@ -2985,7 +3223,6 @@
                 const body = new THREE.Mesh(bodyGeo, casingMat);
                 group.add(body);
 
-                // Glowing Plasma Coils
                 const coilGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.45, 16);
                 const coilMat = new THREE.MeshStandardMaterial({
                     color: 0x06b6d4,
@@ -2998,7 +3235,6 @@
                 coil.rotation.x = Math.PI / 2;
                 group.add(coil);
 
-                // Barrel
                 const bGeo = new THREE.CylinderGeometry(0.06, 0.06, 0.4, 16);
                 const barrel = new THREE.Mesh(bGeo, steelMat);
                 barrel.position.set(0, 0, 0.55);
@@ -3006,49 +3242,30 @@
                 group.add(barrel);
 
             } else {
-                // Standard Bolt Rifle Pattern
-                // 1. Receiver / Upper Housing
+                // Standard Bolt Rifle / Lasgun Pattern
                 const recGeo = new THREE.BoxGeometry(0.16, 0.28, 0.82);
                 const rec = new THREE.Mesh(recGeo, casingMat);
                 rec.position.set(0, 0, 0);
                 group.add(rec);
 
-                // 2. Heavy Barrel
                 const barrelGeo = new THREE.CylinderGeometry(0.05, 0.05, 0.45, 16);
                 const barrel = new THREE.Mesh(barrelGeo, steelMat);
                 barrel.position.set(0, 0.04, 0.55);
                 barrel.rotation.x = Math.PI / 2;
                 group.add(barrel);
 
-                // Muzzle Brake
                 const muzzleGeo = new THREE.CylinderGeometry(0.065, 0.065, 0.12, 16);
                 const muzzle = new THREE.Mesh(muzzleGeo, steelMat);
                 muzzle.position.set(0, 0.04, 0.78);
                 muzzle.rotation.x = Math.PI / 2;
                 group.add(muzzle);
 
-                // 3. Magazine (Box or Drum)
-                if (weaponData.class === 'auto') {
-                    const drumGeo = new THREE.CylinderGeometry(0.14, 0.14, 0.18, 16);
-                    const drum = new THREE.Mesh(drumGeo, steelMat);
-                    drum.position.set(0, -0.22, 0.1);
-                    group.add(drum);
-                } else {
-                    const magGeo = new THREE.BoxGeometry(0.12, 0.32, 0.16);
-                    const mag = new THREE.Mesh(magGeo, steelMat);
-                    mag.position.set(0, -0.22, 0.1);
-                    mag.rotation.x = -Math.PI / 12;
-                    group.add(mag);
-                }
+                const magGeo = new THREE.BoxGeometry(0.12, 0.32, 0.16);
+                const mag = new THREE.Mesh(magGeo, steelMat);
+                mag.position.set(0, -0.22, 0.1);
+                mag.rotation.x = -Math.PI / 12;
+                group.add(mag);
 
-                // 4. Optic Sight
-                const scopeGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.42, 16);
-                const scope = new THREE.Mesh(scopeGeo, steelMat);
-                scope.position.set(0, 0.2, 0);
-                scope.rotation.x = Math.PI / 2;
-                group.add(scope);
-
-                // 5. Imperial Aquila Crest on Casing
                 const crestGeo = new THREE.BoxGeometry(0.17, 0.08, 0.16);
                 const crest = new THREE.Mesh(crestGeo, goldMat);
                 crest.position.set(0, 0.02, 0);
