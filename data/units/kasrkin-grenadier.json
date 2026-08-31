@@ -1,0 +1,61 @@
+{
+  "id": "c1a9f4e2-8d7b-4a3c-9e2f-1b5d6a7e8f90",
+  "slug": "kasrkin-grenadier",
+  "name": "Kasrkin Elite Grenadiers",
+  "faction": "astra_militarum",
+  "subFaction": "Cadia 8th Shock Troops",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1120,
+    "modelCount": 10,
+    "armor": 60,
+    "speedMps": 5.0,
+    "chargeSpeedMps": 6.2,
+    "acceleration": 3.8,
+    "massKgPerModel": 120,
+    "leadership": 75,
+    "baseCostPoints": 750,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 160.0,
+    "sprintSpeedMps": 7.5,
+    "sprintSpeedMph": 16.8,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0.0,
+    "armorComposition": "Hardened Plasteel and Ceramite composite Carapace Armor with sealed environmental rebreathers",
+    "armorEquivalentRHAmm": 90,
+    "combatStaminaHours": 18,
+    "citation": "Codex: Astra Militarum (9th Ed), Dan Abnett - Necropolis",
+    "loreSummary": "The pinnacle of unaugmented human infantry training. Kasrkin operate high-output hot-shot lasguns linked to backpack capacitor cells, capable of punching through power armor seams."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/kasrkin-grenadier.opt.glb",
+    "dracoCompressionRatio": 0.915,
+    "vramFootprintMb": 7.8,
+    "polyCount": 21800,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": ["BC7", "ASTC", "ETC1S"]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 48,
+      "mobility": 35,
+      "burstDmg": 65,
+      "sustainedDps": 58,
+      "utility": 45,
+      "mass": 28
+    },
+    "loreCanon": {
+      "ehp": 52,
+      "mobility": 38,
+      "burstDmg": 74,
+      "sustainedDps": 64,
+      "utility": 52,
+      "mass": 32
+    }
+  },
+  "primaryWeaponSlug": "hotshot-lasgun",
+  "tacticalDescription": "Elite armor-piercing ranged infantry. Specialized in eliminating heavy infantry targets at medium range.",
+  "artImagePath": "/assets/art/kasrkin_grenadier.jpg"
+}

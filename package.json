@@ -1,0 +1,28 @@
+{
+  "name": "statvault",
+  "version": "1.0.2",
+  "private": true,
+  "description": "The Interactive Source-of-Truth Database for Warhammer 40,000 Total War (Warcore Engine)",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "pipeline:inspect": "ts-node packages/3d-pipeline/src/inspect-vram.ts"
+  },
+  "devDependencies": {
+    "turbo": "^1.13.3",
+    "typescript": "^5.4.5",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.12.7"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "license": "MIT"
+}

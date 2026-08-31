@@ -1,0 +1,61 @@
+{
+  "id": "b3d5e7a9-2f1c-4b6d-8e0a-3c5d7e9f1a2b",
+  "slug": "cadian-shock-trooper",
+  "name": "Cadian Infantry Guardsmen",
+  "faction": "astra_militarum",
+  "subFaction": "Cadia Shock Troops",
+  "role": "line_infantry",
+  "engineStats": {
+    "hitPoints": 900,
+    "modelCount": 12,
+    "armor": 30,
+    "speedMps": 4.8,
+    "chargeSpeedMps": 5.8,
+    "acceleration": 3.5,
+    "massKgPerModel": 85,
+    "leadership": 55,
+    "baseCostPoints": 400,
+    "collisionRadiusM": 0.5
+  },
+  "loreStats": {
+    "reactionTimeMs": 220.0,
+    "sprintSpeedMps": 6.2,
+    "sprintSpeedMph": 13.8,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0.0,
+    "armorComposition": "Layered Ablative Flak Vest with ballistic ceramic inserts",
+    "armorEquivalentRHAmm": 35,
+    "combatStaminaHours": 12,
+    "citation": "Imperial Infantryman's Uplifting Primer, Aaron Dembski-Bowden - Cadia Stands",
+    "loreSummary": "Standard frontline human conscript infantry. Highly disciplined under officer leadership, but vulnerable to heavy armor, high AP fire, and acute Transhuman Dread."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/cadian-shock-trooper.opt.glb",
+    "dracoCompressionRatio": 0.908,
+    "vramFootprintMb": 6.9,
+    "polyCount": 18400,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": ["BC7", "ASTC", "ETC1S"]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 28,
+      "mobility": 25,
+      "burstDmg": 28,
+      "sustainedDps": 32,
+      "utility": 30,
+      "mass": 18
+    },
+    "loreCanon": {
+      "ehp": 15,
+      "mobility": 22,
+      "burstDmg": 20,
+      "sustainedDps": 28,
+      "utility": 25,
+      "mass": 15
+    }
+  },
+  "primaryWeaponSlug": "kantrael-lasgun",
+  "tacticalDescription": "Core line infantry unit. Inexpensive mass ranged firepower with officer-guided volley orders.",
+  "artImagePath": "/assets/art/hero_banner.jpg"
+}

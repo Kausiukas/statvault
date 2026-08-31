@@ -1,0 +1,27 @@
+{
+  "id": "w1b8d2e4-9a3c-4e7f-8c1b-2d4e6f8a0b2c",
+  "slug": "godwyn-bolt-rifle",
+  "name": "Godwyn-Pattern Auto Bolt Rifle",
+  "type": "ballistic_slug",
+  "faction": "adeptus_astartes",
+  "engineDamage": {
+    "baseDamage": 38,
+    "armorPenetration": 25,
+    "attacksPerSecond": 1.25,
+    "rangeMeters": 180,
+    "accuracyPercent": 82,
+    "projectileVelocityMps": 450,
+    "burstCount": 1,
+    "reloadTimeSeconds": 2.2
+  },
+  "loreDescriptor": {
+    "caliber": ".75 Caliber (19.05mm) High-Explosive Mass-Reactive",
+    "propellant": "Solid rocket booster with primary chemical ignition charge",
+    "muzzleVelocityMps": 940,
+    "effectiveRangeKm": 2.0,
+    "kineticEnergyJoules": 35000,
+    "loreEffectDescription": "Self-propelled explosive rounds with dense diamantine penetrator caps. Penetrates target armor before secondary internal detonation.",
+    "citation": "Imperial Armor Volume Two: Space Marines & Forces of the Adeptus Astartes"
+  },
+  "iconSlug": "bolt-rifle-icon"
+}

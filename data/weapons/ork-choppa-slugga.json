@@ -1,0 +1,27 @@
+{
+  "id": "w4e1a5b7-2d6f-7b0c-1f4e-5a7b9c1d3e5f",
+  "slug": "ork-choppa-slugga",
+  "name": "Heavy Iron Choppa & Kustom Slugga",
+  "type": "melee_crude",
+  "faction": "orks",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 15,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 0,
+    "accuracyPercent": 65,
+    "projectileVelocityMps": 0,
+    "burstCount": 1,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Heavy High-Carbon Scrap Iron Cleaver & Crude Caliber Ballistic Lead Slug",
+    "propellant": "Impure volatile black powder propellant",
+    "muzzleVelocityMps": 320,
+    "effectiveRangeKm": 0.05,
+    "kineticEnergyJoules": 18000,
+    "loreEffectDescription": "Crude, brutal weapons wielded with ferocious biomechanical leverage. Capable of denting armor and severing limbs through sheer brute impact force.",
+    "citation": "Waaagh! The Orks - Wargear of the Greenskins"
+  },
+  "iconSlug": "choppa-icon"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "w3d0f4a6-1c5e-6a9b-0e3d-4f6a8b0c2d4e",
+  "slug": "kantrael-lasgun",
+  "name": "M36 Kantrael Pattern Lasrifle",
+  "type": "energy_las",
+  "faction": "astra_militarum",
+  "engineDamage": {
+    "baseDamage": 22,
+    "armorPenetration": 10,
+    "attacksPerSecond": 1.4,
+    "rangeMeters": 150,
+    "accuracyPercent": 75,
+    "projectileVelocityMps": 1200,
+    "burstCount": 1,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Variable Focus Photonic Pulse",
+    "propellant": "Standard Size-4 Standard Issue Power Cell",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 1.0,
+    "thermalYieldKelvin": 4500,
+    "loreEffectDescription": "Extremely reliable infantry weapon. Effective against unarmored targets; requires massed overlapping volley fire to defeat heavy combat armor.",
+    "citation": "Imperial Infantryman's Uplifting Primer (Damocles Edition)"
+  },
+  "iconSlug": "kantrael-lasgun-icon"
+}

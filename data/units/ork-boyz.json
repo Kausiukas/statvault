@@ -1,0 +1,61 @@
+{
+  "id": "f8e2d4c6-9a1b-4f3e-8c5d-7e9a1b2c3d4e",
+  "slug": "ork-boyz",
+  "name": "Ork Boyz Mob (Slugga & Choppa)",
+  "faction": "orks",
+  "subFaction": "Goff Clan",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1920,
+    "modelCount": 16,
+    "armor": 25,
+    "speedMps": 5.2,
+    "chargeSpeedMps": 6.8,
+    "acceleration": 4.2,
+    "massKgPerModel": 160,
+    "leadership": 60,
+    "baseCostPoints": 500,
+    "collisionRadiusM": 0.65
+  },
+  "loreStats": {
+    "reactionTimeMs": 85.0,
+    "sprintSpeedMps": 11.0,
+    "sprintSpeedMph": 24.6,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0.0,
+    "armorComposition": "Crude Scrap Metal Plates, Riveted Iron Shoulders, and Tough Fungal Leather",
+    "armorEquivalentRHAmm": 20,
+    "combatStaminaHours": 48,
+    "citation": "Codex: Orks (9th Ed), Guy Haley - Brutal Kunnin",
+    "loreSummary": "Genetically engineered fungal-symbiont shock organisms. Pain-immune biology allows them to absorb grievous wounds and charge with brute momentum into melee."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/ork-boyz.opt.glb",
+    "dracoCompressionRatio": 0.922,
+    "vramFootprintMb": 8.1,
+    "polyCount": 23400,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": ["BC7", "ASTC", "ETC1S"]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 45,
+      "mobility": 38,
+      "burstDmg": 52,
+      "sustainedDps": 48,
+      "utility": 35,
+      "mass": 42
+    },
+    "loreCanon": {
+      "ehp": 68,
+      "mobility": 55,
+      "burstDmg": 72,
+      "sustainedDps": 60,
+      "utility": 40,
+      "mass": 65
+    }
+  },
+  "primaryWeaponSlug": "ork-choppa-slugga",
+  "tacticalDescription": "Aggressive melee swarm unit. Mass charge mechanics provide bonus penetration and disruption on contact.",
+  "artImagePath": "/assets/art/ork_boy.jpg"
+}

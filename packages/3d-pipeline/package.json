@@ -1,0 +1,27 @@
+{
+  "name": "@statvault/3d-pipeline",
+  "version": "1.0.2",
+  "description": "3D asset compression, Draco geometry quantization, and KTX2 texture transcoding pipeline for StatVault WebGL viewports",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "statvault-vram": "./dist/inspect-vram.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "inspect": "ts-node src/inspect-vram.ts"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "^3.10.1",
+    "@gltf-transform/extensions": "^3.10.1",
+    "@gltf-transform/functions": "^3.10.1",
+    "draco3dgltf": "^1.5.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "license": "MIT"
+}

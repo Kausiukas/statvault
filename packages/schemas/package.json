@@ -1,0 +1,19 @@
+{
+  "name": "@statvault/schemas",
+  "version": "1.0.2",
+  "description": "Zod and TypeScript schema specifications for StatVault units, weapons, lore dataslates, and patch diffs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/**/*.ts"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "e4b2d1c9-7f3e-4b2a-8c5d-9a1b2c3d4e5f",
+  "slug": "space-marine-intercessor",
+  "name": "Adeptus Astartes Tactical Squad (Intercessor Mk.X)",
+  "faction": "adeptus_astartes",
+  "subFaction": "Ultramarines 2nd Company",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1600,
+    "modelCount": 8,
+    "armor": 90,
+    "speedMps": 5.8,
+    "chargeSpeedMps": 7.4,
+    "acceleration": 4.5,
+    "massKgPerModel": 450,
+    "leadership": 85,
+    "baseCostPoints": 1050,
+    "collisionRadiusM": 0.85
+  },
+  "loreStats": {
+    "reactionTimeMs": 2.4,
+    "sprintSpeedMps": 24.5,
+    "sprintSpeedMph": 54.8,
+    "dreadAuraRadiusM": 75,
+    "dreadShockFactor": 0.85,
+    "armorComposition": "Bonded Ceramite-Adamantium composite plate with auto-reactive myomer bundles",
+    "armorEquivalentRHAmm": 450,
+    "combatStaminaHours": 72,
+    "citation": "Codex: Space Marines (9th Ed), Guy Haley - Dark Imperium (2017)",
+    "loreSummary": "Transhuman warrior engineered with 19 gene-seed organs, capable of continuous hypersonic combat without fatigue, projecting a paralyzing Transhuman Dread field against unaugmented baseline mortals."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/space-marine-intercessor.opt.glb",
+    "dracoCompressionRatio": 0.928,
+    "vramFootprintMb": 8.4,
+    "polyCount": 24500,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": ["BC7", "ASTC", "ETC1S"]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 72,
+      "mobility": 42,
+      "burstDmg": 58,
+      "sustainedDps": 62,
+      "utility": 55,
+      "mass": 50
+    },
+    "loreCanon": {
+      "ehp": 95,
+      "mobility": 96,
+      "burstDmg": 89,
+      "sustainedDps": 88,
+      "utility": 82,
+      "mass": 85
+    }
+  },
+  "primaryWeaponSlug": "godwyn-bolt-rifle",
+  "tacticalDescription": "Primary line shock infantry. High armor and EHP mitigation against small arms. High mass prevents knockback disruption.",
+  "artImagePath": "/assets/art/space_marine_intercessor.jpg"
+}

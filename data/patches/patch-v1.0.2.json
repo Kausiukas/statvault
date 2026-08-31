@@ -1,0 +1,60 @@
+{
+  "buildVersion": "v1.0.2",
+  "releaseDate": "2026-08-15T12:00:00Z",
+  "title": "Warcore Balance Patch 1.0.2 - Shock Infantry & Armor Tuning",
+  "gameEngine": "Warcore RTS",
+  "summary": "Recalibrates base Astartes kinetic momentum, enhances Kasrkin armor penetration, and adjusts Ork Choppa mass scaling to improve mid-tier melee counterplay.",
+  "unitDeltas": [
+    {
+      "unitSlug": "space-marine-intercessor",
+      "unitName": "Adeptus Astartes Tactical Squad",
+      "attribute": "Armor Rating (A)",
+      "previousValue": 85,
+      "newValue": 90,
+      "deltaFormatted": "+5 Armor",
+      "changeType": "buff",
+      "tacticalRationale": "Increased armor rating to better reflect ceramite plate resistance against small arms volley fire."
+    },
+    {
+      "unitSlug": "space-marine-intercessor",
+      "unitName": "Adeptus Astartes Tactical Squad",
+      "attribute": "Charge Speed",
+      "previousValue": 7.0,
+      "newValue": 7.4,
+      "deltaFormatted": "+0.4 m/s",
+      "changeType": "buff",
+      "tacticalRationale": "Slightly compresses the charge duration to improve shock assault responsiveness without breaking collision grids."
+    },
+    {
+      "unitSlug": "kasrkin-grenadier",
+      "unitName": "Kasrkin Elite Grenadiers",
+      "attribute": "Weapon AP",
+      "previousValue": 40,
+      "newValue": 45,
+      "deltaFormatted": "+5 AP",
+      "changeType": "buff",
+      "tacticalRationale": "Enhanced hot-shot lasgun penetration against monstrous creatures and power armored units."
+    },
+    {
+      "unitSlug": "cadian-shock-trooper",
+      "unitName": "Cadian Infantry Guardsmen",
+      "attribute": "Point Cost",
+      "previousValue": 450,
+      "newValue": 400,
+      "deltaFormatted": "-50 pts",
+      "changeType": "buff",
+      "tacticalRationale": "Reduced cost to allow larger Imperial Guard defensive line formations in competitive matches."
+    },
+    {
+      "unitSlug": "ork-boyz",
+      "unitName": "Ork Boyz Mob",
+      "attribute": "Base HP",
+      "previousValue": 1800,
+      "newValue": 1920,
+      "deltaFormatted": "+120 HP",
+      "changeType": "buff",
+      "tacticalRationale": "Increased health pool to compensate for low armor rating against high rate-of-fire weapons."
+    }
+  ],
+  "approvedByLeadArchitect": true
+}

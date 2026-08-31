@@ -1,0 +1,27 @@
+{
+  "id": "w5f2b6c8-3e7a-8c1d-2a5f-6b8c0d2e4f6a",
+  "slug": "warp-daemon-blade",
+  "name": "Accursed Daemon Blade & Combi-Bolter",
+  "type": "warp_daemon",
+  "faction": "chaos_space_marines",
+  "engineDamage": {
+    "baseDamage": 48,
+    "armorPenetration": 50,
+    "attacksPerSecond": 1.4,
+    "rangeMeters": 140,
+    "accuracyPercent": 85,
+    "projectileVelocityMps": 500,
+    "burstCount": 2,
+    "reloadTimeSeconds": 2.0
+  },
+  "loreDescriptor": {
+    "caliber": "Bound Neverborn Entity within Monomolecular Adamantine Matrix",
+    "propellant": "Psychic warp-fire resonance",
+    "muzzleVelocityMps": 1100,
+    "effectiveRangeKm": 1.8,
+    "thermalYieldKelvin": 18000,
+    "loreEffectDescription": "A blade bound with a screaming warp entity that cuts through physical armor and psychic wards alike, devouring the target's soul essence.",
+    "citation": "Codex: Chaos Space Marines (9th Ed), The Book of the Damned"
+  },
+  "iconSlug": "daemon-blade-icon"
+}

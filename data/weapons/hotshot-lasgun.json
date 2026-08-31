@@ -1,0 +1,27 @@
+{
+  "id": "w2c9e3f5-0b4d-5f8a-9d2c-3e5f7a9b1c3d",
+  "slug": "hotshot-lasgun",
+  "name": "Type XIV Hellgun (Hot-shot Lasgun)",
+  "type": "energy_las",
+  "faction": "astra_militarum",
+  "engineDamage": {
+    "baseDamage": 42,
+    "armorPenetration": 45,
+    "attacksPerSecond": 1.1,
+    "rangeMeters": 160,
+    "accuracyPercent": 88,
+    "projectileVelocityMps": 1200,
+    "burstCount": 1,
+    "reloadTimeSeconds": 2.8
+  },
+  "loreDescriptor": {
+    "caliber": "Continuous High-Energy Coherent Photonic Beam",
+    "propellant": "High-density Liquid Metal Backpack Capacitor Powerpack",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 1.5,
+    "thermalYieldKelvin": 12500,
+    "loreEffectDescription": "Overcharged laser emitter cycling massive electrical charges. Vaporizes light armor and melts straight through ceramite joints with concentrated thermal transfer.",
+    "citation": "Munitorum Field Manual: Special Operations Division"
+  },
+  "iconSlug": "hotshot-lasgun-icon"
+}

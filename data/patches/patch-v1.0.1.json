@@ -1,0 +1,30 @@
+{
+  "buildVersion": "v1.0.1",
+  "releaseDate": "2026-08-01T09:30:00Z",
+  "title": "Warcore Balance Patch 1.0.1 - Day One Tactical Hotfix",
+  "gameEngine": "Warcore RTS",
+  "summary": "Addresses launch-day pathfinding collisions and adjusts Chaos Chosen weapon cooldowns.",
+  "unitDeltas": [
+    {
+      "unitSlug": "chaos-chosen",
+      "unitName": "Chaos Chosen Warriors",
+      "attribute": "Base Cost Points",
+      "previousValue": 1250,
+      "newValue": 1150,
+      "deltaFormatted": "-100 pts",
+      "changeType": "buff",
+      "tacticalRationale": "Normalized pricing relative to loyalist Terminator and Veteran squads."
+    },
+    {
+      "unitSlug": "space-marine-intercessor",
+      "unitName": "Adeptus Astartes Tactical Squad",
+      "attribute": "Collision Radius",
+      "previousValue": 1.0,
+      "newValue": 0.85,
+      "deltaFormatted": "-0.15m Radius",
+      "changeType": "fix",
+      "tacticalRationale": "Reduced model collision footprint to avoid pathfinding congestion around narrow choke-points."
+    }
+  ],
+  "approvedByLeadArchitect": true
+}

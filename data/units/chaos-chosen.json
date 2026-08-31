@@ -1,0 +1,61 @@
+{
+  "id": "a9c7e5b3-1d4f-4e6a-8b2c-0e8d6a4f2c1b",
+  "slug": "chaos-chosen",
+  "name": "Chaos Chosen Warriors",
+  "faction": "chaos_space_marines",
+  "subFaction": "Black Legion Veteran Cadre",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1750,
+    "modelCount": 8,
+    "armor": 95,
+    "speedMps": 5.8,
+    "chargeSpeedMps": 7.6,
+    "acceleration": 4.6,
+    "massKgPerModel": 470,
+    "leadership": 90,
+    "baseCostPoints": 1150,
+    "collisionRadiusM": 0.85
+  },
+  "loreStats": {
+    "reactionTimeMs": 1.8,
+    "sprintSpeedMps": 26.0,
+    "sprintSpeedMph": 58.2,
+    "dreadAuraRadiusM": 90,
+    "dreadShockFactor": 0.95,
+    "armorComposition": "Warp-Forged Corrupted Ceramite, mutated bone lattices, and dark patron wards",
+    "armorEquivalentRHAmm": 520,
+    "combatStaminaHours": 120,
+    "citation": "Codex: Chaos Space Marines (9th Ed), Aaron Dembski-Bowden - Talon of Horus",
+    "loreSummary": "Veterans of the Long War empowered by millennia of Warp exposure and Dark God pacts. Emanates an overwhelming aura of cosmic terror and psychic despair."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/chaos-chosen.opt.glb",
+    "dracoCompressionRatio": 0.931,
+    "vramFootprintMb": 9.2,
+    "polyCount": 26800,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": ["BC7", "ASTC", "ETC1S"]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 78,
+      "mobility": 44,
+      "burstDmg": 75,
+      "sustainedDps": 68,
+      "utility": 60,
+      "mass": 52
+    },
+    "loreCanon": {
+      "ehp": 98,
+      "mobility": 98,
+      "burstDmg": 94,
+      "sustainedDps": 92,
+      "utility": 90,
+      "mass": 88
+    }
+  },
+  "primaryWeaponSlug": "warp-daemon-blade",
+  "tacticalDescription": "Elite melee/shock specialists with high terror rating and brutal burst armor-piercing damage.",
+  "artImagePath": "/assets/art/chaos_chosen.jpg"
+}
