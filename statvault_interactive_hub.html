@@ -497,19 +497,27 @@
                         </div>
 
                         <!-- Preset Model Loaders -->
+                        <!-- Preset Model Loaders & File Input -->
                         <div class="flex flex-wrap items-center gap-2 pt-1 border-t border-dataslate-100">
                             <span class="text-[11px] font-bold text-dataslate-700 uppercase tracking-wider">Quick Presets:</span>
                             <button onclick="loadPresetModel('running')" class="px-2.5 py-1 bg-imperium-blue/10 hover:bg-imperium-blue/20 border border-imperium-blue/30 text-imperium-blue font-bold rounded text-[11px] transition-all">
-                                🏃 Space Marine (Sprint GLB)
+                                🏃 Space Marine (Sprint)
                             </button>
                             <button onclick="loadPresetModel('walking')" class="px-2.5 py-1 bg-imperium-green/10 hover:bg-imperium-green/20 border border-imperium-green/30 text-imperium-green font-bold rounded text-[11px] transition-all">
-                                🚶 Space Marine (Walk GLB)
+                                🚶 Space Marine (Walk)
                             </button>
                             <button onclick="loadPresetModel('pbr')" class="px-2.5 py-1 bg-gold-50 hover:bg-gold-100 border border-gold-300 text-gold-700 font-bold rounded text-[11px] transition-all">
-                                🛡️ Space Marine (PBR Refined)
+                                🛡️ Space Marine (PBR)
                             </button>
+                            <button onclick="loadPresetModel('ork_boy')" class="px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 font-bold rounded text-[11px] transition-all">
+                                🧟 Ork Boy (3D Mesh)
+                            </button>
+                            <label class="cursor-pointer px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-800 font-bold rounded text-[11px] transition-all flex items-center gap-1">
+                                <span>📁 Load File (.glb)</span>
+                                <input type="file" accept=".glb,.gltf" onchange="loadLocalFileGLB(event)" class="hidden" />
+                            </label>
                             <button onclick="loadPresetModel('procedural')" class="px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-700 font-bold rounded text-[11px] transition-all">
-                                🎲 Procedural Armor Core
+                                🎲 Procedural Toy
                             </button>
                         </div>
                     </div>
@@ -1352,6 +1360,35 @@
             });
         }
 
+        // Cloud CDN Hosted 3D Models (Open CORS for direct browser streaming)
+        const PRESET_3D_MODELS = {
+            running: {
+                name: "Space Marine (Tactical Sprint GLB)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05967-7591-726f-9a30-9ee87b5a6a2c/output/Animation_Running_withSkin.glb?Expires=1788465779&Signature=cI6jEPvr27AYmLrKVJBZrhk~lXy7fR~Qf2uaA~Nkn3j4KMci1m0Euq-xyt8Qgbsz6TtCxbbm-uC91qrqyBtNuEpo3Y5SICdxsyAd0woM5ZGEpOf2AIKXDG4LluqCZe5vCZUn2nAkorsVyD1JZmSdHf8hLP5fwRNsIslvsDNAQJyH64fhTMzfEBgCzN4WnCGpHYTpjXfATpkW-V9-1Fvy~LU~3t29pLVqPRSU0N1xqN7kl2LSZimVOeI59TxXKptyHGGszVYEs6BW06RnF6KWY1BARiBL8-xcRrFoAod7D0ZxteMGkFx2-ZmphVZirvrE6embXt9JSVhgtreIg33Elw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            },
+            walking: {
+                name: "Space Marine (Patrol Walk GLB)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05967-7591-726f-9a30-9ee87b5a6a2c/output/Animation_Walking_withSkin.glb?Expires=1788465779&Signature=XOAXnobs0vlAkaUNoWlISPDkDjg86Jo-W-u5bomNgU9YLuuikgMY3F-SAW6w4gUIcCUP~qH24Z2vyT5S-176BXyjgwIb3gYC4BVU6IrHBL3hcsutqtSjrc6KVRixJjIBbrTp3wLfybNn8d08xOxgHLiUhsxCWvnH3ojVDVtwe~3zJgeizOshV7atrReM~ERd6~7pzYN~BhVlI90awmqYNNIsb8mocRRrnQzf92r6YA9vI1~WkMgymfMIdz0vNDJM0LFVwN01ZNcS5mUnbo6PBKu5CQMHMN3PwF6Pvfm~40Jo5bULfxfIndmKINrI-Cl6rc7psiKF6RxEtXJZat9jBg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            },
+            pbr: {
+                name: "Space Marine (PBR Refined Master GLB)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05966-5a32-7753-857e-31f6e845809f/output/model.glb?Expires=4941734400&Signature=Ui082GPFEL~yIktZbhDRBvVyNq6Yp8TeATMA-wYqYkFkYEwRC0Pe0s3gngJo5J~4vapbggGRUpMyGb8WV8h23ydepjO6h3oIEJDDYVnJBetXVQJwM7-1z7lJNk6ljpXjXatqkSZWxpWYQEBZ0vOUV3KLw8x5hxQRhCwfxUt8DuSSQGPDpSsEBzml9rGiPXPKTAgbk0OKxbM5iFSKKnR9tCML7fWiAp3LHLQwF08LpyEKtrR~xCgKFfxY89j9xwJ~eCG2ha--xnTDhTyqPjmPdcDkUHtcTYsxAnUMfe6-DevG7SebTb0hr0NvGhJqvo4WH9UerZl5yopo9Z5ZNDTmvQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            },
+            ork_boy: {
+                name: "Ork Boy (Choppa & Slugga 3D Mesh)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a0597c-6e62-724e-afad-bac10f687d96/output/model.glb?Expires=4941734400&Signature=H-de~wt-w-hfaN5QGnWIm-4dbgh27Y-s9I1Xi~jGrvQUUf6sQwX22qpaL5XyqoNQZwPcH4XFVS5sUtgVYoRkfQaM0W7vjxmqHxrgzQNFZFhaKDJf4ZkOuTiCJ5pL~ZQyrb7w41f9gEaP-QQorKsckcy-~fDZlaeH7hMtIgtEHY~3KpVQc2fEx0cQkQkUFNlhShGdhJaO9HYInzJV6-smv94Ohh7SguurR6H11rXNHYOg9XFb0vDy~9MRYX3~93ms-Z3AB3CW0esb0jvktp9l~KMDmt9bARryQVlQfRfW2mUc3-anpyR3pZ7Aw23HAyGk9bIR-D8Xq1M4ZRy-JucCLA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            }
+        };
+
+        // Load Local File (.glb) from User Disk (Bypasses Browser CORS)
+        function loadLocalFileGLB(event) {
+            const file = event.target.files && event.target.files[0];
+            if (file) {
+                const objectUrl = URL.createObjectURL(file);
+                loadGLBModel(objectUrl, `Local: ${file.name}`);
+            }
+        }
+
         // Load 3D GLB Model
         function loadGLBModel(url, label = '3D Unit Model') {
             const loadingOverlay = document.getElementById("three-loading");
@@ -1383,16 +1420,27 @@
                     const center = box.getCenter(new THREE.Vector3());
                     const size = box.getSize(new THREE.Vector3());
                     const maxDim = Math.max(size.x, size.y, size.z);
-                    const scale = 2.0 / maxDim;
+                    const scale = 2.4 / (maxDim || 1);
                     current3DObject.scale.set(scale, scale, scale);
-                    current3DObject.position.sub(center.multiplyScalar(scale));
-                    current3DObject.position.y = -0.9;
+
+                    // Recalculate box after scale to align feet with grid at y = -1.0
+                    box.setFromObject(current3DObject);
+                    current3DObject.position.x = - (box.min.x + box.max.x) / 2;
+                    current3DObject.position.y = - box.min.y - 1.0;
+                    current3DObject.position.z = - (box.min.z + box.max.z) / 2;
 
                     let totalTris = 0;
                     current3DObject.traverse((node) => {
                         if (node.isMesh) {
                             node.castShadow = true;
                             node.receiveShadow = true;
+                            if (node.material) {
+                                if (Array.isArray(node.material)) {
+                                    node.material.forEach(m => { m.side = THREE.DoubleSide; });
+                                } else {
+                                    node.material.side = THREE.DoubleSide;
+                                }
+                            }
                             if (node.geometry) {
                                 totalTris += node.geometry.index ? node.geometry.index.count / 3 : node.geometry.attributes.position.count / 3;
                             }
@@ -1422,7 +1470,7 @@
                     }
                 },
                 (error) => {
-                    console.warn("Direct GLB load failed (likely CORS or static serve), falling back to Procedural Armor Core:", error);
+                    console.warn("Direct GLB load failed, falling back to Procedural Armor Core:", error);
                     createProceduralArmorCore(label);
                 }
             );
@@ -1491,12 +1539,9 @@
 
         // Preset Loaders
         function loadPresetModel(type) {
-            if (type === 'running') {
-                loadGLBModel('public/models/space-marine-running.glb', 'Space Marine (Tactical Sprint GLB)');
-            } else if (type === 'walking') {
-                loadGLBModel('public/models/space-marine-walking.glb', 'Space Marine (Patrol Walk GLB)');
-            } else if (type === 'pbr') {
-                loadGLBModel('public/models/space-marine-intercessor.glb', 'Space Marine (PBR Refined Master GLB)');
+            if (PRESET_3D_MODELS[type]) {
+                const preset = PRESET_3D_MODELS[type];
+                loadGLBModel(preset.url, preset.name);
             } else {
                 createProceduralArmorCore('Procedural Tactical Core');
             }
