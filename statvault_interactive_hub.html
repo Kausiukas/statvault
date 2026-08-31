@@ -533,14 +533,17 @@
                             <!-- Preset Model Loaders & File Input -->
                             <div class="flex flex-wrap items-center gap-2 pt-1 border-t border-dataslate-100">
                                 <span class="text-[11px] font-bold text-dataslate-700 uppercase tracking-wider">Showcase Models:</span>
-                                <button onclick="loadPresetModel('pbr')" class="px-2.5 py-1 bg-gold-500 text-white hover:bg-gold-600 font-bold rounded text-[11px] transition-all shadow-sm">
-                                    🛡️ Space Marine (PBR Master - Solid Form)
+                                <button onclick="loadPresetModel('dual_pbr')" class="px-2.5 py-1 bg-gold-500 text-white hover:bg-gold-600 font-bold rounded text-[11px] transition-all shadow-sm">
+                                    ⚔️ Dual-Wield Veteran (PBR Master)
                                 </button>
-                                <button onclick="loadPresetModel('running')" class="px-2.5 py-1 bg-imperium-blue/10 hover:bg-imperium-blue/20 border border-imperium-blue/30 text-imperium-blue font-bold rounded text-[11px] transition-all">
-                                    🏃 Sprint Animation
+                                <button onclick="loadPresetModel('dual_sprint')" class="px-2.5 py-1 bg-imperium-blue/10 hover:bg-imperium-blue/20 border border-imperium-blue/30 text-imperium-blue font-bold rounded text-[11px] transition-all">
+                                    🏃 Dual-Wield Sprint (Rigid Arms)
                                 </button>
-                                <button onclick="loadPresetModel('walking')" class="px-2.5 py-1 bg-imperium-green/10 hover:bg-imperium-green/20 border border-imperium-green/30 text-imperium-green font-bold rounded text-[11px] transition-all">
-                                    🚶 Walk Animation
+                                <button onclick="loadPresetModel('dual_walk')" class="px-2.5 py-1 bg-imperium-green/10 hover:bg-imperium-green/20 border border-imperium-green/30 text-imperium-green font-bold rounded text-[11px] transition-all">
+                                    🚶 Dual-Wield Walk (Rigid Arms)
+                                </button>
+                                <button onclick="loadPresetModel('pbr')" class="px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-800 font-bold rounded text-[11px] transition-all">
+                                    🛡️ Tactical Marine (PBR)
                                 </button>
                                 <button onclick="loadPresetModel('ork_boy')" class="px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 font-bold rounded text-[11px] transition-all">
                                     🧟 Ork Boy
@@ -1964,8 +1967,8 @@
             gridHelper.position.y = -1;
             scene.add(gridHelper);
 
-            // Load PBR Master Model by default (Solid hard-surface geometry & true lore materials)
-            loadPresetModel('pbr');
+            // Load Dual-Wield PBR Master Model by default (Independent rigid weapon arms)
+            loadPresetModel('dual_pbr');
 
             // Render loop
             function animate() {
@@ -2005,17 +2008,29 @@
 
         // Cloud CDN Hosted 3D Models (Open CORS for direct browser streaming)
         const PRESET_3D_MODELS = {
+            dual_pbr: {
+                name: "Space Marine Assault Veteran (Dual-Wield PBR Master)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05999-2c91-71bc-9603-f57adcab5016/output/model.glb?Expires=4941734400&Signature=BKFrXjMLEkp10Ziolpexn1Yv9ZLcrv7ZzeR7AYWGs3kRWneTtU~Lc6SDnnWEyfZPciEn~liF29RNUKATiPU7E8YLJiiHxQxtsYiK0pLMOiiBP1S0XiiNGnmaJ9Wh3K5TKx0BzkaG01DfRqcumKghhR2HkYWwiBcW9gpvqpfJNb1HaDN5J~qWnIuYKhqZc7nnOz40NRJQWzruT-Y6DO1eHTCs2ygdX2Kh8XlbS5-9TyKTsSm9GLX-29vx5lleg2BRmX3Tyvd~pBptIlNTEoSf99Lqv1sqTYH0kV1v0myRwbSK5o3d99c~JWTDklrCJYGxnc6xFKxjCsrC5XdyQWSwOQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            },
+            dual_sprint: {
+                name: "Assault Marine (Dual-Wield Sprint - Rigid Arm Cycles)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05998-f0d2-7351-818d-bbd9902d1868/output/Animation_Running_withSkin.glb?Expires=1788469025&Signature=Evfy2jC5lqSh3mwA2d9LSCtWSVxWmyJqtczlu7HRwkH8uACLfVH9HoAosYbT1S4url-pYJNOdc5LaTOmRdnlpJ5w3QymgfuAt7pG9gv1PGhIV9bIIQL0-P0tJvEuTd9B7VFHSSlYZ~oJ8o2JCJVruTIq1r5UoYv2zVsSc~ZhS1gGZ2leNFMswy4aUAEy1w43cLx5OoS6U5eNMzrj6nQWoZRBsVh4WMQwEJzAtt7rSv2EofkZ-1x-Lni20Hmp3OERTgq6cmtyA49QePhiZGJU8OrBQkzUGnf9qYRBlhVLzIVzGLRXFgZt8QNHJx6iKanoY-E7yo0fCAFFPqRAy2Zdvg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            },
+            dual_walk: {
+                name: "Assault Marine (Dual-Wield Walk - Rigid Arm Cycles)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05998-f0d2-7351-818d-bbd9902d1868/output/Animation_Walking_withSkin.glb?Expires=1788469025&Signature=bnituoiP7YBIl52gb4RQd-Xwa1bzBrIlkELs-VbqZia-bcL0RtuUTMZlFH2D5OR3U9tquErGb7Z0QY0W4wZ0hS0367MPtZVYNQ50k3F4yx60h20qV5fsoxpIFZ9s8iqNtFInYOYC-ocDG0rIIPvnm12CLAcdUptYdd5Ae4QiYR32OuimC~979vHrKTqJ5Vd5XELDi6FGG18WIBhoV1leRdRoYz2bgKOvgGQgYQSb~4s5I2fyVZWctBri4Luf-T~hJR-j-hovYk80EnPUIIH~c1RpR7AS-qRuiq~~XhvzZiuOXos4fFSJyi4lX1OMEfSOn~Fvr8n2BDfLMEFp~wIFSw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            },
+            pbr: {
+                name: "Tactical Marine (Boltgun PBR Master)",
+                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05966-5a32-7753-857e-31f6e845809f/output/model.glb?Expires=4941734400&Signature=Ui082GPFEL~yIktZbhDRBvVyNq6Yp8TeATMA-wYqYkFkYEwRC0Pe0s3gngJo5J~4vapbggGRUpMyGb8WV8h23ydepjO6h3oIEJDDYVnJBetXVQJwM7-1z7lJNk6ljpXjXatqkSZWxpWYQEBZ0vOUV3KLw8x5hxQRhCwfxUt8DuSSQGPDpSsEBzml9rGiPXPKTAgbk0OKxbM5iFSKKnR9tCML7fWiAp3LHLQwF08LpyEKtrR~xCgKFfxY89j9xwJ~eCG2ha--xnTDhTyqPjmPdcDkUHtcTYsxAnUMfe6-DevG7SebTb0hr0NvGhJqvo4WH9UerZl5yopo9Z5ZNDTmvQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+            },
             running: {
-                name: "Space Marine (Tactical Sprint GLB)",
+                name: "Tactical Marine (Two-Handed Sprint)",
                 url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05967-7591-726f-9a30-9ee87b5a6a2c/output/Animation_Running_withSkin.glb?Expires=1788465779&Signature=cI6jEPvr27AYmLrKVJBZrhk~lXy7fR~Qf2uaA~Nkn3j4KMci1m0Euq-xyt8Qgbsz6TtCxbbm-uC91qrqyBtNuEpo3Y5SICdxsyAd0woM5ZGEpOf2AIKXDG4LluqCZe5vCZUn2nAkorsVyD1JZmSdHf8hLP5fwRNsIslvsDNAQJyH64fhTMzfEBgCzN4WnCGpHYTpjXfATpkW-V9-1Fvy~LU~3t29pLVqPRSU0N1xqN7kl2LSZimVOeI59TxXKptyHGGszVYEs6BW06RnF6KWY1BARiBL8-xcRrFoAod7D0ZxteMGkFx2-ZmphVZirvrE6embXt9JSVhgtreIg33Elw__&Key-Pair-Id=K1VGYTHIYLM9UM"
             },
             walking: {
-                name: "Space Marine (Patrol Walk GLB)",
+                name: "Tactical Marine (Two-Handed Walk)",
                 url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05967-7591-726f-9a30-9ee87b5a6a2c/output/Animation_Walking_withSkin.glb?Expires=1788465779&Signature=XOAXnobs0vlAkaUNoWlISPDkDjg86Jo-W-u5bomNgU9YLuuikgMY3F-SAW6w4gUIcCUP~qH24Z2vyT5S-176BXyjgwIb3gYC4BVU6IrHBL3hcsutqtSjrc6KVRixJjIBbrTp3wLfybNn8d08xOxgHLiUhsxCWvnH3ojVDVtwe~3zJgeizOshV7atrReM~ERd6~7pzYN~BhVlI90awmqYNNIsb8mocRRrnQzf92r6YA9vI1~WkMgymfMIdz0vNDJM0LFVwN01ZNcS5mUnbo6PBKu5CQMHMN3PwF6Pvfm~40Jo5bULfxfIndmKINrI-Cl6rc7psiKF6RxEtXJZat9jBg__&Key-Pair-Id=K1VGYTHIYLM9UM"
-            },
-            pbr: {
-                name: "Space Marine (PBR Refined Master GLB)",
-                url: "https://assets.meshy.ai/9c8fcae0-2323-4d0b-af1d-6c9cf56faabc/tasks/01a05966-5a32-7753-857e-31f6e845809f/output/model.glb?Expires=4941734400&Signature=Ui082GPFEL~yIktZbhDRBvVyNq6Yp8TeATMA-wYqYkFkYEwRC0Pe0s3gngJo5J~4vapbggGRUpMyGb8WV8h23ydepjO6h3oIEJDDYVnJBetXVQJwM7-1z7lJNk6ljpXjXatqkSZWxpWYQEBZ0vOUV3KLw8x5hxQRhCwfxUt8DuSSQGPDpSsEBzml9rGiPXPKTAgbk0OKxbM5iFSKKnR9tCML7fWiAp3LHLQwF08LpyEKtrR~xCgKFfxY89j9xwJ~eCG2ha--xnTDhTyqPjmPdcDkUHtcTYsxAnUMfe6-DevG7SebTb0hr0NvGhJqvo4WH9UerZl5yopo9Z5ZNDTmvQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
             },
             ork_boy: {
                 name: "Ork Boy (Choppa & Slugga 3D Mesh)",
