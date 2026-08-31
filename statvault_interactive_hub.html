@@ -517,73 +517,715 @@
                                 <input type="file" accept=".glb,.gltf" onchange="loadLocalFileGLB(event)" class="hidden" />
                             </label>
                             <button onclick="loadPresetModel('procedural')" class="px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-700 font-bold rounded text-[11px] transition-all">
-                                🎲 Procedural Toy
-                            </button>
-                        </div>
-                    </div>
+        <!-- TAB 4: 3D ASSET & VRAM INSPECTOR & CUSTOMIZATION SUITE -->
+        <section id="section-pipeline" class="space-y-6 hidden">
+            <!-- Context Banner -->
+            <div class="bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h2 class="text-xl font-extrabold text-dataslate-900 flex items-center gap-2">
+                        <span>🎲</span> 3D Model Forge, Armor Painter, Sigil Studio & Weapon Arsenal
+                    </h2>
+                    <p class="text-sm text-dataslate-700 mt-1 leading-relaxed">
+                        Inspect real-time 3D models in WebGL, customize chapter color palettes and material finishes, design heraldic sigils, inspect isolated rigid weapons in the **Weapon Forge**, or generate new models via **Meshy AI**.
+                    </p>
                 </div>
+                <div class="flex items-center gap-2">
+                    <span class="bg-gold-50 text-gold-700 border border-gold-300 text-xs font-mono font-bold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-sm">
+                        ⚡ Meshy v2 + PBR Studio
+                    </span>
+                </div>
+            </div>
 
-                <!-- VRAM Pipeline Calculator & Metrics (5 Columns) -->
-                <div class="lg:col-span-5 bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm space-y-4 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-base font-bold text-dataslate-900 border-b border-dataslate-100 pb-2 flex items-center justify-between">
-                            <span>📦 VRAM & Asset Metrics</span>
-                            <span class="text-xs bg-imperium-green/10 text-imperium-green font-bold px-2 py-0.5 rounded border border-imperium-green/20">-87.5% VRAM</span>
-                        </h3>
-                        <p class="text-xs text-dataslate-700 mt-2">
-                            GPU memory allocation for the active WebGL asset comparing raw uncompressed buffers versus Draco + KTX2 block-compression.
-                        </p>
+            <!-- Customizer Suite Sub-Navigation Bar -->
+            <div class="bg-dataslate-100 p-1.5 rounded-xl border border-dataslate-200 flex flex-wrap gap-1.5 shadow-inner">
+                <button onclick="switchStudioSubTab('viewport')" id="subtab-btn-viewport" class="studio-subtab px-3.5 py-2 text-xs font-bold rounded-lg bg-white text-dataslate-900 shadow-sm border border-dataslate-200 transition-all flex items-center gap-1.5">
+                    <span>🎮</span> 3D WebGL Viewport
+                </button>
+                <button onclick="switchStudioSubTab('painter')" id="subtab-btn-painter" class="studio-subtab px-3.5 py-2 text-xs font-bold rounded-lg text-dataslate-700 hover:bg-white hover:text-dataslate-900 transition-all flex items-center gap-1.5">
+                    <span>🎨</span> Armor Painter & Chapters
+                </button>
+                <button onclick="switchStudioSubTab('sigils')" id="subtab-btn-sigils" class="studio-subtab px-3.5 py-2 text-xs font-bold rounded-lg text-dataslate-700 hover:bg-white hover:text-dataslate-900 transition-all flex items-center gap-1.5">
+                    <span>⚜️</span> Logos & Sigil Creator
+                </button>
+                <button onclick="switchStudioSubTab('weapons')" id="subtab-btn-weapons" class="studio-subtab px-3.5 py-2 text-xs font-bold rounded-lg text-dataslate-700 hover:bg-white hover:text-dataslate-900 transition-all flex items-center gap-1.5">
+                    <span>⚔️</span> Weapon Forge & Arsenal
+                </button>
+                <button onclick="switchStudioSubTab('meshy')" id="subtab-btn-meshy" class="studio-subtab px-3.5 py-2 text-xs font-bold rounded-lg text-dataslate-700 hover:bg-white hover:text-dataslate-900 transition-all flex items-center gap-1.5">
+                    <span>⚡</span> Meshy AI 3D Generator
+                </button>
+                <button onclick="switchStudioSubTab('vram')" id="subtab-btn-vram" class="studio-subtab px-3.5 py-2 text-xs font-bold rounded-lg text-dataslate-700 hover:bg-white hover:text-dataslate-900 transition-all flex items-center gap-1.5">
+                    <span>📦</span> Draco & VRAM Metrics
+                </button>
+            </div>
+
+            <!-- MODULE 1: 3D VIEWPORT (Active Main Canvas) -->
+            <div id="studio-panel-viewport" class="space-y-4">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    <!-- 3D Canvas Viewport Container (8 Columns) -->
+                    <div class="lg:col-span-8 bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm flex flex-col justify-between space-y-3">
+                        <div class="flex justify-between items-center border-b border-dataslate-100 pb-2">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-base font-bold text-dataslate-900 flex items-center gap-1.5">
+                                    <span>🎮</span> WebGL Interactive 3D Model Viewport
+                                </h3>
+                                <span id="model-badge" class="text-[10px] bg-gold-50 text-gold-700 border border-gold-300 font-mono font-bold px-2 py-0.5 rounded">
+                                    Space Marine (PBR Refined Master)
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-1 text-xs">
+                                <span class="h-2 w-2 rounded-full bg-imperium-green animate-pulse"></span>
+                                <span class="font-mono text-dataslate-700 text-[11px]">WebGL 2.0 PBR Active</span>
+                            </div>
+                        </div>
+
+                        <!-- Three.js Canvas Div -->
+                        <div id="three-container" class="w-full h-96 bg-dataslate-950 rounded-xl relative overflow-hidden flex items-center justify-center cursor-grab active:cursor-grabbing border border-dataslate-800 shadow-inner">
+                            <div id="three-loading" class="absolute inset-0 bg-dataslate-950/90 flex flex-col items-center justify-center text-white text-xs font-mono gap-2 z-10">
+                                <div class="w-8 h-8 border-2 border-gold-500 border-t-transparent rounded-full animate-spin"></div>
+                                <span id="three-loading-text">Initializing Three.js WebGL & Loading 3D Mesh...</span>
+                            </div>
+                            <!-- Viewport Overlay Badges -->
+                            <div class="absolute top-3 left-3 bg-dataslate-900/80 backdrop-blur text-gold-400 font-mono text-[10px] px-2.5 py-1 rounded border border-gold-500/30 flex items-center gap-2">
+                                <span>FPS: <strong id="viewport-fps" class="text-white">60</strong></span>
+                                <span>•</span>
+                                <span>Tris: <strong id="viewport-polycount" class="text-white">24.5k</strong></span>
+                            </div>
+                            <!-- Active Scheme Badge -->
+                            <div class="absolute top-3 right-3 bg-dataslate-900/80 backdrop-blur text-blue-400 font-mono text-[10px] px-2.5 py-1 rounded border border-blue-500/30 flex items-center gap-1.5">
+                                <span>Scheme: <strong id="active-scheme-label" class="text-white">Ultramarines</strong></span>
+                            </div>
+                        </div>
+
+                        <!-- 3D Interactive Controls & Animation Playback Bar -->
+                        <div class="space-y-2.5 pt-1 text-xs">
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <!-- Animation Controls -->
+                                <div class="flex items-center gap-1.5 bg-dataslate-50 p-1.5 rounded-lg border border-dataslate-200">
+                                    <button id="anim-play-btn" onclick="toggleAnimationPlayback()" class="px-2.5 py-1 bg-gold-500 hover:bg-gold-600 font-bold text-white rounded text-xs transition-all shadow-sm">
+                                        ⏸️ Pause
+                                    </button>
+                                    <label class="text-[11px] font-bold text-dataslate-700 px-1">Speed:</label>
+                                    <select id="anim-speed-select" onchange="setAnimationSpeed(this.value)" class="bg-white border border-dataslate-300 text-dataslate-900 text-xs font-bold rounded p-1">
+                                        <option value="0.5">0.5x</option>
+                                        <option value="1.0" selected>1.0x (Normal)</option>
+                                        <option value="1.5">1.5x (Sprint)</option>
+                                        <option value="2.0">2.0x (Hyper)</option>
+                                    </select>
+                                </div>
+
+                                <!-- View & Lighting Controls -->
+                                <div class="flex items-center gap-1.5">
+                                    <button onclick="toggle3DWireframe()" id="wireframe-btn" class="px-2.5 py-1.5 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 font-bold rounded text-dataslate-800 transition-all">
+                                        🕸️ Wireframe
+                                    </button>
+                                    <button onclick="cycleLightingRig()" class="px-2.5 py-1.5 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 font-bold rounded text-dataslate-800 transition-all">
+                                        💡 <span id="lighting-label" class="font-mono text-gold-600">Studio</span>
+                                    </button>
+                                    <button onclick="reset3DCamera()" class="px-2.5 py-1.5 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 font-bold rounded text-dataslate-800 transition-all">
+                                        🔄 Reset View
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Preset Model Loaders & File Input -->
+                            <div class="flex flex-wrap items-center gap-2 pt-1 border-t border-dataslate-100">
+                                <span class="text-[11px] font-bold text-dataslate-700 uppercase tracking-wider">Showcase Models:</span>
+                                <button onclick="loadPresetModel('pbr')" class="px-2.5 py-1 bg-gold-500 text-white hover:bg-gold-600 font-bold rounded text-[11px] transition-all shadow-sm">
+                                    🛡️ Space Marine (PBR Master - Solid Form)
+                                </button>
+                                <button onclick="loadPresetModel('running')" class="px-2.5 py-1 bg-imperium-blue/10 hover:bg-imperium-blue/20 border border-imperium-blue/30 text-imperium-blue font-bold rounded text-[11px] transition-all">
+                                    🏃 Sprint Animation
+                                </button>
+                                <button onclick="loadPresetModel('walking')" class="px-2.5 py-1 bg-imperium-green/10 hover:bg-imperium-green/20 border border-imperium-green/30 text-imperium-green font-bold rounded text-[11px] transition-all">
+                                    🚶 Walk Animation
+                                </button>
+                                <button onclick="loadPresetModel('ork_boy')" class="px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 font-bold rounded text-[11px] transition-all">
+                                    🧟 Ork Boy
+                                </button>
+                                <label class="cursor-pointer px-2.5 py-1 bg-dataslate-100 hover:bg-dataslate-200 border border-dataslate-300 text-dataslate-800 font-bold rounded text-[11px] transition-all flex items-center gap-1">
+                                    <span>📁 Load File (.glb)</span>
+                                    <input type="file" accept=".glb,.gltf" onchange="loadLocalFileGLB(event)" class="hidden" />
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Asset Breakdown Cards -->
-                    <div class="space-y-2.5 text-xs">
-                        <div class="bg-dataslate-50 p-3 rounded-lg border border-dataslate-200 flex justify-between items-center">
-                            <div>
-                                <span class="font-bold text-dataslate-900 block">Mesh Geometry (.glb)</span>
-                                <span class="text-dataslate-700 text-[11px]">Google Draco Edgebreaker (14-bit)</span>
-                            </div>
-                            <div class="text-right font-mono">
-                                <span class="text-dataslate-700 line-through block text-[11px]">75.6 MB</span>
-                                <span class="text-imperium-green font-extrabold text-sm">3.2 MB (-95%)</span>
+                    <!-- Quick Chapter & Material Side Column (4 Columns) -->
+                    <div class="lg:col-span-4 bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm space-y-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-dataslate-900 border-b border-dataslate-100 pb-2 flex items-center justify-between">
+                                <span>🎨 Quick Chapter Styles</span>
+                                <button onclick="switchStudioSubTab('painter')" class="text-xs text-gold-600 font-bold hover:underline">Full Painter &rarr;</button>
+                            </h3>
+                            <div class="grid grid-cols-2 gap-2 mt-3 text-xs">
+                                <button onclick="applyChapterPreset('ultramarines')" class="p-2 rounded-lg border border-blue-200 hover:border-blue-500 bg-blue-50/50 flex items-center gap-2 text-left transition-all">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-blue-600 border border-gold-400"></span>
+                                    <span class="font-bold text-dataslate-800 text-[11px]">Ultramarines</span>
+                                </button>
+                                <button onclick="applyChapterPreset('blood_angels')" class="p-2 rounded-lg border border-red-200 hover:border-red-500 bg-red-50/50 flex items-center gap-2 text-left transition-all">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-red-600 border border-gold-400"></span>
+                                    <span class="font-bold text-dataslate-800 text-[11px]">Blood Angels</span>
+                                </button>
+                                <button onclick="applyChapterPreset('imperial_fists')" class="p-2 rounded-lg border border-yellow-200 hover:border-yellow-500 bg-yellow-50/50 flex items-center gap-2 text-left transition-all">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-yellow-400 border border-black"></span>
+                                    <span class="font-bold text-dataslate-800 text-[11px]">Imperial Fists</span>
+                                </button>
+                                <button onclick="applyChapterPreset('salamanders')" class="p-2 rounded-lg border border-emerald-200 hover:border-emerald-500 bg-emerald-50/50 flex items-center gap-2 text-left transition-all">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-emerald-600 border border-gold-400"></span>
+                                    <span class="font-bold text-dataslate-800 text-[11px]">Salamanders</span>
+                                </button>
+                                <button onclick="applyChapterPreset('raven_guard')" class="p-2 rounded-lg border border-slate-200 hover:border-slate-500 bg-slate-50/50 flex items-center gap-2 text-left transition-all">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-slate-900 border border-white"></span>
+                                    <span class="font-bold text-dataslate-800 text-[11px]">Raven Guard</span>
+                                </button>
+                                <button onclick="applyChapterPreset('white_scars')" class="p-2 rounded-lg border border-slate-200 hover:border-slate-500 bg-slate-50/50 flex items-center gap-2 text-left transition-all">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-white border border-red-600"></span>
+                                    <span class="font-bold text-dataslate-800 text-[11px]">White Scars</span>
+                                </button>
+                                <button onclick="applyChapterPreset('dark_angels')" class="p-2 rounded-lg border border-green-200 hover:border-green-500 bg-green-50/50 flex items-center gap-2 text-left transition-all">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-green-800 border border-stone-300"></span>
+                                    <span class="font-bold text-dataslate-800 text-[11px]">Dark Angels</span>
+                                </button>
+                                <button onclick="applyChapterPreset('black_templars')" class="p-2 rounded-lg border border-slate-200 hover:border-slate-500 bg-slate-50/50 flex items-center gap-2 text-left transition-all">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-black border border-red-600"></span>
+                                    <span class="font-bold text-dataslate-800 text-[11px]">Black Templars</span>
+                                </button>
                             </div>
                         </div>
 
-                        <div class="bg-dataslate-50 p-3 rounded-lg border border-dataslate-200 flex justify-between items-center">
-                            <div>
-                                <span class="font-bold text-dataslate-900 block">Albedo / Base Color</span>
-                                <span class="text-dataslate-700 text-[11px]">2048x2048 Basis Universal ETC1S</span>
-                            </div>
-                            <div class="text-right font-mono">
-                                <span class="text-dataslate-700 line-through block text-[11px]">16.0 MB VRAM</span>
-                                <span class="text-imperium-green font-extrabold text-sm">0.75 MB VRAM</span>
+                        <!-- Quick Weapon Equip -->
+                        <div class="border-t border-dataslate-100 pt-3">
+                            <h3 class="text-sm font-bold text-dataslate-900 pb-2 flex items-center justify-between">
+                                <span>⚔️ Quick Rigid Arsenal</span>
+                                <button onclick="switchStudioSubTab('weapons')" class="text-xs text-gold-600 font-bold hover:underline">Weapon Forge &rarr;</button>
+                            </h3>
+                            <div class="space-y-1.5 text-xs">
+                                <button onclick="equipRigidWeapon('bolt_rifle')" class="w-full p-2 bg-dataslate-50 hover:bg-dataslate-100 border border-dataslate-200 font-bold rounded-lg text-left flex justify-between items-center transition-all">
+                                    <span>💥 Godwyn Bolt Rifle</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">0.75 cal AP</span>
+                                </button>
+                                <button onclick="equipRigidWeapon('chainsword')" class="w-full p-2 bg-dataslate-50 hover:bg-dataslate-100 border border-dataslate-200 font-bold rounded-lg text-left flex justify-between items-center transition-all">
+                                    <span>🗡️ Astartes Chainsword</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Adamantine</span>
+                                </button>
+                                <button onclick="equipRigidWeapon('power_sword')" class="w-full p-2 bg-dataslate-50 hover:bg-dataslate-100 border border-dataslate-200 font-bold rounded-lg text-left flex justify-between items-center transition-all">
+                                    <span>⚡ Master Power Sword</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Energy Field</span>
+                                </button>
                             </div>
                         </div>
 
-                        <div class="bg-dataslate-50 p-3 rounded-lg border border-dataslate-200 flex justify-between items-center">
-                            <div>
-                                <span class="font-bold text-dataslate-900 block">Normal / ORM Maps</span>
-                                <span class="text-dataslate-700 text-[11px]">2048x2048 Basis Universal UASTC</span>
-                            </div>
-                            <div class="text-right font-mono">
-                                <span class="text-dataslate-700 line-through block text-[11px]">32.0 MB VRAM</span>
-                                <span class="text-imperium-green font-extrabold text-sm">4.0 MB VRAM</span>
-                            </div>
+                        <!-- Hard Surface Note -->
+                        <div class="bg-slate-900 text-gold-400 p-3 rounded-lg text-[11px] font-mono border border-slate-800">
+                            <strong class="text-white block mb-0.5">🛡️ Warcore Engine Rigid Socket:</strong>
+                            Weapons in the Forge are isolated 100% rigid props attached to bone sockets to prevent soft-skinning distortion.
                         </div>
-                    </div>
-
-                    <!-- VRAM Formula Explanation -->
-                    <div class="bg-slate-900 text-gold-400 p-3.5 rounded-lg text-xs font-mono space-y-1 border border-slate-800">
-                        <span class="text-white font-bold block">GPU Memory Math:</span>
-                        $$\text{VRAM} = \sum \left( W \times H \times bpp \times \frac{4}{3} \right)$$
-                        <span class="text-slate-400 block text-[10px] font-sans mt-1">
-                            KTX2 textures remain block-compressed inside GPU memory without inflating into uncompressed 32-bit RGBA bitmapped memory.
-                        </span>
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom Section: MESHY AI 3D MODEL FORGE & ANIMATION STUDIO -->
-            <div class="bg-white p-5 rounded-xl border-2 border-gold-500/40 shadow-sm space-y-5">
+            <!-- MODULE 2: ARMOR PAINTER & CHAPTER COLOR STUDIO (Full Panel) -->
+            <div id="studio-panel-painter" class="bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm space-y-5 hidden">
+                <div class="border-b border-dataslate-200 pb-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                    <div>
+                        <h3 class="text-lg font-extrabold text-dataslate-900 flex items-center gap-2">
+                            <span>🎨</span> Chapter Armor Painter & Custom Color Scheme Studio
+                        </h3>
+                        <p class="text-xs text-dataslate-700 mt-0.5">
+                            Apply authentic canonical Warhammer 40k Chapter & Legion heraldry or forge your own custom Chapter color scheme.
+                        </p>
+                    </div>
+                    <button onclick="applyCustomColorsTo3D()" class="px-4 py-2 bg-gold-500 hover:bg-gold-600 text-white text-xs font-extrabold rounded-lg shadow-sm transition-all flex items-center gap-1.5">
+                        <span>✨</span> Apply Custom Scheme to 3D Viewport
+                    </button>
+                </div>
+
+                <!-- 13 Chapter Presets Grid -->
+                <div>
+                    <h4 class="text-xs font-bold text-dataslate-700 uppercase tracking-wider mb-2.5">Canonical Faction Heraldry Presets:</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5">
+                        <div onclick="applyChapterPreset('ultramarines')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-blue-50/40 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#0047AB] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#D4AF37] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#FF0000] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Ultramarines</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">XIII Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('blood_angels')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-red-50/40 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#BA0C2F] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#D4AF37] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#00A86B] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Blood Angels</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">IX Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('imperial_fists')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-yellow-50/40 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#FFD100] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#1A1A1A] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#FF0000] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Imperial Fists</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">VII Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('salamanders')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-emerald-50/40 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#006A4E] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#D4AF37] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#FF6700] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Salamanders</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">XVIII Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('raven_guard')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-slate-100 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#111827] border border-white/40"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#F9FAFB] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#DC2626] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Raven Guard</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">XIX Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('white_scars')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-slate-100 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#FFFFFF] border border-black/30"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#B91C1C] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#F59E0B] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">White Scars</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">V Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('dark_angels')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-green-50/40 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#0B4F37] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#E5DCC5] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#DC2626] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Dark Angels</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">I Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('black_templars')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-slate-100 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#0F172A] border border-white/40"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#F8FAFC] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#DC2626] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Black Templars</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">Crusader Chapter</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('space_wolves')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-slate-100 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#4A607A] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#D97706] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#F59E0B] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Space Wolves</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">VI Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('death_guard')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-stone-100 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#78716C] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#4D7C0F] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#78350F] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Death Guard</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">XIV Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('emperors_children')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-purple-50/40 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#7E22CE] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#EC4899] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#EAB308] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Emperor's Children</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">III Legion</span>
+                        </div>
+
+                        <div onclick="applyChapterPreset('iron_warriors')" class="cursor-pointer p-3 rounded-xl border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 hover:bg-slate-100 transition-all text-center space-y-1.5 shadow-sm">
+                            <div class="flex justify-center gap-1">
+                                <span class="w-4 h-4 rounded-full bg-[#475569] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#FACC15] border border-black/20"></span>
+                                <span class="w-4 h-4 rounded-full bg-[#1E293B] border border-black/20"></span>
+                            </div>
+                            <span class="font-extrabold text-dataslate-900 text-xs block">Iron Warriors</span>
+                            <span class="text-[10px] text-dataslate-700 block font-mono">IV Legion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Color Picker & Material Sliders -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 pt-3 border-t border-dataslate-200">
+                    <!-- Color Pickers (7 Cols) -->
+                    <div class="md:col-span-7 space-y-3">
+                        <h4 class="text-xs font-bold text-dataslate-700 uppercase tracking-wider">Custom Palette Elements:</h4>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                            <div class="bg-dataslate-50 p-2.5 rounded-lg border border-dataslate-200">
+                                <label class="text-[11px] font-bold text-dataslate-700 block mb-1">Primary Armor:</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="color" id="picker-primary" value="#0047AB" onchange="onCustomColorInput()" class="w-8 h-8 rounded border border-dataslate-300 cursor-pointer p-0.5" />
+                                    <span id="picker-primary-hex" class="text-xs font-mono font-bold text-dataslate-900">#0047AB</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-dataslate-50 p-2.5 rounded-lg border border-dataslate-200">
+                                <label class="text-[11px] font-bold text-dataslate-700 block mb-1">Pauldron Trim:</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="color" id="picker-trim" value="#D4AF37" onchange="onCustomColorInput()" class="w-8 h-8 rounded border border-dataslate-300 cursor-pointer p-0.5" />
+                                    <span id="picker-trim-hex" class="text-xs font-mono font-bold text-dataslate-900">#D4AF37</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-dataslate-50 p-2.5 rounded-lg border border-dataslate-200">
+                                <label class="text-[11px] font-bold text-dataslate-700 block mb-1">Aquila / Chest:</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="color" id="picker-aquila" value="#D4AF37" onchange="onCustomColorInput()" class="w-8 h-8 rounded border border-dataslate-300 cursor-pointer p-0.5" />
+                                    <span id="picker-aquila-hex" class="text-xs font-mono font-bold text-dataslate-900">#D4AF37</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-dataslate-50 p-2.5 rounded-lg border border-dataslate-200">
+                                <label class="text-[11px] font-bold text-dataslate-700 block mb-1">Helmet Lenses:</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="color" id="picker-lenses" value="#FF0000" onchange="onCustomColorInput()" class="w-8 h-8 rounded border border-dataslate-300 cursor-pointer p-0.5" />
+                                    <span id="picker-lenses-hex" class="text-xs font-mono font-bold text-dataslate-900">#FF0000</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-dataslate-50 p-2.5 rounded-lg border border-dataslate-200">
+                                <label class="text-[11px] font-bold text-dataslate-700 block mb-1">Undersuit / Joints:</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="color" id="picker-joints" value="#1E1E1E" onchange="onCustomColorInput()" class="w-8 h-8 rounded border border-dataslate-300 cursor-pointer p-0.5" />
+                                    <span id="picker-joints-hex" class="text-xs font-mono font-bold text-dataslate-900">#1E1E1E</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-dataslate-50 p-2.5 rounded-lg border border-dataslate-200">
+                                <label class="text-[11px] font-bold text-dataslate-700 block mb-1">Weapon Casing:</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="color" id="picker-weapon" value="#DC2626" onchange="onCustomColorInput()" class="w-8 h-8 rounded border border-dataslate-300 cursor-pointer p-0.5" />
+                                    <span id="picker-weapon-hex" class="text-xs font-mono font-bold text-dataslate-900">#DC2626</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Material Finish Sliders (5 Cols) -->
+                    <div class="md:col-span-5 space-y-3 bg-dataslate-50 p-4 rounded-xl border border-dataslate-200 flex flex-col justify-between">
+                        <h4 class="text-xs font-bold text-dataslate-700 uppercase tracking-wider">PBR Surface Finish Modifiers:</h4>
+                        
+                        <div class="space-y-3 text-xs">
+                            <div>
+                                <div class="flex justify-between font-bold mb-1">
+                                    <span class="text-dataslate-700">Armor Metalness:</span>
+                                    <span id="val-metalness" class="font-mono text-gold-600">0.75</span>
+                                </div>
+                                <input type="range" id="slider-metalness" min="0" max="100" value="75" oninput="onCustomMaterialInput()" class="w-full accent-gold-500 cursor-pointer" />
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between font-bold mb-1">
+                                    <span class="text-dataslate-700">Ceramite Gloss / Roughness:</span>
+                                    <span id="val-roughness" class="font-mono text-gold-600">0.30</span>
+                                </div>
+                                <input type="range" id="slider-roughness" min="0" max="100" value="30" oninput="onCustomMaterialInput()" class="w-full accent-gold-500 cursor-pointer" />
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between font-bold mb-1">
+                                    <span class="text-dataslate-700">Battle Scars & Wear:</span>
+                                    <span id="val-wear" class="font-mono text-gold-600">15%</span>
+                                </div>
+                                <input type="range" id="slider-wear" min="0" max="100" value="15" oninput="onCustomMaterialInput()" class="w-full accent-gold-500 cursor-pointer" />
+                            </div>
+                        </div>
+
+                        <div class="pt-2 flex gap-2">
+                            <button onclick="applyCustomColorsTo3D()" class="flex-1 py-2 bg-gold-500 hover:bg-gold-600 text-white font-bold text-xs rounded-lg shadow-sm transition-all">
+                                🎨 Live Apply
+                            </button>
+                            <button onclick="applyChapterPreset('ultramarines')" class="px-3 py-2 bg-white hover:bg-dataslate-200 border border-dataslate-300 font-bold text-xs rounded-lg transition-all">
+                                🔄 Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODULE 3: CHAPTER LOGOS & SIGIL CREATOR STUDIO -->
+            <div id="studio-panel-sigils" class="bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm space-y-5 hidden">
+                <div class="border-b border-dataslate-200 pb-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                    <div>
+                        <h3 class="text-lg font-extrabold text-dataslate-900 flex items-center gap-2">
+                            <span>⚜️</span> Chapter Logos, Insignia & Sigil Creator Studio
+                        </h3>
+                        <p class="text-xs text-dataslate-700 mt-0.5">
+                            Select canonical Chapter sigils or design custom heraldic badges and project them directly onto unit shoulder pauldrons.
+                        </p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="downloadSigilPNG()" class="px-3 py-1.5 bg-white border border-dataslate-300 hover:bg-dataslate-100 text-dataslate-800 text-xs font-bold rounded-lg shadow-sm transition-all">
+                            💾 Export PNG
+                        </button>
+                        <button onclick="projectSigilToPauldron()" class="px-3.5 py-1.5 bg-gold-500 hover:bg-gold-600 text-white text-xs font-extrabold rounded-lg shadow-sm transition-all flex items-center gap-1">
+                            <span>🛡️</span> Project to Pauldron
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <!-- Left: Premade Insignias & Custom Designer Controls (7 Cols) -->
+                    <div class="md:col-span-7 space-y-4">
+                        <div>
+                            <h4 class="text-xs font-bold text-dataslate-700 uppercase tracking-wider mb-2">Select Insignia Glyph:</h4>
+                            <div class="grid grid-cols-3 sm:grid-cols-4 gap-2 text-xs">
+                                <button onclick="selectSigilGlyph('omega')" class="sigil-btn p-2 rounded-lg border-2 border-gold-500 bg-gold-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">ꭥ</span>
+                                    <span class="text-[10px] block">Ultima Omega</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('blood_drop')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">🩸</span>
+                                    <span class="text-[10px] block">Blood Drop</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('fist')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">✊</span>
+                                    <span class="text-[10px] block">Iron Fist</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('dragon')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">🐉</span>
+                                    <span class="text-[10px] block">Drake Head</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('raven')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">🦅</span>
+                                    <span class="text-[10px] block">Raven Silhouette</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('maltese')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">✠</span>
+                                    <span class="text-[10px] block">Templar Cross</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('sword')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">🗡️</span>
+                                    <span class="text-[10px] block">Winged Sword</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('mechanicus')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">⚙️</span>
+                                    <span class="text-[10px] block">Skull Cog</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('chaos_star')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">✴</span>
+                                    <span class="text-[10px] block">Chaos Star</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('inquisition')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">][</span>
+                                    <span class="text-[10px] block">Inquisition</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('ork_jaw')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">💀</span>
+                                    <span class="text-[10px] block">Ork Iron Jaw</span>
+                                </button>
+                                <button onclick="selectSigilGlyph('fleur')" class="sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center">
+                                    <span class="text-lg block">⚜️</span>
+                                    <span class="text-[10px] block">Fleur-de-lis</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Custom Sigil Options -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                            <div>
+                                <label class="font-bold text-dataslate-700 block mb-1">Badge Shield Shape:</label>
+                                <select id="sigil-shape" onchange="renderSigilCanvas()" class="w-full bg-dataslate-50 border border-dataslate-300 text-dataslate-900 text-xs font-bold rounded-lg p-2">
+                                    <option value="roundel">Imperial Roundel (Circle)</option>
+                                    <option value="shield" selected>Knightly Heater Shield</option>
+                                    <option value="diamond">Crux Diamond</option>
+                                    <option value="hexagon">Mechanicus Hexagon</option>
+                                    <option value="banner">Honor Purity Scroll</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="font-bold text-dataslate-700 block mb-1">Honor Roman Numeral:</label>
+                                <select id="sigil-numeral" onchange="renderSigilCanvas()" class="w-full bg-dataslate-50 border border-dataslate-300 text-dataslate-900 text-xs font-bold rounded-lg p-2">
+                                    <option value="none">-- None --</option>
+                                    <option value="I" selected>Squad I (First Company)</option>
+                                    <option value="II">Squad II</option>
+                                    <option value="III">Squad III</option>
+                                    <option value="IV">Squad IV</option>
+                                    <option value="X">Squad X (Veterans)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="font-bold text-dataslate-700 block mb-1">Emblem Color:</label>
+                                <input type="color" id="sigil-color-glyph" value="#FFFFFF" onchange="renderSigilCanvas()" class="w-full h-8 rounded border border-dataslate-300 cursor-pointer p-0.5" />
+                            </div>
+
+                            <div>
+                                <label class="font-bold text-dataslate-700 block mb-1">Badge Background:</label>
+                                <input type="color" id="sigil-color-bg" value="#0047AB" onchange="renderSigilCanvas()" class="w-full h-8 rounded border border-dataslate-300 cursor-pointer p-0.5" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Live 2D Sigil Canvas Preview (5 Cols) -->
+                    <div class="md:col-span-5 flex flex-col items-center justify-center bg-dataslate-950 p-6 rounded-xl border border-dataslate-800 space-y-3">
+                        <span class="text-xs font-mono text-gold-400 font-bold uppercase tracking-wider">Live Sigil Texture (256x256)</span>
+                        <div class="p-2 bg-dataslate-900 rounded-xl border border-gold-500/40 shadow-xl">
+                            <canvas id="sigil-canvas" width="256" height="256" class="w-48 h-48 rounded-lg shadow-inner"></canvas>
+                        </div>
+                        <span class="text-[11px] text-slate-400 text-center">Click "Project to Pauldron" to map this custom emblem directly onto the 3D unit mesh.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODULE 4: DEDICATED WEAPON FORGE & RIGID ARSENAL -->
+            <div id="studio-panel-weapons" class="bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm space-y-5 hidden">
+                <div class="border-b border-dataslate-200 pb-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                    <div>
+                        <h3 class="text-lg font-extrabold text-dataslate-900 flex items-center gap-2">
+                            <span>⚔️</span> Dedicated Weapon Forge & Rigid Arsenal Editor
+                        </h3>
+                        <p class="text-xs text-dataslate-700 mt-0.5">
+                            Inspect isolated 100% rigid 3D weapons without soft-skinning distortion, configure custom weapon attachments, and equip them to the character socket.
+                        </p>
+                    </div>
+                    <button onclick="equipCurrentWeaponToCharacter()" class="px-4 py-2 bg-gold-500 hover:bg-gold-600 text-white text-xs font-extrabold rounded-lg shadow-sm transition-all flex items-center gap-1.5">
+                        <span>⚔️</span> Equip Active Weapon to 3D Unit
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    <!-- Left: Isolated 3D Weapon Canvas (7 Cols) -->
+                    <div class="lg:col-span-7 bg-dataslate-950 p-4 rounded-xl border border-dataslate-800 flex flex-col justify-between space-y-3">
+                        <div class="flex justify-between items-center text-xs">
+                            <span class="text-gold-400 font-mono font-bold flex items-center gap-1">
+                                <span>🔍</span> Standalone Rigid 3D Weapon Inspector
+                            </span>
+                            <span id="weapon-badge" class="bg-dataslate-800 text-white font-mono text-[10px] px-2 py-0.5 rounded border border-slate-700">
+                                Godwyn Bolt Rifle
+                            </span>
+                        </div>
+
+                        <!-- 3D Weapon Canvas -->
+                        <div id="weapon-three-container" class="w-full h-80 bg-dataslate-900 rounded-lg relative overflow-hidden flex items-center justify-center cursor-grab active:cursor-grabbing border border-dataslate-800">
+                            <div id="weapon-loading" class="absolute inset-0 bg-dataslate-950/80 flex items-center justify-center text-white text-xs font-mono">
+                                Initializing Rigid Weapon Geometry...
+                            </div>
+                        </div>
+
+                        <!-- Weapon View Controls -->
+                        <div class="flex justify-between items-center text-xs text-slate-400">
+                            <div class="flex gap-2">
+                                <button onclick="toggleWeaponWireframe()" class="px-2.5 py-1 bg-dataslate-800 hover:bg-dataslate-700 text-white font-bold rounded text-[11px] border border-slate-700">
+                                    🕸️ Wireframe
+                                </button>
+                                <button onclick="resetWeaponCamera()" class="px-2.5 py-1 bg-dataslate-800 hover:bg-dataslate-700 text-white font-bold rounded text-[11px] border border-slate-700">
+                                    🔄 Reset Angle
+                                </button>
+                            </div>
+                            <span class="italic text-[10px]">Zero Soft-Skinning Deformation</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Arsenal Catalog & Weapon Customizer (5 Cols) -->
+                    <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-dataslate-700 uppercase tracking-wider mb-2">Select Arsenal Preset:</h4>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <button onclick="selectRigidWeaponPreset('bolt_rifle')" class="weapon-preset-btn p-2 rounded-lg border-2 border-gold-500 bg-gold-50 font-bold text-dataslate-900 text-left">
+                                    <span class="block">💥 Godwyn Bolt Rifle</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">0.75 cal Mass-Reactive</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('stalker_bolter')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
+                                    <span class="block">🎯 Stalker Bolt Rifle</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">High-Mag Sniper</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('auto_bolter')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
+                                    <span class="block">⚡ Auto Bolt Rifle</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">High-Capacity Drum</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('chainsword')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
+                                    <span class="block">🗡️ Astartes Chainsword</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Adamantine Teeth</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('power_sword')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
+                                    <span class="block">✨ Power Sword</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Disruption Field</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('plasma_gun')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
+                                    <span class="block">🔵 Plasma Incinerator</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Overcharged Coil</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('melta_gun')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
+                                    <span class="block">🔥 Multi-Melta</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Thermal Blast</span>
+                                </button>
+                                <button onclick="selectRigidWeaponPreset('lasgun')" class="weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left">
+                                    <span class="block">⚡ Kantrael Lasgun</span>
+                                    <span class="text-[10px] text-dataslate-700 font-mono">Standard Imperial</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Custom Weapon Configurator -->
+                        <div class="bg-dataslate-50 p-3.5 rounded-xl border border-dataslate-200 space-y-2.5 text-xs">
+                            <h4 class="font-bold text-dataslate-700 uppercase tracking-wider">Custom Weapon Attachments:</h4>
+                            
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>
+                                    <label class="font-bold text-dataslate-700 block mb-1">Casing Color:</label>
+                                    <select id="custom-weapon-casing" onchange="updateRigidWeaponMaterials()" class="w-full bg-white border border-dataslate-300 text-dataslate-900 text-xs font-bold rounded p-1.5">
+                                        <option value="#DC2626" selected>Imperial Red (#DC2626)</option>
+                                        <option value="#1E293B">Matte Tactical Black</option>
+                                        <option value="#F8FAFC">Relic Bone White</option>
+                                        <option value="#D97706">Masterwork Gold</option>
+                                        <option value="#0B4F37">Dark Angel Caliban Green</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="font-bold text-dataslate-700 block mb-1">Optics / Scope:</label>
+                                    <select id="custom-weapon-optic" onchange="updateRigidWeaponAttachments()" class="w-full bg-white border border-dataslate-300 text-dataslate-900 text-xs font-bold rounded p-1.5">
+                                        <option value="iron">Standard Iron Sights</option>
+                                        <option value="holo" selected>Tactical Holo-Sight</option>
+                                        <option value="scope">Stalker High-Mag Scope</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Live Weapon Stats -->
+                            <div class="grid grid-cols-3 gap-2 bg-white p-2.5 rounded-lg border border-dataslate-200 text-center font-mono">
+                                <div>
+                                    <span class="text-[10px] text-dataslate-700 block">DMG</span>
+                                    <strong id="wep-stat-dmg" class="text-dataslate-900 text-sm">45</strong>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] text-dataslate-700 block">AP</span>
+                                    <strong id="wep-stat-ap" class="text-imperium-blue text-sm">25</strong>
+                                </div>
+                                <div>
+                                    <span class="text-[10px] text-dataslate-700 block">RPM</span>
+                                    <strong id="wep-stat-rpm" class="text-gold-600 text-sm">360</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODULE 5: MESHY AI 3D MODEL FORGE (API Generator) -->
+            <div id="studio-panel-meshy" class="bg-white p-5 rounded-xl border-2 border-gold-500/40 shadow-sm space-y-5 hidden">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-dataslate-200 pb-3 gap-2">
                     <div>
                         <h3 class="text-lg font-extrabold text-dataslate-900 flex items-center gap-2">
@@ -658,6 +1300,97 @@
                                 <label class="text-xs font-bold text-dataslate-700 uppercase tracking-wider">Meshy Bearer API Key:</label>
                                 <span class="text-[10px] text-imperium-green font-bold font-mono">Authenticated</span>
                             </div>
+                            <input type="password" id="meshy-api-key" value="msy_b95iMAKXmOmaJ5qu0JREDvb8hFrAAYuWA2z9" class="w-full bg-white border border-dataslate-300 text-dataslate-900 text-xs font-mono rounded-lg p-2 focus:ring-gold-500 focus:border-gold-500" />
+                        </div>
+
+                        <!-- Progress Section -->
+                        <div id="meshy-progress-box" class="space-y-2 bg-white p-3 rounded-lg border border-dataslate-200">
+                            <div class="flex justify-between items-center text-xs">
+                                <span id="meshy-status-label" class="font-bold text-dataslate-800">Status: Standby</span>
+                                <span id="meshy-progress-pct" class="font-mono font-bold text-gold-600">0%</span>
+                            </div>
+                            <!-- Progress Bar -->
+                            <div class="w-full bg-dataslate-200 h-2.5 rounded-full overflow-hidden">
+                                <div id="meshy-progress-bar" class="bg-gold-500 h-full w-0 transition-all duration-300"></div>
+                            </div>
+                            <!-- Stage Pills -->
+                            <div class="flex justify-between text-[10px] font-mono text-dataslate-700 pt-1">
+                                <span id="stage-preview" class="px-1.5 py-0.5 rounded bg-dataslate-100 text-dataslate-700">1. Mesh</span>
+                                <span id="stage-refine" class="px-1.5 py-0.5 rounded bg-dataslate-100 text-dataslate-700">2. PBR Textures</span>
+                                <span id="stage-rigging" class="px-1.5 py-0.5 rounded bg-dataslate-100 text-dataslate-700">3. Rig & Animate</span>
+                                <span id="stage-render" class="px-1.5 py-0.5 rounded bg-dataslate-100 text-dataslate-700">4. WebGL Load</span>
+                            </div>
+                        </div>
+
+                        <!-- Cogitator Console Logs -->
+                        <div class="bg-dataslate-950 text-gold-400 p-2.5 rounded-lg text-[10px] font-mono h-24 overflow-y-auto border border-dataslate-800 space-y-1">
+                            <div class="text-slate-400">> STATVAULT 3D FORGE COGITATOR INITIALIZED</div>
+                            <div class="text-slate-400">> READY TO DISPATCH MESHY OPENAPI TASKS</div>
+                            <div id="meshy-console-output" class="text-amber-400"></div>
+                        </div>
+
+                        <!-- Forge Action Button -->
+                        <button id="meshy-forge-btn" onclick="commenceMeshyGeneration()" class="w-full py-2.5 bg-gold-500 hover:bg-gold-600 active:bg-gold-700 text-white font-extrabold text-xs uppercase tracking-wider rounded-lg transition-all shadow-md flex items-center justify-center gap-2">
+                            <span>🚀</span> Commence 3D Model Generation
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODULE 6: VRAM & DRACO METRICS -->
+            <div id="studio-panel-vram" class="bg-white p-5 rounded-xl border border-dataslate-200 shadow-sm space-y-4 hidden">
+                <div class="border-b border-dataslate-200 pb-3 flex justify-between items-center">
+                    <div>
+                        <h3 class="text-base font-bold text-dataslate-900">
+                            📦 Asset Optimization & VRAM Profiler
+                        </h3>
+                        <p class="text-xs text-dataslate-700 mt-1">
+                            Comparison between uncompressed source assets versus the optimized runtime glTF pipeline delivered via CDN.
+                        </p>
+                    </div>
+                    <span class="text-xs bg-imperium-green/10 text-imperium-green font-bold px-2.5 py-1 rounded-lg border border-imperium-green/20">
+                        -87.5% VRAM Reduction
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+                    <div class="bg-dataslate-50 p-4 rounded-xl border border-dataslate-200 space-y-1">
+                        <span class="font-bold text-dataslate-900 block">Mesh Geometry (.glb)</span>
+                        <span class="text-dataslate-700 text-[11px] block">Google Draco Edgebreaker (14-bit)</span>
+                        <div class="font-mono pt-2">
+                            <span class="text-dataslate-700 line-through text-[11px] block">75.6 MB</span>
+                            <span class="text-imperium-green font-extrabold text-base">3.2 MB (-95%)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-dataslate-50 p-4 rounded-xl border border-dataslate-200 space-y-1">
+                        <span class="font-bold text-dataslate-900 block">Albedo / Base Color</span>
+                        <span class="text-dataslate-700 text-[11px] block">2048x2048 Basis Universal ETC1S</span>
+                        <div class="font-mono pt-2">
+                            <span class="text-dataslate-700 line-through text-[11px] block">16.0 MB VRAM</span>
+                            <span class="text-imperium-green font-extrabold text-base">0.75 MB VRAM</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-dataslate-50 p-4 rounded-xl border border-dataslate-200 space-y-1">
+                        <span class="font-bold text-dataslate-900 block">Normal / ORM Maps</span>
+                        <span class="text-dataslate-700 text-[11px] block">2048x2048 Basis Universal UASTC</span>
+                        <div class="font-mono pt-2">
+                            <span class="text-dataslate-700 line-through text-[11px] block">32.0 MB VRAM</span>
+                            <span class="text-imperium-green font-extrabold text-base">4.0 MB VRAM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 text-gold-400 p-4 rounded-lg text-xs font-mono space-y-1 border border-slate-800">
+                    <span class="text-white font-bold block">GPU Memory Math:</span>
+                    $$\text{VRAM} = \sum \left( W \times H \times bpp \times \frac{4}{3} \right)$$
+                    <span class="text-slate-400 block text-[10px] font-sans mt-1">
+                        KTX2 textures remain block-compressed inside GPU memory without inflating into uncompressed 32-bit RGBA bitmapped memory.
+                    </span>
+                </div>
+            </div>
+        </section>
                             <input type="password" id="meshy-api-key" value="msy_b95iMAKXmOmaJ5qu0JREDvb8hFrAAYuWA2z9" class="w-full bg-white border border-dataslate-300 text-dataslate-900 text-xs font-mono rounded-lg p-2 focus:ring-gold-500 focus:border-gold-500" />
                         </div>
 
@@ -1839,6 +2572,545 @@
                 forgeBtn.innerHTML = `<span>🚀</span> Commence 3D Model Generation`;
                 forgeBtn.className = "w-full py-2.5 bg-gold-500 hover:bg-gold-600 text-white font-extrabold text-xs uppercase tracking-wider rounded-lg transition-all shadow-md flex items-center justify-center gap-2";
             }
+        }
+
+        // ==========================================
+        // 3D CUSTOMIZER SUITE & WEAPON FORGE ENGINE
+        // ==========================================
+
+        let activeStudioSubTab = 'viewport';
+        let currentChapterKey = 'ultramarines';
+        let activeSigilGlyph = 'omega';
+        let activeWeaponPreset = 'bolt_rifle';
+
+        // Chapter Preset Database
+        const CHAPTER_PRESETS = {
+            ultramarines: { name: "Ultramarines (XIII Legion)", primary: "#0047AB", trim: "#D4AF37", aquila: "#D4AF37", lenses: "#FF0000", joints: "#1E1E1E", weapon: "#DC2626", metalness: 0.75, roughness: 0.30, wear: 15 },
+            blood_angels: { name: "Blood Angels (IX Legion)", primary: "#BA0C2F", trim: "#D4AF37", aquila: "#D4AF37", lenses: "#00A86B", joints: "#1E1E1E", weapon: "#1E1E1E", metalness: 0.70, roughness: 0.35, wear: 20 },
+            imperial_fists: { name: "Imperial Fists (VII Legion)", primary: "#FFD100", trim: "#1A1A1A", aquila: "#D4AF37", lenses: "#FF0000", joints: "#1A1A1A", weapon: "#DC2626", metalness: 0.65, roughness: 0.40, wear: 25 },
+            salamanders: { name: "Salamanders (XVIII Legion)", primary: "#006A4E", trim: "#D4AF37", aquila: "#D4AF37", lenses: "#FF6700", joints: "#1A1A1A", weapon: "#1A1A1A", metalness: 0.75, roughness: 0.30, wear: 30 },
+            raven_guard: { name: "Raven Guard (XIX Legion)", primary: "#111827", trim: "#F9FAFB", aquila: "#9CA3AF", lenses: "#DC2626", joints: "#1F2937", weapon: "#111827", metalness: 0.85, roughness: 0.25, wear: 10 },
+            white_scars: { name: "White Scars (V Legion)", primary: "#FFFFFF", trim: "#B91C1C", aquila: "#EAB308", lenses: "#F59E0B", joints: "#374151", weapon: "#B91C1C", metalness: 0.60, roughness: 0.45, wear: 20 },
+            dark_angels: { name: "Dark Angels (I Legion)", primary: "#0B4F37", trim: "#E5DCC5", aquila: "#E5DCC5", lenses: "#DC2626", joints: "#1E293B", weapon: "#DC2626", metalness: 0.70, roughness: 0.35, wear: 20 },
+            black_templars: { name: "Black Templars", primary: "#0F172A", trim: "#F8FAFC", aquila: "#CA8A04", lenses: "#DC2626", joints: "#1E293B", weapon: "#DC2626", metalness: 0.80, roughness: 0.30, wear: 35 },
+            space_wolves: { name: "Space Wolves (VI Legion)", primary: "#4A607A", trim: "#D97706", aquila: "#D97706", lenses: "#F59E0B", joints: "#78350F", weapon: "#334155", metalness: 0.65, roughness: 0.40, wear: 40 },
+            death_guard: { name: "Death Guard (XIV Legion)", primary: "#78716C", trim: "#4D7C0F", aquila: "#78350F", lenses: "#84CC16", joints: "#44403C", weapon: "#78350F", metalness: 0.50, roughness: 0.65, wear: 80 },
+            emperors_children: { name: "Emperor's Children (III Legion)", primary: "#7E22CE", trim: "#EC4899", aquila: "#EAB308", lenses: "#38BDF8", joints: "#1E1E1E", weapon: "#EC4899", metalness: 0.90, roughness: 0.15, wear: 10 },
+            iron_warriors: { name: "Iron Warriors (IV Legion)", primary: "#475569", trim: "#FACC15", aquila: "#1E293B", lenses: "#DC2626", joints: "#0F172A", weapon: "#1E293B", metalness: 0.95, roughness: 0.20, wear: 50 }
+        };
+
+        // Subtab Navigation
+        function switchStudioSubTab(tab) {
+            activeStudioSubTab = tab;
+            ['viewport', 'painter', 'sigils', 'weapons', 'meshy', 'vram'].forEach(t => {
+                const btn = document.getElementById(`subtab-btn-${t}`);
+                const panel = document.getElementById(`studio-panel-${t}`);
+                if (btn && panel) {
+                    if (t === tab) {
+                        btn.className = "studio-subtab px-3.5 py-2 text-xs font-bold rounded-lg bg-white text-dataslate-900 shadow-sm border border-dataslate-200 transition-all flex items-center gap-1.5";
+                        panel.classList.remove('hidden');
+                    } else {
+                        btn.className = "studio-subtab px-3.5 py-2 text-xs font-bold rounded-lg text-dataslate-700 hover:bg-white hover:text-dataslate-900 transition-all flex items-center gap-1.5";
+                        panel.classList.add('hidden');
+                    }
+                }
+            });
+
+            if (tab === 'weapons' && !weaponRenderer) {
+                setTimeout(initWeaponInspector, 100);
+            }
+            if (tab === 'sigils') {
+                renderSigilCanvas();
+            }
+        }
+
+        // Armor Painter Engine
+        function applyChapterPreset(key) {
+            if (!CHAPTER_PRESETS[key]) return;
+            const c = CHAPTER_PRESETS[key];
+            currentChapterKey = key;
+
+            // Update Input Pickers
+            document.getElementById('picker-primary').value = c.primary;
+            document.getElementById('picker-primary-hex').innerText = c.primary;
+            document.getElementById('picker-trim').value = c.trim;
+            document.getElementById('picker-trim-hex').innerText = c.trim;
+            document.getElementById('picker-aquila').value = c.aquila;
+            document.getElementById('picker-aquila-hex').innerText = c.aquila;
+            document.getElementById('picker-lenses').value = c.lenses;
+            document.getElementById('picker-lenses-hex').innerText = c.lenses;
+            document.getElementById('picker-joints').value = c.joints;
+            document.getElementById('picker-joints-hex').innerText = c.joints;
+            document.getElementById('picker-weapon').value = c.weapon;
+            document.getElementById('picker-weapon-hex').innerText = c.weapon;
+
+            document.getElementById('slider-metalness').value = Math.round(c.metalness * 100);
+            document.getElementById('val-metalness').innerText = c.metalness.toFixed(2);
+            document.getElementById('slider-roughness').value = Math.round(c.roughness * 100);
+            document.getElementById('val-roughness').innerText = c.roughness.toFixed(2);
+            document.getElementById('slider-wear').value = c.wear;
+            document.getElementById('val-wear').innerText = `${c.wear}%`;
+
+            const badge = document.getElementById('active-scheme-label');
+            if (badge) badge.innerText = c.name.split(' ')[0];
+
+            applyCustomColorsTo3D();
+        }
+
+        function onCustomColorInput() {
+            document.getElementById('picker-primary-hex').innerText = document.getElementById('picker-primary').value;
+            document.getElementById('picker-trim-hex').innerText = document.getElementById('picker-trim').value;
+            document.getElementById('picker-aquila-hex').innerText = document.getElementById('picker-aquila').value;
+            document.getElementById('picker-lenses-hex').innerText = document.getElementById('picker-lenses').value;
+            document.getElementById('picker-joints-hex').innerText = document.getElementById('picker-joints').value;
+            document.getElementById('picker-weapon-hex').innerText = document.getElementById('picker-weapon').value;
+            applyCustomColorsTo3D();
+        }
+
+        function onCustomMaterialInput() {
+            const metal = parseFloat(document.getElementById('slider-metalness').value) / 100;
+            const rough = parseFloat(document.getElementById('slider-roughness').value) / 100;
+            const wear = parseInt(document.getElementById('slider-wear').value);
+
+            document.getElementById('val-metalness').innerText = metal.toFixed(2);
+            document.getElementById('val-roughness').innerText = rough.toFixed(2);
+            document.getElementById('val-wear').innerText = `${wear}%`;
+            applyCustomColorsTo3D();
+        }
+
+        function applyCustomColorsTo3D() {
+            if (!current3DObject) return;
+
+            const primary = document.getElementById('picker-primary').value;
+            const trim = document.getElementById('picker-trim').value;
+            const lenses = document.getElementById('picker-lenses').value;
+            const metal = parseFloat(document.getElementById('slider-metalness').value) / 100;
+            const rough = parseFloat(document.getElementById('slider-roughness').value) / 100;
+
+            const primColor = new THREE.Color(primary);
+
+            current3DObject.traverse((node) => {
+                if (node.isMesh && node.material) {
+                    const mats = Array.isArray(node.material) ? node.material : [node.material];
+                    mats.forEach(mat => {
+                        if (mat.isMeshStandardMaterial || mat.isMeshPhysicalMaterial) {
+                            mat.color = primColor.clone();
+                            mat.metalness = metal;
+                            mat.roughness = rough;
+                            mat.needsUpdate = true;
+                        }
+                    });
+                }
+            });
+        }
+
+        // ==========================================
+        // CHAPTER LOGOS & SIGIL CREATOR ENGINE
+        // ==========================================
+
+        function selectSigilGlyph(glyph) {
+            activeSigilGlyph = glyph;
+            document.querySelectorAll('.sigil-btn').forEach(btn => {
+                btn.className = "sigil-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-center";
+            });
+            event.currentTarget.className = "sigil-btn p-2 rounded-lg border-2 border-gold-500 bg-gold-50 font-bold text-dataslate-900 text-center";
+            renderSigilCanvas();
+        }
+
+        function renderSigilCanvas() {
+            const canvas = document.getElementById('sigil-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const w = canvas.width;
+            const h = canvas.height;
+
+            const shape = document.getElementById('sigil-shape').value;
+            const numeral = document.getElementById('sigil-numeral').value;
+            const glyphColor = document.getElementById('sigil-color-glyph').value;
+            const bgColor = document.getElementById('sigil-color-bg').value;
+
+            ctx.clearRect(0, 0, w, h);
+
+            // 1. Draw Background Shield
+            ctx.fillStyle = bgColor;
+            ctx.strokeStyle = '#D4AF37'; // Gold rim
+            ctx.lineWidth = 8;
+
+            ctx.beginPath();
+            if (shape === 'roundel') {
+                ctx.arc(w / 2, h / 2, w / 2 - 12, 0, Math.PI * 2);
+            } else if (shape === 'diamond') {
+                ctx.moveTo(w / 2, 14);
+                ctx.lineTo(w - 14, h / 2);
+                ctx.lineTo(w / 2, h - 14);
+                ctx.lineTo(14, h / 2);
+                ctx.closePath();
+            } else if (shape === 'hexagon') {
+                for (let i = 0; i < 6; i++) {
+                    const angle = (i * Math.PI) / 3;
+                    const x = w / 2 + (w / 2 - 16) * Math.cos(angle);
+                    const y = h / 2 + (h / 2 - 16) * Math.sin(angle);
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.closePath();
+            } else { // Heater Shield default
+                ctx.moveTo(30, 20);
+                ctx.lineTo(w - 30, 20);
+                ctx.lineTo(w - 30, h * 0.55);
+                ctx.quadraticCurveTo(w - 30, h - 20, w / 2, h - 10);
+                ctx.quadraticCurveTo(30, h - 20, 30, h * 0.55);
+                ctx.closePath();
+            }
+            ctx.fill();
+            ctx.stroke();
+
+            // 2. Draw Decorative Laurels / Trim
+            ctx.strokeStyle = '#FACC15';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // 3. Draw Selected Glyph
+            ctx.fillStyle = glyphColor;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            const GLYPH_CHARS = {
+                omega: 'ꭥ',
+                blood_drop: '🩸',
+                fist: '✊',
+                dragon: '🐉',
+                raven: '🦅',
+                maltese: '✠',
+                sword: '🗡️',
+                mechanicus: '⚙️',
+                chaos_star: '✴',
+                inquisition: '][',
+                ork_jaw: '💀',
+                fleur: '⚜️'
+            };
+
+            ctx.font = 'bold 84px Arial, sans-serif';
+            ctx.fillText(GLYPH_CHARS[activeSigilGlyph] || 'ꭥ', w / 2, h / 2 - (numeral !== 'none' ? 14 : 0));
+
+            // 4. Draw Squad Numeral
+            if (numeral !== 'none') {
+                ctx.fillStyle = '#D4AF37';
+                ctx.font = 'bold 22px "Courier New", monospace';
+                ctx.fillText(`- ${numeral} -`, w / 2, h - 45);
+            }
+        }
+
+        function downloadSigilPNG() {
+            const canvas = document.getElementById('sigil-canvas');
+            const link = document.createElement('a');
+            link.download = `statvault_chapter_sigil_${activeSigilGlyph}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        function projectSigilToPauldron() {
+            const canvas = document.getElementById('sigil-canvas');
+            if (!canvas || !current3DObject) return;
+
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.needsUpdate = true;
+
+            current3DObject.traverse((node) => {
+                if (node.isMesh && node.material) {
+                    const mats = Array.isArray(node.material) ? node.material : [node.material];
+                    mats.forEach(m => {
+                        m.map = texture;
+                        m.needsUpdate = true;
+                    });
+                }
+            });
+            alert("⚜️ Custom Chapter Sigil successfully projected onto 3D Unit Pauldron!");
+        }
+
+        // ==========================================
+        // DEDICATED 3D WEAPON FORGE & RIGID ARSENAL
+        // ==========================================
+
+        let weaponScene, weaponCamera, weaponRenderer, weaponControls, currentRigidWeaponMesh;
+
+        const WEAPON_PRESETS = {
+            bolt_rifle: { name: "Godwyn Pattern Bolt Rifle", dmg: 45, ap: 25, rpm: 360, class: "bolter", color: "#DC2626" },
+            stalker_bolter: { name: "Stalker Pattern Bolt Rifle", dmg: 75, ap: 40, rpm: 120, class: "stalker", color: "#1E293B" },
+            auto_bolter: { name: "Auto Bolt Rifle (Drum)", dmg: 38, ap: 18, rpm: 600, class: "auto", color: "#DC2626" },
+            chainsword: { name: "Astartes Chainsword", dmg: 65, ap: 15, rpm: 800, class: "chainsword", color: "#D4AF37" },
+            power_sword: { name: "Master Power Sword", dmg: 95, ap: 60, rpm: 100, class: "power_sword", color: "#38BDF8" },
+            plasma_gun: { name: "Plasma Incinerator", dmg: 120, ap: 70, rpm: 180, class: "plasma", color: "#06B6D4" },
+            melta_gun: { name: "Multi-Melta", dmg: 220, ap: 90, rpm: 80, class: "melta", color: "#F59E0B" },
+            lasgun: { name: "Kantrael Pattern Lasgun", dmg: 20, ap: 5, rpm: 450, class: "lasgun", color: "#4B5563" }
+        };
+
+        function initWeaponInspector() {
+            const container = document.getElementById('weapon-three-container');
+            if (!container || weaponRenderer) return;
+
+            weaponScene = new THREE.Scene();
+            weaponCamera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 50);
+            weaponCamera.position.set(0, 0.4, 1.8);
+
+            weaponRenderer = new THREE.WebGLRenderer({ antialias: true });
+            weaponRenderer.setSize(container.clientWidth, container.clientHeight);
+            weaponRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            weaponRenderer.toneMapping = THREE.ACESFilmicToneMapping;
+            container.appendChild(weaponRenderer.domElement);
+
+            if (typeof THREE.OrbitControls !== 'undefined') {
+                weaponControls = new THREE.OrbitControls(weaponCamera, weaponRenderer.domElement);
+                weaponControls.enableDamping = true;
+                weaponControls.dampingFactor = 0.05;
+            }
+
+            // Weapon Lighting
+            const amb = new THREE.AmbientLight(0xffffff, 1.2);
+            weaponScene.add(amb);
+            const dir = new THREE.DirectionalLight(0xffffff, 2.0);
+            dir.position.set(3, 5, 4);
+            weaponScene.add(dir);
+            const rim = new THREE.PointLight(0x38bdf8, 1.5, 10);
+            rim.position.set(-3, -2, -3);
+            weaponScene.add(rim);
+
+            // Floor Grid
+            const grid = new THREE.GridHelper(4, 10, 0xd4af37, 0x334155);
+            grid.position.y = -0.5;
+            weaponScene.add(grid);
+
+            selectRigidWeaponPreset('bolt_rifle');
+
+            const loading = document.getElementById('weapon-loading');
+            if (loading) loading.style.display = 'none';
+
+            function animateWeapon() {
+                requestAnimationFrame(animateWeapon);
+                if (currentRigidWeaponMesh) {
+                    currentRigidWeaponMesh.rotation.y += 0.008;
+                }
+                if (weaponControls) weaponControls.update();
+                weaponRenderer.render(weaponScene, weaponCamera);
+            }
+            animateWeapon();
+        }
+
+        function selectRigidWeaponPreset(key) {
+            if (!WEAPON_PRESETS[key]) return;
+            activeWeaponPreset = key;
+            const w = WEAPON_PRESETS[key];
+
+            document.getElementById('weapon-badge').innerText = w.name;
+            document.getElementById('wep-stat-dmg').innerText = w.dmg;
+            document.getElementById('wep-stat-ap').innerText = `${w.ap} AP`;
+            document.getElementById('wep-stat-rpm').innerText = w.rpm;
+
+            document.querySelectorAll('.weapon-preset-btn').forEach(btn => {
+                btn.className = "weapon-preset-btn p-2 rounded-lg border border-dataslate-200 hover:border-gold-500 bg-dataslate-50 font-bold text-dataslate-900 text-left";
+            });
+            if (event && event.currentTarget) {
+                event.currentTarget.className = "weapon-preset-btn p-2 rounded-lg border-2 border-gold-500 bg-gold-50 font-bold text-dataslate-900 text-left";
+            }
+
+            buildRigidWeapon3DMesh(w);
+        }
+
+        function buildRigidWeapon3DMesh(weaponData) {
+            if (!weaponScene) return;
+            if (currentRigidWeaponMesh) weaponScene.remove(currentRigidWeaponMesh);
+
+            const group = new THREE.Group();
+            const casingColor = document.getElementById('custom-weapon-casing') ? document.getElementById('custom-weapon-casing').value : weaponData.color;
+
+            const steelMat = new THREE.MeshStandardMaterial({ color: 0x222226, metalness: 0.9, roughness: 0.25 });
+            const casingMat = new THREE.MeshStandardMaterial({ color: new THREE.Color(casingColor), metalness: 0.6, roughness: 0.35 });
+            const goldMat = new THREE.MeshStandardMaterial({ color: 0xD4AF37, metalness: 0.95, roughness: 0.2 });
+
+            if (weaponData.class === 'chainsword') {
+                // Chainsword Body
+                const bladeGeo = new THREE.BoxGeometry(0.12, 1.1, 0.22);
+                const blade = new THREE.Mesh(bladeGeo, casingMat);
+                blade.position.set(0, 0.45, 0);
+                group.add(blade);
+
+                // Teeth Channel
+                const teethGeo = new THREE.BoxGeometry(0.06, 1.05, 0.08);
+                const teethMat = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, metalness: 0.95, roughness: 0.1 });
+                const teeth = new THREE.Mesh(teethGeo, teethMat);
+                teeth.position.set(0, 0.45, 0.12);
+                group.add(teeth);
+
+                // Crossguard & Motor
+                const motorGeo = new THREE.CylinderGeometry(0.12, 0.12, 0.25, 16);
+                const motor = new THREE.Mesh(motorGeo, goldMat);
+                motor.position.set(0, -0.15, 0);
+                motor.rotation.z = Math.PI / 2;
+                group.add(motor);
+
+                // Hilt
+                const hiltGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.35, 12);
+                const hilt = new THREE.Mesh(hiltGeo, steelMat);
+                hilt.position.set(0, -0.35, 0);
+                group.add(hilt);
+
+            } else if (weaponData.class === 'power_sword') {
+                // Power Blade
+                const bladeGeo = new THREE.BoxGeometry(0.04, 1.2, 0.18);
+                const bladeMat = new THREE.MeshStandardMaterial({
+                    color: 0x38bdf8,
+                    emissive: 0x0284c7,
+                    emissiveIntensity: 0.8,
+                    metalness: 0.9,
+                    roughness: 0.1
+                });
+                const blade = new THREE.Mesh(bladeGeo, bladeMat);
+                blade.position.set(0, 0.5, 0);
+                group.add(blade);
+
+                // Guard
+                const guardGeo = new THREE.BoxGeometry(0.45, 0.06, 0.1);
+                const guard = new THREE.Mesh(guardGeo, goldMat);
+                guard.position.set(0, -0.12, 0);
+                group.add(guard);
+
+                // Grip
+                const gripGeo = new THREE.CylinderGeometry(0.035, 0.035, 0.3, 12);
+                const grip = new THREE.Mesh(gripGeo, steelMat);
+                grip.position.set(0, -0.3, 0);
+                group.add(grip);
+
+            } else if (weaponData.class === 'plasma') {
+                // Plasma Rifle Receiver
+                const bodyGeo = new THREE.BoxGeometry(0.18, 0.3, 0.85);
+                const body = new THREE.Mesh(bodyGeo, casingMat);
+                group.add(body);
+
+                // Glowing Plasma Coils
+                const coilGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.45, 16);
+                const coilMat = new THREE.MeshStandardMaterial({
+                    color: 0x06b6d4,
+                    emissive: 0x0891b2,
+                    emissiveIntensity: 1.2,
+                    roughness: 0.1
+                });
+                const coil = new THREE.Mesh(coilGeo, coilMat);
+                coil.position.set(0, 0.12, -0.05);
+                coil.rotation.x = Math.PI / 2;
+                group.add(coil);
+
+                // Barrel
+                const bGeo = new THREE.CylinderGeometry(0.06, 0.06, 0.4, 16);
+                const barrel = new THREE.Mesh(bGeo, steelMat);
+                barrel.position.set(0, 0, 0.55);
+                barrel.rotation.x = Math.PI / 2;
+                group.add(barrel);
+
+            } else {
+                // Standard Bolt Rifle Pattern
+                // 1. Receiver / Upper Housing
+                const recGeo = new THREE.BoxGeometry(0.16, 0.28, 0.82);
+                const rec = new THREE.Mesh(recGeo, casingMat);
+                rec.position.set(0, 0, 0);
+                group.add(rec);
+
+                // 2. Heavy Barrel
+                const barrelGeo = new THREE.CylinderGeometry(0.05, 0.05, 0.45, 16);
+                const barrel = new THREE.Mesh(barrelGeo, steelMat);
+                barrel.position.set(0, 0.04, 0.55);
+                barrel.rotation.x = Math.PI / 2;
+                group.add(barrel);
+
+                // Muzzle Brake
+                const muzzleGeo = new THREE.CylinderGeometry(0.065, 0.065, 0.12, 16);
+                const muzzle = new THREE.Mesh(muzzleGeo, steelMat);
+                muzzle.position.set(0, 0.04, 0.78);
+                muzzle.rotation.x = Math.PI / 2;
+                group.add(muzzle);
+
+                // 3. Magazine (Box or Drum)
+                if (weaponData.class === 'auto') {
+                    const drumGeo = new THREE.CylinderGeometry(0.14, 0.14, 0.18, 16);
+                    const drum = new THREE.Mesh(drumGeo, steelMat);
+                    drum.position.set(0, -0.22, 0.1);
+                    group.add(drum);
+                } else {
+                    const magGeo = new THREE.BoxGeometry(0.12, 0.32, 0.16);
+                    const mag = new THREE.Mesh(magGeo, steelMat);
+                    mag.position.set(0, -0.22, 0.1);
+                    mag.rotation.x = -Math.PI / 12;
+                    group.add(mag);
+                }
+
+                // 4. Optic Sight
+                const scopeGeo = new THREE.CylinderGeometry(0.04, 0.04, 0.42, 16);
+                const scope = new THREE.Mesh(scopeGeo, steelMat);
+                scope.position.set(0, 0.2, 0);
+                scope.rotation.x = Math.PI / 2;
+                group.add(scope);
+
+                // 5. Imperial Aquila Crest on Casing
+                const crestGeo = new THREE.BoxGeometry(0.17, 0.08, 0.16);
+                const crest = new THREE.Mesh(crestGeo, goldMat);
+                crest.position.set(0, 0.02, 0);
+                group.add(crest);
+            }
+
+            group.position.set(0, 0, 0);
+            currentRigidWeaponMesh = group;
+            weaponScene.add(currentRigidWeaponMesh);
+        }
+
+        function updateRigidWeaponMaterials() {
+            if (WEAPON_PRESETS[activeWeaponPreset]) {
+                buildRigidWeapon3DMesh(WEAPON_PRESETS[activeWeaponPreset]);
+            }
+        }
+
+        function updateRigidWeaponAttachments() {
+            updateRigidWeaponMaterials();
+        }
+
+        function toggleWeaponWireframe() {
+            if (!currentRigidWeaponMesh) return;
+            currentRigidWeaponMesh.traverse(node => {
+                if (node.isMesh && node.material) {
+                    node.material.wireframe = !node.material.wireframe;
+                }
+            });
+        }
+
+        function resetWeaponCamera() {
+            if (weaponCamera && weaponControls) {
+                weaponCamera.position.set(0, 0.4, 1.8);
+                weaponControls.target.set(0, 0, 0);
+                weaponControls.update();
+            }
+        }
+
+        function equipRigidWeapon(weaponKey) {
+            selectRigidWeaponPreset(weaponKey);
+            equipCurrentWeaponToCharacter();
+        }
+
+        function equipCurrentWeaponToCharacter() {
+            if (!current3DObject || !currentRigidWeaponMesh) return;
+
+            // Remove any previously equipped rigid weapon prop
+            const existing = current3DObject.getObjectByName("rigid_equipped_weapon");
+            if (existing) current3DObject.remove(existing);
+
+            // Clone current weapon mesh
+            const weaponClone = currentRigidWeaponMesh.clone(true);
+            weaponClone.name = "rigid_equipped_weapon";
+            weaponClone.scale.set(0.85, 0.85, 0.85);
+
+            // Position rigidly at the Space Marine's right hand position
+            weaponClone.position.set(0.35, 0.85, 0.35);
+            weaponClone.rotation.set(0, -Math.PI / 6, 0);
+
+            current3DObject.add(weaponClone);
+            alert(`⚔️ ${WEAPON_PRESETS[activeWeaponPreset].name} equipped to Character Hand Socket! Rigid un-deformed attachment active.`);
         }
 
         // Render Patch History Table
