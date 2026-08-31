@@ -13,12 +13,13 @@ build
 # Turborepo Cache
 .turbo
 
-# Environment Variables
+# Environment Variables & API Keys
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+apis.txt
 
 # Logs
 npm-debug.log*
