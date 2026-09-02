@@ -1,0 +1,27 @@
+{
+  "id": "b2c4ed55-346d-4e51-ba5b-90efd4c35fdc",
+  "slug": "gauss-blaster",
+  "name": "Dual-Induction Gauss Blaster",
+  "type": "energy_gauss",
+  "faction": "necrons",
+  "engineDamage": {
+    "baseDamage": 44,
+    "armorPenetration": 45,
+    "attacksPerSecond": 1.25,
+    "rangeMeters": 200,
+    "accuracyPercent": 85,
+    "projectileVelocityMps": 650,
+    "burstCount": 2,
+    "reloadTimeSeconds": 2
+  },
+  "loreDescriptor": {
+    "caliber": "Twin-Linked High-Yield Sub-Atomic Induction Barrels",
+    "propellant": "Overcharged Gauss Capacitor Relay",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 2.2,
+    "thermalYieldKelvin": 120000,
+    "loreEffectDescription": "Emits twin synchronized pulses of emerald energy that instantly vaporize ceramite, plasteel, and organic sinew into shimmering atomic fog.",
+    "citation": "Codex: Necrons (9th Ed)"
+  },
+  "iconSlug": "gauss-blaster-icon"
+}

@@ -1,0 +1,65 @@
+{
+  "id": "d711eca6-7f4e-431f-a3fb-0e704c4afacf",
+  "slug": "necron-immortal",
+  "name": "Necron Immortals (Gauss Blaster Squad)",
+  "faction": "necrons",
+  "subFaction": "Sautekh Dynasty",
+  "role": "heavy_support",
+  "engineStats": {
+    "hitPoints": 1600,
+    "modelCount": 8,
+    "armor": 110,
+    "speedMps": 4.3,
+    "chargeSpeedMps": 5.4,
+    "acceleration": 4,
+    "massKgPerModel": 260,
+    "leadership": 105,
+    "baseCostPoints": 960,
+    "collisionRadiusM": 0.75
+  },
+  "loreStats": {
+    "reactionTimeMs": 0.5,
+    "sprintSpeedMps": 5.2,
+    "sprintSpeedMph": 11.6,
+    "dreadAuraRadiusM": 55,
+    "dreadShockFactor": 0.72,
+    "armorComposition": "Reinforced Heavy Necrodermis Carapace with Quantum Shielding Inlays",
+    "armorEquivalentRHAmm": 650,
+    "combatStaminaHours": "infinite",
+    "citation": "Codex: Necrons (9th Ed), Robert Rath - The Infinite and the Divine (2020)",
+    "loreSummary": "Veterans of the War in Heaven retain strategic tactical sentience. Armored in heavy necrodermis capable of withstanding direct anti-tank fire while returning hyper-accelerated gauss volleys."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/necron-immortal.opt.glb",
+    "dracoCompressionRatio": 0.9,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 49,
+      "mobility": 21,
+      "burstDmg": 33,
+      "sustainedDps": 55,
+      "utility": 85,
+      "mass": 28
+    },
+    "loreCanon": {
+      "ehp": 63,
+      "mobility": 30,
+      "burstDmg": 46,
+      "sustainedDps": 72,
+      "utility": 85,
+      "mass": 31
+    }
+  },
+  "primaryWeaponSlug": "gauss-blaster",
+  "tacticalDescription": "Heavy frontline fire-support cadre. Heavy armor mitigation and devastating anti-infantry armor-piercing firepower.",
+  "artImagePath": "/assets/art/necron_immortal.jpg"
+}
