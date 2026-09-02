@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `necron-immortal` | necrons | heavy_support | gauss-blaster |
 | `necron-warrior` | necrons | line_infantry | gauss-flayer |
 | `space-marine-intercessor` | adeptus_astartes | shock_infantry | godwyn-bolt-rifle |
 | `cadian-shock-trooper` | astra_militarum | line_infantry | kantrael-lasgun |
@@ -23,6 +24,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `gauss-blaster` | necrons | energy_gauss |
 | `gauss-flayer` | necrons | energy_gauss |
 | `godwyn-bolt-rifle` | adeptus_astartes | ballistic_slug |
 | `kantrael-lasgun` | astra_militarum | energy_las |
@@ -34,6 +36,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `necron-immortal-weapon_potency` | `necron-immortal` | weapon_potency | The Infinite and the Divine |
 | `necron-warrior-armor_durability` | `necron-warrior` | armor_durability | The Twice-Dead King: Ruin |
 
 ### 3D models without dataslates (`public/models/`)
@@ -63,7 +66,6 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 ## Suggested queue (priority order)
 
-2. **`necron-immortal`** — Necron Immortal + Gauss Blaster. Faction depth after Warrior.
 3. **`guardian-defender`** — Aeldari Guardian Defender + Shuriken Catapult. First Aeldari entry.
 4. **`hormagaunt`** — Tyranid Hormagaunt + Scything Talons. First Tyranid entry.
 5. **`fire-warrior`** — T'au Fire Warrior + Pulse Rifle. First T'au entry.
@@ -79,7 +81,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 4 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 2 | cadian-shock-trooper |
-| heavy_support | 0 | — |
+| heavy_support | 1 | — |
 | fast_attack | 0 | — |
 | monstrous_creature | 0 | — |
 | vehicle | 0 | — |
@@ -91,6 +93,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-02 | `necron-immortal`, `gauss-blaster`, `necron-immortal-weapon_potency` | statvault-wiki-agent |
 | 2026-09-02 | `necron-warrior`, `gauss-flayer`, `necron-warrior-armor_durability` | statvault-wiki-agent |
 | _(initial seed)_ | 5 units, 5 weapons | manual |
 
