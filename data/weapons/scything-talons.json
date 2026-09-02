@@ -1,0 +1,27 @@
+{
+  "id": "0c96ce6c-6184-44ad-87e7-0e947890f6e8",
+  "slug": "scything-talons",
+  "name": "Biomorphic Scything Talons",
+  "type": "bio_weapon",
+  "faction": "tyranids",
+  "engineDamage": {
+    "baseDamage": 22,
+    "armorPenetration": 18,
+    "attacksPerSecond": 2.5,
+    "rangeMeters": 2,
+    "accuracyPercent": 75,
+    "projectileVelocityMps": 0,
+    "burstCount": 2,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Hardened Chitinous Razor Bone Scythes",
+    "propellant": "Hydraulic Muscular Contraction",
+    "muzzleVelocityMps": 35,
+    "effectiveRangeKm": 0.002,
+    "loreEffectDescription": "Dense diamond-hard chitin talons powered by compressed tendon actuators, slicing limbs and shearing through flak armor with savage kinetic force.",
+    "citation": "Codex: Tyranids (9th Ed)"
+  },
+  "iconSlug": "scything-talons-icon",
+  "artImagePath": "/assets/art/scything_talons.jpg"
+}
