@@ -31,6 +31,46 @@
 
 ---
 
+<!-- FEATURED_HEADER_START -->
+<div align="center">
+
+## 🌟 Daily Featured Dataslate: Necron Immortals (Gauss Blaster Squad)
+*Autonomous Ingestion Pipeline — Canonical Lore Research, Dual-Lens Stats & Generated Visuals*
+
+<table>
+  <tr>
+    <td width="42%" align="center" valign="middle">
+      <img src="assets/art/necron_immortal.jpg" alt="Necron Immortals (Gauss Blaster Squad)" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
+      <br/>
+      <sub><b>StatVault Visual Asset:</b> Canonical Grimdark Dataslate Render</sub>
+    </td>
+    <td width="58%" valign="top">
+      <h3><b>Necron Immortals (Gauss Blaster Squad)</b></h3>
+      <p>
+        <img src="https://img.shields.io/badge/Faction-NECRONS-00ff66?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-HEAVY%20SUPPORT-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-960%20pts-gold?style=flat-square" />
+      </p>
+      <p><b>📖 Tactical Analysis:</b><br/>
+      <i>"Heavy frontline fire-support cadre. Heavy armor mitigation and devastating anti-infantry armor-piercing firepower."</i></p>
+      <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
+      • <b>Lore Armor Protection:</b> 650mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1600 HP (Armor Rating: 110)<br/>
+      • <b>RTS Tactical Speed:</b> 9.6 mph (15.5 km/h)<br/>
+      • <b>Primary Armament:</b> Dual-Induction Gauss Blaster (AP: 45, Base Dmg: 44)<br/>
+      • <b>Lore Phenomenon:</b> Veterans of the War in Heaven retain strategic tactical sentience. Armored in heavy necrodermis capable of withstanding direct anti-tank fir...</p>
+      <p>
+        <a href="data/units/necron-immortal.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/gauss-blaster.json"><b>💥 Weapon Specs (.json)</b></a> • <a href="public/models/necron-immortal.glb"><b>🎮 3D Model (.glb)</b></a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
+<!-- FEATURED_HEADER_END -->
+
 ## ⚡ Vision Statement & The Dual-Lens Perspective
 
 **StatVault** is an open-access, high-performance web dashboard, 3D asset inspection terminal, and analytical source-of-truth database built specifically for strategy gamers, modders, competitive RTS tacticians, and Warhammer 40,000 lore enthusiasts.

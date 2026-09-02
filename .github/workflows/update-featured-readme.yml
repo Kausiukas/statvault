@@ -1,0 +1,58 @@
+name: Update Featured Readme Header
+
+on:
+  workflow_run:
+    workflows: ["Generate 3D Model & Visuals (Meshy API)"]
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      unit_slug:
+        description: 'Unit slug to feature (optional, auto-detects latest if omitted)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: Update Readme Featured Card
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Readme Featured Generator
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.unit_slug }}" ]; then
+            ARGS="--unit ${{ inputs.unit_slug }}"
+          fi
+          npx ts-node scripts/update-readme-featured.ts $ARGS
+
+      - name: Commit & Push Changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain README.md)" ]; then
+            git add README.md
+            git commit -m "docs(readme): feature latest corpus ingestion [skip ci]"
+            git push origin main
+            echo "Successfully updated and pushed README.md."
+          else
+            echo "No changes detected in README.md."
+          fi
