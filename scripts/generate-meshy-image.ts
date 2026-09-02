@@ -85,6 +85,7 @@ const CANONICAL_IMAGE_PROMPTS: Record<string, string> = {
   'space-marine-intercessor': 'Warhammer 40k Adeptus Astartes Primaris Intercessor, Mark X Tacticus power armor, holding Godwyn Bolt Rifle, high-fidelity miniature render',
   'ork-boyz': 'Warhammer 40k Ork Boy, muscular green brute in scrap metal armor, holding crude Choppa cleaver and heavy Slugga pistol, high-fidelity miniature render',
   'chaos-chosen': 'Warhammer 40k Chaos Chosen Warrior, baroque corrupted power armor with horns, holding daemon sword, high-fidelity miniature render',
+  'hormagaunt': 'Warhammer 40k Tyranid Hormagaunt swarm bioform, chitinous purple carapace, beige bio-flesh, four bounding legs, two huge razor scything talons, snarling bio-jaw, dynamic ground stance, high-fidelity miniature render, studio neutral background',
 };
 
 async function main() {

@@ -67,11 +67,14 @@ function resolveLatestUnitSlug(requestedSlug?: string): string {
 function resolveUnitImage(unitSlug: string, artImagePath?: string): string {
   const normalized = unitSlug.replace(/-/g, '_');
   const candidates = [
+    artImagePath ? artImagePath.replace(/^\//, '') : undefined,
     `assets/art/${normalized}.jpg`,
     `assets/art/${normalized}.png`,
+    `assets/art/${unitSlug}.jpg`,
+    `assets/art/${unitSlug}.png`,
+    `assets/art/${normalized}_miniature.png`,
     `assets/art/meshy_${normalized}.png`,
     `assets/art/meshy_text_to_image_${normalized}.png`,
-    artImagePath ? artImagePath.replace(/^\//, '') : undefined,
   ].filter(Boolean) as string[];
 
   for (const c of candidates) {

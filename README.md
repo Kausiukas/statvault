@@ -40,7 +40,7 @@
 <table>
   <tr>
     <td width="42%" align="center" valign="middle">
-      <img src="assets/art/space_marine_intercessor.jpg" alt="Hormagaunt Swarm Brood" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
+      <img src="assets/art/hormagaunt.jpg" alt="Hormagaunt Swarm Brood" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
       <br/>
       <sub><b>StatVault Visual Asset:</b> Canonical Grimdark Dataslate Render</sub>
     </td>
@@ -60,7 +60,7 @@
       • <b>Primary Armament:</b> Biomorphic Scything Talons (AP: 18, Base Dmg: 22)<br/>
       • <b>Lore Phenomenon:</b> Hyperactive, ravenous vanguard swarm bioforms bounding across battlefields in erratic leaping patterns to overwhelm firing lines through she...</p>
       <p>
-        <a href="data/units/hormagaunt.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/scything-talons.json"><b>💥 Weapon Specs (.json)</b></a>
+        <a href="data/units/hormagaunt.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/scything-talons.json"><b>💥 Weapon Specs (.json)</b></a> • <a href="public/models/hormagaunt.glb"><b>🎮 3D Model (.glb)</b></a>
       </p>
     </td>
   </tr>
