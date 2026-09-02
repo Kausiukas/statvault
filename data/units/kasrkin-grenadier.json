@@ -9,7 +9,7 @@
     "hitPoints": 1120,
     "modelCount": 10,
     "armor": 60,
-    "speedMps": 5.0,
+    "speedMps": 5,
     "chargeSpeedMps": 6.2,
     "acceleration": 3.8,
     "massKgPerModel": 120,
@@ -18,11 +18,11 @@
     "collisionRadiusM": 0.55
   },
   "loreStats": {
-    "reactionTimeMs": 160.0,
+    "reactionTimeMs": 160,
     "sprintSpeedMps": 7.5,
     "sprintSpeedMph": 16.8,
     "dreadAuraRadiusM": 0,
-    "dreadShockFactor": 0.0,
+    "dreadShockFactor": 0,
     "armorComposition": "Hardened Plasteel and Ceramite composite Carapace Armor with sealed environmental rebreathers",
     "armorEquivalentRHAmm": 90,
     "combatStaminaHours": 18,
@@ -31,11 +31,15 @@
   },
   "asset3d": {
     "optimizedGlbPath": "/models/kasrkin-grenadier.opt.glb",
-    "dracoCompressionRatio": 0.915,
-    "vramFootprintMb": 7.8,
-    "polyCount": 21800,
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 22500,
     "textureResolution": "2048x2048",
-    "ktx2Formats": ["BC7", "ASTC", "ETC1S"]
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
   },
   "upiScores": {
     "inEngine": {
