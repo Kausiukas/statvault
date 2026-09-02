@@ -6,7 +6,8 @@
  * 2. Primary Weapon Multiview (3 images) via Meshy Text-to-Image (Nano Banana Pro, generate_multi_view: true)
  * 3. Unit in Action Concept Art (1 image, 16:9) in a lore-accurate battle environment
  *
- * Total Credits per run: ~21-23 credits
+ * Total Credits per run: 27 credits (3 tasks x 9 credits on Nano Banana Pro)
+ * Monthly Total (30 days): 810 credits / month (fully within 1,000 credit Pro plan)
  */
 
 import * as fs from 'fs';
@@ -245,7 +246,7 @@ async function generateConceptArt(apiKey: string, prompt: string, prefix: string
       if (Array.isArray(statusRes.image_urls) && statusRes.image_urls.length > 0) {
         imageUrl = statusRes.image_urls[0];
       }
-      console.log(`✓ Concept art task completed (consumed ${statusRes.consumed_credits ?? 3} credits)`);
+      console.log(`✓ Concept art task completed (consumed ${statusRes.consumed_credits ?? 9} credits)`);
       break;
     } else if (status === 'FAILED' || status === 'EXPIRED') {
       throw new Error(`Concept art task ${taskId} failed: ${statusRes.task_error?.message}`);
