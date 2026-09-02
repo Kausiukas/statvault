@@ -2,7 +2,7 @@ name: Update Featured Readme Header
 
 on:
   workflow_run:
-    workflows: ["Generate Visual Assets Suite (Meshy API)"]
+    workflows: ["Stamp Content Credentials & Provenance (C2PA/XMP)"]
     types:
       - completed
   workflow_dispatch:
