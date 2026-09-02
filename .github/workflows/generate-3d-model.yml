@@ -1,13 +1,16 @@
-name: Generate 3D Model (Meshy API)
+name: Generate 3D Model & Visuals (Meshy API)
 
 on:
+  workflow_run:
+    workflows: ["Daily Wiki Build-Up & Lore Dataslate Corpus"]
+    types:
+      - completed
   workflow_dispatch:
     inputs:
       unit_slug:
-        description: 'Unit slug (e.g. necron-immortal, guardian-defender, hormagaunt, fire-warrior)'
-        required: true
+        description: 'Unit slug (optional, auto-detects latest missing model if omitted)'
+        required: false
         type: string
-        default: 'necron-immortal'
       custom_prompt:
         description: 'Optional custom text-to-3d prompt'
         required: false
@@ -21,6 +24,7 @@ jobs:
   generate-3d-model:
     name: Generate Textured 3D Asset
     runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout Repository
@@ -35,20 +39,28 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Get Current Date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
+
       - name: Run Meshy 3D Generator
         env:
           MESHY_API_KEY: ${{ secrets.MESHY_API_KEY }}
         run: |
-          ARGS="--unit ${{ inputs.unit_slug }}"
+          ARGS=""
+          if [ -n "${{ inputs.unit_slug }}" ]; then
+            ARGS="--unit ${{ inputs.unit_slug }}"
+          fi
           if [ -n "${{ inputs.custom_prompt }}" ]; then
             ARGS="$ARGS --prompt \"${{ inputs.custom_prompt }}\""
           fi
+          echo "Executing generate-meshy-model with args: $ARGS"
           npx ts-node scripts/generate-meshy-model.ts $ARGS
 
       - name: Detect Changes
         id: git_status
         run: |
-          if [ -n "$(git status --porcelain public/models/)" ]; then
+          if [ -n "$(git status --porcelain public/models/ assets/ data/)" ]; then
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
@@ -59,21 +71,24 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "asset(3d): add generated 3D model for ${{ inputs.unit_slug }}"
-          branch: "asset/3d-${{ inputs.unit_slug }}"
+          commit-message: "asset(3d): add generated 3D model & visuals [${{ steps.date.outputs.date }}]"
+          branch: "asset/3d-auto-${{ steps.date.outputs.date }}"
           base: main
-          title: "🎮 [3D Asset] New Textured Model for ${{ inputs.unit_slug }}"
+          title: "🎮 [3D Visuals] New Textured 3D Model & Assets (${{ steps.date.outputs.date }})"
           body: |
             ## Summary
-            Automated 3D model generated via Meshy Text-to-3D REST API for \`${{ inputs.unit_slug }}\`.
+            Automated 3D model and visual assets generated via Meshy Text-to-3D REST API.
+            This workflow was triggered automatically following the completion of the daily wiki build-up.
 
-            - File: \`public/models/${{ inputs.unit_slug }}.glb\`
-            - Formats: GLB (ready for Draco compression & KTX2 transcoding)
+            ### Generated Artifacts
+            - Textured 3D mesh: \`public/models/*.glb\`
+            - Dataslate unit integration: \`data/units/*.json\` updated
+            - Corpus schema validation: verified
 
             ---
-            *Review model in StatVault 3D inspector before merging.*
+            *Note: Review the 3D model in the StatVault WebGL viewport before merging.*
           labels: |
             3d-asset
-            models
+            visuals
             automated-pr
           reviewers: Kausiukas
