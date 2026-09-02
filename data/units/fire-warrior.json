@@ -33,7 +33,7 @@
     "optimizedGlbPath": "/models/fire-warrior.opt.glb",
     "dracoCompressionRatio": 0.91,
     "vramFootprintMb": 7.2,
-    "polyCount": 20000,
+    "polyCount": 22500,
     "textureResolution": "2048x2048",
     "ktx2Formats": [
       "BC7",
@@ -61,5 +61,5 @@
   },
   "primaryWeaponSlug": "pulse-rifle",
   "tacticalDescription": "Superior long-range fire infantry. Highest non-heavy ballistic range and thermal energy output among core line infantry, vulnerable to close melee charges.",
-  "artImagePath": "/assets/art/fire_warrior.jpg"
+  "artImagePath": "assets/art/fire_warrior.png"
 }
