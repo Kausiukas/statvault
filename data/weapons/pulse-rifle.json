@@ -1,0 +1,28 @@
+{
+  "id": "81fa3982-2ce5-4680-8464-e7d70e170140",
+  "slug": "pulse-rifle",
+  "name": "Tau Pulse Rifle",
+  "type": "energy_pulse",
+  "faction": "tau_empire",
+  "engineDamage": {
+    "baseDamage": 38,
+    "armorPenetration": 28,
+    "attacksPerSecond": 1.1,
+    "rangeMeters": 230,
+    "accuracyPercent": 82,
+    "projectileVelocityMps": 750,
+    "burstCount": 1,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Sub-Atomic Micro-Plasma Filament Induction Barrel",
+    "propellant": "Linear Electromagnetic Particle Accelerator Coil",
+    "muzzleVelocityMps": 4500,
+    "effectiveRangeKm": 1.4,
+    "thermalYieldKelvin": 42000,
+    "loreEffectDescription": "Fires an accelerated particle packet surrounded by a stabilizing electromagnetic envelope that expands on impact into high-temperature superheated plasma.",
+    "citation": "Codex: Tau Empire (9th Ed)"
+  },
+  "iconSlug": "pulse-rifle-icon",
+  "artImagePath": "/assets/art/pulse_rifle.jpg"
+}

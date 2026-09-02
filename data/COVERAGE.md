@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `fire-warrior` | tau_empire | line_infantry | pulse-rifle |
 | `hormagaunt` | tyranids | shock_infantry | scything-talons |
 | `guardian-defender` | aeldari | line_infantry | shuriken-catapult |
 | `necron-immortal` | necrons | heavy_support | gauss-blaster |
@@ -26,6 +27,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `pulse-rifle` | tau_empire | energy_pulse |
 | `scything-talons` | tyranids | bio_weapon |
 | `shuriken-catapult` | aeldari | energy_shuriken |
 | `gauss-blaster` | necrons | energy_gauss |
@@ -40,6 +42,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `fire-warrior-weapon_potency` | `fire-warrior` | weapon_potency | Fire Caste |
 | `hormagaunt-velocity_discrepancy` | `hormagaunt` | velocity_discrepancy | The Devastation of Baal |
 | `guardian-defender-velocity_discrepancy` | `guardian-defender` | velocity_discrepancy | Path of the Warrior |
 | `necron-immortal-weapon_potency` | `necron-immortal` | weapon_potency | The Infinite and the Divine |
@@ -66,13 +69,12 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | necrons | 1 | Partial |
 | aeldari | 1 | Partial |
 | tyranids | 1 | Partial |
-| **tau_empire** | **0** | **Empty** |
+| tau_empire | 1 | Partial |
 
 ---
 
 ## Suggested queue (priority order)
 
-5. **`fire-warrior`** — T'au Fire Warrior + Pulse Rifle. First T'au entry.
 6. **`space-marine-assault`** — Assault Intercessor + Chainsword/Bolt Pistol. Model exists.
 7. **`leman-russ-battle-tank`** — First vehicle entry (astra_militarum).
 8. **`dreadnought-redemptor`** — First monstrous_creature entry (adeptus_astartes).
@@ -84,7 +86,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 5 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 3 | cadian-shock-trooper |
+| line_infantry | 4 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
 | monstrous_creature | 0 | — |
@@ -97,6 +99,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-02 | `fire-warrior`, `pulse-rifle`, `fire-warrior-weapon_potency` | statvault-wiki-agent |
 | 2026-09-02 | `hormagaunt`, `scything-talons`, `hormagaunt-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-02 | `guardian-defender`, `shuriken-catapult`, `guardian-defender-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-02 | `necron-immortal`, `gauss-blaster`, `necron-immortal-weapon_potency` | statvault-wiki-agent |
