@@ -34,33 +34,33 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Chaos Chosen Warriors
+## 🌟 Daily Featured Dataslate: Necron Immortals (Gauss Blaster Squad)
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Dual-Lens Stats & Generated Visuals*
 
 <table>
   <tr>
     <td width="42%" align="center" valign="middle">
-      <img src="assets/art/chaos_chosen.jpg" alt="Chaos Chosen Warriors" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
+      <img src="assets/art/necron_immortal.jpg" alt="Necron Immortals (Gauss Blaster Squad)" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
       <br/>
       <sub><b>StatVault Visual Asset:</b> Canonical Grimdark Dataslate Render</sub>
     </td>
     <td width="58%" valign="top">
-      <h3><b>Chaos Chosen Warriors</b></h3>
+      <h3><b>Necron Immortals (Gauss Blaster Squad)</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-CHAOS%20SPACE%20MARINES-cc2222?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-SHOCK%20INFANTRY-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-1150%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-NECRONS-00ff66?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-HEAVY%20SUPPORT-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-960%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Elite melee/shock specialists with high terror rating and brutal burst armor-piercing damage."</i></p>
+      <i>"Heavy frontline fire-support cadre. Heavy armor mitigation and devastating anti-infantry armor-piercing firepower."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 520mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1750 HP (Armor Rating: 95)<br/>
-      • <b>RTS Tactical Speed:</b> 13.0 mph (20.9 km/h)<br/>
-      • <b>Primary Armament:</b> Accursed Daemon Blade & Combi-Bolter (AP: 50, Base Dmg: 48)<br/>
-      • <b>Lore Phenomenon:</b> Veterans of the Long War empowered by millennia of Warp exposure and Dark God pacts. Emanates an overwhelming aura of cosmic terror and psyc...</p>
+      • <b>Lore Armor Protection:</b> 650mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1600 HP (Armor Rating: 110)<br/>
+      • <b>RTS Tactical Speed:</b> 9.6 mph (15.5 km/h)<br/>
+      • <b>Primary Armament:</b> Dual-Induction Gauss Blaster (AP: 45, Base Dmg: 44)<br/>
+      • <b>Lore Phenomenon:</b> Veterans of the War in Heaven retain strategic tactical sentience. Armored in heavy necrodermis capable of withstanding direct anti-tank fir...</p>
       <p>
-        <a href="data/units/chaos-chosen.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/warp-daemon-blade.json"><b>💥 Weapon Specs (.json)</b></a> • <a href="public/models/chaos-chosen.glb"><b>🎮 3D Model (.glb)</b></a>
+        <a href="data/units/necron-immortal.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/gauss-blaster.json"><b>💥 Weapon Specs (.json)</b></a> • <a href="public/models/necron-immortal.glb"><b>🎮 3D Model (.glb)</b></a>
       </p>
     </td>
   </tr>

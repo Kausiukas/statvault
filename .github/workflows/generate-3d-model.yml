@@ -29,6 +29,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
@@ -73,6 +75,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "asset(3d): add generated 3D model & visuals [${{ steps.date.outputs.date }}]"
           branch: "asset/3d-auto-${{ steps.date.outputs.date }}"
+          branch-suffix: "timestamp"
+          delete-branch: true
           base: main
           title: "🎮 [3D Visuals] New Textured 3D Model & Assets (${{ steps.date.outputs.date }})"
           body: |
