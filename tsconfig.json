@@ -20,5 +20,10 @@
       "@statvault/3d-pipeline": ["packages/3d-pipeline/src"]
     }
   },
-  "exclude": ["node_modules", "dist", ".next"]
+  "exclude": ["node_modules", "dist", ".next"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
 }

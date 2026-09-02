@@ -1,0 +1,27 @@
+{
+  "id": "358629a0-f977-4475-bd7f-e18df628f23f",
+  "slug": "gauss-flayer",
+  "name": "Necron Gauss Flayer",
+  "type": "energy_gauss",
+  "faction": "necrons",
+  "engineDamage": {
+    "baseDamage": 28,
+    "armorPenetration": 32,
+    "attacksPerSecond": 1.1,
+    "rangeMeters": 175,
+    "accuracyPercent": 80,
+    "projectileVelocityMps": 550,
+    "burstCount": 1,
+    "reloadTimeSeconds": 1.6
+  },
+  "loreDescriptor": {
+    "caliber": "Sub-Atomic Linear Induction Emitter Array",
+    "propellant": "Micro-Singularity Gauss Field with Flux Solenoid Coils",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 1.8,
+    "thermalYieldKelvin": 85000,
+    "loreEffectDescription": "Fires an emerald electromagnetic disruption beam that dissolves atomic bonds, stripping targets layer by microscopic layer regardless of material density.",
+    "citation": "Codex: Necrons (9th Ed), Imperial Armor Volume Twelve: The Fall of Orpheus"
+  },
+  "iconSlug": "gauss-flayer-icon"
+}

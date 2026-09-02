@@ -1,0 +1,65 @@
+{
+  "id": "1beca3c9-5dfa-4faf-936b-77e673f963ec",
+  "slug": "necron-warrior",
+  "name": "Necron Warrior Phalanx",
+  "faction": "necrons",
+  "subFaction": "Sautekh Dynasty",
+  "role": "line_infantry",
+  "engineStats": {
+    "hitPoints": 1440,
+    "modelCount": 12,
+    "armor": 75,
+    "speedMps": 4.2,
+    "chargeSpeedMps": 5.3,
+    "acceleration": 4,
+    "massKgPerModel": 180,
+    "leadership": 100,
+    "baseCostPoints": 720,
+    "collisionRadiusM": 0.65
+  },
+  "loreStats": {
+    "reactionTimeMs": 0.8,
+    "sprintSpeedMps": 4.8,
+    "sprintSpeedMph": 10.7,
+    "dreadAuraRadiusM": 40,
+    "dreadShockFactor": 0.65,
+    "armorComposition": "Living Metal (Necrodermis) Phase-Alloy Matrix with Autonomous Nanite Lattice",
+    "armorEquivalentRHAmm": 420,
+    "combatStaminaHours": "infinite",
+    "citation": "Codex: Necrons (9th Ed), Nate Crowley - The Twice-Dead King: Ruin (2021)",
+    "loreSummary": "Ancient soulless mechanical foot-soldiers clad in self-repairing living metal necrodermis. They advance in eerie synchronized silence, disintegrating organic and armored foes atom by atom while passively reforming battlefield damage."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/necron-warrior.opt.glb",
+    "dracoCompressionRatio": 0.912,
+    "vramFootprintMb": 7.2,
+    "polyCount": 21800,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 42,
+      "mobility": 20,
+      "burstDmg": 28,
+      "sustainedDps": 46,
+      "utility": 76,
+      "mass": 20
+    },
+    "loreCanon": {
+      "ehp": 55,
+      "mobility": 28,
+      "burstDmg": 39,
+      "sustainedDps": 60,
+      "utility": 76,
+      "mass": 24
+    }
+  },
+  "primaryWeaponSlug": "gauss-flayer",
+  "tacticalDescription": "Unwavering frontline line infantry. High passive resilience and armor with reanimation survivability. Vulnerable to fast flanking assault due to slow traverse speed.",
+  "artImagePath": "/assets/art/necron_warrior.jpg"
+}

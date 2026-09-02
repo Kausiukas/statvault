@@ -8,7 +8,7 @@ StatVault is maintained as a collaborative hybrid ecosystem supported by **human
 
 ## 📑 Table of Contents
 1. [Code of Conduct](#1-code-of-conduct)
-2. [Autonomous Gemini 2.5 Agent Architecture & Guidelines](#2-autonomous-gemini-25-agent-architecture--guidelines)
+2. [Daily Wiki Build-Up Agent (Cursor Automation)](#2-daily-wiki-build-up-agent-cursor-automation)
 3. [Content & Data Schema Specifications](#3-content--data-schema-specifications)
    - [Unit Profile Schema](#unit-profile-schema)
    - [Weapon Profile Schema](#weapon-profile-schema)
@@ -24,41 +24,58 @@ All contributors—both human and automated—are expected to uphold respectful,
 
 ---
 
-## 2. Autonomous Gemini 2.5 Agent Architecture & Guidelines
+## 2. Daily Wiki Build-Up Agent (Cursor Automation)
 
-StatVault incorporates an **External Gemini 2.5 API Agent** that performs daily autonomous reconnaissance across Total War 40k balance patches and new Black Library publications.
+StatVault runs a **daily Cursor Automation** that grows the lore-grounded dataslate corpus in `data/`. The agent researches one Warhammer 40k topic per run and opens a reviewable pull request — it never merges.
 
 ```mermaid
 flowchart TD
-    subgraph ExternalCron["External Autonomous Runner (Cron / Cloud Function)"]
-        Scan[1. Scan Patch Feeds & GW Dataslates] --> Diff[2. Compute Stat Discrepancies & Delta Diffs]
-        Diff --> Gen[3. Generate Zod-Validated JSON Schema Payloads]
-        Gen --> Auth[4. Authenticate via GitHub REST API App Token]
+    subgraph CursorAutomation["Cursor Automation (Daily Schedule)"]
+        Inventory[1. Read data/COVERAGE.md and existing slugs]
+        Pick[2. Pick next gap: empty factions then missing roles]
+        Research[3. Research cited canonical lore]
+        Write[4. Write Zod-valid unit + weapon + lore JSON]
+        Validate[5. Run npm run validate:data]
+        PR[6. Open PR to main — never merge]
     end
 
     subgraph GitHubRepo["GitHub Repository (Kausiukas/statvault)"]
-        Branch[5. Create Topic Branch: gemini/daily-update-YYYY-MM-DD]
-        Commit[6. Push Atomic JSON & Lore Commits]
-        PR[7. Open Automated Pull Request with Dataslate Summary]
-        Review[8. Automated Monorepo Schema Validation & Human Review]
+        Branch[lore/wiki-YYYY-MM-DD-unit-slug]
+        Review[Human review and merge]
     end
 
-    Auth --> Branch --> Commit --> PR --> Review
+    Inventory --> Pick --> Research --> Write --> Validate --> PR
+    PR --> Branch --> Review
 ```
 
-### Key Operational Rules for the Gemini Agent
-1. **Zero In-Repo Workflow Dependency:** The agent executes on external infrastructure and interacts strictly through the **GitHub REST API v3 / GraphQL v4**. No in-repo GitHub Actions compute minutes are consumed.
-2. **Deterministic Topic Branch Naming:**
-   ```
-   gemini/daily-update-YYYY-MM-DD
-   gemini/patch-diff-warcore-vX.Y.Z
-   gemini/lore-dataslate-CITATION_SLUG
-   ```
-3. **Automated PR Body Template:** Every automated PR must include:
-   * A summary of modified unit parameters.
-   * LaTeX mathematical delta comparisons for affected $EHP$, $TTK$, or Velocity curves.
-   * Full bibliographic citation for any lore additions (Author, Title, ISBN, Chapter/Timestamp).
-   * Verification status against the Zod schema.
+### Agent skill
+
+The full protocol lives in [`.cursor/skills/statvault-wiki-build/SKILL.md`](.cursor/skills/statvault-wiki-build/SKILL.md). Key rules:
+
+1. **Lore is authoritative.** Every lore stat must cite a real source (Black Library, Codex, Imperial Armor). Paraphrase only.
+2. **Engine stats are Dual-Lens estimates** until official Warcore extracts exist. Derive from lore via compression ratios in `DOCS/DUAL_LENS_SPEC.md`.
+3. **One cluster per run:** 1 unit + 1 primary weapon + 1 lore annotation.
+4. **Coverage tracking:** Read and update `data/COVERAGE.md` to avoid duplicates.
+5. **Schema validation:** Run `npm run validate:data` before opening any PR.
+
+### Branch naming
+
+```
+lore/wiki-YYYY-MM-DD-<unit-slug>
+lore/<unit-or-faction-slug>          # manual lore submissions
+```
+
+### Automated PR body must include
+
+* Summary of added unit, weapon, and lore annotation slugs
+* Full bibliographic citations (Author, Title, Year, Chapter/Page)
+* Dual-Lens estimate disclaimer for all `engineStats` / `engineDamage` values
+* `npm run validate:data` pass/fail status
+* Open questions flagged for human review
+
+### Coverage index
+
+See [`data/COVERAGE.md`](data/COVERAGE.md) for the current backlog, faction gaps, and suggested queue.
 
 ---
 
@@ -268,7 +285,7 @@ perf(3d-pipeline): tune Draco position quantization from 16 to 14 bits
 * Features: `feature/short-feature-name`
 * Bug Fixes: `fix/short-bug-name`
 * Lore Submissions: `lore/unit-or-faction-slug`
-* Autonomous Agent: `gemini/daily-update-YYYY-MM-DD`
+* Daily Wiki Agent: `lore/wiki-YYYY-MM-DD-<unit-slug>`
 
 ---
 
@@ -278,23 +295,26 @@ perf(3d-pipeline): tune Draco position quantization from 16 to 14 bits
 Ensure all automated tests, schema validations, and linting checks pass:
 
 ```bash
-# 1. Run all workspace TypeScript checks
+# 1. Validate all data/units, data/weapons, and data/lore JSON against Zod schemas
+npm run validate:data
+
+# 2. Run all workspace TypeScript checks
 npm run typecheck
 
-# 2. Run unit tests for math engine and schemas
+# 3. Run unit tests for math engine and schemas
 npm run test
 
-# 3. Verify ESLint and Prettier compliance
+# 4. Verify ESLint and Prettier compliance
 npm run lint
 npm run format:check
 
-# 4. If modifying 3D models, validate glTF structure
+# 5. If modifying 3D models, validate glTF structure
 npm run pipeline:validate --workspace=packages/3d-pipeline
 ```
 
 ### 2. Pull Request Submission
-1. Push your branch to your fork.
-2. Open a Pull Request targeting `master` branch on `Kausiukas/statvault`.
+1. Push your branch to your fork or origin.
+2. Open a Pull Request targeting the **`main`** branch on `Kausiukas/statvault`.
 3. Fill out the PR template completely with verification steps.
 4. Maintainers will review and merge upon CI approval.
 
