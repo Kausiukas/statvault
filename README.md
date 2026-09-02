@@ -34,37 +34,70 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Tau Fire Warrior Strike Team
-*Autonomous Ingestion Pipeline — Canonical Lore Research, Dual-Lens Stats & Generated Visuals*
+## 🌟 Daily Featured Dataslate: Hormagaunt Swarm Brood
+*Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
-    <td width="42%" align="center" valign="middle">
-      <img src="assets/art/fire_warrior.png" alt="Tau Fire Warrior Strike Team" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
+    <td align="center">
+      <img src="assets/art/hormagaunt_concept.png" alt="Hormagaunt Swarm Brood in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>StatVault Visual Asset:</b> Canonical Grimdark Dataslate Render</sub>
-    </td>
-    <td width="58%" valign="top">
-      <h3><b>Tau Fire Warrior Strike Team</b></h3>
-      <p>
-        <img src="https://img.shields.io/badge/Faction-TAU%20EMPIRE-555555?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-LINE%20INFANTRY-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-680%20pts-gold?style=flat-square" />
-      </p>
-      <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Superior long-range fire infantry. Highest non-heavy ballistic range and thermal energy output among core line infantry, vulnerable to close melee charges."</i></p>
-      <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 110mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1050 HP (Armor Rating: 50)<br/>
-      • <b>RTS Tactical Speed:</b> 10.5 mph (16.9 km/h)<br/>
-      • <b>Primary Armament:</b> Tau Pulse Rifle (AP: 28, Base Dmg: 38)<br/>
-      • <b>Lore Phenomenon:</b> Disciplined ranged combat infantry of the Fire Caste. Equipped with advanced sensor suites, target-lock optics, and devastating long-range p...</p>
-      <p>
-        <a href="data/units/fire-warrior.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/pulse-rifle.json"><b>💥 Weapon Specs (.json)</b></a> • <a href="public/models/fire-warrior.glb"><b>🎮 3D Model (.glb)</b></a>
-      </p>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Hormagaunt Swarm Brood deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
+
+<table>
+  <tr>
+    <td width="38%" align="center" valign="middle">
+      <img src="assets/art/hormagaunt_multiview_0.png" alt="Hormagaunt Swarm Brood" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <br/>
+      <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
+    </td>
+    <td width="62%" valign="top">
+      <h3><b>Hormagaunt Swarm Brood</b></h3>
+      <p>
+        <img src="https://img.shields.io/badge/Faction-TYRANIDS-aa33aa?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-SHOCK%20INFANTRY-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-500%20pts-gold?style=flat-square" />
+      </p>
+      <p><b>📖 Tactical Analysis:</b><br/>
+      <i>"High-speed swarm melee bioform. High bounding leap distance and melee saturation; relies on swarm mass to absorb defensive fire."</i></p>
+      <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
+      • <b>Lore Armor Protection:</b> 45mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1200 HP (Armor Rating: 25)<br/>
+      • <b>RTS Tactical Speed:</b> 14.1 mph (22.7 km/h)<br/>
+      • <b>Primary Armament:</b> Biomorphic Scything Talons (AP: 18, Base Dmg: 22)<br/>
+      • <b>Lore Phenomenon:</b> Hyperactive, ravenous vanguard swarm bioforms bounding across battlefields in erratic leaping patterns to overwhelm firing lines through she...</p>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
+  </tr>
+  <tr>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/hormagaunt_multiview_0.png"><img src="assets/art/hormagaunt_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/hormagaunt_multiview_1.png"><img src="assets/art/hormagaunt_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/hormagaunt_multiview_2.png"><img src="assets/art/hormagaunt_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Biomorphic Scything Talons</th>
+  </tr>
+  <tr>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/scything-talons_multiview_0.png"><img src="assets/art/scything-talons_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/scything-talons_multiview_1.png"><img src="assets/art/scything-talons_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/scything-talons_multiview_2.png"><img src="assets/art/scything-talons_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+  </tr>
+</table>
+
+<p align="center">
+  <a href="data/units/hormagaunt.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/scything-talons.json"><b>💥 Weapon Specs (.json)</b></a> • <a href="public/models/hormagaunt.glb"><b>🎮 3D Model (.glb)</b></a>
+</p>
 
 </div>
 

@@ -23,5 +23,10 @@
     "citation": "Codex: Tyranids (9th Ed)"
   },
   "iconSlug": "scything-talons-icon",
-  "artImagePath": "/assets/art/scything_talons.jpg"
+  "artImagePath": "assets/art/scything-talons_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/scything-talons_multiview_0.png",
+    "assets/art/scything-talons_multiview_1.png",
+    "assets/art/scything-talons_multiview_2.png"
+  ]
 }

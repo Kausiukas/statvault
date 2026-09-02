@@ -61,5 +61,11 @@
   },
   "primaryWeaponSlug": "scything-talons",
   "tacticalDescription": "High-speed swarm melee bioform. High bounding leap distance and melee saturation; relies on swarm mass to absorb defensive fire.",
-  "artImagePath": "assets/art/hormagaunt.png"
+  "artImagePath": "assets/art/hormagaunt_concept.png",
+  "multiviewImages": [
+    "assets/art/hormagaunt_multiview_0.png",
+    "assets/art/hormagaunt_multiview_1.png",
+    "assets/art/hormagaunt_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/hormagaunt_concept.png"
 }

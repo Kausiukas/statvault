@@ -115,48 +115,118 @@ function generateFeaturedHtml(unit: any, weapon: any, imageRelativePath: string)
     ? unit.asset3d.optimizedGlbPath.replace(/^\//, 'public/')
     : `public/models/${unit.slug}.glb`;
   const hasGlb = fs.existsSync(path.join(REPO_ROOT, glbPath)) || fs.existsSync(path.join(REPO_ROOT, `public/models/${unit.slug}.glb`));
-  const hasUnitMv = fs.existsSync(path.join(REPO_ROOT, `assets/art/${unit.slug}_multiview_0.png`));
-  const hasWeaponMv = weapon && fs.existsSync(path.join(REPO_ROOT, `assets/art/${weapon.slug}_multiview_0.png`));
 
-  return `${TAG_START}
-<div align="center">
+  const unitMv0 = `assets/art/${unit.slug}_multiview_0.png`;
+  const unitMv1 = `assets/art/${unit.slug}_multiview_1.png`;
+  const unitMv2 = `assets/art/${unit.slug}_multiview_2.png`;
+  const hasUnitMv = fs.existsSync(path.join(REPO_ROOT, unitMv0)) &&
+                    fs.existsSync(path.join(REPO_ROOT, unitMv1)) &&
+                    fs.existsSync(path.join(REPO_ROOT, unitMv2));
 
-## 🌟 Daily Featured Dataslate: ${unit.name}
-*Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Assets & Battlefield Concept Art*
+  const weaponSlug = weapon ? weapon.slug : unit.primaryWeaponSlug;
+  const weaponMv0 = weaponSlug ? `assets/art/${weaponSlug}_multiview_0.png` : undefined;
+  const weaponMv1 = weaponSlug ? `assets/art/${weaponSlug}_multiview_1.png` : undefined;
+  const weaponMv2 = weaponSlug ? `assets/art/${weaponSlug}_multiview_2.png` : undefined;
+  const hasWeaponMv = weaponMv0 && weaponMv1 && weaponMv2 &&
+                      fs.existsSync(path.join(REPO_ROOT, weaponMv0)) &&
+                      fs.existsSync(path.join(REPO_ROOT, weaponMv1)) &&
+                      fs.existsSync(path.join(REPO_ROOT, weaponMv2));
 
-<table>
-  <tr>
-    <td width="46%" align="center" valign="middle">
-      <img src="${imageRelativePath}" alt="${unit.name}" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
-      <br/>
-      <sub><b>StatVault Visual Asset:</b> Canonical Grimdark Action Concept Art & Multi-View Suite</sub>
-    </td>
-    <td width="54%" valign="top">
-      <h3><b>${unit.name}</b></h3>
-      <p>
-        <img src="https://img.shields.io/badge/Faction-${encodeURIComponent(factionName)}-${factionColor}?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-${encodeURIComponent(roleName)}-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-${encodeURIComponent(cost)}-gold?style=flat-square" />
-      </p>
-      <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"${unit.tacticalDescription}"</i></p>
-      <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> ${loreArmor}<br/>
-      • <b>In-Engine Durability:</b> ${engineHp} HP (Armor Rating: ${engineArmor})<br/>
-      • <b>RTS Tactical Speed:</b> ${engineSpeed}<br/>
-      • <b>Primary Armament:</b> ${weaponName} ${weaponAp ? `(${weaponAp}, ${weaponDmg})` : ''}<br/>
-      • <b>Lore Phenomenon:</b> ${unit.loreStats?.loreSummary ? unit.loreStats.loreSummary.slice(0, 140) + '...' : 'Classified military record.'}</p>
-      <p>
-        <a href="${unitJsonPath}"><b>📄 Unit Dataslate (.json)</b></a>${weaponJsonPath ? ` • <a href="${weaponJsonPath}"><b>💥 Weapon Specs (.json)</b></a>` : ''}${hasUnitMv ? ` • <a href="assets/art/${unit.slug}_multiview_0.png"><b>📸 Unit Multi-View (3 Angles)</b></a>` : ''}${hasWeaponMv ? ` • <a href="assets/art/${weapon.slug}_multiview_0.png"><b>⚔️ Weapon Multi-View</b></a>` : ''}${hasGlb ? ` • <a href="public/models/${unit.slug}.glb"><b>🎮 3D Model (.glb)</b></a>` : ''}
-      </p>
-    </td>
-  </tr>
-</table>
+  const conceptPath = `assets/art/${unit.slug}_concept.png`;
+  const hasConcept = fs.existsSync(path.join(REPO_ROOT, conceptPath));
 
-</div>
+  // Determine primary spotlight image for the core dossier
+  const spotlightImage = hasUnitMv
+    ? unitMv0
+    : fs.existsSync(path.join(REPO_ROOT, `assets/art/${unit.slug}.png`))
+    ? `assets/art/${unit.slug}.png`
+    : imageRelativePath;
 
----
-${TAG_END}`;
+  let html = `${TAG_START}\n<div align="center">\n\n`;
+  html += `## 🌟 Daily Featured Dataslate: ${unit.name}\n`;
+  html += `*Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*\n\n`;
+
+  // 1. Hero Battlefield Concept Art Banner (if available)
+  if (hasConcept) {
+    html += `<table>\n`;
+    html += `  <tr>\n`;
+    html += `    <td align="center">\n`;
+    html += `      <img src="${conceptPath}" alt="${unit.name} in Action" width="100%" style="border-radius: 8px;" />\n`;
+    html += `      <br/>\n`;
+    html += `      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>${unit.name} deployed in active battlefield engagement</i></sub>\n`;
+    html += `    </td>\n`;
+    html += `  </tr>\n`;
+    html += `</table>\n\n`;
+  }
+
+  // 2. Core Tactical Dossier (Two-Column Layout)
+  html += `<table>\n`;
+  html += `  <tr>\n`;
+  html += `    <td width="38%" align="center" valign="middle">\n`;
+  html += `      <img src="${spotlightImage}" alt="${unit.name}" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />\n`;
+  html += `      <br/>\n`;
+  html += `      <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>\n`;
+  html += `    </td>\n`;
+  html += `    <td width="62%" valign="top">\n`;
+  html += `      <h3><b>${unit.name}</b></h3>\n`;
+  html += `      <p>\n`;
+  html += `        <img src="https://img.shields.io/badge/Faction-${encodeURIComponent(factionName)}-${factionColor}?style=flat-square" />\n`;
+  html += `        <img src="https://img.shields.io/badge/Role-${encodeURIComponent(roleName)}-blue?style=flat-square" />\n`;
+  html += `        <img src="https://img.shields.io/badge/Engine_Cost-${encodeURIComponent(cost)}-gold?style=flat-square" />\n`;
+  html += `      </p>\n`;
+  html += `      <p><b>📖 Tactical Analysis:</b><br/>\n`;
+  html += `      <i>"${unit.tacticalDescription}"</i></p>\n`;
+  html += `      <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>\n`;
+  html += `      • <b>Lore Armor Protection:</b> ${loreArmor}<br/>\n`;
+  html += `      • <b>In-Engine Durability:</b> ${engineHp} HP (Armor Rating: ${engineArmor})<br/>\n`;
+  html += `      • <b>RTS Tactical Speed:</b> ${engineSpeed}<br/>\n`;
+  html += `      • <b>Primary Armament:</b> ${weaponName} ${weaponAp ? `(${weaponAp}, ${weaponDmg})` : ''}<br/>\n`;
+  html += `      • <b>Lore Phenomenon:</b> ${unit.loreStats?.loreSummary ? unit.loreStats.loreSummary.slice(0, 140) + '...' : 'Classified military record.'}</p>\n`;
+  html += `    </td>\n`;
+  html += `  </tr>\n`;
+  html += `</table>\n\n`;
+
+  // 3. Multi-Angle Orthographic Views (Unit)
+  if (hasUnitMv) {
+    html += `<table>\n`;
+    html += `  <tr>\n`;
+    html += `    <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>\n`;
+    html += `  </tr>\n`;
+    html += `  <tr>\n`;
+    html += `    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="${unitMv0}"><img src="${unitMv0}" width="150" alt="Front Profile" /></a></td>\n`;
+    html += `    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="${unitMv1}"><img src="${unitMv1}" width="150" alt="Flank Profile" /></a></td>\n`;
+    html += `    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="${unitMv2}"><img src="${unitMv2}" width="150" alt="Dorsal Profile" /></a></td>\n`;
+    html += `  </tr>\n`;
+    html += `</table>\n\n`;
+  }
+
+  // 4. Multi-Angle Weapon Inspection (Armament)
+  if (hasWeaponMv && weaponMv0 && weaponMv1 && weaponMv2) {
+    html += `<table>\n`;
+    html += `  <tr>\n`;
+    html += `    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: ${weaponName}</th>\n`;
+    html += `  </tr>\n`;
+    html += `  <tr>\n`;
+    html += `    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="${weaponMv0}"><img src="${weaponMv0}" width="90" alt="Weapon View 1" /></a></td>\n`;
+    html += `    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="${weaponMv1}"><img src="${weaponMv1}" width="90" alt="Weapon View 2" /></a></td>\n`;
+    html += `    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="${weaponMv2}"><img src="${weaponMv2}" width="90" alt="Weapon View 3" /></a></td>\n`;
+    html += `  </tr>\n`;
+    html += `</table>\n\n`;
+  }
+
+  // 5. Navigation Toolbar
+  html += `<p align="center">\n`;
+  html += `  <a href="${unitJsonPath}"><b>📄 Inspect Unit Dataslate (.json)</b></a>`;
+  if (weaponJsonPath) {
+    html += ` • <a href="${weaponJsonPath}"><b>💥 Weapon Specs (.json)</b></a>`;
+  }
+  if (hasGlb) {
+    html += ` • <a href="public/models/${unit.slug}.glb"><b>🎮 3D Model (.glb)</b></a>`;
+  }
+  html += `\n</p>\n\n`;
+
+  html += `</div>\n\n---\n${TAG_END}`;
+  return html;
 }
 
 async function main() {
