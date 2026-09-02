@@ -16,6 +16,7 @@
     "validate:data": "npm run validate:data --workspace=@statvault/schemas",
     "task:wiki-build": "ts-node scripts/daily-wiki-builder.ts",
     "model:generate": "ts-node scripts/generate-meshy-model.ts",
+    "image:generate": "ts-node scripts/generate-meshy-image.ts",
     "pipeline:inspect": "ts-node packages/3d-pipeline/src/inspect-vram.ts"
   },
   "devDependencies": {
