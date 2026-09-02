@@ -54,5 +54,6 @@ export const WeaponProfileSchema = z.object({
   loreDescriptor: WeaponLoreDescriptorSchema,
   iconSlug: z.string().optional(),
   artImagePath: z.string().optional(),
+  multiviewImages: z.array(z.string()).optional(),
 });
 export type WeaponProfile = z.infer<typeof WeaponProfileSchema>;

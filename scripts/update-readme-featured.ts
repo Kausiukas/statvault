@@ -67,14 +67,15 @@ function resolveLatestUnitSlug(requestedSlug?: string): string {
 function resolveUnitImage(unitSlug: string, artImagePath?: string): string {
   const normalized = unitSlug.replace(/-/g, '_');
   const candidates = [
+    `assets/art/${normalized}_concept.png`,
+    `assets/art/${unitSlug}_concept.png`,
     artImagePath ? artImagePath.replace(/^\//, '') : undefined,
-    `assets/art/${normalized}.jpg`,
     `assets/art/${normalized}.png`,
-    `assets/art/${unitSlug}.jpg`,
+    `assets/art/${normalized}.jpg`,
     `assets/art/${unitSlug}.png`,
-    `assets/art/${normalized}_miniature.png`,
-    `assets/art/meshy_${normalized}.png`,
-    `assets/art/meshy_text_to_image_${normalized}.png`,
+    `assets/art/${unitSlug}.jpg`,
+    `assets/art/${normalized}_multiview_0.png`,
+    `assets/art/${unitSlug}_multiview_0.png`,
   ].filter(Boolean) as string[];
 
   for (const c of candidates) {
@@ -114,21 +115,23 @@ function generateFeaturedHtml(unit: any, weapon: any, imageRelativePath: string)
     ? unit.asset3d.optimizedGlbPath.replace(/^\//, 'public/')
     : `public/models/${unit.slug}.glb`;
   const hasGlb = fs.existsSync(path.join(REPO_ROOT, glbPath)) || fs.existsSync(path.join(REPO_ROOT, `public/models/${unit.slug}.glb`));
+  const hasUnitMv = fs.existsSync(path.join(REPO_ROOT, `assets/art/${unit.slug}_multiview_0.png`));
+  const hasWeaponMv = weapon && fs.existsSync(path.join(REPO_ROOT, `assets/art/${weapon.slug}_multiview_0.png`));
 
   return `${TAG_START}
 <div align="center">
 
 ## 🌟 Daily Featured Dataslate: ${unit.name}
-*Autonomous Ingestion Pipeline — Canonical Lore Research, Dual-Lens Stats & Generated Visuals*
+*Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Assets & Battlefield Concept Art*
 
 <table>
   <tr>
-    <td width="42%" align="center" valign="middle">
+    <td width="46%" align="center" valign="middle">
       <img src="${imageRelativePath}" alt="${unit.name}" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
       <br/>
-      <sub><b>StatVault Visual Asset:</b> Canonical Grimdark Dataslate Render</sub>
+      <sub><b>StatVault Visual Asset:</b> Canonical Grimdark Action Concept Art & Multi-View Suite</sub>
     </td>
-    <td width="58%" valign="top">
+    <td width="54%" valign="top">
       <h3><b>${unit.name}</b></h3>
       <p>
         <img src="https://img.shields.io/badge/Faction-${encodeURIComponent(factionName)}-${factionColor}?style=flat-square" />
@@ -144,7 +147,7 @@ function generateFeaturedHtml(unit: any, weapon: any, imageRelativePath: string)
       • <b>Primary Armament:</b> ${weaponName} ${weaponAp ? `(${weaponAp}, ${weaponDmg})` : ''}<br/>
       • <b>Lore Phenomenon:</b> ${unit.loreStats?.loreSummary ? unit.loreStats.loreSummary.slice(0, 140) + '...' : 'Classified military record.'}</p>
       <p>
-        <a href="${unitJsonPath}"><b>📄 Inspect Unit Dataslate (.json)</b></a>${weaponJsonPath ? ` • <a href="${weaponJsonPath}"><b>💥 Weapon Specs (.json)</b></a>` : ''}${hasGlb ? ` • <a href="public/models/${unit.slug}.glb"><b>🎮 3D Model (.glb)</b></a>` : ''}
+        <a href="${unitJsonPath}"><b>📄 Unit Dataslate (.json)</b></a>${weaponJsonPath ? ` • <a href="${weaponJsonPath}"><b>💥 Weapon Specs (.json)</b></a>` : ''}${hasUnitMv ? ` • <a href="assets/art/${unit.slug}_multiview_0.png"><b>📸 Unit Multi-View (3 Angles)</b></a>` : ''}${hasWeaponMv ? ` • <a href="assets/art/${weapon.slug}_multiview_0.png"><b>⚔️ Weapon Multi-View</b></a>` : ''}${hasGlb ? ` • <a href="public/models/${unit.slug}.glb"><b>🎮 3D Model (.glb)</b></a>` : ''}
       </p>
     </td>
   </tr>

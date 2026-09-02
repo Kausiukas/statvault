@@ -93,5 +93,7 @@ export const UnitProfileSchema = z.object({
   secondaryWeaponSlug: z.string().optional(),
   tacticalDescription: z.string(),
   artImagePath: z.string().optional(),
+  conceptArtPath: z.string().optional(),
+  multiviewImages: z.array(z.string()).optional(),
 });
 export type UnitProfile = z.infer<typeof UnitProfileSchema>;

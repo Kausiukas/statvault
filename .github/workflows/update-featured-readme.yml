@@ -2,7 +2,7 @@ name: Update Featured Readme Header
 
 on:
   workflow_run:
-    workflows: ["Generate 3D Model & Visuals (Meshy API)"]
+    workflows: ["Generate Visual Assets Suite (Meshy API)"]
     types:
       - completed
   workflow_dispatch:

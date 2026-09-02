@@ -19,6 +19,7 @@
     "task:wiki-build": "ts-node scripts/daily-wiki-builder.ts",
     "model:generate": "ts-node scripts/generate-meshy-model.ts",
     "image:generate": "ts-node scripts/generate-meshy-image.ts",
+    "visuals:daily": "ts-node scripts/generate-daily-visuals.ts",
     "readme:update": "ts-node scripts/update-readme-featured.ts",
     "pipeline:inspect": "ts-node packages/3d-pipeline/src/inspect-vram.ts"
   },

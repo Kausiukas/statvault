@@ -1,4 +1,4 @@
-name: Generate 3D Model & Visuals (Meshy API)
+name: Generate Visual Assets Suite (Meshy API)
 
 on:
   workflow_run:
@@ -8,11 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       unit_slug:
-        description: 'Unit slug (optional, auto-detects latest missing model if omitted)'
-        required: false
-        type: string
-      custom_prompt:
-        description: 'Optional custom text-to-3d prompt'
+        description: 'Unit slug (optional, auto-detects latest if omitted)'
         required: false
         type: string
 
@@ -21,8 +17,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  generate-3d-model:
-    name: Generate Textured 3D Asset
+  generate-visuals:
+    name: Generate Multi-View & Concept Art Suite
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
 
@@ -47,7 +43,7 @@ jobs:
         id: date
         run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
 
-      - name: Run Meshy 3D Generator
+      - name: Run Meshy Daily Visual Suite Generator
         env:
           MESHY_API_KEY: ${{ secrets.MESHY_API_KEY }}
         run: |
@@ -55,27 +51,24 @@ jobs:
           if [ -n "${{ inputs.unit_slug }}" ]; then
             ARGS="--unit ${{ inputs.unit_slug }}"
           fi
-          if [ -n "${{ inputs.custom_prompt }}" ]; then
-            ARGS="$ARGS --prompt \"${{ inputs.custom_prompt }}\""
-          fi
-          echo "Executing generate-meshy-model with args: $ARGS"
-          npx ts-node scripts/generate-meshy-model.ts $ARGS
+          echo "Executing generate-daily-visuals with args: $ARGS"
+          npx ts-node scripts/generate-daily-visuals.ts $ARGS
 
       - name: Detect Changes
         id: git_status
         run: |
-          if [ -n "$(git status --porcelain public/models/ assets/ data/)" ]; then
+          if [ -n "$(git status --porcelain assets/ data/)" ]; then
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Commit & Push 3D Assets Directly to main
+      - name: Commit & Push Visual Assets Directly to main
         if: steps.git_status.outputs.has_changes == 'true'
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/models/ assets/ data/
-          git commit -m "asset(3d): add generated 3D model & visuals [${{ steps.date.outputs.date }}]"
+          git add assets/art/ data/
+          git commit -m "asset(visuals): add unit multiview, weapon multiview, and concept art [${{ steps.date.outputs.date }}]"
           git push origin main
-          echo "Successfully committed and pushed generated 3D model & visuals directly to main."
+          echo "Successfully committed and pushed visual asset suite directly to main."
