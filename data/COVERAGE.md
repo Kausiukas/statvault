@@ -43,7 +43,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Model file | Suggested unit slug | Faction |
 |------------|---------------------|---------|
-| `necron-immortal.glb` | `necron-immortal` | necrons |
+| `guardian-defender.glb` | `guardian-defender` | aeldari |
 | `space-marine-assault-dual-pbr.glb` | `space-marine-assault` | adeptus_astartes |
 | `space-marine-running.glb` | _(animation ref)_ | adeptus_astartes |
 | `space-marine-walking.glb` | _(animation ref)_ | adeptus_astartes |
