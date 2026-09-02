@@ -34,33 +34,33 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Aeldari Guardian Defenders
+## 🌟 Daily Featured Dataslate: Hormagaunt Swarm Brood
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Dual-Lens Stats & Generated Visuals*
 
 <table>
   <tr>
     <td width="42%" align="center" valign="middle">
-      <img src="assets/art/meshy_text_to_image_guardian.png" alt="Aeldari Guardian Defenders" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
+      <img src="assets/art/space_marine_intercessor.jpg" alt="Hormagaunt Swarm Brood" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
       <br/>
       <sub><b>StatVault Visual Asset:</b> Canonical Grimdark Dataslate Render</sub>
     </td>
     <td width="58%" valign="top">
-      <h3><b>Aeldari Guardian Defenders</b></h3>
+      <h3><b>Hormagaunt Swarm Brood</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-AELDARI-00cccc?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-LINE%20INFANTRY-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-650%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-TYRANIDS-aa33aa?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-SHOCK%20INFANTRY-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-500%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"High-mobility light infantry. Outstanding reaction speed and burst short-range firepower, vulnerable to heavy artillery and concentrated fire."</i></p>
+      <i>"High-speed swarm melee bioform. High bounding leap distance and melee saturation; relies on swarm mass to absorb defensive fire."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 80mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 950 HP (Armor Rating: 45)<br/>
-      • <b>RTS Tactical Speed:</b> 12.3 mph (19.8 km/h)<br/>
-      • <b>Primary Armament:</b> Aeldari Shuriken Catapult (AP: 30, Base Dmg: 32)<br/>
-      • <b>Lore Phenomenon:</b> Citizen militia of the dying Aeldari race. Graceful and preternaturally fast, equipped with psychoreactive mesh body armor that hardens agai...</p>
+      • <b>Lore Armor Protection:</b> 45mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1200 HP (Armor Rating: 25)<br/>
+      • <b>RTS Tactical Speed:</b> 14.1 mph (22.7 km/h)<br/>
+      • <b>Primary Armament:</b> Biomorphic Scything Talons (AP: 18, Base Dmg: 22)<br/>
+      • <b>Lore Phenomenon:</b> Hyperactive, ravenous vanguard swarm bioforms bounding across battlefields in erratic leaping patterns to overwhelm firing lines through she...</p>
       <p>
-        <a href="data/units/guardian-defender.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/shuriken-catapult.json"><b>💥 Weapon Specs (.json)</b></a> • <a href="public/models/guardian-defender.glb"><b>🎮 3D Model (.glb)</b></a>
+        <a href="data/units/hormagaunt.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/scything-talons.json"><b>💥 Weapon Specs (.json)</b></a>
       </p>
     </td>
   </tr>
