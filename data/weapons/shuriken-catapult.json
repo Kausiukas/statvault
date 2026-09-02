@@ -1,0 +1,27 @@
+{
+  "id": "4c74fe58-ec45-4515-a86d-8ba02011e1ee",
+  "slug": "shuriken-catapult",
+  "name": "Aeldari Shuriken Catapult",
+  "type": "energy_shuriken",
+  "faction": "aeldari",
+  "engineDamage": {
+    "baseDamage": 32,
+    "armorPenetration": 30,
+    "attacksPerSecond": 2.2,
+    "rangeMeters": 140,
+    "accuracyPercent": 78,
+    "projectileVelocityMps": 600,
+    "burstCount": 3,
+    "reloadTimeSeconds": 1.2
+  },
+  "loreDescriptor": {
+    "caliber": "Monofilament Plasteel/Ceramite Disc (1 Molecule Thickness Edge)",
+    "propellant": "Gravitic Repulsor Linear Accelerator",
+    "muzzleVelocityMps": 2200,
+    "effectiveRangeKm": 0.8,
+    "loreEffectDescription": "Fires high-velocity razor-sharp monomolecular discs capable of shearing limbs and slicing through heavy composite armor along molecular fracture planes.",
+    "citation": "Codex: Aeldari (9th Ed)"
+  },
+  "iconSlug": "shuriken-catapult-icon",
+  "artImagePath": "/assets/art/shuriken_catapult.jpg"
+}

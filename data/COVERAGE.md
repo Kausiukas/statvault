@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `guardian-defender` | aeldari | line_infantry | shuriken-catapult |
 | `necron-immortal` | necrons | heavy_support | gauss-blaster |
 | `necron-warrior` | necrons | line_infantry | gauss-flayer |
 | `space-marine-intercessor` | adeptus_astartes | shock_infantry | godwyn-bolt-rifle |
@@ -24,6 +25,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `shuriken-catapult` | aeldari | energy_shuriken |
 | `gauss-blaster` | necrons | energy_gauss |
 | `gauss-flayer` | necrons | energy_gauss |
 | `godwyn-bolt-rifle` | adeptus_astartes | ballistic_slug |
@@ -36,6 +38,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `guardian-defender-velocity_discrepancy` | `guardian-defender` | velocity_discrepancy | Path of the Warrior |
 | `necron-immortal-weapon_potency` | `necron-immortal` | weapon_potency | The Infinite and the Divine |
 | `necron-warrior-armor_durability` | `necron-warrior` | armor_durability | The Twice-Dead King: Ruin |
 
@@ -43,7 +46,6 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Model file | Suggested unit slug | Faction |
 |------------|---------------------|---------|
-| `guardian-defender.glb` | `guardian-defender` | aeldari |
 | `space-marine-assault-dual-pbr.glb` | `space-marine-assault` | adeptus_astartes |
 | `space-marine-running.glb` | _(animation ref)_ | adeptus_astartes |
 | `space-marine-walking.glb` | _(animation ref)_ | adeptus_astartes |
@@ -59,7 +61,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | chaos_space_marines | 1 | Partial |
 | orks | 1 | Partial |
 | necrons | 1 | Partial |
-| **aeldari** | **0** | **Empty** |
+| aeldari | 1 | Partial |
 | **tyranids** | **0** | **Empty** |
 | **tau_empire** | **0** | **Empty** |
 
@@ -67,7 +69,6 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 ## Suggested queue (priority order)
 
-3. **`guardian-defender`** — Aeldari Guardian Defender + Shuriken Catapult. First Aeldari entry.
 4. **`hormagaunt`** — Tyranid Hormagaunt + Scything Talons. First Tyranid entry.
 5. **`fire-warrior`** — T'au Fire Warrior + Pulse Rifle. First T'au entry.
 6. **`space-marine-assault`** — Assault Intercessor + Chainsword/Bolt Pistol. Model exists.
@@ -81,7 +82,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 4 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 2 | cadian-shock-trooper |
+| line_infantry | 3 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
 | monstrous_creature | 0 | — |
@@ -94,6 +95,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-02 | `guardian-defender`, `shuriken-catapult`, `guardian-defender-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-02 | `necron-immortal`, `gauss-blaster`, `necron-immortal-weapon_potency` | statvault-wiki-agent |
 | 2026-09-02 | `necron-warrior`, `gauss-flayer`, `necron-warrior-armor_durability` | statvault-wiki-agent |
 | _(initial seed)_ | 5 units, 5 weapons | manual |

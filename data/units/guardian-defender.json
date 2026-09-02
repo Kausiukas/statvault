@@ -1,0 +1,65 @@
+{
+  "id": "3c91cd6a-068e-4b48-b9c9-dbe306a0738b",
+  "slug": "guardian-defender",
+  "name": "Aeldari Guardian Defenders",
+  "faction": "aeldari",
+  "subFaction": "Craftworld Ulthwé",
+  "role": "line_infantry",
+  "engineStats": {
+    "hitPoints": 950,
+    "modelCount": 10,
+    "armor": 45,
+    "speedMps": 5.5,
+    "chargeSpeedMps": 6.9,
+    "acceleration": 4,
+    "massKgPerModel": 85,
+    "leadership": 75,
+    "baseCostPoints": 650,
+    "collisionRadiusM": 0.5
+  },
+  "loreStats": {
+    "reactionTimeMs": 4.5,
+    "sprintSpeedMps": 10.5,
+    "sprintSpeedMph": 23.5,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0,
+    "armorComposition": "Psychoreactive Thermoplas Mesh Armor with Integrated Biomonitor Matrix",
+    "armorEquivalentRHAmm": 80,
+    "combatStaminaHours": 12,
+    "citation": "Codex: Aeldari (9th Ed), Gav Thorpe - Path of the Warrior (2010)",
+    "loreSummary": "Citizen militia of the dying Aeldari race. Graceful and preternaturally fast, equipped with psychoreactive mesh body armor that hardens against impact while allowing fluid acrobatic repositioning."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/guardian-defender.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 22000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 22,
+      "mobility": 48,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 35,
+      "mass": 14
+    },
+    "loreCanon": {
+      "ehp": 30,
+      "mobility": 93,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 35,
+      "mass": 17
+    }
+  },
+  "primaryWeaponSlug": "shuriken-catapult",
+  "tacticalDescription": "High-mobility light infantry. Outstanding reaction speed and burst short-range firepower, vulnerable to heavy artillery and concentrated fire.",
+  "artImagePath": "assets/art/meshy_text_to_image_guardian.png"
+}

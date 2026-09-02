@@ -34,33 +34,33 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Necron Immortals (Gauss Blaster Squad)
+## 🌟 Daily Featured Dataslate: Aeldari Guardian Defenders
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Dual-Lens Stats & Generated Visuals*
 
 <table>
   <tr>
     <td width="42%" align="center" valign="middle">
-      <img src="assets/art/necron_immortal.jpg" alt="Necron Immortals (Gauss Blaster Squad)" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
+      <img src="assets/art/meshy_text_to_image_guardian.png" alt="Aeldari Guardian Defenders" width="100%" style="border-radius: 8px; max-height: 380px; object-fit: cover;" />
       <br/>
       <sub><b>StatVault Visual Asset:</b> Canonical Grimdark Dataslate Render</sub>
     </td>
     <td width="58%" valign="top">
-      <h3><b>Necron Immortals (Gauss Blaster Squad)</b></h3>
+      <h3><b>Aeldari Guardian Defenders</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-NECRONS-00ff66?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-HEAVY%20SUPPORT-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-960%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-AELDARI-00cccc?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-LINE%20INFANTRY-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-650%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Heavy frontline fire-support cadre. Heavy armor mitigation and devastating anti-infantry armor-piercing firepower."</i></p>
+      <i>"High-mobility light infantry. Outstanding reaction speed and burst short-range firepower, vulnerable to heavy artillery and concentrated fire."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 650mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1600 HP (Armor Rating: 110)<br/>
-      • <b>RTS Tactical Speed:</b> 9.6 mph (15.5 km/h)<br/>
-      • <b>Primary Armament:</b> Dual-Induction Gauss Blaster (AP: 45, Base Dmg: 44)<br/>
-      • <b>Lore Phenomenon:</b> Veterans of the War in Heaven retain strategic tactical sentience. Armored in heavy necrodermis capable of withstanding direct anti-tank fir...</p>
+      • <b>Lore Armor Protection:</b> 80mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 950 HP (Armor Rating: 45)<br/>
+      • <b>RTS Tactical Speed:</b> 12.3 mph (19.8 km/h)<br/>
+      • <b>Primary Armament:</b> Aeldari Shuriken Catapult (AP: 30, Base Dmg: 32)<br/>
+      • <b>Lore Phenomenon:</b> Citizen militia of the dying Aeldari race. Graceful and preternaturally fast, equipped with psychoreactive mesh body armor that hardens agai...</p>
       <p>
-        <a href="data/units/necron-immortal.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/gauss-blaster.json"><b>💥 Weapon Specs (.json)</b></a> • <a href="public/models/necron-immortal.glb"><b>🎮 3D Model (.glb)</b></a>
+        <a href="data/units/guardian-defender.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/shuriken-catapult.json"><b>💥 Weapon Specs (.json)</b></a> • <a href="public/models/guardian-defender.glb"><b>🎮 3D Model (.glb)</b></a>
       </p>
     </td>
   </tr>

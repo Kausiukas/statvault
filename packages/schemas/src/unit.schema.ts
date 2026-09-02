@@ -9,6 +9,10 @@ export const FactionEnum = z.enum([
   'necrons',
   'tyranids',
   'tau_empire',
+  'adepta_sororitas',
+  'adeptus_custodes',
+  'leagues_of_votann',
+  'drukhari',
 ]);
 export type Faction = z.infer<typeof FactionEnum>;
 

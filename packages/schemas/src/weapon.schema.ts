@@ -13,6 +13,10 @@ export const WeaponTypeEnum = z.enum([
   'melee_chain',
   'melee_crude',
   'warp_daemon',
+  'bio_weapon',
+  'energy_flamer',
+  'energy_volkite',
+  'melee_force',
 ]);
 export type WeaponType = z.infer<typeof WeaponTypeEnum>;
 
