@@ -1,0 +1,27 @@
+{
+  "id": "3235f950-0235-49ac-ae95-0634b9d8c247",
+  "slug": "godwyn-deaz-boltgun",
+  "name": "Godwyn-De’az Pattern Boltgun",
+  "type": "ballistic_slug",
+  "faction": "adepta_sororitas",
+  "engineDamage": {
+    "baseDamage": 36,
+    "armorPenetration": 25,
+    "attacksPerSecond": 1.3,
+    "rangeMeters": 175,
+    "accuracyPercent": 80,
+    "projectileVelocityMps": 620,
+    "burstCount": 1,
+    "reloadTimeSeconds": 1.6
+  },
+  "loreDescriptor": {
+    "caliber": ".50 Caliber Mass-Reactive Explosive Penetrator",
+    "propellant": "Solid Chemical Propellant followed by Gyrojet Rocket Ignition",
+    "muzzleVelocityMps": 1150,
+    "effectiveRangeKm": 1,
+    "loreEffectDescription": "Compact boltgun scaled for mortal power armor, firing mass-reactive explosive bolts that penetrate target armor before secondary internal fragmentation.",
+    "citation": "Codex: Adepta Sororitas (9th Ed)"
+  },
+  "iconSlug": "boltgun-icon",
+  "artImagePath": "/assets/art/godwyn_deaz_boltgun.jpg"
+}

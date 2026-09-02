@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `battle-sister` | adepta_sororitas | line_infantry | godwyn-deaz-boltgun |
 | `fire-warrior` | tau_empire | line_infantry | pulse-rifle |
 | `hormagaunt` | tyranids | shock_infantry | scything-talons |
 | `guardian-defender` | aeldari | line_infantry | shuriken-catapult |
@@ -27,6 +28,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `godwyn-deaz-boltgun` | adepta_sororitas | ballistic_slug |
 | `pulse-rifle` | tau_empire | energy_pulse |
 | `scything-talons` | tyranids | bio_weapon |
 | `shuriken-catapult` | aeldari | energy_shuriken |
@@ -42,6 +44,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `battle-sister-combat_longevity` | `battle-sister` | combat_longevity | The Rose in Darkness |
 | `fire-warrior-weapon_potency` | `fire-warrior` | weapon_potency | Fire Caste |
 | `hormagaunt-velocity_discrepancy` | `hormagaunt` | velocity_discrepancy | The Devastation of Baal |
 | `guardian-defender-velocity_discrepancy` | `guardian-defender` | velocity_discrepancy | Path of the Warrior |
@@ -86,7 +89,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 5 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 4 | cadian-shock-trooper |
+| line_infantry | 5 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
 | monstrous_creature | 0 | — |
@@ -99,6 +102,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-02 | `battle-sister`, `godwyn-deaz-boltgun`, `battle-sister-combat_longevity` | statvault-wiki-agent |
 | 2026-09-02 | `fire-warrior`, `pulse-rifle`, `fire-warrior-weapon_potency` | statvault-wiki-agent |
 | 2026-09-02 | `hormagaunt`, `scything-talons`, `hormagaunt-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-02 | `guardian-defender`, `shuriken-catapult`, `guardian-defender-velocity_discrepancy` | statvault-wiki-agent |

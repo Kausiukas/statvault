@@ -1,0 +1,65 @@
+{
+  "id": "db8f6e72-d8d2-4aa0-8074-a20491224cfb",
+  "slug": "battle-sister",
+  "name": "Battle Sisters Squad",
+  "faction": "adepta_sororitas",
+  "subFaction": "Order of Our Martyred Lady",
+  "role": "line_infantry",
+  "engineStats": {
+    "hitPoints": 1250,
+    "modelCount": 10,
+    "armor": 80,
+    "speedMps": 4.8,
+    "chargeSpeedMps": 6,
+    "acceleration": 4,
+    "massKgPerModel": 130,
+    "leadership": 90,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 8,
+    "sprintSpeedMps": 7.2,
+    "sprintSpeedMph": 16.1,
+    "dreadAuraRadiusM": 10,
+    "dreadShockFactor": 0.15,
+    "armorComposition": "Sororitas Power Armor with Sabbat-Pattern Ceramite Carapace",
+    "armorEquivalentRHAmm": 220,
+    "combatStaminaHours": 24,
+    "citation": "Codex: Adepta Sororitas (9th Ed), Danie Ware - The Rose in Darkness (2022)",
+    "loreSummary": "Devout warrior-nuns of the Ecclesiarchy clad in miniaturized power armor. Unshakeable faith and disciplined bolter drills allow them to hold ground against terrifying warp monstrosities."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/battle-sister.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 38,
+      "mobility": 44,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 60,
+      "mass": 22
+    },
+    "loreCanon": {
+      "ehp": 54,
+      "mobility": 76,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 60,
+      "mass": 26
+    }
+  },
+  "primaryWeaponSlug": "godwyn-deaz-boltgun",
+  "tacticalDescription": "High-morale armored line infantry. Superb leadership and faith resilience, effective mid-range bolter fire.",
+  "artImagePath": "/assets/art/battle_sister.jpg"
+}
