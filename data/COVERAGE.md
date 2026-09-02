@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `hormagaunt` | tyranids | shock_infantry | scything-talons |
 | `guardian-defender` | aeldari | line_infantry | shuriken-catapult |
 | `necron-immortal` | necrons | heavy_support | gauss-blaster |
 | `necron-warrior` | necrons | line_infantry | gauss-flayer |
@@ -25,6 +26,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `scything-talons` | tyranids | bio_weapon |
 | `shuriken-catapult` | aeldari | energy_shuriken |
 | `gauss-blaster` | necrons | energy_gauss |
 | `gauss-flayer` | necrons | energy_gauss |
@@ -38,6 +40,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `hormagaunt-velocity_discrepancy` | `hormagaunt` | velocity_discrepancy | The Devastation of Baal |
 | `guardian-defender-velocity_discrepancy` | `guardian-defender` | velocity_discrepancy | Path of the Warrior |
 | `necron-immortal-weapon_potency` | `necron-immortal` | weapon_potency | The Infinite and the Divine |
 | `necron-warrior-armor_durability` | `necron-warrior` | armor_durability | The Twice-Dead King: Ruin |
@@ -62,14 +65,13 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | orks | 1 | Partial |
 | necrons | 1 | Partial |
 | aeldari | 1 | Partial |
-| **tyranids** | **0** | **Empty** |
+| tyranids | 1 | Partial |
 | **tau_empire** | **0** | **Empty** |
 
 ---
 
 ## Suggested queue (priority order)
 
-4. **`hormagaunt`** — Tyranid Hormagaunt + Scything Talons. First Tyranid entry.
 5. **`fire-warrior`** — T'au Fire Warrior + Pulse Rifle. First T'au entry.
 6. **`space-marine-assault`** — Assault Intercessor + Chainsword/Bolt Pistol. Model exists.
 7. **`leman-russ-battle-tank`** — First vehicle entry (astra_militarum).
@@ -81,7 +83,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 4 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 5 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 3 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
@@ -95,6 +97,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-02 | `hormagaunt`, `scything-talons`, `hormagaunt-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-02 | `guardian-defender`, `shuriken-catapult`, `guardian-defender-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-02 | `necron-immortal`, `gauss-blaster`, `necron-immortal-weapon_potency` | statvault-wiki-agent |
 | 2026-09-02 | `necron-warrior`, `gauss-flayer`, `necron-warrior-armor_durability` | statvault-wiki-agent |

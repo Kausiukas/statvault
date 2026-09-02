@@ -1,0 +1,65 @@
+{
+  "id": "48c5742c-053a-4fd2-a6da-dcc30433cc61",
+  "slug": "hormagaunt",
+  "name": "Hormagaunt Swarm Brood",
+  "faction": "tyranids",
+  "subFaction": "Hive Fleet Leviathan",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 20,
+    "armor": 25,
+    "speedMps": 6.3,
+    "chargeSpeedMps": 7.9,
+    "acceleration": 4,
+    "massKgPerModel": 60,
+    "leadership": 65,
+    "baseCostPoints": 500,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 1.2,
+    "sprintSpeedMps": 13.5,
+    "sprintSpeedMph": 30.2,
+    "dreadAuraRadiusM": 15,
+    "dreadShockFactor": 0.45,
+    "armorComposition": "Chitinous Exoskeleton with Segmented Scleroprotein Plates",
+    "armorEquivalentRHAmm": 45,
+    "combatStaminaHours": "infinite",
+    "citation": "Codex: Tyranids (9th Ed), Guy Haley - The Devastation of Baal (2017)",
+    "loreSummary": "Hyperactive, ravenous vanguard swarm bioforms bounding across battlefields in erratic leaping patterns to overwhelm firing lines through sheer numbers and slashing razor talons."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/hormagaunt.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 25,
+      "mobility": 52,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 40,
+      "mass": 10
+    },
+    "loreCanon": {
+      "ehp": 35,
+      "mobility": 100,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 40,
+      "mass": 12
+    }
+  },
+  "primaryWeaponSlug": "scything-talons",
+  "tacticalDescription": "High-speed swarm melee bioform. High bounding leap distance and melee saturation; relies on swarm mass to absorb defensive fire.",
+  "artImagePath": "/assets/art/hormagaunt.jpg"
+}
