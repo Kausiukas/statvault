@@ -23,5 +23,6 @@
     "loreEffectDescription": "Emits twin synchronized pulses of emerald energy that instantly vaporize ceramite, plasteel, and organic sinew into shimmering atomic fog.",
     "citation": "Codex: Necrons (9th Ed)"
   },
-  "iconSlug": "gauss-blaster-icon"
+  "iconSlug": "gauss-blaster-icon",
+  "artImagePath": "/assets/art/gauss_blaster.jpg"
 }

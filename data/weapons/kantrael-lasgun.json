@@ -23,5 +23,6 @@
     "loreEffectDescription": "Extremely reliable infantry weapon. Effective against unarmored targets; requires massed overlapping volley fire to defeat heavy combat armor.",
     "citation": "Imperial Infantryman's Uplifting Primer (Damocles Edition)"
   },
-  "iconSlug": "kantrael-lasgun-icon"
+  "iconSlug": "kantrael-lasgun-icon",
+  "artImagePath": "/assets/art/kantrael_lasgun.jpg"
 }

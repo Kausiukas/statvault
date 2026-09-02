@@ -23,5 +23,6 @@
     "loreEffectDescription": "Overcharged laser emitter cycling massive electrical charges. Vaporizes light armor and melts straight through ceramite joints with concentrated thermal transfer.",
     "citation": "Munitorum Field Manual: Special Operations Division"
   },
-  "iconSlug": "hotshot-lasgun-icon"
+  "iconSlug": "hotshot-lasgun-icon",
+  "artImagePath": "/assets/art/hotshot_lasgun.jpg"
 }

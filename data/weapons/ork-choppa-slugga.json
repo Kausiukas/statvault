@@ -23,5 +23,6 @@
     "loreEffectDescription": "Crude, brutal weapons wielded with ferocious biomechanical leverage. Capable of denting armor and severing limbs through sheer brute impact force.",
     "citation": "Waaagh! The Orks - Wargear of the Greenskins"
   },
-  "iconSlug": "choppa-icon"
+  "iconSlug": "ork-choppa-slugga-icon",
+  "artImagePath": "/assets/art/ork_choppa_slugga.jpg"
 }

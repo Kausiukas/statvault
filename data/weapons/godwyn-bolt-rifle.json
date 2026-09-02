@@ -23,5 +23,6 @@
     "loreEffectDescription": "Self-propelled explosive rounds with dense diamantine penetrator caps. Penetrates target armor before secondary internal detonation.",
     "citation": "Imperial Armor Volume Two: Space Marines & Forces of the Adeptus Astartes"
   },
-  "iconSlug": "bolt-rifle-icon"
+  "iconSlug": "bolt-rifle-icon",
+  "artImagePath": "/assets/art/godwyn_bolt_rifle.jpg"
 }

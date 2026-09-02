@@ -1,0 +1,79 @@
+name: Generate 3D Model (Meshy API)
+
+on:
+  workflow_dispatch:
+    inputs:
+      unit_slug:
+        description: 'Unit slug (e.g. necron-immortal, guardian-defender, hormagaunt, fire-warrior)'
+        required: true
+        type: string
+        default: 'necron-immortal'
+      custom_prompt:
+        description: 'Optional custom text-to-3d prompt'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-3d-model:
+    name: Generate Textured 3D Asset
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Meshy 3D Generator
+        env:
+          MESHY_API_KEY: ${{ secrets.MESHY_API_KEY }}
+        run: |
+          ARGS="--unit ${{ inputs.unit_slug }}"
+          if [ -n "${{ inputs.custom_prompt }}" ]; then
+            ARGS="$ARGS --prompt \"${{ inputs.custom_prompt }}\""
+          fi
+          npx ts-node scripts/generate-meshy-model.ts $ARGS
+
+      - name: Detect Changes
+        id: git_status
+        run: |
+          if [ -n "$(git status --porcelain public/models/)" ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Pull Request with 3D Asset
+        if: steps.git_status.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "asset(3d): add generated 3D model for ${{ inputs.unit_slug }}"
+          branch: "asset/3d-${{ inputs.unit_slug }}"
+          base: main
+          title: "🎮 [3D Asset] New Textured Model for ${{ inputs.unit_slug }}"
+          body: |
+            ## Summary
+            Automated 3D model generated via Meshy Text-to-3D REST API for \`${{ inputs.unit_slug }}\`.
+
+            - File: \`public/models/${{ inputs.unit_slug }}.glb\`
+            - Formats: GLB (ready for Draco compression & KTX2 transcoding)
+
+            ---
+            *Review model in StatVault 3D inspector before merging.*
+          labels: |
+            3d-asset
+            models
+            automated-pr
+          reviewers: Kausiukas

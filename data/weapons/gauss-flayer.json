@@ -23,5 +23,6 @@
     "loreEffectDescription": "Fires an emerald electromagnetic disruption beam that dissolves atomic bonds, stripping targets layer by microscopic layer regardless of material density.",
     "citation": "Codex: Necrons (9th Ed), Imperial Armor Volume Twelve: The Fall of Orpheus"
   },
-  "iconSlug": "gauss-flayer-icon"
+  "iconSlug": "gauss-flayer-icon",
+  "artImagePath": "/assets/art/gauss_flayer.jpg"
 }

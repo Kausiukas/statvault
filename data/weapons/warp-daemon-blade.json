@@ -23,5 +23,6 @@
     "loreEffectDescription": "A blade bound with a screaming warp entity that cuts through physical armor and psychic wards alike, devouring the target's soul essence.",
     "citation": "Codex: Chaos Space Marines (9th Ed), The Book of the Damned"
   },
-  "iconSlug": "daemon-blade-icon"
+  "iconSlug": "daemon-blade-icon",
+  "artImagePath": "/assets/art/warp_daemon_blade.jpg"
 }

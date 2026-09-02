@@ -49,5 +49,6 @@ export const WeaponProfileSchema = z.object({
   engineDamage: WeaponEngineDamageSchema,
   loreDescriptor: WeaponLoreDescriptorSchema,
   iconSlug: z.string().optional(),
+  artImagePath: z.string().optional(),
 });
 export type WeaponProfile = z.infer<typeof WeaponProfileSchema>;

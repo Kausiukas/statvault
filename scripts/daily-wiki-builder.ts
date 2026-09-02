@@ -157,6 +157,7 @@ interface DataslateDefinition {
       reloadTimeSeconds: number;
     };
     iconSlug?: string;
+    artImagePath?: string;
   };
   loreAnnotation: {
     category: LoreCategory;
@@ -726,6 +727,7 @@ export function buildDataslateCluster(def: DataslateDefinition): {
       citation: w.loreDescriptor.citation,
     },
     iconSlug: w.iconSlug,
+    artImagePath: w.artImagePath ?? `/assets/art/${w.slug.replace(/-/g, '_')}.jpg`,
   };
 
   const lorePayload: LoreAnnotation = {
