@@ -18,11 +18,11 @@
     "collisionRadiusM": 0.65
   },
   "loreStats": {
-    "reactionTimeMs": 85.0,
-    "sprintSpeedMps": 11.0,
+    "reactionTimeMs": 85,
+    "sprintSpeedMps": 11,
     "sprintSpeedMph": 24.6,
     "dreadAuraRadiusM": 0,
-    "dreadShockFactor": 0.0,
+    "dreadShockFactor": 0,
     "armorComposition": "Crude Scrap Metal Plates, Riveted Iron Shoulders, and Tough Fungal Leather",
     "armorEquivalentRHAmm": 20,
     "combatStaminaHours": 48,
@@ -31,11 +31,15 @@
   },
   "asset3d": {
     "optimizedGlbPath": "/models/ork-boyz.opt.glb",
-    "dracoCompressionRatio": 0.922,
-    "vramFootprintMb": 8.1,
-    "polyCount": 23400,
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 22500,
     "textureResolution": "2048x2048",
-    "ktx2Formats": ["BC7", "ASTC", "ETC1S"]
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
   },
   "upiScores": {
     "inEngine": {
