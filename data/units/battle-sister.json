@@ -61,5 +61,11 @@
   },
   "primaryWeaponSlug": "godwyn-deaz-boltgun",
   "tacticalDescription": "High-morale armored line infantry. Superb leadership and faith resilience, effective mid-range bolter fire.",
-  "artImagePath": "/assets/art/battle_sister.jpg"
+  "artImagePath": "assets/art/battle-sister_concept.png",
+  "multiviewImages": [
+    "assets/art/battle-sister_multiview_0.png",
+    "assets/art/battle-sister_multiview_1.png",
+    "assets/art/battle-sister_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/battle-sister_concept.png"
 }

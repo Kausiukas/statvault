@@ -23,5 +23,10 @@
     "citation": "Codex: Adepta Sororitas (9th Ed)"
   },
   "iconSlug": "boltgun-icon",
-  "artImagePath": "/assets/art/godwyn_deaz_boltgun.jpg"
+  "artImagePath": "assets/art/godwyn-deaz-boltgun_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/godwyn-deaz-boltgun_multiview_0.png",
+    "assets/art/godwyn-deaz-boltgun_multiview_1.png",
+    "assets/art/godwyn-deaz-boltgun_multiview_2.png"
+  ]
 }
