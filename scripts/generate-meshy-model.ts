@@ -93,9 +93,17 @@ const CANONICAL_UNIT_PROMPTS: Record<string, string> = {
   'necron-immortal': 'Warhammer 40k Necron Immortal ancient metallic skeletal cybernetic warrior, holding a Gauss Blaster rifle, glowing green dynastic energy, living metal silver chassis, T-pose',
   'guardian-defender': 'Warhammer 40k Aeldari Craftworld Guardian Defender, psychoreactive smooth thermoplas mesh armor, sleek crest helmet, holding Shuriken Catapult, T-pose, high-fidelity miniature render',
   'hormagaunt': 'Warhammer 40k Tyranid Hormagaunt swarm bioform, chitinous carapace, four bounding legs, two huge razor scything talons, snarling bio-jaw, dynamic ground stance',
+  'termagant': 'Warhammer 40k Tyranid Termagant bioform with Fleshborer living parasite symbiote rifle, chitinous carapace, four bounding legs, high-fidelity miniature render',
   'fire-warrior': 'Warhammer 40k Tau Fire Warrior Strike Team soldier, sleek ceramic combat armor, cyclopean sensor helmet, holding Pulse Rifle, T-pose, clean battle-ready finish',
   'kasrkin-grenadier': 'Warhammer 40k Kasrkin Grenadier elite soldier, heavy carapace armor, targeting helmet visor, holding Hotshot Hellgun with power cables, military stance',
+  'space-marine-intercessor': 'Warhammer 40k Adeptus Astartes Primaris Intercessor, Mark X Tacticus power armor, holding Godwyn Bolt Rifle, heroic T-pose',
   'space-marine-assault': 'Warhammer 40k Adeptus Astartes Assault Intercessor, Mark X Tacticus power armor, jump pack, chainsword and heavy bolt pistol, heroic T-pose',
+  'ork-boyz': 'Warhammer 40k Ork Boy, muscular green brute in scrap metal armor, holding crude Choppa cleaver and heavy Slugga pistol, high-fidelity miniature render',
+  'chaos-chosen': 'Warhammer 40k Chaos Chosen Warrior, baroque corrupted power armor with horns, holding daemon sword, high-fidelity miniature render',
+  'battle-sister': 'Warhammer 40k Adepta Sororitas Battle Sister, power armor with fleur-de-lis iconography, holding Godwyn-Deaz Boltgun, high-fidelity miniature render',
+  'custodian-guard': 'Warhammer 40k Adeptus Custodes Custodian Guard, ornate golden auramite power armor, holding Guardian Spear, majestic heroic stance',
+  'hearthkyn-warrior': 'Warhammer 40k Leagues of Votann Hearthkyn Warrior, void hazard suit with armor plates, holding Autoch bolter, stout tactical stance',
+  'kabalite-warrior': 'Warhammer 40k Drukhari Kabalite Warrior, sharp barbed ghostplate armor, holding Splinter Rifle, sinister agile stance',
 };
 
 const MODEL_ALIASES: Record<string, string[]> = {
@@ -285,19 +293,88 @@ async function main() {
   const sizeMb = (fs.statSync(outGlbPath).size / (1024 * 1024)).toFixed(2);
   console.log(`✓ Downloaded ${finalSlug}.glb (${sizeMb} MB)`);
 
-  // Step 4: Download thumbnail if unit image is missing
-  const artPath = path.join(ART_DIR, `${finalSlug.replace(/-/g, '_')}.jpg`);
-  if (thumbnailUrl && !fs.existsSync(artPath)) {
-    console.log(`Downloading preview thumbnail to: ${artPath}...`);
+  // Step 4: Ensure High-Res Studio Miniature Art is Generated and Verified on Disk
+  const normalizedArtSlug = finalSlug.replace(/-/g, '_');
+  const targetPng = path.join(ART_DIR, `${normalizedArtSlug}.png`);
+  const targetJpg = path.join(ART_DIR, `${normalizedArtSlug}.jpg`);
+  let resolvedArtPath = '';
+
+  if ((fs.existsSync(targetPng) && fs.statSync(targetPng).size > 1000) || (fs.existsSync(targetJpg) && fs.statSync(targetJpg).size > 1000)) {
+    console.log(`✓ High-res miniature artwork already verified on disk for: ${finalSlug}`);
+    resolvedArtPath = `assets/art/${normalizedArtSlug}.png`;
+  } else {
+    console.log(`\n🎨 Generating Studio Miniature Render via Meshy Text-to-Image (Nano Banana Pro)...`);
+    const imagePrompt = `${finalPrompt}, high-fidelity tabletop miniature figure render, isolated on neutral studio grey background, sharp focus, clean lighting`;
+
     try {
-      await downloadFile(thumbnailUrl, artPath);
-      console.log(`✓ Created fallback artwork: ${path.basename(artPath)}`);
-    } catch (artErr) {
-      console.warn('Note: Could not save thumbnail image.');
+      const createImgRes = await requestJson(
+        {
+          hostname: 'api.meshy.ai',
+          path: '/openapi/v1/text-to-image',
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            'Content-Type': 'application/json',
+          },
+        },
+        {
+          prompt: imagePrompt,
+          ai_model: 'nano-banana-pro',
+          aspect_ratio: '1:1',
+        }
+      );
+
+      const imgTaskId = createImgRes.result || createImgRes.id;
+      if (imgTaskId) {
+        console.log(`✓ Image task created: ${imgTaskId}. Waiting for image render completion...`);
+        for (let attempt = 0; attempt < 30; attempt++) {
+          await new Promise((r) => setTimeout(r, 4000));
+          const statusRes = await requestJson({
+            hostname: 'api.meshy.ai',
+            path: `/openapi/v1/text-to-image/${imgTaskId}`,
+            method: 'GET',
+            headers: { Authorization: `Bearer ${apiKey}` },
+          });
+
+          const imgStatus = statusRes.status;
+          const imgProgress = statusRes.progress ?? 0;
+          console.log(`  Image Status: ${imgStatus} (${imgProgress}%)`);
+
+          if (imgStatus === 'SUCCEEDED') {
+            if (Array.isArray(statusRes.image_urls) && statusRes.image_urls.length > 0) {
+              const imgUrl = statusRes.image_urls[0];
+              console.log(`Downloading high-res miniature art to ${targetPng}...`);
+              await downloadFile(imgUrl, targetPng);
+              fs.copyFileSync(targetPng, targetJpg);
+              resolvedArtPath = `assets/art/${normalizedArtSlug}.png`;
+              console.log(`✓ Verified miniature art saved: assets/art/${normalizedArtSlug}.png`);
+            }
+            break;
+          } else if (imgStatus === 'FAILED' || imgStatus === 'EXPIRED') {
+            console.warn(`Text-to-Image task failed: ${statusRes.task_error?.message}`);
+            break;
+          }
+        }
+      }
+    } catch (imgErr: any) {
+      console.warn(`Could not generate Text-to-Image render: ${imgErr.message}`);
+    }
+
+    // Fallback: Use thumbnail from 3D model if text-to-image didn't succeed
+    if (!resolvedArtPath && thumbnailUrl) {
+      console.log(`Downloading 3D preview thumbnail fallback to: ${targetJpg}...`);
+      try {
+        await downloadFile(thumbnailUrl, targetJpg);
+        fs.copyFileSync(targetJpg, targetPng);
+        resolvedArtPath = `assets/art/${normalizedArtSlug}.jpg`;
+        console.log(`✓ Saved fallback thumbnail artwork: assets/art/${normalizedArtSlug}.jpg`);
+      } catch (artErr) {
+        console.warn('Note: Could not save thumbnail image.');
+      }
     }
   }
 
-  // Step 5: Update Unit JSON asset3d reference if unit file exists
+  // Step 5: Update Unit JSON asset3d and artImagePath references
   if (unitFilePath && fs.existsSync(unitFilePath)) {
     try {
       const uData = JSON.parse(fs.readFileSync(unitFilePath, 'utf-8'));
@@ -309,8 +386,11 @@ async function main() {
         textureResolution: '2048x2048',
         ktx2Formats: ['BC7', 'ASTC', 'ETC1S'],
       };
+      if (resolvedArtPath) {
+        uData.artImagePath = resolvedArtPath;
+      }
       fs.writeFileSync(unitFilePath, JSON.stringify(uData, null, 2) + '\n', 'utf-8');
-      console.log(`✓ Updated asset3d attributes in: ${path.basename(unitFilePath)}`);
+      console.log(`✓ Updated asset3d and artImagePath in: ${path.basename(unitFilePath)}`);
     } catch (uErr) {
       console.warn('Could not update unit json asset3d reference.');
     }
@@ -334,8 +414,27 @@ async function main() {
     console.warn('Notice: validate:data exited with notice.');
   }
 
+  // Step 8: Strict Pre-Finish Verification (Ensures Header Updater NEVER encounters missing assets)
+  console.log('\n🔍 Verifying all required visual assets exist on disk before declaring finish:');
+  if (!fs.existsSync(outGlbPath) || fs.statSync(outGlbPath).size === 0) {
+    throw new Error(`[FATAL] 3D model missing or empty at: ${outGlbPath}`);
+  }
+  console.log(`  ✓ 3D Mesh: ${path.basename(outGlbPath)} (${sizeMb} MB)`);
+
+  const artCandidates = [
+    path.join(ART_DIR, `${normalizedArtSlug}.png`),
+    path.join(ART_DIR, `${normalizedArtSlug}.jpg`),
+    path.join(ART_DIR, `${finalSlug}.png`),
+    path.join(ART_DIR, `${finalSlug}.jpg`),
+  ];
+  const verifiedArt = artCandidates.find((f) => fs.existsSync(f) && fs.statSync(f).size > 1000);
+  if (!verifiedArt) {
+    throw new Error(`[FATAL] Visual artwork for ${finalSlug} is missing on disk. Header updater cannot proceed without image.`);
+  }
+  console.log(`  ✓ Visual Image: ${path.basename(verifiedArt)} (${(fs.statSync(verifiedArt).size / 1024).toFixed(1)} KB)`);
+
   console.log('\n================================================');
-  console.log(`🚀 3D visual generation complete for: ${finalSlug}`);
+  console.log(`🚀 Visual asset generation strictly verified and complete for: ${finalSlug}`);
 }
 
 if (require.main === module) {
