@@ -32,7 +32,7 @@ import {
   type UnitRole,
   type WeaponType,
   type LoreCategory,
-} from '@statvault/schemas';
+} from '../packages/schemas/src';
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const UNITS_DIR = path.join(REPO_ROOT, 'data/units');

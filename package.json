@@ -13,6 +13,8 @@
     "test": "turbo run test",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
+    "build:schemas": "npm run build --workspace=@statvault/schemas",
+    "postinstall": "npm run build --workspace=@statvault/schemas",
     "validate:data": "npm run validate:data --workspace=@statvault/schemas",
     "task:wiki-build": "ts-node scripts/daily-wiki-builder.ts",
     "model:generate": "ts-node scripts/generate-meshy-model.ts",
