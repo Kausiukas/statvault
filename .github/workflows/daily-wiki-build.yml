@@ -77,34 +77,12 @@ jobs:
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Create Reviewable Pull Request
+      - name: Commit & Push Corpus Growth Directly to main
         if: steps.git_status.outputs.has_changes == 'true' && inputs.dry_run != true
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "lore: daily wiki corpus ingestion [${{ steps.date.outputs.date }}]"
-          branch: "lore/wiki-${{ steps.date.outputs.date }}"
-          branch-suffix: "timestamp"
-          delete-branch: true
-          base: main
-          title: "⚔️ [Corpus Ingestion] Daily Lore Dataslate Addition (${{ steps.date.outputs.date }})"
-          body: |
-            ## Summary
-            Automated daily StatVault corpus addition. Pulls new units, weapons, lore citations, and artifact links into the database.
-
-            ### Scope
-            - Autonomous corpus build-up only (no game patch diffs or comparisons).
-            - Canonical lore grounding from verified Black Library, Codex, and Imperial Armor publications.
-            - RTS baseline parameter derivation via Dual-Lens framework formulas.
-
-            ### Schema Validation Status
-            - [x] `npm run validate:data` passed on 100% of corpus files.
-            - [x] Zod schemas satisfied across units, weapons, and lore annotations.
-
-            ---
-            *Note: As per repository guidelines in [CONTRIBUTING.md](CONTRIBUTING.md), this pull request requires human lore and tactical balance review before merging. Never auto-merged.*
-          labels: |
-            lore
-            dataslate
-            automated-pr
-          reviewers: Kausiukas
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "lore: daily wiki corpus ingestion [${{ steps.date.outputs.date }}]"
+          git push origin main
+          echo "Successfully committed and pushed new corpus dataslates directly to main."

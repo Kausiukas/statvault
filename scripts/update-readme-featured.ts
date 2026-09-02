@@ -39,7 +39,7 @@ function resolveLatestUnitSlug(requestedSlug?: string): string {
   // 1. Check COVERAGE.md changelog
   if (fs.existsSync(COVERAGE_PATH)) {
     const content = fs.readFileSync(COVERAGE_PATH, 'utf-8');
-    const match = content.match(/\|\s*\d{4}-\d{2}-\d{2}\s*\|\s*`([a-z0-9-]+)`/);
+    const match = content.match(/\|\s*\d{4}-\d{2}-\d{2}\s*\|\s*\x60([a-z0-9-]+)\x60/);
     if (match && match[1]) {
       return match[1];
     }

@@ -70,31 +70,12 @@ jobs:
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Create Pull Request with 3D Asset
+      - name: Commit & Push 3D Assets Directly to main
         if: steps.git_status.outputs.has_changes == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "asset(3d): add generated 3D model & visuals [${{ steps.date.outputs.date }}]"
-          branch: "asset/3d-auto-${{ steps.date.outputs.date }}"
-          branch-suffix: "timestamp"
-          delete-branch: true
-          base: main
-          title: "🎮 [3D Visuals] New Textured 3D Model & Assets (${{ steps.date.outputs.date }})"
-          body: |
-            ## Summary
-            Automated 3D model and visual assets generated via Meshy Text-to-3D REST API.
-            This workflow was triggered automatically following the completion of the daily wiki build-up.
-
-            ### Generated Artifacts
-            - Textured 3D mesh: \`public/models/*.glb\`
-            - Dataslate unit integration: \`data/units/*.json\` updated
-            - Corpus schema validation: verified
-
-            ---
-            *Note: Review the 3D model in the StatVault WebGL viewport before merging.*
-          labels: |
-            3d-asset
-            visuals
-            automated-pr
-          reviewers: Kausiukas
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/models/ assets/ data/
+          git commit -m "asset(3d): add generated 3D model & visuals [${{ steps.date.outputs.date }}]"
+          git push origin main
+          echo "Successfully committed and pushed generated 3D model & visuals directly to main."

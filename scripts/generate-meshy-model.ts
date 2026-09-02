@@ -98,6 +98,16 @@ const CANONICAL_UNIT_PROMPTS: Record<string, string> = {
   'space-marine-assault': 'Warhammer 40k Adeptus Astartes Assault Intercessor, Mark X Tacticus power armor, jump pack, chainsword and heavy bolt pistol, heroic T-pose',
 };
 
+const MODEL_ALIASES: Record<string, string[]> = {
+  'ork-boyz': ['ork-boyz.glb', 'ork-boy.glb'],
+  'space-marine-intercessor': ['space-marine-intercessor.glb', 'space-marine-assault-dual-pbr.glb'],
+};
+
+function hasModel(slug: string): boolean {
+  const candidates = MODEL_ALIASES[slug] || [`${slug}.glb`];
+  return candidates.some((filename) => fs.existsSync(path.join(MODELS_DIR, filename)));
+}
+
 function resolveTargetUnit(targetSlug?: string): { slug: string; prompt: string; unitFilePath?: string } {
   if (targetSlug) {
     const unitFile = path.join(UNITS_DIR, `${targetSlug}.json`);
@@ -115,24 +125,56 @@ function resolveTargetUnit(targetSlug?: string): { slug: string; prompt: string;
     };
   }
 
-  // Auto-detection mode: find the newest unit in data/units/ lacking a .glb in public/models/
+  // 1. Prioritize newest unit from data/COVERAGE.md changelog
+  if (fs.existsSync(COVERAGE_FILE)) {
+    const content = fs.readFileSync(COVERAGE_FILE, 'utf-8');
+    const match = content.match(/\|\s*\d{4}-\d{2}-\d{2}\s*\|\s*\x60([a-z0-9-]+)\x60/);
+    if (match && match[1]) {
+      const newestSlug = match[1];
+      if (!hasModel(newestSlug)) {
+        console.log(`🎯 Prioritizing newest ingested unit from COVERAGE.md: ${newestSlug}`);
+        const unitFile = path.join(UNITS_DIR, `${newestSlug}.json`);
+        let prompt = CANONICAL_UNIT_PROMPTS[newestSlug];
+        if (!prompt && fs.existsSync(unitFile)) {
+          try {
+            const u = JSON.parse(fs.readFileSync(unitFile, 'utf-8'));
+            prompt = `Warhammer 40k ${u.name}, ${u.faction}, ${u.role}, ${u.loreStats?.armorComposition || ''}, realistic 3D game model, T-pose`;
+          } catch (e) {}
+        }
+        return {
+          slug: newestSlug,
+          prompt: prompt || `Warhammer 40k ${newestSlug.replace(/-/g, ' ')}, 3D model, T-pose`,
+          unitFilePath: fs.existsSync(unitFile) ? unitFile : undefined,
+        };
+      }
+    }
+  }
+
+  // 2. Scan data/units/ sorted by newest first (mtime descending)
   if (fs.existsSync(UNITS_DIR)) {
-    const files = fs.readdirSync(UNITS_DIR).filter((f) => f.endsWith('.json'));
-    for (const f of files) {
-      const slug = f.replace('.json', '');
-      const glbPath = path.join(MODELS_DIR, `${slug}.glb`);
-      if (!fs.existsSync(glbPath)) {
-        const unitFile = path.join(UNITS_DIR, f);
+    const files = fs
+      .readdirSync(UNITS_DIR)
+      .filter((f) => f.endsWith('.json'))
+      .map((f) => ({
+        filename: f,
+        slug: f.replace('.json', ''),
+        mtime: fs.statSync(path.join(UNITS_DIR, f)).mtimeMs,
+      }))
+      .sort((a, b) => b.mtime - a.mtime);
+
+    for (const item of files) {
+      if (!hasModel(item.slug)) {
+        const unitFile = path.join(UNITS_DIR, item.filename);
         try {
           const u = JSON.parse(fs.readFileSync(unitFile, 'utf-8'));
           const prompt =
-            CANONICAL_UNIT_PROMPTS[slug] ||
+            CANONICAL_UNIT_PROMPTS[item.slug] ||
             `Warhammer 40k ${u.name}, ${u.faction}, ${u.role}, ${u.loreStats?.armorComposition || ''}, realistic 3D game model, T-pose`;
-          return { slug, prompt, unitFilePath: unitFile };
+          return { slug: item.slug, prompt, unitFilePath: unitFile };
         } catch (e) {
           return {
-            slug,
-            prompt: CANONICAL_UNIT_PROMPTS[slug] || `Warhammer 40k ${slug.replace(/-/g, ' ')}, 3D model, T-pose`,
+            slug: item.slug,
+            prompt: CANONICAL_UNIT_PROMPTS[item.slug] || `Warhammer 40k ${item.slug.replace(/-/g, ' ')}, 3D model, T-pose`,
             unitFilePath: unitFile,
           };
         }
