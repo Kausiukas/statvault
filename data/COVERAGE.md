@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `custodian-guard` | adeptus_custodes | shock_infantry | guardian-spear |
 | `battle-sister` | adepta_sororitas | line_infantry | godwyn-deaz-boltgun |
 | `fire-warrior` | tau_empire | line_infantry | pulse-rifle |
 | `hormagaunt` | tyranids | shock_infantry | scything-talons |
@@ -28,6 +29,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `guardian-spear` | adeptus_custodes | melee_power |
 | `godwyn-deaz-boltgun` | adepta_sororitas | ballistic_slug |
 | `pulse-rifle` | tau_empire | energy_pulse |
 | `scything-talons` | tyranids | bio_weapon |
@@ -44,6 +46,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `custodian-guard-armor_durability` | `custodian-guard` | armor_durability | The Emperor’s Legion |
 | `battle-sister-combat_longevity` | `battle-sister` | combat_longevity | The Rose in Darkness |
 | `fire-warrior-weapon_potency` | `fire-warrior` | weapon_potency | Fire Caste |
 | `hormagaunt-velocity_discrepancy` | `hormagaunt` | velocity_discrepancy | The Devastation of Baal |
@@ -88,7 +91,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 5 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 6 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 5 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
@@ -102,6 +105,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-03 | `custodian-guard`, `guardian-spear`, `custodian-guard-armor_durability` | statvault-wiki-agent |
 | 2026-09-02 | `battle-sister`, `godwyn-deaz-boltgun`, `battle-sister-combat_longevity` | statvault-wiki-agent |
 | 2026-09-02 | `fire-warrior`, `pulse-rifle`, `fire-warrior-weapon_potency` | statvault-wiki-agent |
 | 2026-09-02 | `hormagaunt`, `scything-talons`, `hormagaunt-velocity_discrepancy` | statvault-wiki-agent |

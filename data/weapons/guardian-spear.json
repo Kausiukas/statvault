@@ -1,0 +1,27 @@
+{
+  "id": "168e372a-71fe-459f-931a-1d595b41f016",
+  "slug": "guardian-spear",
+  "name": "Master-Crafted Guardian Spear",
+  "type": "melee_power",
+  "faction": "adeptus_custodes",
+  "engineDamage": {
+    "baseDamage": 75,
+    "armorPenetration": 65,
+    "attacksPerSecond": 1.8,
+    "rangeMeters": 4,
+    "accuracyPercent": 95,
+    "projectileVelocityMps": 800,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.2
+  },
+  "loreDescriptor": {
+    "caliber": "Auramite Blade with Integral High-Yield Bolt Caster (.80 Cal)",
+    "propellant": "Micro-Fusion Reactor Disruptor Matrix",
+    "muzzleVelocityMps": 1800,
+    "effectiveRangeKm": 1.2,
+    "loreEffectDescription": "Dual-purpose halberd incorporating a masterwork power blade that cleaves heavy tank hulls, paired with an integrated high-caliber boltgun.",
+    "citation": "Codex: Adeptus Custodes"
+  },
+  "iconSlug": "guardian-spear-icon",
+  "artImagePath": "/assets/art/guardian_spear.jpg"
+}

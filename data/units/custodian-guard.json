@@ -1,0 +1,65 @@
+{
+  "id": "82b6d1ab-c3d6-42a9-8729-075a3fd72076",
+  "slug": "custodian-guard",
+  "name": "Custodian Guard Cadre",
+  "faction": "adeptus_custodes",
+  "subFaction": "Emperor’s Shadowkeepers",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1950,
+    "modelCount": 3,
+    "armor": 140,
+    "speedMps": 6.5,
+    "chargeSpeedMps": 8.1,
+    "acceleration": 4,
+    "massKgPerModel": 480,
+    "leadership": 110,
+    "baseCostPoints": 1450,
+    "collisionRadiusM": 0.8
+  },
+  "loreStats": {
+    "reactionTimeMs": 0.3,
+    "sprintSpeedMps": 18,
+    "sprintSpeedMph": 40.3,
+    "dreadAuraRadiusM": 60,
+    "dreadShockFactor": 0.95,
+    "armorComposition": "Custom-Alloy Auramite Power Armor with Electro-Disruptor Wards",
+    "armorEquivalentRHAmm": 850,
+    "combatStaminaHours": "infinite",
+    "citation": "Codex: Adeptus Custodes (9th Ed), Chris Wraight - The Emperor’s Legion (2017)",
+    "loreSummary": "The Emperor’s personal bodyguard and elite demigods of war. Each Custodian is a bespoke artisanal masterpiece of bio-alchemical engineering, clad in auramite and wielding master-crafted guardian spears."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/custodian-guard.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 100,
+      "mobility": 53,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 100,
+      "mass": 80
+    },
+    "loreCanon": {
+      "ehp": 100,
+      "mobility": 100,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 100,
+      "mass": 96
+    }
+  },
+  "primaryWeaponSlug": "guardian-spear",
+  "tacticalDescription": "Apex tier elite shock heavy infantry. Near-impenetrable auramite armor, high melee AP, and supreme durability.",
+  "artImagePath": "/assets/art/custodian_guard.jpg"
+}
