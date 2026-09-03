@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Battle Sisters Squad
+## 🌟 Daily Featured Dataslate: Hearthkyn Warriors Kinband
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/battle-sister_concept.png" alt="Battle Sisters Squad in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/hearthkyn-warrior_concept.png" alt="Hearthkyn Warriors Kinband in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Battle Sisters Squad deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Hearthkyn Warriors Kinband deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/battle-sister_multiview_0.png" alt="Battle Sisters Squad" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/hearthkyn-warrior_multiview_0.png" alt="Hearthkyn Warriors Kinband" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Battle Sisters Squad</b></h3>
+      <h3><b>Hearthkyn Warriors Kinband</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-ADEPTA%20SORORITAS-555555?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-LEAGUES%20OF%20VOTANN-555555?style=flat-square" />
         <img src="https://img.shields.io/badge/Role-LINE%20INFANTRY-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-780%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-720%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"High-morale armored line infantry. Superb leadership and faith resilience, effective mid-range bolter fire."</i></p>
+      <i>"Sturdy armored line infantry. High armor rating and resilient moral fortitude, slightly slower movement speed."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 220mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1250 HP (Armor Rating: 80)<br/>
-      • <b>RTS Tactical Speed:</b> 10.7 mph (17.3 km/h)<br/>
-      • <b>Primary Armament:</b> Godwyn-De’az Pattern Boltgun (AP: 25, Base Dmg: 36)<br/>
-      • <b>Lore Phenomenon:</b> Devout warrior-nuns of the Ecclesiarchy clad in miniaturized power armor. Unshakeable faith and disciplined bolter drills allow them to hold...</p>
+      • <b>Lore Armor Protection:</b> 190mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1300 HP (Armor Rating: 85)<br/>
+      • <b>RTS Tactical Speed:</b> 10.1 mph (16.2 km/h)<br/>
+      • <b>Primary Armament:</b> Autoch-Pattern Bolter (AP: 26, Base Dmg: 38)<br/>
+      • <b>Lore Phenomenon:</b> Clone-engineered Kin miners and soldiers. Tenacious, pragmatic, and heavily armored in void-sealed hazard suits capable of surviving orbital...</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,25 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/battle-sister_multiview_0.png"><img src="assets/art/battle-sister_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/battle-sister_multiview_1.png"><img src="assets/art/battle-sister_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/battle-sister_multiview_2.png"><img src="assets/art/battle-sister_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/hearthkyn-warrior_multiview_0.png"><img src="assets/art/hearthkyn-warrior_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/hearthkyn-warrior_multiview_1.png"><img src="assets/art/hearthkyn-warrior_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/hearthkyn-warrior_multiview_2.png"><img src="assets/art/hearthkyn-warrior_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Godwyn-De’az Pattern Boltgun</th>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Autoch-Pattern Bolter</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/godwyn-deaz-boltgun_multiview_0.png"><img src="assets/art/godwyn-deaz-boltgun_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/godwyn-deaz-boltgun_multiview_1.png"><img src="assets/art/godwyn-deaz-boltgun_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/godwyn-deaz-boltgun_multiview_2.png"><img src="assets/art/godwyn-deaz-boltgun_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/autoch-bolter_multiview_0.png"><img src="assets/art/autoch-bolter_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/autoch-bolter_multiview_1.png"><img src="assets/art/autoch-bolter_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/autoch-bolter_multiview_2.png"><img src="assets/art/autoch-bolter_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/battle-sister.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/godwyn-deaz-boltgun.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/hearthkyn-warrior.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/autoch-bolter.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
