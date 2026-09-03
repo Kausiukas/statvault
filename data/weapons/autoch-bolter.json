@@ -23,5 +23,10 @@
     "citation": "Codex: Leagues of Votann (9th Ed)"
   },
   "iconSlug": "autoch-bolter-icon",
-  "artImagePath": "/assets/art/autoch_bolter.jpg"
+  "artImagePath": "assets/art/autoch-bolter_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/autoch-bolter_multiview_0.png",
+    "assets/art/autoch-bolter_multiview_1.png",
+    "assets/art/autoch-bolter_multiview_2.png"
+  ]
 }

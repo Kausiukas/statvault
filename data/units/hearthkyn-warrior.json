@@ -61,5 +61,11 @@
   },
   "primaryWeaponSlug": "autoch-bolter",
   "tacticalDescription": "Sturdy armored line infantry. High armor rating and resilient moral fortitude, slightly slower movement speed.",
-  "artImagePath": "/assets/art/hearthkyn_warrior.jpg"
+  "artImagePath": "assets/art/hearthkyn-warrior_concept.png",
+  "multiviewImages": [
+    "assets/art/hearthkyn-warrior_multiview_0.png",
+    "assets/art/hearthkyn-warrior_multiview_1.png",
+    "assets/art/hearthkyn-warrior_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/hearthkyn-warrior_concept.png"
 }
