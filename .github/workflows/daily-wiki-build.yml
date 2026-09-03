@@ -2,7 +2,7 @@ name: Daily Wiki Build-Up & Lore Dataslate Corpus
 
 on:
   schedule:
-    # Daily at 06:00 UTC
+    # Daily at 07:20 UTC
     - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
