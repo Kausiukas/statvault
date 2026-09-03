@@ -1,0 +1,65 @@
+{
+  "id": "08897b87-b498-40cd-806c-538ce8f417a1",
+  "slug": "hearthkyn-warrior",
+  "name": "Hearthkyn Warriors Kinband",
+  "faction": "leagues_of_votann",
+  "subFaction": "Greater Thurian League",
+  "role": "line_infantry",
+  "engineStats": {
+    "hitPoints": 1300,
+    "modelCount": 10,
+    "armor": 85,
+    "speedMps": 4.5,
+    "chargeSpeedMps": 5.6,
+    "acceleration": 4,
+    "massKgPerModel": 140,
+    "leadership": 80,
+    "baseCostPoints": 720,
+    "collisionRadiusM": 0.6
+  },
+  "loreStats": {
+    "reactionTimeMs": 7.5,
+    "sprintSpeedMps": 6,
+    "sprintSpeedMph": 13.4,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0,
+    "armorComposition": "Kin Weave Armored Void Suit with Magna-Clad Plates",
+    "armorEquivalentRHAmm": 190,
+    "combatStaminaHours": 36,
+    "citation": "Codex: Leagues of Votann (9th Ed)",
+    "loreSummary": "Clone-engineered Kin miners and soldiers. Tenacious, pragmatic, and heavily armored in void-sealed hazard suits capable of surviving orbital hard vacuum and point-blank small arms."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/hearthkyn-warrior.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 41,
+      "mobility": 43,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 40,
+      "mass": 23
+    },
+    "loreCanon": {
+      "ehp": 52,
+      "mobility": 70,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 40,
+      "mass": 28
+    }
+  },
+  "primaryWeaponSlug": "autoch-bolter",
+  "tacticalDescription": "Sturdy armored line infantry. High armor rating and resilient moral fortitude, slightly slower movement speed.",
+  "artImagePath": "/assets/art/hearthkyn_warrior.jpg"
+}

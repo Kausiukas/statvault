@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `hearthkyn-warrior` | leagues_of_votann | line_infantry | autoch-bolter |
 | `custodian-guard` | adeptus_custodes | shock_infantry | guardian-spear |
 | `battle-sister` | adepta_sororitas | line_infantry | godwyn-deaz-boltgun |
 | `fire-warrior` | tau_empire | line_infantry | pulse-rifle |
@@ -29,6 +30,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `autoch-bolter` | leagues_of_votann | ballistic_slug |
 | `guardian-spear` | adeptus_custodes | melee_power |
 | `godwyn-deaz-boltgun` | adepta_sororitas | ballistic_slug |
 | `pulse-rifle` | tau_empire | energy_pulse |
@@ -46,6 +48,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `hearthkyn-warrior-armor_durability` | `hearthkyn-warrior` | armor_durability | Codex: Leagues of Votann |
 | `custodian-guard-armor_durability` | `custodian-guard` | armor_durability | The Emperor’s Legion |
 | `battle-sister-combat_longevity` | `battle-sister` | combat_longevity | The Rose in Darkness |
 | `fire-warrior-weapon_potency` | `fire-warrior` | weapon_potency | Fire Caste |
@@ -92,7 +95,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 6 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 5 | cadian-shock-trooper |
+| line_infantry | 6 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
 | monstrous_creature | 0 | — |
@@ -105,6 +108,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-03 | `hearthkyn-warrior`, `autoch-bolter`, `hearthkyn-warrior-armor_durability` | statvault-wiki-agent |
 | 2026-09-03 | `custodian-guard`, `guardian-spear`, `custodian-guard-armor_durability` | statvault-wiki-agent |
 | 2026-09-02 | `battle-sister`, `godwyn-deaz-boltgun`, `battle-sister-combat_longevity` | statvault-wiki-agent |
 | 2026-09-02 | `fire-warrior`, `pulse-rifle`, `fire-warrior-weapon_potency` | statvault-wiki-agent |

@@ -1,0 +1,27 @@
+{
+  "id": "16f8bf5c-1285-4086-a0a5-a1afd0c95f80",
+  "slug": "autoch-bolter",
+  "name": "Autoch-Pattern Bolter",
+  "type": "ballistic_slug",
+  "faction": "leagues_of_votann",
+  "engineDamage": {
+    "baseDamage": 38,
+    "armorPenetration": 26,
+    "attacksPerSecond": 1.4,
+    "rangeMeters": 170,
+    "accuracyPercent": 82,
+    "projectileVelocityMps": 680,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.5
+  },
+  "loreDescriptor": {
+    "caliber": ".60 Caliber High-Density Solid Core Armor-Piercing Round",
+    "propellant": "Advanced Electro-Chemical Cartridge",
+    "muzzleVelocityMps": 1350,
+    "effectiveRangeKm": 1.1,
+    "loreEffectDescription": "Precision-engineered Kin bolter combining high cyclic rate of fire with dense micro-fragmenting penetrator rounds.",
+    "citation": "Codex: Leagues of Votann (9th Ed)"
+  },
+  "iconSlug": "autoch-bolter-icon",
+  "artImagePath": "/assets/art/autoch_bolter.jpg"
+}
