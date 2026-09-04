@@ -1,0 +1,65 @@
+{
+  "id": "661660f6-ebd3-4579-a15e-315c0985434c",
+  "slug": "kabalite-warrior",
+  "name": "Kabalite Warriors Syndicate",
+  "faction": "drukhari",
+  "subFaction": "Kabal of the Black Heart",
+  "role": "line_infantry",
+  "engineStats": {
+    "hitPoints": 880,
+    "modelCount": 10,
+    "armor": 35,
+    "speedMps": 5.5,
+    "chargeSpeedMps": 6.9,
+    "acceleration": 4,
+    "massKgPerModel": 75,
+    "leadership": 75,
+    "baseCostPoints": 640,
+    "collisionRadiusM": 0.5
+  },
+  "loreStats": {
+    "reactionTimeMs": 3.8,
+    "sprintSpeedMps": 11.2,
+    "sprintSpeedMph": 25.1,
+    "dreadAuraRadiusM": 15,
+    "dreadShockFactor": 0.35,
+    "armorComposition": "Segmented Ghostplate Armor with Hard-Light Distortion Shroud",
+    "armorEquivalentRHAmm": 70,
+    "combatStaminaHours": 18,
+    "citation": "Codex: Drukhari (9th Ed), Andy Chambers - Path of the Renegade (2012)",
+    "loreSummary": "Sadistic raiders of Commorragh. Incredibly swift and lethal, wielding splinter rifles that fire crystallised virulent neurotoxins that induce agonizing death in seconds."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/kabalite-warrior.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 19,
+      "mobility": 48,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 50,
+      "mass": 13
+    },
+    "loreCanon": {
+      "ehp": 27,
+      "mobility": 96,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 50,
+      "mass": 15
+    }
+  },
+  "primaryWeaponSlug": "splinter-rifle",
+  "tacticalDescription": "High-speed venomous skirmishers. Poisoned splinter weapons bypass heavy organic toughness; extremely fragile under counter-battery fire.",
+  "artImagePath": "/assets/art/kabalite_warrior.jpg"
+}

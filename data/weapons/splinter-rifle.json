@@ -1,0 +1,27 @@
+{
+  "id": "073176ea-2a2c-4e26-8b6b-811f2a2ab075",
+  "slug": "splinter-rifle",
+  "name": "Drukhari Splinter Rifle",
+  "type": "energy_shuriken",
+  "faction": "drukhari",
+  "engineDamage": {
+    "baseDamage": 30,
+    "armorPenetration": 22,
+    "attacksPerSecond": 2,
+    "rangeMeters": 160,
+    "accuracyPercent": 80,
+    "projectileVelocityMps": 720,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.1
+  },
+  "loreDescriptor": {
+    "caliber": "Micro-Splinter Solid Toxin Crystals",
+    "propellant": "Magno-Electric Pulsed Rail Field",
+    "muzzleVelocityMps": 2400,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Splits solid cylinders of lethal virulent neurotoxin into thousands of micro-shards, saturating enemy targets with lethal agonizing venom that kills regardless of physical size.",
+    "citation": "Codex: Drukhari (9th Ed)"
+  },
+  "iconSlug": "splinter-rifle-icon",
+  "artImagePath": "/assets/art/splinter_rifle.jpg"
+}
