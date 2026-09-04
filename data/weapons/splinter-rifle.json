@@ -23,5 +23,10 @@
     "citation": "Codex: Drukhari (9th Ed)"
   },
   "iconSlug": "splinter-rifle-icon",
-  "artImagePath": "/assets/art/splinter_rifle.jpg"
+  "artImagePath": "assets/art/splinter-rifle_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/splinter-rifle_multiview_0.png",
+    "assets/art/splinter-rifle_multiview_1.png",
+    "assets/art/splinter-rifle_multiview_2.png"
+  ]
 }

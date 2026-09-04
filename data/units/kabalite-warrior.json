@@ -61,5 +61,11 @@
   },
   "primaryWeaponSlug": "splinter-rifle",
   "tacticalDescription": "High-speed venomous skirmishers. Poisoned splinter weapons bypass heavy organic toughness; extremely fragile under counter-battery fire.",
-  "artImagePath": "/assets/art/kabalite_warrior.jpg"
+  "artImagePath": "assets/art/kabalite-warrior_concept.png",
+  "multiviewImages": [
+    "assets/art/kabalite-warrior_multiview_0.png",
+    "assets/art/kabalite-warrior_multiview_1.png",
+    "assets/art/kabalite-warrior_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/kabalite-warrior_concept.png"
 }
