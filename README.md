@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Kabalite Warriors Syndicate
+## 🌟 Daily Featured Dataslate: Howling Banshees Aspect Cadre
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/kabalite-warrior_concept.png" alt="Kabalite Warriors Syndicate in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/howling-banshee_concept.png" alt="Howling Banshees Aspect Cadre in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Kabalite Warriors Syndicate deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Howling Banshees Aspect Cadre deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/kabalite-warrior_multiview_0.png" alt="Kabalite Warriors Syndicate" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/howling-banshee_multiview_0.png" alt="Howling Banshees Aspect Cadre" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Kabalite Warriors Syndicate</b></h3>
+      <h3><b>Howling Banshees Aspect Cadre</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-DRUKHARI-555555?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-LINE%20INFANTRY-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-640%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-AELDARI-00cccc?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-SHOCK%20INFANTRY-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-750%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"High-speed venomous skirmishers. Poisoned splinter weapons bypass heavy organic toughness; extremely fragile under counter-battery fire."</i></p>
+      <i>"Devastating shock assault infantry. Acoustic disruption cancels target counter-charge and lowers enemy defense before power sword sweep."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 70mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 880 HP (Armor Rating: 35)<br/>
-      • <b>RTS Tactical Speed:</b> 12.3 mph (19.8 km/h)<br/>
-      • <b>Primary Armament:</b> Drukhari Splinter Rifle (AP: 22, Base Dmg: 30)<br/>
-      • <b>Lore Phenomenon:</b> Sadistic raiders of Commorragh. Incredibly swift and lethal, wielding splinter rifles that fire crystallised virulent neurotoxins that induc...</p>
+      • <b>Lore Armor Protection:</b> 120mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 650 HP (Armor Rating: 55)<br/>
+      • <b>RTS Tactical Speed:</b> 13.4 mph (21.6 km/h)<br/>
+      • <b>Primary Armament:</b> Aeldari Aspect Power Sword (AP: 50, Base Dmg: 55)<br/>
+      • <b>Lore Phenomenon:</b> Acrobatic aspect assault shock infantry utilizing sonic psychosonic shockwave masks that paralyze enemy nervous systems upon charge impact....</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,14 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/kabalite-warrior_multiview_0.png"><img src="assets/art/kabalite-warrior_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/kabalite-warrior_multiview_1.png"><img src="assets/art/kabalite-warrior_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/kabalite-warrior_multiview_2.png"><img src="assets/art/kabalite-warrior_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Drukhari Splinter Rifle</th>
-  </tr>
-  <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/splinter-rifle_multiview_0.png"><img src="assets/art/splinter-rifle_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/splinter-rifle_multiview_1.png"><img src="assets/art/splinter-rifle_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/splinter-rifle_multiview_2.png"><img src="assets/art/splinter-rifle_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/howling-banshee_multiview_0.png"><img src="assets/art/howling-banshee_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/howling-banshee_multiview_1.png"><img src="assets/art/howling-banshee_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/howling-banshee_multiview_2.png"><img src="assets/art/howling-banshee_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/kabalite-warrior.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/splinter-rifle.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/howling-banshee.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/banshee-power-sword.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
