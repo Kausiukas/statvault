@@ -35,7 +35,8 @@ export type WeaponEngineDamage = z.infer<typeof WeaponEngineDamageSchema>;
 export const WeaponLoreDescriptorSchema = z.object({
   caliber: z.string(),
   propellant: z.string(),
-  muzzleVelocityMps: z.number().positive(),
+  // Non-projectile melee weapons have no muzzle or projectile velocity.
+  muzzleVelocityMps: z.number().nonnegative(),
   effectiveRangeKm: z.number().positive(),
   kineticEnergyJoules: z.number().positive().optional(),
   thermalYieldKelvin: z.number().positive().optional(),
