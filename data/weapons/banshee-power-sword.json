@@ -1,0 +1,27 @@
+{
+  "id": "2729581e-8d04-455f-b916-93ac5bdbdf91",
+  "slug": "banshee-power-sword",
+  "name": "Aeldari Aspect Power Sword",
+  "type": "melee_power",
+  "faction": "aeldari",
+  "engineDamage": {
+    "baseDamage": 55,
+    "armorPenetration": 50,
+    "attacksPerSecond": 2,
+    "rangeMeters": 2,
+    "accuracyPercent": 92,
+    "projectileVelocityMps": 0,
+    "burstCount": 1,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Molecular Monofilament Crystal Blade with Disruptor Field",
+    "propellant": "Psychocrystalline Power Core",
+    "muzzleVelocityMps": 0,
+    "effectiveRangeKm": 0.002,
+    "loreEffectDescription": "Crackling molecular disruption field slicing through adamantium armor and bone with negligible resistance.",
+    "citation": "Codex: Aeldari"
+  },
+  "iconSlug": "power-sword-icon",
+  "artImagePath": "/assets/art/banshee_power_sword.jpg"
+}

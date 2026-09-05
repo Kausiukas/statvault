@@ -1,0 +1,65 @@
+{
+  "id": "7b03099a-e0e9-4cc0-aa9b-c6f506847ff7",
+  "slug": "howling-banshee",
+  "name": "Howling Banshees Aspect Cadre",
+  "faction": "aeldari",
+  "subFaction": "Aspect Temple of the Banshee",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 650,
+    "modelCount": 5,
+    "armor": 55,
+    "speedMps": 6,
+    "chargeSpeedMps": 7.5,
+    "acceleration": 4,
+    "massKgPerModel": 80,
+    "leadership": 85,
+    "baseCostPoints": 750,
+    "collisionRadiusM": 0.5
+  },
+  "loreStats": {
+    "reactionTimeMs": 2.8,
+    "sprintSpeedMps": 12,
+    "sprintSpeedMph": 26.8,
+    "dreadAuraRadiusM": 25,
+    "dreadShockFactor": 0.65,
+    "armorComposition": "Fitted Aspect Warrior Psychoreactive Mesh Plate",
+    "armorEquivalentRHAmm": 120,
+    "combatStaminaHours": 16,
+    "citation": "Codex: Aeldari (9th Ed), Path of the Warrior",
+    "loreSummary": "Acrobatic aspect assault shock infantry utilizing sonic psychosonic shockwave masks that paralyze enemy nervous systems upon charge impact."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/howling-banshee.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 16,
+      "mobility": 50,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 70,
+      "mass": 13
+    },
+    "loreCanon": {
+      "ehp": 22,
+      "mobility": 100,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 70,
+      "mass": 16
+    }
+  },
+  "primaryWeaponSlug": "banshee-power-sword",
+  "tacticalDescription": "Devastating shock assault infantry. Acoustic disruption cancels target counter-charge and lowers enemy defense before power sword sweep.",
+  "artImagePath": "/assets/art/howling_banshee.jpg"
+}
