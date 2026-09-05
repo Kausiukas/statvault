@@ -23,5 +23,9 @@
     "citation": "Codex: Aeldari"
   },
   "iconSlug": "power-sword-icon",
-  "artImagePath": "/assets/art/banshee_power_sword.jpg"
+  "artImagePath": "assets/art/banshee-power-sword_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/banshee-power-sword_multiview_0.png",
+    "assets/art/banshee-power-sword_multiview_1.png"
+  ]
 }

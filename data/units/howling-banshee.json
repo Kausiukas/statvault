@@ -61,5 +61,11 @@
   },
   "primaryWeaponSlug": "banshee-power-sword",
   "tacticalDescription": "Devastating shock assault infantry. Acoustic disruption cancels target counter-charge and lowers enemy defense before power sword sweep.",
-  "artImagePath": "/assets/art/howling_banshee.jpg"
+  "artImagePath": "assets/art/howling-banshee_concept.png",
+  "multiviewImages": [
+    "assets/art/howling-banshee_multiview_0.png",
+    "assets/art/howling-banshee_multiview_1.png",
+    "assets/art/howling-banshee_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/howling-banshee_concept.png"
 }
