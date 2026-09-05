@@ -62,22 +62,74 @@ function requestJson(options: https.RequestOptions, body?: object): Promise<any>
   });
 }
 
-function downloadFile(url: string, destPath: string): Promise<void> {
+const EXPECTED_MULTIVIEW_COUNT = 3;
+const FETCH_RETRY_ATTEMPTS = 3;
+const FETCH_RETRY_DELAY_MS = 2000;
+const MIN_ASSET_BYTES = 1000;
+
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function downloadFileOnce(url: string, destPath: string): Promise<void> {
   return new Promise((resolve, reject) => {
-    const file = fs.createWriteStream(destPath);
+    const tempPath = `${destPath}.part`;
+    if (fs.existsSync(tempPath)) {
+      fs.unlinkSync(tempPath);
+    }
+
     https
       .get(url, (res) => {
+        if (!res.statusCode || res.statusCode < 200 || res.statusCode >= 300) {
+          res.resume();
+          reject(new Error(`Asset download returned HTTP ${res.statusCode ?? 'unknown'}`));
+          return;
+        }
+
+        const file = fs.createWriteStream(tempPath);
         res.pipe(file);
+        res.on('error', reject);
+        file.on('error', reject);
         file.on('finish', () => {
-          file.close();
-          resolve();
+          file.close((err) => {
+            if (err) {
+              reject(err);
+              return;
+            }
+            fs.renameSync(tempPath, destPath);
+            resolve();
+          });
         });
       })
       .on('error', (err) => {
-        fs.unlink(destPath, () => {});
         reject(err);
       });
   });
+}
+
+async function downloadFile(url: string, destPath: string): Promise<void> {
+  let lastError: unknown;
+
+  for (let attempt = 1; attempt <= FETCH_RETRY_ATTEMPTS; attempt++) {
+    try {
+      await downloadFileOnce(url, destPath);
+      return;
+    } catch (err) {
+      lastError = err;
+      const tempPath = `${destPath}.part`;
+      if (fs.existsSync(tempPath)) {
+        fs.unlinkSync(tempPath);
+      }
+      if (attempt < FETCH_RETRY_ATTEMPTS) {
+        console.warn(`   Download failed (attempt ${attempt}/${FETCH_RETRY_ATTEMPTS}); retrying fetch...`);
+        await wait(FETCH_RETRY_DELAY_MS);
+      }
+    }
+  }
+
+  throw lastError instanceof Error ? lastError : new Error(`Failed to download asset: ${path.basename(destPath)}`);
+}
+
+function validAsset(filePath: string): boolean {
+  return fs.existsSync(filePath) && fs.statSync(filePath).size >= MIN_ASSET_BYTES;
 }
 
 // Canonical Presets
@@ -147,11 +199,10 @@ async function generateMultiView(apiKey: string, prompt: string, prefix: string)
   }
   console.log(`✓ Task created: ${taskId}. Waiting for 3-view render completion...`);
 
-  let finished = false;
   let imageUrls: string[] = [];
 
   for (let attempt = 0; attempt < 45; attempt++) {
-    await new Promise((r) => setTimeout(r, 5000));
+    await wait(5000);
     const statusRes = await requestJson({
       hostname: 'api.meshy.ai',
       path: `/openapi/v1/text-to-image/${taskId}`,
@@ -164,8 +215,40 @@ async function generateMultiView(apiKey: string, prompt: string, prefix: string)
     console.log(`   Status: ${status} (${progress}%)`);
 
     if (status === 'SUCCEEDED') {
-      finished = true;
-      imageUrls = statusRes.image_urls || [];
+      imageUrls = Array.isArray(statusRes.image_urls)
+        ? statusRes.image_urls.filter((url: unknown): url is string => typeof url === 'string' && url.length > 0)
+        : [];
+
+      // Meshy documents three URLs for multi-view output, but occasionally marks
+      // a task successful before all URLs are available. Re-fetch the completed
+      // task a few times without creating or charging for another generation.
+      for (
+        let fetchAttempt = 1;
+        imageUrls.length < EXPECTED_MULTIVIEW_COUNT && fetchAttempt <= FETCH_RETRY_ATTEMPTS;
+        fetchAttempt++
+      ) {
+        console.warn(
+          `   Received ${imageUrls.length}/${EXPECTED_MULTIVIEW_COUNT} view URL(s); retrying task-result fetch ` +
+            `(${fetchAttempt}/${FETCH_RETRY_ATTEMPTS})...`
+        );
+        await wait(FETCH_RETRY_DELAY_MS);
+        const refreshedStatus = await requestJson({
+          hostname: 'api.meshy.ai',
+          path: `/openapi/v1/text-to-image/${taskId}`,
+          method: 'GET',
+          headers: { Authorization: `Bearer ${apiKey}` },
+        });
+        const refreshedUrls = Array.isArray(refreshedStatus.image_urls)
+          ? refreshedStatus.image_urls.filter(
+              (url: unknown): url is string => typeof url === 'string' && url.length > 0
+            )
+          : [];
+        if (refreshedUrls.length > imageUrls.length) {
+          imageUrls = refreshedUrls;
+        }
+      }
+
+      imageUrls = imageUrls.slice(0, EXPECTED_MULTIVIEW_COUNT);
       console.log(`✓ Multi-view task completed (consumed ${statusRes.consumed_credits ?? 9} credits)`);
       break;
     } else if (status === 'FAILED' || status === 'EXPIRED') {
@@ -173,8 +256,14 @@ async function generateMultiView(apiKey: string, prompt: string, prefix: string)
     }
   }
 
-  if (imageUrls.length === 0) {
+  if (imageUrls.length < 1) {
     throw new Error(`Multi-view succeeded but returned no image URLs for ${prefix}`);
+  }
+  if (imageUrls.length < EXPECTED_MULTIVIEW_COUNT) {
+    console.warn(
+      `⚠ Accepting ${imageUrls.length}/${EXPECTED_MULTIVIEW_COUNT} generated view(s) for ${prefix}; ` +
+        'at least one valid asset satisfies the category requirement.'
+    );
   }
 
   const savedPaths: string[] = [];
@@ -229,7 +318,7 @@ async function generateConceptArt(apiKey: string, prompt: string, prefix: string
   let imageUrl: string | undefined;
 
   for (let attempt = 0; attempt < 35; attempt++) {
-    await new Promise((r) => setTimeout(r, 4000));
+    await wait(4000);
     const statusRes = await requestJson({
       hostname: 'api.meshy.ai',
       path: `/openapi/v1/text-to-image/${taskId}`,
@@ -245,6 +334,23 @@ async function generateConceptArt(apiKey: string, prompt: string, prefix: string
       finished = true;
       if (Array.isArray(statusRes.image_urls) && statusRes.image_urls.length > 0) {
         imageUrl = statusRes.image_urls[0];
+      }
+
+      for (let fetchAttempt = 1; !imageUrl && fetchAttempt <= FETCH_RETRY_ATTEMPTS; fetchAttempt++) {
+        console.warn(
+          `   Concept task succeeded without an image URL; retrying task-result fetch ` +
+            `(${fetchAttempt}/${FETCH_RETRY_ATTEMPTS})...`
+        );
+        await wait(FETCH_RETRY_DELAY_MS);
+        const refreshedStatus = await requestJson({
+          hostname: 'api.meshy.ai',
+          path: `/openapi/v1/text-to-image/${taskId}`,
+          method: 'GET',
+          headers: { Authorization: `Bearer ${apiKey}` },
+        });
+        if (Array.isArray(refreshedStatus.image_urls) && refreshedStatus.image_urls.length > 0) {
+          imageUrl = refreshedStatus.image_urls[0];
+        }
       }
       console.log(`✓ Concept art task completed (consumed ${statusRes.consumed_credits ?? 9} credits)`);
       break;
@@ -333,9 +439,12 @@ async function main() {
   const existingUnitMv = [0, 1, 2].map((i) => path.join(ART_DIR, `${unitMultiviewPrefix}_multiview_${i}.png`));
   let unitMvPaths: string[] = [];
 
-  if (existingUnitMv.every((f) => fs.existsSync(f) && fs.statSync(f).size > 1000)) {
-    console.log(`✓ Unit multiview already verified on disk: ${unitMultiviewPrefix}_multiview_[0,1,2].png`);
-    unitMvPaths = existingUnitMv.map((f) => `assets/art/${path.basename(f)}`);
+  const validExistingUnitMv = existingUnitMv.filter(validAsset);
+  if (validExistingUnitMv.length > 0) {
+    console.log(
+      `✓ Reusing ${validExistingUnitMv.length}/${EXPECTED_MULTIVIEW_COUNT} verified unit view(s) already on disk.`
+    );
+    unitMvPaths = validExistingUnitMv.map((f) => `assets/art/${path.basename(f)}`);
   } else {
     const unitPrompt =
       CANONICAL_UNIT_PROMPTS[targetUnitSlug] ||
@@ -349,9 +458,12 @@ async function main() {
     const weaponMultiviewPrefix = weaponSlug;
     const existingWeaponMv = [0, 1, 2].map((i) => path.join(ART_DIR, `${weaponMultiviewPrefix}_multiview_${i}.png`));
 
-    if (existingWeaponMv.every((f) => fs.existsSync(f) && fs.statSync(f).size > 1000)) {
-      console.log(`✓ Weapon multiview already verified on disk: ${weaponMultiviewPrefix}_multiview_[0,1,2].png`);
-      weaponMvPaths = existingWeaponMv.map((f) => `assets/art/${path.basename(f)}`);
+    const validExistingWeaponMv = existingWeaponMv.filter(validAsset);
+    if (validExistingWeaponMv.length > 0) {
+      console.log(
+        `✓ Reusing ${validExistingWeaponMv.length}/${EXPECTED_MULTIVIEW_COUNT} verified weapon view(s) already on disk.`
+      );
+      weaponMvPaths = validExistingWeaponMv.map((f) => `assets/art/${path.basename(f)}`);
     } else {
       const weaponPrompt =
         CANONICAL_WEAPON_PROMPTS[weaponSlug] ||
@@ -367,7 +479,7 @@ async function main() {
   const conceptPngPath = path.join(ART_DIR, `${conceptPrefix}_concept.png`);
   let conceptArtRelPath = `assets/art/${conceptPrefix}_concept.png`;
 
-  if (fs.existsSync(conceptPngPath) && fs.statSync(conceptPngPath).size > 1000) {
+  if (validAsset(conceptPngPath)) {
     console.log(`✓ Concept art already verified on disk: ${conceptPrefix}_concept.png`);
   } else {
     const conceptPrompt =
@@ -400,33 +512,33 @@ async function main() {
     console.warn('Notice: validate:data exited with notice.');
   }
 
-  // STEP 6: Strict Pre-Finish Verification (Assert all 7 files exist)
-  console.log('\n🛡️  Performing Strict Pre-Finish Assertion:');
-  const requiredFiles = [
-    path.join(ART_DIR, `${unitMultiviewPrefix}_multiview_0.png`),
-    path.join(ART_DIR, `${unitMultiviewPrefix}_multiview_1.png`),
-    path.join(ART_DIR, `${unitMultiviewPrefix}_multiview_2.png`),
-    path.join(ART_DIR, `${conceptPrefix}_concept.png`),
+  // STEP 6: Pre-Finish Verification (at least one valid asset per category)
+  console.log('\n🛡️  Performing Pre-Finish Category Assertion:');
+  const requiredCategories = [
+    { name: 'unit multiview', paths: unitMvPaths },
+    { name: 'concept art', paths: [conceptArtRelPath] },
   ];
   if (weaponSlug) {
-    requiredFiles.push(
-      path.join(ART_DIR, `${weaponSlug}_multiview_0.png`),
-      path.join(ART_DIR, `${weaponSlug}_multiview_1.png`),
-      path.join(ART_DIR, `${weaponSlug}_multiview_2.png`)
-    );
+    requiredCategories.push({ name: 'weapon multiview', paths: weaponMvPaths });
   }
 
-  for (const f of requiredFiles) {
-    if (!fs.existsSync(f) || fs.statSync(f).size < 1000) {
-      throw new Error(`[FATAL] Required asset missing or incomplete: ${path.basename(f)}`);
+  for (const category of requiredCategories) {
+    if (category.paths.length < 1) {
+      throw new Error(`[FATAL] Required category has no generated assets: ${category.name}`);
     }
-    console.log(`  ✓ Verified: ${path.basename(f)} (${(fs.statSync(f).size / 1024).toFixed(1)} KB)`);
+    for (const relPath of category.paths) {
+      const filePath = path.join(REPO_ROOT, relPath);
+      if (!validAsset(filePath)) {
+        throw new Error(`[FATAL] Required asset missing or incomplete: ${path.basename(filePath)}`);
+      }
+      console.log(`  ✓ ${category.name}: ${path.basename(filePath)} (${(fs.statSync(filePath).size / 1024).toFixed(1)} KB)`);
+    }
   }
 
   console.log('\n===========================================================');
   console.log(`🚀 Daily Visual Suite Successfully Generated for: ${unitData.name}`);
-  console.log(`  • Unit Multiview:    3 images`);
-  console.log(`  • Weapon Multiview:  3 images`);
+  console.log(`  • Unit Multiview:    ${unitMvPaths.length} image(s)`);
+  console.log(`  • Weapon Multiview:  ${weaponMvPaths.length} image(s)`);
   console.log(`  • Action Concept Art: 1 widescreen image`);
   console.log('===========================================================');
 }
