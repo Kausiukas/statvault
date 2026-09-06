@@ -1,0 +1,65 @@
+{
+  "id": "eea52d5e-26ef-49c8-a5de-e0e2b8281a86",
+  "slug": "termagant",
+  "name": "Termagant Fire-Brood",
+  "faction": "tyranids",
+  "subFaction": "Hive Fleet Leviathan",
+  "role": "line_infantry",
+  "engineStats": {
+    "hitPoints": 1100,
+    "modelCount": 20,
+    "armor": 20,
+    "speedMps": 4.7,
+    "chargeSpeedMps": 5.9,
+    "acceleration": 4,
+    "massKgPerModel": 55,
+    "leadership": 60,
+    "baseCostPoints": 460,
+    "collisionRadiusM": 0.5
+  },
+  "loreStats": {
+    "reactionTimeMs": 2,
+    "sprintSpeedMps": 8.5,
+    "sprintSpeedMph": 19,
+    "dreadAuraRadiusM": 10,
+    "dreadShockFactor": 0.25,
+    "armorComposition": "Chitinous Carapace Plate",
+    "armorEquivalentRHAmm": 35,
+    "combatStaminaHours": "infinite",
+    "citation": "Codex: Tyranids (9th Ed)",
+    "loreSummary": "Ranged frontline bioform carrying a living parasitic symbiote bio-weapon that launches flesh-boring beetle larvae."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/termagant.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 22,
+      "mobility": 44,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 30,
+      "mass": 9
+    },
+    "loreCanon": {
+      "ehp": 32,
+      "mobility": 83,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 30,
+      "mass": 11
+    }
+  },
+  "primaryWeaponSlug": "fleshborer",
+  "tacticalDescription": "Expendable ranged swarm infantry. Saturates approaching enemies with flesh-devouring living ammunition.",
+  "artImagePath": "/assets/art/termagant.jpg"
+}

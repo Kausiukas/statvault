@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `termagant` | tyranids | line_infantry | fleshborer |
 | `howling-banshee` | aeldari | shock_infantry | banshee-power-sword |
 | `kabalite-warrior` | drukhari | line_infantry | splinter-rifle |
 | `hearthkyn-warrior` | leagues_of_votann | line_infantry | autoch-bolter |
@@ -32,6 +33,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `fleshborer` | tyranids | bio_weapon |
 | `banshee-power-sword` | aeldari | melee_power |
 | `splinter-rifle` | drukhari | energy_shuriken |
 | `autoch-bolter` | leagues_of_votann | ballistic_slug |
@@ -52,6 +54,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `termagant-weapon_potency` | `termagant` | weapon_potency | The Devastation of Baal |
 | `howling-banshee-transhuman_dread` | `howling-banshee` | transhuman_dread | Path of the Warrior |
 | `kabalite-warrior-weapon_potency` | `kabalite-warrior` | weapon_potency | Path of the Renegade |
 | `hearthkyn-warrior-armor_durability` | `hearthkyn-warrior` | armor_durability | Codex: Leagues of Votann |
@@ -101,7 +104,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 7 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 7 | cadian-shock-trooper |
+| line_infantry | 8 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
 | monstrous_creature | 0 | — |
@@ -114,6 +117,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-06 | `termagant`, `fleshborer`, `termagant-weapon_potency` | statvault-wiki-agent |
 | 2026-09-05 | `howling-banshee`, `banshee-power-sword`, `howling-banshee-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-04 | `kabalite-warrior`, `splinter-rifle`, `kabalite-warrior-weapon_potency` | statvault-wiki-agent |
 | 2026-09-03 | `hearthkyn-warrior`, `autoch-bolter`, `hearthkyn-warrior-armor_durability` | statvault-wiki-agent |

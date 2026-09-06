@@ -1,0 +1,27 @@
+{
+  "id": "d8f1e487-cefc-48c4-ae95-6d9551d84556",
+  "slug": "fleshborer",
+  "name": "Tyranid Fleshborer Symbiote",
+  "type": "bio_weapon",
+  "faction": "tyranids",
+  "engineDamage": {
+    "baseDamage": 24,
+    "armorPenetration": 12,
+    "attacksPerSecond": 1.8,
+    "rangeMeters": 120,
+    "accuracyPercent": 68,
+    "projectileVelocityMps": 320,
+    "burstCount": 1,
+    "reloadTimeSeconds": 1.5
+  },
+  "loreDescriptor": {
+    "caliber": "Chitinous Borer Beetle Larvae (Living Parasite)",
+    "propellant": "Muscular Spasm Ejection",
+    "muzzleVelocityMps": 280,
+    "effectiveRangeKm": 0.35,
+    "loreEffectDescription": "Fires living voracious borer insects that frantically chew through meat, bone, and neural tissue upon impact until dying in seconds.",
+    "citation": "Codex: Tyranids (9th Ed)"
+  },
+  "iconSlug": "fleshborer-icon",
+  "artImagePath": "/assets/art/fleshborer.jpg"
+}
