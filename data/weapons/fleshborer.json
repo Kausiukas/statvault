@@ -23,5 +23,10 @@
     "citation": "Codex: Tyranids (9th Ed)"
   },
   "iconSlug": "fleshborer-icon",
-  "artImagePath": "/assets/art/fleshborer.jpg"
+  "artImagePath": "assets/art/fleshborer_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/fleshborer_multiview_0.png",
+    "assets/art/fleshborer_multiview_1.png",
+    "assets/art/fleshborer_multiview_2.png"
+  ]
 }

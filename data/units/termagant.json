@@ -61,5 +61,11 @@
   },
   "primaryWeaponSlug": "fleshborer",
   "tacticalDescription": "Expendable ranged swarm infantry. Saturates approaching enemies with flesh-devouring living ammunition.",
-  "artImagePath": "/assets/art/termagant.jpg"
+  "artImagePath": "assets/art/termagant_concept.png",
+  "multiviewImages": [
+    "assets/art/termagant_multiview_0.png",
+    "assets/art/termagant_multiview_1.png",
+    "assets/art/termagant_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/termagant_concept.png"
 }
