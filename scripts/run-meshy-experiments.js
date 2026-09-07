@@ -1,8 +1,23 @@
 const https = require('https');
+
+const INTERNAL_STATUS_LANGUAGE = /\b(?:provisional|unapproved|approved|approval|moderator|review|verification)\b/i;
+const NO_RENDERED_TEXT_INSTRUCTION = 'No text, typography, captions, labels, title cards, banners, signs, logos, UI, watermarks, or written words anywhere in the image';
+
+function prepareImagePrompt(prompt) {
+  const cleanPrompt = prompt
+    .split(/[,;.!?]+/)
+    .map((clause) => clause.trim())
+    .filter(Boolean)
+    .filter((clause) => !INTERNAL_STATUS_LANGUAGE.test(clause))
+    .join(', ');
+  if (!cleanPrompt) throw new Error('Image prompt contained only internal moderation/status language.');
+  return `${cleanPrompt}. ${NO_RENDERED_TEXT_INSTRUCTION}.`;
+}
 const fs = require('fs');
 const path = require('path');
 
-const apiKey = 'msy_b95iMAKXmOmaJ5qu0JREDvb8hFrAAYuWA2z9';
+const apiKey = (process.env.MESHY_API_KEY || '').trim();
+if (!apiKey) throw new Error('MESHY_API_KEY is required.');
 
 const tasksToRun = [
   {
@@ -70,7 +85,7 @@ async function run() {
         'Content-Type': 'application/json'
       }
     }, {
-      prompt: item.prompt,
+        prompt: prepareImagePrompt(item.prompt),
       ai_model: 'nano-banana-pro'
     });
 

@@ -13,6 +13,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as https from 'https';
+import { prepareImagePrompt } from './image-prompt-safety';
 import { execSync } from 'child_process';
 
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -173,8 +174,9 @@ const CANONICAL_CONCEPT_PROMPTS: Record<string, string> = {
 };
 
 async function generateMultiView(apiKey: string, prompt: string, prefix: string): Promise<string[]> {
+  const safePrompt = prepareImagePrompt(prompt);
   console.log(`\n📸 Generating Multi-View (3 Angles) for [${prefix}]...`);
-  console.log(`   Prompt: "${prompt}"`);
+  console.log(`   Prompt: "${safePrompt}"`);
 
   const createRes = await requestJson(
     {
@@ -187,7 +189,7 @@ async function generateMultiView(apiKey: string, prompt: string, prefix: string)
       },
     },
     {
-      prompt,
+      prompt: safePrompt,
       ai_model: 'nano-banana-pro',
       generate_multi_view: true,
     }
@@ -288,8 +290,9 @@ async function generateMultiView(apiKey: string, prompt: string, prefix: string)
 }
 
 async function generateConceptArt(apiKey: string, prompt: string, prefix: string): Promise<string> {
+  const safePrompt = prepareImagePrompt(prompt);
   console.log(`\n🎨 Generating Lore-Accurate Action Concept Art (16:9) for [${prefix}]...`);
-  console.log(`   Prompt: "${prompt}"`);
+  console.log(`   Prompt: "${safePrompt}"`);
 
   const createRes = await requestJson(
     {
@@ -302,7 +305,7 @@ async function generateConceptArt(apiKey: string, prompt: string, prefix: string
       },
     },
     {
-      prompt,
+      prompt: safePrompt,
       ai_model: 'nano-banana-pro',
       aspect_ratio: '16:9',
     }
@@ -484,7 +487,7 @@ async function main() {
   } else {
     const conceptPrompt =
       CANONICAL_CONCEPT_PROMPTS[targetUnitSlug] ||
-      `Epic Warhammer 40k cinematic battle scene, ${unitData.name} in combat action in a lore-accurate battle environment, ${unitData.tacticalDescription}, firing line, atmospheric smoke, particle effects, dramatic lighting, high-fidelity grimdark concept art, wide 16:9 composition`;
+      `Epic Warhammer 40k cinematic battle scene, ${unitData.name} in combat action in a lore-accurate battle environment, wielding ${weaponData?.name || weaponSlug || 'faction-appropriate weapons'}, ${unitData.faction} ${unitData.role}, firing line, atmospheric smoke, particle effects, dramatic lighting, high-fidelity grimdark concept art, wide 16:9 composition`;
     conceptArtRelPath = await generateConceptArt(apiKey, conceptPrompt, conceptPrefix);
   }
 

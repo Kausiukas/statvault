@@ -12,6 +12,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as https from 'https';
+import { prepareImagePrompt } from './image-prompt-safety';
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const ART_DIR = path.join(REPO_ROOT, 'assets/art');
@@ -126,11 +127,13 @@ async function main() {
     prompt = CANONICAL_IMAGE_PROMPTS['guardian-defender'];
   }
 
+  const safePrompt = prepareImagePrompt(prompt);
+
   console.log('🏛️  StatVault Meshy Text-to-Image Generator (Nano Banana Pro)');
   console.log('===========================================================');
   console.log(`Model Engine: nano-banana-pro`);
   console.log(`Target Slug:  ${slug}`);
-  console.log(`Prompt:       "${prompt}"`);
+  console.log(`Prompt:       "${safePrompt}"`);
 
   // Step 1: Submit Text-to-Image task
   console.log('\nSubmitting task to Meshy Text-to-Image API...');
@@ -145,7 +148,7 @@ async function main() {
       },
     },
     {
-      prompt: prompt,
+      prompt: safePrompt,
       ai_model: 'nano-banana-pro',
     }
   );

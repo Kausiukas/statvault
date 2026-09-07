@@ -22,6 +22,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as https from 'https';
 import { execSync } from 'child_process';
+import { prepareImagePrompt } from './image-prompt-safety';
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const MODELS_DIR = path.join(REPO_ROOT, 'public/models');
@@ -304,7 +305,9 @@ async function main() {
     resolvedArtPath = `assets/art/${normalizedArtSlug}.png`;
   } else {
     console.log(`\n🎨 Generating Studio Miniature Render via Meshy Text-to-Image (Nano Banana Pro)...`);
-    const imagePrompt = `${finalPrompt}, high-fidelity tabletop miniature figure render, isolated on neutral studio grey background, sharp focus, clean lighting`;
+    const imagePrompt = prepareImagePrompt(
+      `${finalPrompt}, high-fidelity tabletop miniature figure render, isolated on neutral studio grey background, sharp focus, clean lighting`
+    );
 
     try {
       const createImgRes = await requestJson(
