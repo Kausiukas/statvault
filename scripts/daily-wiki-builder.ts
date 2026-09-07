@@ -33,6 +33,7 @@ import {
   type WeaponType,
   type LoreCategory,
 } from '../packages/schemas/src';
+import { STATIC_ASSET_BACKLOG, type StaticAssetSeed } from './static-asset-backlog';
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const UNITS_DIR = path.join(REPO_ROOT, 'data/units');
@@ -832,6 +833,189 @@ export const CANONICAL_KNOWLEDGEBASE: Record<string, DataslateDefinition> = {
 };
 
 // ============================================================================
+// Temporary Static Backlog Expansion
+// ============================================================================
+
+interface FactionArchetype {
+  label: string;
+  reactionTimeMs: number;
+  sprintSpeedMps: number;
+  dreadAuraRadiusM: number;
+  dreadShockFactor: number;
+  armorComposition: string;
+  armorEquivalentRHAmm: number;
+  combatStaminaHours: number | 'infinite';
+  engineArmor: number;
+  leadership: number;
+  massKgPerModel: number;
+}
+
+const FACTION_ARCHETYPES: Record<Faction, FactionArchetype> = {
+  adeptus_astartes: { label: 'Adeptus Astartes', reactionTimeMs: 5, sprintSpeedMps: 9, dreadAuraRadiusM: 18, dreadShockFactor: 0.55, armorComposition: 'Ceramite power armour over a powered fibre-bundle undersuit', armorEquivalentRHAmm: 250, combatStaminaHours: 72, engineArmor: 100, leadership: 92, massKgPerModel: 420 },
+  astra_militarum: { label: 'Astra Militarum', reactionTimeMs: 180, sprintSpeedMps: 7, dreadAuraRadiusM: 0, dreadShockFactor: 0, armorComposition: 'Flak or carapace armour appropriate to the formation', armorEquivalentRHAmm: 35, combatStaminaHours: 12, engineArmor: 35, leadership: 68, massKgPerModel: 90 },
+  chaos_space_marines: { label: 'Chaos Space Marines', reactionTimeMs: 5, sprintSpeedMps: 9, dreadAuraRadiusM: 22, dreadShockFactor: 0.65, armorComposition: 'Warp-scarred ceramite power armour', armorEquivalentRHAmm: 260, combatStaminaHours: 96, engineArmor: 105, leadership: 90, massKgPerModel: 440 },
+  orks: { label: 'Orks', reactionTimeMs: 70, sprintSpeedMps: 8, dreadAuraRadiusM: 12, dreadShockFactor: 0.3, armorComposition: 'Layered scrap plate, hide and improvised armour', armorEquivalentRHAmm: 55, combatStaminaHours: 36, engineArmor: 45, leadership: 72, massKgPerModel: 145 },
+  aeldari: { label: 'Aeldari', reactionTimeMs: 4.5, sprintSpeedMps: 10.5, dreadAuraRadiusM: 0, dreadShockFactor: 0, armorComposition: 'Psychoreactive mesh and shaped thermoplas plates', armorEquivalentRHAmm: 80, combatStaminaHours: 16, engineArmor: 50, leadership: 82, massKgPerModel: 82 },
+  necrons: { label: 'Necrons', reactionTimeMs: 12, sprintSpeedMps: 6, dreadAuraRadiusM: 16, dreadShockFactor: 0.45, armorComposition: 'Self-repairing living-metal necrodermis', armorEquivalentRHAmm: 220, combatStaminaHours: 'infinite', engineArmor: 95, leadership: 100, massKgPerModel: 180 },
+  tyranids: { label: 'Tyranids', reactionTimeMs: 2, sprintSpeedMps: 10, dreadAuraRadiusM: 14, dreadShockFactor: 0.4, armorComposition: 'Layered chitin and reinforced scleroprotein carapace', armorEquivalentRHAmm: 50, combatStaminaHours: 'infinite', engineArmor: 40, leadership: 75, massKgPerModel: 110 },
+  tau_empire: { label: "T'au Empire", reactionTimeMs: 140, sprintSpeedMps: 6.8, dreadAuraRadiusM: 0, dreadShockFactor: 0, armorComposition: 'Bonded nanocrystalline combat armour', armorEquivalentRHAmm: 105, combatStaminaHours: 12, engineArmor: 55, leadership: 72, massKgPerModel: 100 },
+  adepta_sororitas: { label: 'Adepta Sororitas', reactionTimeMs: 110, sprintSpeedMps: 7.2, dreadAuraRadiusM: 8, dreadShockFactor: 0.2, armorComposition: 'Ceramite power armour sized for an unaugmented human', armorEquivalentRHAmm: 180, combatStaminaHours: 24, engineArmor: 80, leadership: 88, massKgPerModel: 150 },
+  adeptus_custodes: { label: 'Adeptus Custodes', reactionTimeMs: 1.5, sprintSpeedMps: 12, dreadAuraRadiusM: 28, dreadShockFactor: 0.72, armorComposition: 'Artificer-wrought auramite plate', armorEquivalentRHAmm: 420, combatStaminaHours: 168, engineArmor: 135, leadership: 110, massKgPerModel: 520 },
+  leagues_of_votann: { label: 'Leagues of Votann', reactionTimeMs: 120, sprintSpeedMps: 5.8, dreadAuraRadiusM: 0, dreadShockFactor: 0, armorComposition: 'Void-sealed composite plate with field-assisted reinforcement', armorEquivalentRHAmm: 155, combatStaminaHours: 28, engineArmor: 75, leadership: 82, massKgPerModel: 125 },
+  drukhari: { label: 'Drukhari', reactionTimeMs: 4, sprintSpeedMps: 11, dreadAuraRadiusM: 10, dreadShockFactor: 0.32, armorComposition: 'Lightweight barbed ghostplate and reflex mesh', armorEquivalentRHAmm: 75, combatStaminaHours: 18, engineArmor: 48, leadership: 78, massKgPerModel: 78 },
+};
+
+interface RoleArchetype {
+  modelCount: number;
+  hitPoints: number;
+  armorBonus: number;
+  speedMultiplier: number;
+  massMultiplier: number;
+  baseCostPoints: number;
+  collisionRadiusM: number;
+}
+
+const ROLE_ARCHETYPES: Record<UnitRole, RoleArchetype> = {
+  line_infantry: { modelCount: 10, hitPoints: 1000, armorBonus: 0, speedMultiplier: 1, massMultiplier: 1, baseCostPoints: 600, collisionRadiusM: 0.5 },
+  shock_infantry: { modelCount: 8, hitPoints: 1200, armorBonus: 10, speedMultiplier: 1.08, massMultiplier: 1.08, baseCostPoints: 780, collisionRadiusM: 0.55 },
+  heavy_support: { modelCount: 5, hitPoints: 1500, armorBonus: 20, speedMultiplier: 0.82, massMultiplier: 1.35, baseCostPoints: 900, collisionRadiusM: 0.7 },
+  fast_attack: { modelCount: 5, hitPoints: 1100, armorBonus: 5, speedMultiplier: 1.55, massMultiplier: 1.1, baseCostPoints: 820, collisionRadiusM: 0.7 },
+  monstrous_creature: { modelCount: 1, hitPoints: 3200, armorBonus: 35, speedMultiplier: 0.95, massMultiplier: 7, baseCostPoints: 1250, collisionRadiusM: 1.8 },
+  vehicle: { modelCount: 1, hitPoints: 4200, armorBonus: 55, speedMultiplier: 1.35, massMultiplier: 30, baseCostPoints: 1450, collisionRadiusM: 2.8 },
+  lord_of_war: { modelCount: 1, hitPoints: 6500, armorBonus: 80, speedMultiplier: 0.9, massMultiplier: 65, baseCostPoints: 2600, collisionRadiusM: 4.2 },
+};
+
+interface WeaponArchetype {
+  caliber: string;
+  propellant: string;
+  muzzleVelocityMps: number;
+  effectiveRangeKm: number;
+  baseDamage: number;
+  armorPenetration: number;
+  attacksPerSecond: number;
+  rangeMeters: number;
+  accuracyPercent: number;
+  projectileVelocityMps: number;
+  burstCount: number;
+  reloadTimeSeconds: number;
+}
+
+const WEAPON_ARCHETYPES: Record<WeaponType, WeaponArchetype> = {
+  ballistic_slug: { caliber: 'Solid, explosive or mass-reactive projectile', propellant: 'Chemical or electromagnetic launch system', muzzleVelocityMps: 900, effectiveRangeKm: 0.9, baseDamage: 34, armorPenetration: 24, attacksPerSecond: 1.5, rangeMeters: 190, accuracyPercent: 72, projectileVelocityMps: 700, burstCount: 2, reloadTimeSeconds: 1.8 },
+  energy_plasma: { caliber: 'Magnetically contained plasma packet', propellant: 'High-energy plasma containment coils', muzzleVelocityMps: 2800, effectiveRangeKm: 1, baseDamage: 58, armorPenetration: 52, attacksPerSecond: 0.7, rangeMeters: 180, accuracyPercent: 74, projectileVelocityMps: 560, burstCount: 1, reloadTimeSeconds: 2.8 },
+  energy_las: { caliber: 'Coherent high-energy light pulse', propellant: 'Rechargeable power cell', muzzleVelocityMps: 299792458, effectiveRangeKm: 1.2, baseDamage: 28, armorPenetration: 20, attacksPerSecond: 1.8, rangeMeters: 220, accuracyPercent: 78, projectileVelocityMps: 1200, burstCount: 2, reloadTimeSeconds: 1.4 },
+  energy_melta: { caliber: 'Short-range thermal beam', propellant: 'Fusion-reactor fuel charge', muzzleVelocityMps: 299792458, effectiveRangeKm: 0.25, baseDamage: 82, armorPenetration: 78, attacksPerSecond: 0.45, rangeMeters: 90, accuracyPercent: 76, projectileVelocityMps: 1000, burstCount: 1, reloadTimeSeconds: 3.2 },
+  energy_gauss: { caliber: 'Molecular-disruption or exotic-energy beam', propellant: 'Advanced field generator', muzzleVelocityMps: 299792458, effectiveRangeKm: 1.3, baseDamage: 46, armorPenetration: 48, attacksPerSecond: 1.1, rangeMeters: 230, accuracyPercent: 84, projectileVelocityMps: 1100, burstCount: 1, reloadTimeSeconds: 1.7 },
+  energy_shuriken: { caliber: 'Monomolecular disc or splinter projectile', propellant: 'Gravitic or electromagnetic accelerator', muzzleVelocityMps: 2200, effectiveRangeKm: 0.8, baseDamage: 32, armorPenetration: 29, attacksPerSecond: 2.1, rangeMeters: 155, accuracyPercent: 80, projectileVelocityMps: 680, burstCount: 3, reloadTimeSeconds: 1.2 },
+  energy_pulse: { caliber: 'Accelerated energetic particle packet', propellant: 'Electromagnetic accelerator', muzzleVelocityMps: 4300, effectiveRangeKm: 1.4, baseDamage: 40, armorPenetration: 31, attacksPerSecond: 1.15, rangeMeters: 235, accuracyPercent: 82, projectileVelocityMps: 780, burstCount: 1, reloadTimeSeconds: 1.8 },
+  explosive_missile: { caliber: 'Guided or ballistic explosive warhead', propellant: 'Solid-fuel rocket motor', muzzleVelocityMps: 420, effectiveRangeKm: 2.5, baseDamage: 76, armorPenetration: 62, attacksPerSecond: 0.35, rangeMeters: 320, accuracyPercent: 70, projectileVelocityMps: 390, burstCount: 1, reloadTimeSeconds: 4 },
+  melee_power: { caliber: 'Powered melee edge or impact surface', propellant: 'Disruption-field power cell', muzzleVelocityMps: 0, effectiveRangeKm: 0.002, baseDamage: 58, armorPenetration: 55, attacksPerSecond: 1.7, rangeMeters: 2, accuracyPercent: 86, projectileVelocityMps: 0, burstCount: 1, reloadTimeSeconds: 0 },
+  melee_chain: { caliber: 'Motor-driven monomolecular teeth', propellant: 'Compact chain-drive motor', muzzleVelocityMps: 0, effectiveRangeKm: 0.002, baseDamage: 46, armorPenetration: 36, attacksPerSecond: 2, rangeMeters: 2, accuracyPercent: 80, projectileVelocityMps: 0, burstCount: 1, reloadTimeSeconds: 0 },
+  melee_crude: { caliber: 'Heavy hand-forged melee implement', propellant: 'User strength', muzzleVelocityMps: 0, effectiveRangeKm: 0.002, baseDamage: 39, armorPenetration: 24, attacksPerSecond: 1.6, rangeMeters: 2, accuracyPercent: 72, projectileVelocityMps: 0, burstCount: 1, reloadTimeSeconds: 0 },
+  warp_daemon: { caliber: 'Warp-charged manifestation', propellant: 'Immaterium resonance', muzzleVelocityMps: 0, effectiveRangeKm: 0.12, baseDamage: 64, armorPenetration: 60, attacksPerSecond: 1.35, rangeMeters: 24, accuracyPercent: 76, projectileVelocityMps: 260, burstCount: 1, reloadTimeSeconds: 1.8 },
+  bio_weapon: { caliber: 'Living symbiote, claw or bio-projectile', propellant: 'Biological muscle and chemical pressure', muzzleVelocityMps: 320, effectiveRangeKm: 0.5, baseDamage: 37, armorPenetration: 27, attacksPerSecond: 1.6, rangeMeters: 145, accuracyPercent: 70, projectileVelocityMps: 360, burstCount: 1, reloadTimeSeconds: 1.4 },
+  energy_flamer: { caliber: 'Projected incendiary stream', propellant: 'Pressurised fuel and ignition system', muzzleVelocityMps: 55, effectiveRangeKm: 0.12, baseDamage: 45, armorPenetration: 20, attacksPerSecond: 2.2, rangeMeters: 75, accuracyPercent: 95, projectileVelocityMps: 75, burstCount: 4, reloadTimeSeconds: 2.5 },
+  energy_volkite: { caliber: 'Thermal deflagration beam', propellant: 'Ancient high-density power cell', muzzleVelocityMps: 299792458, effectiveRangeKm: 1, baseDamage: 52, armorPenetration: 40, attacksPerSecond: 1, rangeMeters: 205, accuracyPercent: 80, projectileVelocityMps: 1100, burstCount: 1, reloadTimeSeconds: 2 },
+  melee_force: { caliber: 'Psychically conductive melee focus', propellant: 'Psyker-channelled force', muzzleVelocityMps: 0, effectiveRangeKm: 0.002, baseDamage: 62, armorPenetration: 58, attacksPerSecond: 1.4, rangeMeters: 2, accuracyPercent: 84, projectileVelocityMps: 0, burstCount: 1, reloadTimeSeconds: 0 },
+};
+
+function chooseLoreCategory(seed: StaticAssetSeed): LoreCategory {
+  if (seed.weaponType === 'warp_daemon' || seed.weaponType === 'melee_force') return 'warp_corruption';
+  if (seed.role === 'vehicle' || seed.role === 'lord_of_war' || seed.role === 'heavy_support') return 'armor_durability';
+  if (seed.role === 'fast_attack') return 'velocity_discrepancy';
+  if (seed.role === 'shock_infantry' || seed.role === 'monstrous_creature') return 'transhuman_dread';
+  return 'weapon_potency';
+}
+
+function expandStaticSeed(seed: StaticAssetSeed): DataslateDefinition {
+  const faction = FACTION_ARCHETYPES[seed.faction];
+  const role = ROLE_ARCHETYPES[seed.role];
+  const weapon = WEAPON_ARCHETYPES[seed.weaponType];
+  const sprintSpeedMps = Number((faction.sprintSpeedMps * role.speedMultiplier).toFixed(1));
+  const sourceTitle = `Warhammer 40,000 Faction Index: ${faction.label}`;
+  const provisionalNotice = 'Temporary static backlog seed; quantitative values require source-by-source moderator verification.';
+
+  return {
+    unit: {
+      slug: seed.slug,
+      name: seed.name,
+      faction: seed.faction,
+      subFaction: faction.label,
+      role: seed.role,
+      loreStats: {
+        reactionTimeMs: faction.reactionTimeMs,
+        sprintSpeedMps,
+        sprintSpeedMph: Number((sprintSpeedMps * 2.23694).toFixed(1)),
+        dreadAuraRadiusM: faction.dreadAuraRadiusM,
+        dreadShockFactor: faction.dreadShockFactor,
+        armorComposition: faction.armorComposition,
+        armorEquivalentRHAmm: Math.max(10, Math.round(faction.armorEquivalentRHAmm + role.armorBonus * 1.5)),
+        combatStaminaHours: faction.combatStaminaHours,
+        citation: `${sourceTitle}. ${provisionalNotice}`,
+        loreSummary: `${seed.name} is a ${faction.label} ${seed.role.replace(/_/g, ' ')} formation queued for corpus expansion. ${provisionalNotice}`,
+      },
+      engineEstimate: {
+        speedCompressionKappa: 1.75,
+        modelCount: role.modelCount,
+        hitPoints: role.hitPoints,
+        armor: Math.min(300, faction.engineArmor + role.armorBonus),
+        massKgPerModel: Math.round(faction.massKgPerModel * role.massMultiplier),
+        leadership: faction.leadership,
+        baseCostPoints: role.baseCostPoints,
+        collisionRadiusM: role.collisionRadiusM,
+      },
+      tacticalDescription: `Provisional ${seed.role.replace(/_/g, ' ')} profile centred on ${seed.weaponName}; retain as unapproved until detailed balance and source review.`,
+    },
+    weapon: {
+      slug: seed.weaponSlug,
+      name: seed.weaponName,
+      type: seed.weaponType,
+      faction: seed.faction,
+      loreDescriptor: {
+        caliber: weapon.caliber,
+        propellant: weapon.propellant,
+        muzzleVelocityMps: weapon.muzzleVelocityMps,
+        effectiveRangeKm: weapon.effectiveRangeKm,
+        loreEffectDescription: `${seed.weaponName} is the selected primary armament for ${seed.name}. ${provisionalNotice}`,
+        citation: `${sourceTitle}. ${provisionalNotice}`,
+      },
+      engineDamage: {
+        baseDamage: weapon.baseDamage,
+        armorPenetration: weapon.armorPenetration,
+        attacksPerSecond: weapon.attacksPerSecond,
+        rangeMeters: weapon.rangeMeters,
+        accuracyPercent: weapon.accuracyPercent,
+        projectileVelocityMps: weapon.projectileVelocityMps,
+        burstCount: weapon.burstCount,
+        reloadTimeSeconds: weapon.reloadTimeSeconds,
+      },
+      iconSlug: `${seed.weaponSlug}-icon`,
+    },
+    loreAnnotation: {
+      category: chooseLoreCategory(seed),
+      citation: {
+        title: sourceTitle,
+        author: 'Games Workshop',
+        publisher: 'Games Workshop',
+        publicationYear: 2023,
+        pageOrChapter: 'Faction datasheet; exact page pending moderator verification',
+      },
+      excerpt: `Editorial research note for ${seed.name}: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.`,
+      discrepancyFactor: 1.5,
+    },
+  };
+}
+
+const STATIC_KNOWLEDGEBASE = Object.fromEntries(
+  STATIC_ASSET_BACKLOG.map((seed) => [seed.slug, expandStaticSeed(seed)])
+) as Record<string, DataslateDefinition>;
+
+export const EXPANDED_KNOWLEDGEBASE: Record<string, DataslateDefinition> = {
+  ...CANONICAL_KNOWLEDGEBASE,
+  ...STATIC_KNOWLEDGEBASE,
+};
+
+// ============================================================================
 // Multi-Layer Existing Slugs Discovery
 // ============================================================================
 
@@ -910,10 +1094,10 @@ export function pickNextBacklogUnit(targetUnitSlug?: string): DataslateDefinitio
     if (existing.units.has(targetUnitSlug)) {
       throw new Error(`[ABORT] Requested unit "${targetUnitSlug}" already exists in the corpus. Overwriting is strictly prohibited.`);
     }
-    if (CANONICAL_KNOWLEDGEBASE[targetUnitSlug]) {
-      return CANONICAL_KNOWLEDGEBASE[targetUnitSlug];
+    if (EXPANDED_KNOWLEDGEBASE[targetUnitSlug]) {
+      return EXPANDED_KNOWLEDGEBASE[targetUnitSlug];
     }
-    throw new Error(`Requested unit "${targetUnitSlug}" is not present in the canonical dataslate knowledgebase.`);
+    throw new Error(`Requested unit "${targetUnitSlug}" is not present in the expanded dataslate knowledgebase.`);
   }
 
   // Autonomous Faction Representation Balancer:
@@ -957,7 +1141,7 @@ export function pickNextBacklogUnit(targetUnitSlug?: string): DataslateDefinitio
 
   // Step B: Search for candidates in least represented factions
   for (const faction of sortedFactions) {
-    for (const [slug, def] of Object.entries(CANONICAL_KNOWLEDGEBASE)) {
+    for (const [slug, def] of Object.entries(EXPANDED_KNOWLEDGEBASE)) {
       if (def.unit.faction === faction && !existing.units.has(slug)) {
         console.log(`\n🎯 Autonomous Target Selected from least represented faction (${faction}): ${slug}`);
         return def;
@@ -966,7 +1150,7 @@ export function pickNextBacklogUnit(targetUnitSlug?: string): DataslateDefinitio
   }
 
   // Fallback to any unadded knowledgebase entry
-  for (const [slug, def] of Object.entries(CANONICAL_KNOWLEDGEBASE)) {
+  for (const [slug, def] of Object.entries(EXPANDED_KNOWLEDGEBASE)) {
     if (!existing.units.has(slug)) {
       return def;
     }
