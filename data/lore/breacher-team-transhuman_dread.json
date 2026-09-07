@@ -1,0 +1,18 @@
+{
+  "id": "1c2b6feb-7ad7-4d5b-856f-e7c1fc4668f4",
+  "unitSlug": "breacher-team",
+  "category": "transhuman_dread",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: T'au Empire",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for T'au Breacher Team: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-09-07T11:13:02.817Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

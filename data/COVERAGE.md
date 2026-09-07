@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `breacher-team` | tau_empire | shock_infantry | pulse-blaster |
 | `termagant` | tyranids | line_infantry | fleshborer |
 | `howling-banshee` | aeldari | shock_infantry | banshee-power-sword |
 | `kabalite-warrior` | drukhari | line_infantry | splinter-rifle |
@@ -33,6 +34,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `pulse-blaster` | tau_empire | energy_pulse |
 | `fleshborer` | tyranids | bio_weapon |
 | `banshee-power-sword` | aeldari | melee_power |
 | `splinter-rifle` | drukhari | energy_shuriken |
@@ -54,6 +56,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `breacher-team-transhuman_dread` | `breacher-team` | transhuman_dread | Warhammer 40,000 Faction Index: T'au Empire |
 | `termagant-weapon_potency` | `termagant` | weapon_potency | The Devastation of Baal |
 | `howling-banshee-transhuman_dread` | `howling-banshee` | transhuman_dread | Path of the Warrior |
 | `kabalite-warrior-weapon_potency` | `kabalite-warrior` | weapon_potency | Path of the Renegade |
@@ -103,7 +106,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 7 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 8 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 8 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
@@ -117,6 +120,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-07 | `breacher-team`, `pulse-blaster`, `breacher-team-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-06 | `termagant`, `fleshborer`, `termagant-weapon_potency` | statvault-wiki-agent |
 | 2026-09-05 | `howling-banshee`, `banshee-power-sword`, `howling-banshee-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-04 | `kabalite-warrior`, `splinter-rifle`, `kabalite-warrior-weapon_potency` | statvault-wiki-agent |

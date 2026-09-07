@@ -1,0 +1,27 @@
+{
+  "id": "711ad30d-23c0-49f0-aae0-7bd872a9271f",
+  "slug": "pulse-blaster",
+  "name": "Pulse Blaster",
+  "type": "energy_pulse",
+  "faction": "tau_empire",
+  "engineDamage": {
+    "baseDamage": 40,
+    "armorPenetration": 31,
+    "attacksPerSecond": 1.15,
+    "rangeMeters": 235,
+    "accuracyPercent": 82,
+    "projectileVelocityMps": 780,
+    "burstCount": 1,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Accelerated energetic particle packet",
+    "propellant": "Electromagnetic accelerator",
+    "muzzleVelocityMps": 4300,
+    "effectiveRangeKm": 1.4,
+    "loreEffectDescription": "Pulse Blaster is the selected primary armament for T'au Breacher Team. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: T'au Empire. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "pulse-blaster-icon",
+  "artImagePath": "/assets/art/pulse_blaster.jpg"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "6128ef10-7d31-428b-a891-744ec084907e",
+  "slug": "breacher-team",
+  "name": "T'au Breacher Team",
+  "faction": "tau_empire",
+  "subFaction": "T'au Empire",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 8,
+    "armor": 65,
+    "speedMps": 4.2,
+    "chargeSpeedMps": 5.3,
+    "acceleration": 4,
+    "massKgPerModel": 108,
+    "leadership": 72,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 140,
+    "sprintSpeedMps": 7.3,
+    "sprintSpeedMph": 16.3,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0,
+    "armorComposition": "Bonded nanocrystalline combat armour",
+    "armorEquivalentRHAmm": 120,
+    "combatStaminaHours": 12,
+    "citation": "Warhammer 40,000 Faction Index: T'au Empire. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "T'au Breacher Team is a T'au Empire shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/breacher-team.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 32,
+      "mobility": 41,
+      "burstDmg": 92,
+      "sustainedDps": 100,
+      "utility": 32,
+      "mass": 18
+    },
+    "loreCanon": {
+      "ehp": 41,
+      "mobility": 77,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 32,
+      "mass": 22
+    }
+  },
+  "primaryWeaponSlug": "pulse-blaster",
+  "tacticalDescription": "Provisional shock infantry profile centred on Pulse Blaster; retain as unapproved until detailed balance and source review."
+}
