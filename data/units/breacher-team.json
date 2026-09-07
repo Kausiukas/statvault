@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "pulse-blaster",
-  "tacticalDescription": "Provisional shock infantry profile centred on Pulse Blaster; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Pulse Blaster; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/breacher-team_multiview_0.png",
+    "assets/art/breacher-team_multiview_1.png",
+    "assets/art/breacher-team_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/breacher-team_concept.png",
+  "artImagePath": "assets/art/breacher-team_concept.png"
 }
