@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `dominion-squad` | adepta_sororitas | line_infantry | artificer-storm-bolter |
 | `breacher-team` | tau_empire | shock_infantry | pulse-blaster |
 | `termagant` | tyranids | line_infantry | fleshborer |
 | `howling-banshee` | aeldari | shock_infantry | banshee-power-sword |
@@ -34,6 +35,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `artificer-storm-bolter` | adepta_sororitas | ballistic_slug |
 | `pulse-blaster` | tau_empire | energy_pulse |
 | `fleshborer` | tyranids | bio_weapon |
 | `banshee-power-sword` | aeldari | melee_power |
@@ -56,6 +58,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `dominion-squad-weapon_potency` | `dominion-squad` | weapon_potency | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `breacher-team-transhuman_dread` | `breacher-team` | transhuman_dread | Warhammer 40,000 Faction Index: T'au Empire |
 | `termagant-weapon_potency` | `termagant` | weapon_potency | The Devastation of Baal |
 | `howling-banshee-transhuman_dread` | `howling-banshee` | transhuman_dread | Path of the Warrior |
@@ -107,7 +110,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 8 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 8 | cadian-shock-trooper |
+| line_infantry | 9 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
 | monstrous_creature | 0 | — |
@@ -120,6 +123,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-08 | `dominion-squad`, `artificer-storm-bolter`, `dominion-squad-weapon_potency` | statvault-wiki-agent |
 | 2026-09-07 | `breacher-team`, `pulse-blaster`, `breacher-team-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-06 | `termagant`, `fleshborer`, `termagant-weapon_potency` | statvault-wiki-agent |
 | 2026-09-05 | `howling-banshee`, `banshee-power-sword`, `howling-banshee-transhuman_dread` | statvault-wiki-agent |

@@ -1,0 +1,27 @@
+{
+  "id": "05907ec4-d3ab-49a3-a8b2-594f4bbd0c7f",
+  "slug": "artificer-storm-bolter",
+  "name": "Artificer Storm Bolter",
+  "type": "ballistic_slug",
+  "faction": "adepta_sororitas",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Artificer Storm Bolter is the selected primary armament for Dominion Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adepta Sororitas. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "artificer-storm-bolter-icon",
+  "artImagePath": "/assets/art/artificer_storm_bolter.jpg"
+}
