@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "artificer-storm-bolter",
-  "tacticalDescription": "Provisional line infantry profile centred on Artificer Storm Bolter; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Artificer Storm Bolter; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/dominion-squad_multiview_0.png",
+    "assets/art/dominion-squad_multiview_1.png",
+    "assets/art/dominion-squad_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/dominion-squad_concept.png",
+  "artImagePath": "assets/art/dominion-squad_concept.png"
 }

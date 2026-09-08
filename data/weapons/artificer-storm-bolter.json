@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Adepta Sororitas. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "artificer-storm-bolter-icon",
-  "artImagePath": "/assets/art/artificer_storm_bolter.jpg"
+  "artImagePath": "assets/art/artificer-storm-bolter_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/artificer-storm-bolter_multiview_0.png",
+    "assets/art/artificer-storm-bolter_multiview_1.png",
+    "assets/art/artificer-storm-bolter_multiview_2.png"
+  ]
 }
