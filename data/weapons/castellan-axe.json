@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Adeptus Custodes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "castellan-axe-icon",
-  "artImagePath": "/assets/art/castellan_axe.jpg"
+  "artImagePath": "assets/art/castellan-axe_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/castellan-axe_multiview_0.png",
+    "assets/art/castellan-axe_multiview_1.png",
+    "assets/art/castellan-axe_multiview_2.png"
+  ]
 }
