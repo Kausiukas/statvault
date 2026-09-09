@@ -1,0 +1,18 @@
+{
+  "id": "1d149017-27e9-46b3-85b5-6065f67e1d65",
+  "unitSlug": "custodian-wardens",
+  "category": "transhuman_dread",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Adeptus Custodes",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Custodian Wardens: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-09-09T04:00:40.633Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

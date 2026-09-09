@@ -1,0 +1,27 @@
+{
+  "id": "69842d81-5ed4-4f65-8394-dce371dcfc49",
+  "slug": "castellan-axe",
+  "name": "Castellan Axe",
+  "type": "melee_power",
+  "faction": "adeptus_custodes",
+  "engineDamage": {
+    "baseDamage": 58,
+    "armorPenetration": 55,
+    "attacksPerSecond": 1.7,
+    "rangeMeters": 2,
+    "accuracyPercent": 86,
+    "projectileVelocityMps": 0,
+    "burstCount": 1,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Powered melee edge or impact surface",
+    "propellant": "Disruption-field power cell",
+    "muzzleVelocityMps": 0,
+    "effectiveRangeKm": 0.002,
+    "loreEffectDescription": "Castellan Axe is the selected primary armament for Custodian Wardens. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Custodes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "castellan-axe-icon",
+  "artImagePath": "/assets/art/castellan_axe.jpg"
+}

@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `custodian-wardens` | adeptus_custodes | shock_infantry | castellan-axe |
 | `dominion-squad` | adepta_sororitas | line_infantry | artificer-storm-bolter |
 | `breacher-team` | tau_empire | shock_infantry | pulse-blaster |
 | `termagant` | tyranids | line_infantry | fleshborer |
@@ -35,6 +36,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `castellan-axe` | adeptus_custodes | melee_power |
 | `artificer-storm-bolter` | adepta_sororitas | ballistic_slug |
 | `pulse-blaster` | tau_empire | energy_pulse |
 | `fleshborer` | tyranids | bio_weapon |
@@ -58,6 +60,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `custodian-wardens-transhuman_dread` | `custodian-wardens` | transhuman_dread | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `dominion-squad-weapon_potency` | `dominion-squad` | weapon_potency | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `breacher-team-transhuman_dread` | `breacher-team` | transhuman_dread | Warhammer 40,000 Faction Index: T'au Empire |
 | `termagant-weapon_potency` | `termagant` | weapon_potency | The Devastation of Baal |
@@ -109,7 +112,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 8 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 9 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 9 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 0 | — |
@@ -123,6 +126,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-09 | `custodian-wardens`, `castellan-axe`, `custodian-wardens-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-08 | `dominion-squad`, `artificer-storm-bolter`, `dominion-squad-weapon_potency` | statvault-wiki-agent |
 | 2026-09-07 | `breacher-team`, `pulse-blaster`, `breacher-team-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-06 | `termagant`, `fleshborer`, `termagant-weapon_potency` | statvault-wiki-agent |

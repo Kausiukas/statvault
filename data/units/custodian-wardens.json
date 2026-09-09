@@ -1,0 +1,64 @@
+{
+  "id": "0c72d9ba-9222-488c-9e81-c80c514d5f31",
+  "slug": "custodian-wardens",
+  "name": "Custodian Wardens",
+  "faction": "adeptus_custodes",
+  "subFaction": "Adeptus Custodes",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 8,
+    "armor": 145,
+    "speedMps": 7.4,
+    "chargeSpeedMps": 9.3,
+    "acceleration": 4,
+    "massKgPerModel": 562,
+    "leadership": 110,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 1.5,
+    "sprintSpeedMps": 13,
+    "sprintSpeedMph": 29.1,
+    "dreadAuraRadiusM": 28,
+    "dreadShockFactor": 0.72,
+    "armorComposition": "Artificer-wrought auramite plate",
+    "armorEquivalentRHAmm": 435,
+    "combatStaminaHours": 168,
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Custodes. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Custodian Wardens is a Adeptus Custodes shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/custodian-wardens.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 79,
+      "mobility": 57,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 98,
+      "mass": 94
+    },
+    "loreCanon": {
+      "ehp": 100,
+      "mobility": 100,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 98,
+      "mass": 100
+    }
+  },
+  "primaryWeaponSlug": "castellan-axe",
+  "tacticalDescription": "Provisional shock infantry profile centred on Castellan Axe; retain as unapproved until detailed balance and source review."
+}
