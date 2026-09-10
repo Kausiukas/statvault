@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Custodian Wardens
+## 🌟 Daily Featured Dataslate: Hernkyn Pioneers
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/custodian-wardens_concept.png" alt="Custodian Wardens in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/hernkyn-pioneers_concept.png" alt="Hernkyn Pioneers in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Custodian Wardens deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Hernkyn Pioneers deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/custodian-wardens_multiview_0.png" alt="Custodian Wardens" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/hernkyn-pioneers_multiview_0.png" alt="Hernkyn Pioneers" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Custodian Wardens</b></h3>
+      <h3><b>Hernkyn Pioneers</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-ADEPTUS%20CUSTODES-555555?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-SHOCK%20INFANTRY-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-780%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-LEAGUES%20OF%20VOTANN-555555?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-FAST%20ATTACK-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-820%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Provisional shock infantry profile centred on Castellan Axe; retain as unapproved until detailed balance and source review."</i></p>
+      <i>"Provisional fast attack profile centred on Magna-Coil Autocannon; retain as unapproved until detailed balance and source review."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 435mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1200 HP (Armor Rating: 145)<br/>
-      • <b>RTS Tactical Speed:</b> 16.6 mph (26.6 km/h)<br/>
-      • <b>Primary Armament:</b> Castellan Axe (AP: 55, Base Dmg: 58)<br/>
-      • <b>Lore Phenomenon:</b> Custodian Wardens is a Adeptus Custodes shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative va...</p>
+      • <b>Lore Armor Protection:</b> 163mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1100 HP (Armor Rating: 80)<br/>
+      • <b>RTS Tactical Speed:</b> 11.4 mph (18.4 km/h)<br/>
+      • <b>Primary Armament:</b> Magna-Coil Autocannon (AP: 48, Base Dmg: 46)<br/>
+      • <b>Lore Phenomenon:</b> Hernkyn Pioneers is a Leagues of Votann fast attack formation queued for corpus expansion. Temporary static backlog seed; quantitative value...</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,25 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/custodian-wardens_multiview_0.png"><img src="assets/art/custodian-wardens_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/custodian-wardens_multiview_1.png"><img src="assets/art/custodian-wardens_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/custodian-wardens_multiview_2.png"><img src="assets/art/custodian-wardens_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/hernkyn-pioneers_multiview_0.png"><img src="assets/art/hernkyn-pioneers_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/hernkyn-pioneers_multiview_1.png"><img src="assets/art/hernkyn-pioneers_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/hernkyn-pioneers_multiview_2.png"><img src="assets/art/hernkyn-pioneers_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Castellan Axe</th>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Magna-Coil Autocannon</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/castellan-axe_multiview_0.png"><img src="assets/art/castellan-axe_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/castellan-axe_multiview_1.png"><img src="assets/art/castellan-axe_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/castellan-axe_multiview_2.png"><img src="assets/art/castellan-axe_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/magna-coil-autocannon_multiview_0.png"><img src="assets/art/magna-coil-autocannon_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/magna-coil-autocannon_multiview_1.png"><img src="assets/art/magna-coil-autocannon_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/magna-coil-autocannon_multiview_2.png"><img src="assets/art/magna-coil-autocannon_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/custodian-wardens.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/castellan-axe.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/hernkyn-pioneers.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/magna-coil-autocannon.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
