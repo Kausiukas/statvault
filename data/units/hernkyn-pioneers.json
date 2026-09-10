@@ -1,0 +1,64 @@
+{
+  "id": "8539fe7f-c7ff-4d0d-bb7b-d6d72edf62a6",
+  "slug": "hernkyn-pioneers",
+  "name": "Hernkyn Pioneers",
+  "faction": "leagues_of_votann",
+  "subFaction": "Leagues of Votann",
+  "role": "fast_attack",
+  "engineStats": {
+    "hitPoints": 1100,
+    "modelCount": 5,
+    "armor": 80,
+    "speedMps": 5.1,
+    "chargeSpeedMps": 6.4,
+    "acceleration": 4,
+    "massKgPerModel": 138,
+    "leadership": 82,
+    "baseCostPoints": 820,
+    "collisionRadiusM": 0.7
+  },
+  "loreStats": {
+    "reactionTimeMs": 120,
+    "sprintSpeedMps": 9,
+    "sprintSpeedMph": 20.1,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0,
+    "armorComposition": "Void-sealed composite plate with field-assisted reinforcement",
+    "armorEquivalentRHAmm": 163,
+    "combatStaminaHours": 28,
+    "citation": "Warhammer 40,000 Faction Index: Leagues of Votann. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Hernkyn Pioneers is a Leagues of Votann fast attack formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/hernkyn-pioneers.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 33,
+      "mobility": 46,
+      "burstDmg": 63,
+      "sustainedDps": 84,
+      "utility": 42,
+      "mass": 23
+    },
+    "loreCanon": {
+      "ehp": 41,
+      "mobility": 85,
+      "burstDmg": 89,
+      "sustainedDps": 100,
+      "utility": 42,
+      "mass": 28
+    }
+  },
+  "primaryWeaponSlug": "magna-coil-autocannon",
+  "tacticalDescription": "Provisional fast attack profile centred on Magna-Coil Autocannon; retain as unapproved until detailed balance and source review."
+}

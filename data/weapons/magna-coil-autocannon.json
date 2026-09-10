@@ -1,0 +1,27 @@
+{
+  "id": "284e173f-539a-4bc9-8f68-7fb89abc65f1",
+  "slug": "magna-coil-autocannon",
+  "name": "Magna-Coil Autocannon",
+  "type": "energy_gauss",
+  "faction": "leagues_of_votann",
+  "engineDamage": {
+    "baseDamage": 46,
+    "armorPenetration": 48,
+    "attacksPerSecond": 1.1,
+    "rangeMeters": 230,
+    "accuracyPercent": 84,
+    "projectileVelocityMps": 1100,
+    "burstCount": 1,
+    "reloadTimeSeconds": 1.7
+  },
+  "loreDescriptor": {
+    "caliber": "Molecular-disruption or exotic-energy beam",
+    "propellant": "Advanced field generator",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 1.3,
+    "loreEffectDescription": "Magna-Coil Autocannon is the selected primary armament for Hernkyn Pioneers. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Leagues of Votann. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "magna-coil-autocannon-icon",
+  "artImagePath": "/assets/art/magna_coil_autocannon.jpg"
+}

@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `hernkyn-pioneers` | leagues_of_votann | fast_attack | magna-coil-autocannon |
 | `custodian-wardens` | adeptus_custodes | shock_infantry | castellan-axe |
 | `dominion-squad` | adepta_sororitas | line_infantry | artificer-storm-bolter |
 | `breacher-team` | tau_empire | shock_infantry | pulse-blaster |
@@ -36,6 +37,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `magna-coil-autocannon` | leagues_of_votann | energy_gauss |
 | `castellan-axe` | adeptus_custodes | melee_power |
 | `artificer-storm-bolter` | adepta_sororitas | ballistic_slug |
 | `pulse-blaster` | tau_empire | energy_pulse |
@@ -60,6 +62,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `hernkyn-pioneers-velocity_discrepancy` | `hernkyn-pioneers` | velocity_discrepancy | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `custodian-wardens-transhuman_dread` | `custodian-wardens` | transhuman_dread | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `dominion-squad-weapon_potency` | `dominion-squad` | weapon_potency | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `breacher-team-transhuman_dread` | `breacher-team` | transhuman_dread | Warhammer 40,000 Faction Index: T'au Empire |
@@ -115,7 +118,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 9 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 9 | cadian-shock-trooper |
 | heavy_support | 1 | — |
-| fast_attack | 0 | — |
+| fast_attack | 1 | — |
 | monstrous_creature | 0 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -126,6 +129,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-10 | `hernkyn-pioneers`, `magna-coil-autocannon`, `hernkyn-pioneers-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-09 | `custodian-wardens`, `castellan-axe`, `custodian-wardens-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-08 | `dominion-squad`, `artificer-storm-bolter`, `dominion-squad-weapon_potency` | statvault-wiki-agent |
 | 2026-09-07 | `breacher-team`, `pulse-blaster`, `breacher-team-transhuman_dread` | statvault-wiki-agent |
