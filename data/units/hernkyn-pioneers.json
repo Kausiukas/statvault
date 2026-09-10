@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "magna-coil-autocannon",
-  "tacticalDescription": "Provisional fast attack profile centred on Magna-Coil Autocannon; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional fast attack profile centred on Magna-Coil Autocannon; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/hernkyn-pioneers_multiview_0.png",
+    "assets/art/hernkyn-pioneers_multiview_1.png",
+    "assets/art/hernkyn-pioneers_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/hernkyn-pioneers_concept.png",
+  "artImagePath": "assets/art/hernkyn-pioneers_concept.png"
 }
