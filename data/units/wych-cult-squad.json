@@ -1,0 +1,64 @@
+{
+  "id": "f810eb70-da85-4338-ae56-3f9a17d4a283",
+  "slug": "wych-cult-squad",
+  "name": "Wych Cult Squad",
+  "faction": "drukhari",
+  "subFaction": "Drukhari",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 8,
+    "armor": 58,
+    "speedMps": 6.8,
+    "chargeSpeedMps": 8.5,
+    "acceleration": 4,
+    "massKgPerModel": 84,
+    "leadership": 78,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 4,
+    "sprintSpeedMps": 11.9,
+    "sprintSpeedMph": 26.6,
+    "dreadAuraRadiusM": 10,
+    "dreadShockFactor": 0.32,
+    "armorComposition": "Lightweight barbed ghostplate and reflex mesh",
+    "armorEquivalentRHAmm": 90,
+    "combatStaminaHours": 18,
+    "citation": "Warhammer 40,000 Faction Index: Drukhari. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Wych Cult Squad is a Drukhari shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/wych-cult-squad.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 31,
+      "mobility": 54,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 48,
+      "mass": 14
+    },
+    "loreCanon": {
+      "ehp": 39,
+      "mobility": 100,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 48,
+      "mass": 17
+    }
+  },
+  "primaryWeaponSlug": "wych-blades",
+  "tacticalDescription": "Provisional shock infantry profile centred on Wych Blades; retain as unapproved until detailed balance and source review."
+}

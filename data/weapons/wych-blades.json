@@ -1,0 +1,27 @@
+{
+  "id": "5a2bdd0d-79a8-4493-8bb1-0697ef6a13af",
+  "slug": "wych-blades",
+  "name": "Wych Blades",
+  "type": "melee_crude",
+  "faction": "drukhari",
+  "engineDamage": {
+    "baseDamage": 39,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.6,
+    "rangeMeters": 2,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 0,
+    "burstCount": 1,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Heavy hand-forged melee implement",
+    "propellant": "User strength",
+    "muzzleVelocityMps": 0,
+    "effectiveRangeKm": 0.002,
+    "loreEffectDescription": "Wych Blades is the selected primary armament for Wych Cult Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Drukhari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "wych-blades-icon",
+  "artImagePath": "/assets/art/wych_blades.jpg"
+}

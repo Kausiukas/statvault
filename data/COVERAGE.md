@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `wych-cult-squad` | drukhari | shock_infantry | wych-blades |
 | `hernkyn-pioneers` | leagues_of_votann | fast_attack | magna-coil-autocannon |
 | `custodian-wardens` | adeptus_custodes | shock_infantry | castellan-axe |
 | `dominion-squad` | adepta_sororitas | line_infantry | artificer-storm-bolter |
@@ -37,6 +38,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `wych-blades` | drukhari | melee_crude |
 | `magna-coil-autocannon` | leagues_of_votann | energy_gauss |
 | `castellan-axe` | adeptus_custodes | melee_power |
 | `artificer-storm-bolter` | adepta_sororitas | ballistic_slug |
@@ -62,6 +64,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `wych-cult-squad-transhuman_dread` | `wych-cult-squad` | transhuman_dread | Warhammer 40,000 Faction Index: Drukhari |
 | `hernkyn-pioneers-velocity_discrepancy` | `hernkyn-pioneers` | velocity_discrepancy | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `custodian-wardens-transhuman_dread` | `custodian-wardens` | transhuman_dread | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `dominion-squad-weapon_potency` | `dominion-squad` | weapon_potency | Warhammer 40,000 Faction Index: Adepta Sororitas |
@@ -115,7 +118,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 9 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 10 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 9 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 1 | — |
@@ -129,6 +132,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-11 | `wych-cult-squad`, `wych-blades`, `wych-cult-squad-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-10 | `hernkyn-pioneers`, `magna-coil-autocannon`, `hernkyn-pioneers-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-09 | `custodian-wardens`, `castellan-axe`, `custodian-wardens-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-08 | `dominion-squad`, `artificer-storm-bolter`, `dominion-squad-weapon_potency` | statvault-wiki-agent |

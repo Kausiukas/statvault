@@ -1,0 +1,18 @@
+{
+  "id": "8a2a9ada-5fc8-4b58-87d8-42073537f86e",
+  "unitSlug": "wych-cult-squad",
+  "category": "transhuman_dread",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Drukhari",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Wych Cult Squad: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-09-11T04:00:50.796Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
