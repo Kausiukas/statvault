@@ -23,5 +23,9 @@
     "citation": "Warhammer 40,000 Faction Index: Drukhari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "wych-blades-icon",
-  "artImagePath": "/assets/art/wych_blades.jpg"
+  "artImagePath": "assets/art/wych-blades_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/wych-blades_multiview_0.png",
+    "assets/art/wych-blades_multiview_1.png"
+  ]
 }

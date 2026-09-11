@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "wych-blades",
-  "tacticalDescription": "Provisional shock infantry profile centred on Wych Blades; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Wych Blades; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/wych-cult-squad_multiview_0.png",
+    "assets/art/wych-cult-squad_multiview_1.png",
+    "assets/art/wych-cult-squad_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/wych-cult-squad_concept.png",
+  "artImagePath": "assets/art/wych-cult-squad_concept.png"
 }
