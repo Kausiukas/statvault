@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "assault-intercessor-heavy-bolt-pistol",
-  "tacticalDescription": "Provisional shock infantry profile centred on Heavy Bolt Pistol; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Heavy Bolt Pistol; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/space-marine-assault_multiview_0.png",
+    "assets/art/space-marine-assault_multiview_1.png",
+    "assets/art/space-marine-assault_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/space-marine-assault_concept.png",
+  "artImagePath": "assets/art/space-marine-assault_concept.png"
 }
