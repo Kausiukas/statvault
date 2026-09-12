@@ -1,0 +1,64 @@
+{
+  "id": "a1379402-4d48-4266-be56-9a6d4530ddb2",
+  "slug": "space-marine-assault",
+  "name": "Assault Intercessor Squad",
+  "faction": "adeptus_astartes",
+  "subFaction": "Adeptus Astartes",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 8,
+    "armor": 110,
+    "speedMps": 5.5,
+    "chargeSpeedMps": 6.9,
+    "acceleration": 4,
+    "massKgPerModel": 454,
+    "leadership": 92,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 5,
+    "sprintSpeedMps": 9.7,
+    "sprintSpeedMph": 21.7,
+    "dreadAuraRadiusM": 18,
+    "dreadShockFactor": 0.55,
+    "armorComposition": "Ceramite power armour over a powered fibre-bundle undersuit",
+    "armorEquivalentRHAmm": 265,
+    "combatStaminaHours": 72,
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Astartes. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Assault Intercessor Squad is a Adeptus Astartes shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/space-marine-assault.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 48,
+      "mobility": 48,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 70,
+      "mass": 76
+    },
+    "loreCanon": {
+      "ehp": 59,
+      "mobility": 89,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 70,
+      "mass": 91
+    }
+  },
+  "primaryWeaponSlug": "assault-intercessor-heavy-bolt-pistol",
+  "tacticalDescription": "Provisional shock infantry profile centred on Heavy Bolt Pistol; retain as unapproved until detailed balance and source review."
+}

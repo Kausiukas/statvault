@@ -1,0 +1,18 @@
+{
+  "id": "7a2401f8-1be8-43c3-917f-5c14ab82857e",
+  "unitSlug": "space-marine-assault",
+  "category": "transhuman_dread",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Adeptus Astartes",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Assault Intercessor Squad: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-09-12T04:00:35.809Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
