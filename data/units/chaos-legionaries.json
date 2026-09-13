@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "corrupted-boltgun",
-  "tacticalDescription": "Provisional line infantry profile centred on Corrupted Boltgun; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Corrupted Boltgun; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/chaos-legionaries_multiview_0.png",
+    "assets/art/chaos-legionaries_multiview_1.png",
+    "assets/art/chaos-legionaries_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/chaos-legionaries_concept.png",
+  "artImagePath": "assets/art/chaos-legionaries_concept.png"
 }
