@@ -1,0 +1,27 @@
+{
+  "id": "502fa7a8-38bf-4b80-8efa-27bfc5af47d7",
+  "slug": "corrupted-boltgun",
+  "name": "Corrupted Boltgun",
+  "type": "ballistic_slug",
+  "faction": "chaos_space_marines",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Corrupted Boltgun is the selected primary armament for Chaos Space Marine Legionaries. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Chaos Space Marines. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "corrupted-boltgun-icon",
+  "artImagePath": "/assets/art/corrupted_boltgun.jpg"
+}

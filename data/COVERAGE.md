@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `chaos-legionaries` | chaos_space_marines | line_infantry | corrupted-boltgun |
 | `space-marine-assault` | adeptus_astartes | shock_infantry | assault-intercessor-heavy-bolt-pistol |
 | `wych-cult-squad` | drukhari | shock_infantry | wych-blades |
 | `hernkyn-pioneers` | leagues_of_votann | fast_attack | magna-coil-autocannon |
@@ -39,6 +40,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `corrupted-boltgun` | chaos_space_marines | ballistic_slug |
 | `assault-intercessor-heavy-bolt-pistol` | adeptus_astartes | ballistic_slug |
 | `wych-blades` | drukhari | melee_crude |
 | `magna-coil-autocannon` | leagues_of_votann | energy_gauss |
@@ -66,6 +68,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `chaos-legionaries-weapon_potency` | `chaos-legionaries` | weapon_potency | Warhammer 40,000 Faction Index: Chaos Space Marines |
 | `space-marine-assault-transhuman_dread` | `space-marine-assault` | transhuman_dread | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `wych-cult-squad-transhuman_dread` | `wych-cult-squad` | transhuman_dread | Warhammer 40,000 Faction Index: Drukhari |
 | `hernkyn-pioneers-velocity_discrepancy` | `hernkyn-pioneers` | velocity_discrepancy | Warhammer 40,000 Faction Index: Leagues of Votann |
@@ -121,7 +124,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 11 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 9 | cadian-shock-trooper |
+| line_infantry | 10 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 1 | — |
 | monstrous_creature | 0 | — |
@@ -134,6 +137,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-13 | `chaos-legionaries`, `corrupted-boltgun`, `chaos-legionaries-weapon_potency` | statvault-wiki-agent |
 | 2026-09-12 | `space-marine-assault`, `assault-intercessor-heavy-bolt-pistol`, `space-marine-assault-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-11 | `wych-cult-squad`, `wych-blades`, `wych-cult-squad-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-10 | `hernkyn-pioneers`, `magna-coil-autocannon`, `hernkyn-pioneers-velocity_discrepancy` | statvault-wiki-agent |
