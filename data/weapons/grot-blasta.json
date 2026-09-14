@@ -1,0 +1,27 @@
+{
+  "id": "925a6a65-4e53-4420-b5c8-3e2cf3fc87d9",
+  "slug": "grot-blasta",
+  "name": "Grot Blasta",
+  "type": "ballistic_slug",
+  "faction": "orks",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Grot Blasta is the selected primary armament for Gretchin Mob. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Orks. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "grot-blasta-icon",
+  "artImagePath": "/assets/art/grot_blasta.jpg"
+}

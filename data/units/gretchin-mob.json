@@ -1,0 +1,64 @@
+{
+  "id": "ccaf65ce-211d-460f-8f60-882e0a3e135b",
+  "slug": "gretchin-mob",
+  "name": "Gretchin Mob",
+  "faction": "orks",
+  "subFaction": "Orks",
+  "role": "line_infantry",
+  "engineStats": {
+    "hitPoints": 1000,
+    "modelCount": 10,
+    "armor": 45,
+    "speedMps": 4.6,
+    "chargeSpeedMps": 5.8,
+    "acceleration": 4,
+    "massKgPerModel": 145,
+    "leadership": 72,
+    "baseCostPoints": 600,
+    "collisionRadiusM": 0.5
+  },
+  "loreStats": {
+    "reactionTimeMs": 70,
+    "sprintSpeedMps": 8,
+    "sprintSpeedMph": 17.9,
+    "dreadAuraRadiusM": 12,
+    "dreadShockFactor": 0.3,
+    "armorComposition": "Layered scrap plate, hide and improvised armour",
+    "armorEquivalentRHAmm": 55,
+    "combatStaminaHours": 36,
+    "citation": "Warhammer 40,000 Faction Index: Orks. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Gretchin Mob is a Orks line infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/gretchin-mob.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 23,
+      "mobility": 43,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 44,
+      "mass": 24
+    },
+    "loreCanon": {
+      "ehp": 30,
+      "mobility": 80,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 44,
+      "mass": 29
+    }
+  },
+  "primaryWeaponSlug": "grot-blasta",
+  "tacticalDescription": "Provisional line infantry profile centred on Grot Blasta; retain as unapproved until detailed balance and source review."
+}

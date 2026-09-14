@@ -1,0 +1,18 @@
+{
+  "id": "4dffe95b-3126-4ae0-b082-b28c02102de5",
+  "unitSlug": "gretchin-mob",
+  "category": "weapon_potency",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Orks",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Gretchin Mob: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-09-14T04:00:37.451Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
