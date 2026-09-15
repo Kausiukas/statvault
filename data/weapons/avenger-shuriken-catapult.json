@@ -1,0 +1,27 @@
+{
+  "id": "97f41555-3bc4-4271-943d-91e7827ccec1",
+  "slug": "avenger-shuriken-catapult",
+  "name": "Avenger Shuriken Catapult",
+  "type": "energy_shuriken",
+  "faction": "aeldari",
+  "engineDamage": {
+    "baseDamage": 32,
+    "armorPenetration": 29,
+    "attacksPerSecond": 2.1,
+    "rangeMeters": 155,
+    "accuracyPercent": 80,
+    "projectileVelocityMps": 680,
+    "burstCount": 3,
+    "reloadTimeSeconds": 1.2
+  },
+  "loreDescriptor": {
+    "caliber": "Monomolecular disc or splinter projectile",
+    "propellant": "Gravitic or electromagnetic accelerator",
+    "muzzleVelocityMps": 2200,
+    "effectiveRangeKm": 0.8,
+    "loreEffectDescription": "Avenger Shuriken Catapult is the selected primary armament for Dire Avengers. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Aeldari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "avenger-shuriken-catapult-icon",
+  "artImagePath": "/assets/art/avenger_shuriken_catapult.jpg"
+}
