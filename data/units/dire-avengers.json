@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "avenger-shuriken-catapult",
-  "tacticalDescription": "Provisional line infantry profile centred on Avenger Shuriken Catapult; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Avenger Shuriken Catapult; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/dire-avengers_multiview_0.png",
+    "assets/art/dire-avengers_multiview_1.png",
+    "assets/art/dire-avengers_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/dire-avengers_concept.png",
+  "artImagePath": "assets/art/dire-avengers_concept.png"
 }
