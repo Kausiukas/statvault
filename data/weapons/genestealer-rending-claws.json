@@ -1,0 +1,27 @@
+{
+  "id": "ff45ec2d-9294-40de-8a36-aabbccfcc47f",
+  "slug": "genestealer-rending-claws",
+  "name": "Rending Claws",
+  "type": "bio_weapon",
+  "faction": "tyranids",
+  "engineDamage": {
+    "baseDamage": 37,
+    "armorPenetration": 27,
+    "attacksPerSecond": 1.6,
+    "rangeMeters": 145,
+    "accuracyPercent": 70,
+    "projectileVelocityMps": 360,
+    "burstCount": 1,
+    "reloadTimeSeconds": 1.4
+  },
+  "loreDescriptor": {
+    "caliber": "Living symbiote, claw or bio-projectile",
+    "propellant": "Biological muscle and chemical pressure",
+    "muzzleVelocityMps": 320,
+    "effectiveRangeKm": 0.5,
+    "loreEffectDescription": "Rending Claws is the selected primary armament for Genestealer Brood. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Tyranids. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "genestealer-rending-claws-icon",
+  "artImagePath": "/assets/art/genestealer_rending_claws.jpg"
+}

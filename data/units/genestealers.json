@@ -1,0 +1,64 @@
+{
+  "id": "1c8ad13b-8b51-48cb-9648-d0cc30eee14d",
+  "slug": "genestealers",
+  "name": "Genestealer Brood",
+  "faction": "tyranids",
+  "subFaction": "Tyranids",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 8,
+    "armor": 50,
+    "speedMps": 6.2,
+    "chargeSpeedMps": 7.8,
+    "acceleration": 4,
+    "massKgPerModel": 119,
+    "leadership": 75,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 2,
+    "sprintSpeedMps": 10.8,
+    "sprintSpeedMph": 24.2,
+    "dreadAuraRadiusM": 14,
+    "dreadShockFactor": 0.4,
+    "armorComposition": "Layered chitin and reinforced scleroprotein carapace",
+    "armorEquivalentRHAmm": 65,
+    "combatStaminaHours": "infinite",
+    "citation": "Warhammer 40,000 Faction Index: Tyranids. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Genestealer Brood is a Tyranids shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/genestealers.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 29,
+      "mobility": 51,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 49,
+      "mass": 20
+    },
+    "loreCanon": {
+      "ehp": 37,
+      "mobility": 94,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 49,
+      "mass": 24
+    }
+  },
+  "primaryWeaponSlug": "genestealer-rending-claws",
+  "tacticalDescription": "Provisional shock infantry profile centred on Rending Claws; retain as unapproved until detailed balance and source review."
+}

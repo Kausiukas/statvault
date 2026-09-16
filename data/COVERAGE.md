@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `genestealers` | tyranids | shock_infantry | genestealer-rending-claws |
 | `dire-avengers` | aeldari | line_infantry | avenger-shuriken-catapult |
 | `gretchin-mob` | orks | line_infantry | grot-blasta |
 | `chaos-legionaries` | chaos_space_marines | line_infantry | corrupted-boltgun |
@@ -42,6 +43,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `genestealer-rending-claws` | tyranids | bio_weapon |
 | `avenger-shuriken-catapult` | aeldari | energy_shuriken |
 | `grot-blasta` | orks | ballistic_slug |
 | `corrupted-boltgun` | chaos_space_marines | ballistic_slug |
@@ -72,6 +74,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `genestealers-transhuman_dread` | `genestealers` | transhuman_dread | Warhammer 40,000 Faction Index: Tyranids |
 | `dire-avengers-weapon_potency` | `dire-avengers` | weapon_potency | Warhammer 40,000 Faction Index: Aeldari |
 | `gretchin-mob-weapon_potency` | `gretchin-mob` | weapon_potency | Warhammer 40,000 Faction Index: Orks |
 | `chaos-legionaries-weapon_potency` | `chaos-legionaries` | weapon_potency | Warhammer 40,000 Faction Index: Chaos Space Marines |
@@ -129,7 +132,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 11 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 12 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 12 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 1 | — |
@@ -143,6 +146,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-16 | `genestealers`, `genestealer-rending-claws`, `genestealers-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-15 | `dire-avengers`, `avenger-shuriken-catapult`, `dire-avengers-weapon_potency` | statvault-wiki-agent |
 | 2026-09-14 | `gretchin-mob`, `grot-blasta`, `gretchin-mob-weapon_potency` | statvault-wiki-agent |
 | 2026-09-13 | `chaos-legionaries`, `corrupted-boltgun`, `chaos-legionaries-weapon_potency` | statvault-wiki-agent |
