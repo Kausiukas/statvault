@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Dire Avengers
+## 🌟 Daily Featured Dataslate: Genestealer Brood
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/dire-avengers_concept.png" alt="Dire Avengers in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/genestealers_concept.png" alt="Genestealer Brood in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Dire Avengers deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Genestealer Brood deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/dire-avengers_multiview_0.png" alt="Dire Avengers" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/genestealers_multiview_0.png" alt="Genestealer Brood" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Dire Avengers</b></h3>
+      <h3><b>Genestealer Brood</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-AELDARI-00cccc?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-LINE%20INFANTRY-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-600%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-TYRANIDS-aa33aa?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-SHOCK%20INFANTRY-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-780%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Provisional line infantry profile centred on Avenger Shuriken Catapult; retain as unapproved until detailed balance and source review."</i></p>
+      <i>"Provisional shock infantry profile centred on Rending Claws; retain as unapproved until detailed balance and source review."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 80mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1000 HP (Armor Rating: 50)<br/>
-      • <b>RTS Tactical Speed:</b> 13.4 mph (21.6 km/h)<br/>
-      • <b>Primary Armament:</b> Avenger Shuriken Catapult (AP: 29, Base Dmg: 32)<br/>
-      • <b>Lore Phenomenon:</b> Dire Avengers is a Aeldari line infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require s...</p>
+      • <b>Lore Armor Protection:</b> 65mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1200 HP (Armor Rating: 50)<br/>
+      • <b>RTS Tactical Speed:</b> 13.9 mph (22.3 km/h)<br/>
+      • <b>Primary Armament:</b> Rending Claws (AP: 27, Base Dmg: 37)<br/>
+      • <b>Lore Phenomenon:</b> Genestealer Brood is a Tyranids shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values req...</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,25 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/dire-avengers_multiview_0.png"><img src="assets/art/dire-avengers_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/dire-avengers_multiview_1.png"><img src="assets/art/dire-avengers_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/dire-avengers_multiview_2.png"><img src="assets/art/dire-avengers_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/genestealers_multiview_0.png"><img src="assets/art/genestealers_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/genestealers_multiview_1.png"><img src="assets/art/genestealers_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/genestealers_multiview_2.png"><img src="assets/art/genestealers_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Avenger Shuriken Catapult</th>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Rending Claws</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/avenger-shuriken-catapult_multiview_0.png"><img src="assets/art/avenger-shuriken-catapult_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/avenger-shuriken-catapult_multiview_1.png"><img src="assets/art/avenger-shuriken-catapult_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/avenger-shuriken-catapult_multiview_2.png"><img src="assets/art/avenger-shuriken-catapult_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/genestealer-rending-claws_multiview_0.png"><img src="assets/art/genestealer-rending-claws_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/genestealer-rending-claws_multiview_1.png"><img src="assets/art/genestealer-rending-claws_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/genestealer-rending-claws_multiview_2.png"><img src="assets/art/genestealer-rending-claws_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/dire-avengers.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/avenger-shuriken-catapult.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/genestealers.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/genestealer-rending-claws.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
