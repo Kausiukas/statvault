@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "genestealer-rending-claws",
-  "tacticalDescription": "Provisional shock infantry profile centred on Rending Claws; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Rending Claws; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/genestealers_multiview_0.png",
+    "assets/art/genestealers_multiview_1.png",
+    "assets/art/genestealers_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/genestealers_concept.png",
+  "artImagePath": "assets/art/genestealers_concept.png"
 }

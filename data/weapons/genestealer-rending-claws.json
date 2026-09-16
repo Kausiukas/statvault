@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Tyranids. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "genestealer-rending-claws-icon",
-  "artImagePath": "/assets/art/genestealer_rending_claws.jpg"
+  "artImagePath": "assets/art/genestealer-rending-claws_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/genestealer-rending-claws_multiview_0.png",
+    "assets/art/genestealer-rending-claws_multiview_1.png",
+    "assets/art/genestealer-rending-claws_multiview_2.png"
+  ]
 }
