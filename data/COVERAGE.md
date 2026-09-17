@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `pathfinder-team` | tau_empire | line_infantry | pathfinder-rail-rifle |
 | `genestealers` | tyranids | shock_infantry | genestealer-rending-claws |
 | `dire-avengers` | aeldari | line_infantry | avenger-shuriken-catapult |
 | `gretchin-mob` | orks | line_infantry | grot-blasta |
@@ -43,6 +44,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `pathfinder-rail-rifle` | tau_empire | energy_pulse |
 | `genestealer-rending-claws` | tyranids | bio_weapon |
 | `avenger-shuriken-catapult` | aeldari | energy_shuriken |
 | `grot-blasta` | orks | ballistic_slug |
@@ -74,6 +76,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `pathfinder-team-weapon_potency` | `pathfinder-team` | weapon_potency | Warhammer 40,000 Faction Index: T'au Empire |
 | `genestealers-transhuman_dread` | `genestealers` | transhuman_dread | Warhammer 40,000 Faction Index: Tyranids |
 | `dire-avengers-weapon_potency` | `dire-avengers` | weapon_potency | Warhammer 40,000 Faction Index: Aeldari |
 | `gretchin-mob-weapon_potency` | `gretchin-mob` | weapon_potency | Warhammer 40,000 Faction Index: Orks |
@@ -133,7 +136,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 12 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 12 | cadian-shock-trooper |
+| line_infantry | 13 | cadian-shock-trooper |
 | heavy_support | 1 | — |
 | fast_attack | 1 | — |
 | monstrous_creature | 0 | — |
@@ -146,6 +149,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-17 | `pathfinder-team`, `pathfinder-rail-rifle`, `pathfinder-team-weapon_potency` | statvault-wiki-agent |
 | 2026-09-16 | `genestealers`, `genestealer-rending-claws`, `genestealers-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-15 | `dire-avengers`, `avenger-shuriken-catapult`, `dire-avengers-weapon_potency` | statvault-wiki-agent |
 | 2026-09-14 | `gretchin-mob`, `grot-blasta`, `gretchin-mob-weapon_potency` | statvault-wiki-agent |
