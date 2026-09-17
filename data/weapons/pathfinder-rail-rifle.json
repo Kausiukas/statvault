@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: T'au Empire. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "pathfinder-rail-rifle-icon",
-  "artImagePath": "/assets/art/pathfinder_rail_rifle.jpg"
+  "artImagePath": "assets/art/pathfinder-rail-rifle_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/pathfinder-rail-rifle_multiview_0.png",
+    "assets/art/pathfinder-rail-rifle_multiview_1.png",
+    "assets/art/pathfinder-rail-rifle_multiview_2.png"
+  ]
 }
