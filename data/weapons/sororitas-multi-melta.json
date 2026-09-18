@@ -1,0 +1,27 @@
+{
+  "id": "8362e40d-1a94-43f1-9346-e340d0debaa7",
+  "slug": "sororitas-multi-melta",
+  "name": "Sororitas Multi-Melta",
+  "type": "energy_melta",
+  "faction": "adepta_sororitas",
+  "engineDamage": {
+    "baseDamage": 82,
+    "armorPenetration": 78,
+    "attacksPerSecond": 0.45,
+    "rangeMeters": 90,
+    "accuracyPercent": 76,
+    "projectileVelocityMps": 1000,
+    "burstCount": 1,
+    "reloadTimeSeconds": 3.2
+  },
+  "loreDescriptor": {
+    "caliber": "Short-range thermal beam",
+    "propellant": "Fusion-reactor fuel charge",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 0.25,
+    "loreEffectDescription": "Sororitas Multi-Melta is the selected primary armament for Retributor Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adepta Sororitas. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "sororitas-multi-melta-icon",
+  "artImagePath": "/assets/art/sororitas_multi_melta.jpg"
+}
