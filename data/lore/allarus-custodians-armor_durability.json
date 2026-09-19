@@ -1,0 +1,18 @@
+{
+  "id": "09a13a8e-bc01-4bc2-aa7b-1d6188f57d7a",
+  "unitSlug": "allarus-custodians",
+  "category": "armor_durability",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Adeptus Custodes",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Allarus Custodians: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-09-19T04:00:38.324Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
