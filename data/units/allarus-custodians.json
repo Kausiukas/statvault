@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "balistus-grenade-launcher",
-  "tacticalDescription": "Provisional heavy support profile centred on Balistus Grenade Launcher; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on Balistus Grenade Launcher; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/allarus-custodians_multiview_0.png",
+    "assets/art/allarus-custodians_multiview_1.png",
+    "assets/art/allarus-custodians_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/allarus-custodians_concept.png",
+  "artImagePath": "assets/art/allarus-custodians_concept.png"
 }
