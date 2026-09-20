@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `cthonian-beserks` | leagues_of_votann | shock_infantry | heavy-plasma-axe |
 | `allarus-custodians` | adeptus_custodes | heavy_support | balistus-grenade-launcher |
 | `retributor-squad` | adepta_sororitas | heavy_support | sororitas-multi-melta |
 | `pathfinder-team` | tau_empire | line_infantry | pathfinder-rail-rifle |
@@ -46,6 +47,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `heavy-plasma-axe` | leagues_of_votann | melee_power |
 | `balistus-grenade-launcher` | adeptus_custodes | explosive_missile |
 | `sororitas-multi-melta` | adepta_sororitas | energy_melta |
 | `pathfinder-rail-rifle` | tau_empire | energy_pulse |
@@ -80,6 +82,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `cthonian-beserks-transhuman_dread` | `cthonian-beserks` | transhuman_dread | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `allarus-custodians-armor_durability` | `allarus-custodians` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `retributor-squad-armor_durability` | `retributor-squad` | armor_durability | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `pathfinder-team-weapon_potency` | `pathfinder-team` | weapon_potency | Warhammer 40,000 Faction Index: T'au Empire |
@@ -141,7 +144,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 12 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 13 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 13 | cadian-shock-trooper |
 | heavy_support | 3 | — |
 | fast_attack | 1 | — |
@@ -155,6 +158,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-20 | `cthonian-beserks`, `heavy-plasma-axe`, `cthonian-beserks-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-19 | `allarus-custodians`, `balistus-grenade-launcher`, `allarus-custodians-armor_durability` | statvault-wiki-agent |
 | 2026-09-18 | `retributor-squad`, `sororitas-multi-melta`, `retributor-squad-armor_durability` | statvault-wiki-agent |
 | 2026-09-17 | `pathfinder-team`, `pathfinder-rail-rifle`, `pathfinder-team-weapon_potency` | statvault-wiki-agent |
