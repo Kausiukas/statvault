@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "heavy-plasma-axe",
-  "tacticalDescription": "Provisional shock infantry profile centred on Heavy Plasma Axe; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Heavy Plasma Axe; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/cthonian-beserks_multiview_0.png",
+    "assets/art/cthonian-beserks_multiview_1.png",
+    "assets/art/cthonian-beserks_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/cthonian-beserks_concept.png",
+  "artImagePath": "assets/art/cthonian-beserks_concept.png"
 }

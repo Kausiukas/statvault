@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Leagues of Votann. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "heavy-plasma-axe-icon",
-  "artImagePath": "/assets/art/heavy_plasma_axe.jpg"
+  "artImagePath": "assets/art/heavy-plasma-axe_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/heavy-plasma-axe_multiview_0.png",
+    "assets/art/heavy-plasma-axe_multiview_1.png",
+    "assets/art/heavy-plasma-axe_multiview_2.png"
+  ]
 }
