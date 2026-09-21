@@ -23,5 +23,9 @@
     "citation": "Warhammer 40,000 Faction Index: Drukhari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "incubus-klaive-icon",
-  "artImagePath": "/assets/art/incubus_klaive.jpg"
+  "artImagePath": "assets/art/incubus-klaive_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/incubus-klaive_multiview_0.png",
+    "assets/art/incubus-klaive_multiview_1.png"
+  ]
 }
