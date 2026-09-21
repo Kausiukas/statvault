@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `incubi` | drukhari | shock_infantry | incubus-klaive |
 | `cthonian-beserks` | leagues_of_votann | shock_infantry | heavy-plasma-axe |
 | `allarus-custodians` | adeptus_custodes | heavy_support | balistus-grenade-launcher |
 | `retributor-squad` | adepta_sororitas | heavy_support | sororitas-multi-melta |
@@ -47,6 +48,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `incubus-klaive` | drukhari | melee_power |
 | `heavy-plasma-axe` | leagues_of_votann | melee_power |
 | `balistus-grenade-launcher` | adeptus_custodes | explosive_missile |
 | `sororitas-multi-melta` | adepta_sororitas | energy_melta |
@@ -82,6 +84,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `incubi-transhuman_dread` | `incubi` | transhuman_dread | Warhammer 40,000 Faction Index: Drukhari |
 | `cthonian-beserks-transhuman_dread` | `cthonian-beserks` | transhuman_dread | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `allarus-custodians-armor_durability` | `allarus-custodians` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `retributor-squad-armor_durability` | `retributor-squad` | armor_durability | Warhammer 40,000 Faction Index: Adepta Sororitas |
@@ -144,7 +147,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 13 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 14 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 13 | cadian-shock-trooper |
 | heavy_support | 3 | — |
 | fast_attack | 1 | — |
@@ -158,6 +161,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-21 | `incubi`, `incubus-klaive`, `incubi-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-20 | `cthonian-beserks`, `heavy-plasma-axe`, `cthonian-beserks-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-19 | `allarus-custodians`, `balistus-grenade-launcher`, `allarus-custodians-armor_durability` | statvault-wiki-agent |
 | 2026-09-18 | `retributor-squad`, `sororitas-multi-melta`, `retributor-squad-armor_durability` | statvault-wiki-agent |
