@@ -1,0 +1,18 @@
+{
+  "id": "6ea8e07e-5594-4c9e-b004-578d967bd2d1",
+  "unitSlug": "deathmarks",
+  "category": "weapon_potency",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Necrons",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Deathmarks: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-09-22T04:00:40.208Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

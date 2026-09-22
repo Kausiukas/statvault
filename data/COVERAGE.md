@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `deathmarks` | necrons | line_infantry | synaptic-disintegrator |
 | `incubi` | drukhari | shock_infantry | incubus-klaive |
 | `cthonian-beserks` | leagues_of_votann | shock_infantry | heavy-plasma-axe |
 | `allarus-custodians` | adeptus_custodes | heavy_support | balistus-grenade-launcher |
@@ -48,6 +49,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `synaptic-disintegrator` | necrons | energy_gauss |
 | `incubus-klaive` | drukhari | melee_power |
 | `heavy-plasma-axe` | leagues_of_votann | melee_power |
 | `balistus-grenade-launcher` | adeptus_custodes | explosive_missile |
@@ -84,6 +86,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `deathmarks-weapon_potency` | `deathmarks` | weapon_potency | Warhammer 40,000 Faction Index: Necrons |
 | `incubi-transhuman_dread` | `incubi` | transhuman_dread | Warhammer 40,000 Faction Index: Drukhari |
 | `cthonian-beserks-transhuman_dread` | `cthonian-beserks` | transhuman_dread | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `allarus-custodians-armor_durability` | `allarus-custodians` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Custodes |
@@ -148,7 +151,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 14 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 13 | cadian-shock-trooper |
+| line_infantry | 14 | cadian-shock-trooper |
 | heavy_support | 3 | — |
 | fast_attack | 1 | — |
 | monstrous_creature | 0 | — |
@@ -161,6 +164,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-22 | `deathmarks`, `synaptic-disintegrator`, `deathmarks-weapon_potency` | statvault-wiki-agent |
 | 2026-09-21 | `incubi`, `incubus-klaive`, `incubi-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-20 | `cthonian-beserks`, `heavy-plasma-axe`, `cthonian-beserks-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-19 | `allarus-custodians`, `balistus-grenade-launcher`, `allarus-custodians-armor_durability` | statvault-wiki-agent |
