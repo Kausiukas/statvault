@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "synaptic-disintegrator",
-  "tacticalDescription": "Provisional line infantry profile centred on Synaptic Disintegrator; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Synaptic Disintegrator; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/deathmarks_multiview_0.png",
+    "assets/art/deathmarks_multiview_1.png",
+    "assets/art/deathmarks_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/deathmarks_concept.png",
+  "artImagePath": "assets/art/deathmarks_concept.png"
 }
