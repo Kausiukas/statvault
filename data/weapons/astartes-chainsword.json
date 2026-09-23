@@ -1,0 +1,27 @@
+{
+  "id": "702a5ef1-f217-4074-9919-7a5f2bdb6b16",
+  "slug": "astartes-chainsword",
+  "name": "Astartes Chainsword",
+  "type": "melee_chain",
+  "faction": "adeptus_astartes",
+  "engineDamage": {
+    "baseDamage": 46,
+    "armorPenetration": 36,
+    "attacksPerSecond": 2,
+    "rangeMeters": 2,
+    "accuracyPercent": 80,
+    "projectileVelocityMps": 0,
+    "burstCount": 1,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Motor-driven monomolecular teeth",
+    "propellant": "Compact chain-drive motor",
+    "muzzleVelocityMps": 0,
+    "effectiveRangeKm": 0.002,
+    "loreEffectDescription": "Astartes Chainsword is the selected primary armament for Jump Pack Intercessor Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Astartes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "astartes-chainsword-icon",
+  "artImagePath": "/assets/art/astartes_chainsword.jpg"
+}

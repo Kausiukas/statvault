@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `jump-pack-intercessors` | adeptus_astartes | fast_attack | astartes-chainsword |
 | `deathmarks` | necrons | line_infantry | synaptic-disintegrator |
 | `incubi` | drukhari | shock_infantry | incubus-klaive |
 | `cthonian-beserks` | leagues_of_votann | shock_infantry | heavy-plasma-axe |
@@ -49,6 +50,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `astartes-chainsword` | adeptus_astartes | melee_chain |
 | `synaptic-disintegrator` | necrons | energy_gauss |
 | `incubus-klaive` | drukhari | melee_power |
 | `heavy-plasma-axe` | leagues_of_votann | melee_power |
@@ -86,6 +88,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `jump-pack-intercessors-velocity_discrepancy` | `jump-pack-intercessors` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `deathmarks-weapon_potency` | `deathmarks` | weapon_potency | Warhammer 40,000 Faction Index: Necrons |
 | `incubi-transhuman_dread` | `incubi` | transhuman_dread | Warhammer 40,000 Faction Index: Drukhari |
 | `cthonian-beserks-transhuman_dread` | `cthonian-beserks` | transhuman_dread | Warhammer 40,000 Faction Index: Leagues of Votann |
@@ -153,7 +156,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 14 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 14 | cadian-shock-trooper |
 | heavy_support | 3 | — |
-| fast_attack | 1 | — |
+| fast_attack | 2 | — |
 | monstrous_creature | 0 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -164,6 +167,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-23 | `jump-pack-intercessors`, `astartes-chainsword`, `jump-pack-intercessors-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-22 | `deathmarks`, `synaptic-disintegrator`, `deathmarks-weapon_potency` | statvault-wiki-agent |
 | 2026-09-21 | `incubi`, `incubus-klaive`, `incubi-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-20 | `cthonian-beserks`, `heavy-plasma-axe`, `cthonian-beserks-transhuman_dread` | statvault-wiki-agent |
