@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Adeptus Astartes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "astartes-chainsword-icon",
-  "artImagePath": "/assets/art/astartes_chainsword.jpg"
+  "artImagePath": "assets/art/astartes-chainsword_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/astartes-chainsword_multiview_0.png",
+    "assets/art/astartes-chainsword_multiview_1.png",
+    "assets/art/astartes-chainsword_multiview_2.png"
+  ]
 }
