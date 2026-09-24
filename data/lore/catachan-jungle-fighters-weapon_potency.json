@@ -1,0 +1,18 @@
+{
+  "id": "67ec4933-3ff0-481c-af53-76c44290cb1e",
+  "unitSlug": "catachan-jungle-fighters",
+  "category": "weapon_potency",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Astra Militarum",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Catachan Jungle Fighters: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-09-24T04:00:33.760Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

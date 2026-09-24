@@ -1,0 +1,27 @@
+{
+  "id": "6151d2cf-df3a-4715-974c-434781902fd6",
+  "slug": "catachan-fang",
+  "name": "Catachan Fang",
+  "type": "melee_crude",
+  "faction": "astra_militarum",
+  "engineDamage": {
+    "baseDamage": 39,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.6,
+    "rangeMeters": 2,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 0,
+    "burstCount": 1,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Heavy hand-forged melee implement",
+    "propellant": "User strength",
+    "muzzleVelocityMps": 0,
+    "effectiveRangeKm": 0.002,
+    "loreEffectDescription": "Catachan Fang is the selected primary armament for Catachan Jungle Fighters. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "catachan-fang-icon",
+  "artImagePath": "/assets/art/catachan_fang.jpg"
+}

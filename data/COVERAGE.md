@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `catachan-jungle-fighters` | astra_militarum | line_infantry | catachan-fang |
 | `jump-pack-intercessors` | adeptus_astartes | fast_attack | astartes-chainsword |
 | `deathmarks` | necrons | line_infantry | synaptic-disintegrator |
 | `incubi` | drukhari | shock_infantry | incubus-klaive |
@@ -50,6 +51,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `catachan-fang` | astra_militarum | melee_crude |
 | `astartes-chainsword` | adeptus_astartes | melee_chain |
 | `synaptic-disintegrator` | necrons | energy_gauss |
 | `incubus-klaive` | drukhari | melee_power |
@@ -88,6 +90,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `catachan-jungle-fighters-weapon_potency` | `catachan-jungle-fighters` | weapon_potency | Warhammer 40,000 Faction Index: Astra Militarum |
 | `jump-pack-intercessors-velocity_discrepancy` | `jump-pack-intercessors` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `deathmarks-weapon_potency` | `deathmarks` | weapon_potency | Warhammer 40,000 Faction Index: Necrons |
 | `incubi-transhuman_dread` | `incubi` | transhuman_dread | Warhammer 40,000 Faction Index: Drukhari |
@@ -154,7 +157,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 14 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 14 | cadian-shock-trooper |
+| line_infantry | 15 | cadian-shock-trooper |
 | heavy_support | 3 | — |
 | fast_attack | 2 | — |
 | monstrous_creature | 0 | — |
@@ -167,6 +170,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-24 | `catachan-jungle-fighters`, `catachan-fang`, `catachan-jungle-fighters-weapon_potency` | statvault-wiki-agent |
 | 2026-09-23 | `jump-pack-intercessors`, `astartes-chainsword`, `jump-pack-intercessors-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-22 | `deathmarks`, `synaptic-disintegrator`, `deathmarks-weapon_potency` | statvault-wiki-agent |
 | 2026-09-21 | `incubi`, `incubus-klaive`, `incubi-transhuman_dread` | statvault-wiki-agent |

@@ -1,0 +1,64 @@
+{
+  "id": "338c2343-0952-4299-9499-da6d05313da2",
+  "slug": "catachan-jungle-fighters",
+  "name": "Catachan Jungle Fighters",
+  "faction": "astra_militarum",
+  "subFaction": "Astra Militarum",
+  "role": "line_infantry",
+  "engineStats": {
+    "hitPoints": 1000,
+    "modelCount": 10,
+    "armor": 35,
+    "speedMps": 4,
+    "chargeSpeedMps": 5,
+    "acceleration": 4,
+    "massKgPerModel": 90,
+    "leadership": 68,
+    "baseCostPoints": 600,
+    "collisionRadiusM": 0.5
+  },
+  "loreStats": {
+    "reactionTimeMs": 180,
+    "sprintSpeedMps": 7,
+    "sprintSpeedMph": 15.7,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0,
+    "armorComposition": "Flak or carapace armour appropriate to the formation",
+    "armorEquivalentRHAmm": 35,
+    "combatStaminaHours": 12,
+    "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Catachan Jungle Fighters is a Astra Militarum line infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/catachan-jungle-fighters.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 22,
+      "mobility": 40,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 28,
+      "mass": 15
+    },
+    "loreCanon": {
+      "ehp": 29,
+      "mobility": 75,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 28,
+      "mass": 18
+    }
+  },
+  "primaryWeaponSlug": "catachan-fang",
+  "tacticalDescription": "Provisional line infantry profile centred on Catachan Fang; retain as unapproved until detailed balance and source review."
+}
