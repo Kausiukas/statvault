@@ -1,0 +1,64 @@
+{
+  "id": "174e60a5-64ab-47ca-abef-86369b48f7a3",
+  "slug": "khorne-berzerkers",
+  "name": "Khorne Berzerkers",
+  "faction": "chaos_space_marines",
+  "subFaction": "Chaos Space Marines",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 8,
+    "armor": 115,
+    "speedMps": 5.5,
+    "chargeSpeedMps": 6.9,
+    "acceleration": 4,
+    "massKgPerModel": 475,
+    "leadership": 90,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 5,
+    "sprintSpeedMps": 9.7,
+    "sprintSpeedMph": 21.7,
+    "dreadAuraRadiusM": 22,
+    "dreadShockFactor": 0.65,
+    "armorComposition": "Warp-scarred ceramite power armour",
+    "armorEquivalentRHAmm": 275,
+    "combatStaminaHours": 96,
+    "citation": "Warhammer 40,000 Faction Index: Chaos Space Marines. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Khorne Berzerkers is a Chaos Space Marines shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/khorne-berzerkers.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 51,
+      "mobility": 48,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 72,
+      "mass": 79
+    },
+    "loreCanon": {
+      "ehp": 60,
+      "mobility": 89,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 72,
+      "mass": 95
+    }
+  },
+  "primaryWeaponSlug": "berzerker-chainaxe",
+  "tacticalDescription": "Provisional shock infantry profile centred on Berzerker Chainaxe; retain as unapproved until detailed balance and source review."
+}

@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `khorne-berzerkers` | chaos_space_marines | shock_infantry | berzerker-chainaxe |
 | `catachan-jungle-fighters` | astra_militarum | line_infantry | catachan-fang |
 | `jump-pack-intercessors` | adeptus_astartes | fast_attack | astartes-chainsword |
 | `deathmarks` | necrons | line_infantry | synaptic-disintegrator |
@@ -51,6 +52,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `berzerker-chainaxe` | chaos_space_marines | melee_chain |
 | `catachan-fang` | astra_militarum | melee_crude |
 | `astartes-chainsword` | adeptus_astartes | melee_chain |
 | `synaptic-disintegrator` | necrons | energy_gauss |
@@ -90,6 +92,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `khorne-berzerkers-transhuman_dread` | `khorne-berzerkers` | transhuman_dread | Warhammer 40,000 Faction Index: Chaos Space Marines |
 | `catachan-jungle-fighters-weapon_potency` | `catachan-jungle-fighters` | weapon_potency | Warhammer 40,000 Faction Index: Astra Militarum |
 | `jump-pack-intercessors-velocity_discrepancy` | `jump-pack-intercessors` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `deathmarks-weapon_potency` | `deathmarks` | weapon_potency | Warhammer 40,000 Faction Index: Necrons |
@@ -156,7 +159,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 14 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 15 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 15 | cadian-shock-trooper |
 | heavy_support | 3 | — |
 | fast_attack | 2 | — |
@@ -170,6 +173,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-25 | `khorne-berzerkers`, `berzerker-chainaxe`, `khorne-berzerkers-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-24 | `catachan-jungle-fighters`, `catachan-fang`, `catachan-jungle-fighters-weapon_potency` | statvault-wiki-agent |
 | 2026-09-23 | `jump-pack-intercessors`, `astartes-chainsword`, `jump-pack-intercessors-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-22 | `deathmarks`, `synaptic-disintegrator`, `deathmarks-weapon_potency` | statvault-wiki-agent |
