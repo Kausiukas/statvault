@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "berzerker-chainaxe",
-  "tacticalDescription": "Provisional shock infantry profile centred on Berzerker Chainaxe; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Berzerker Chainaxe; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/khorne-berzerkers_multiview_0.png",
+    "assets/art/khorne-berzerkers_multiview_1.png",
+    "assets/art/khorne-berzerkers_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/khorne-berzerkers_concept.png",
+  "artImagePath": "assets/art/khorne-berzerkers_concept.png"
 }
