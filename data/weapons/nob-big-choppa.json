@@ -1,0 +1,27 @@
+{
+  "id": "e1760612-78bf-47e0-830d-d7c62a28e4ae",
+  "slug": "nob-big-choppa",
+  "name": "Nob Big Choppa",
+  "type": "melee_crude",
+  "faction": "orks",
+  "engineDamage": {
+    "baseDamage": 39,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.6,
+    "rangeMeters": 2,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 0,
+    "burstCount": 1,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Heavy hand-forged melee implement",
+    "propellant": "User strength",
+    "muzzleVelocityMps": 0,
+    "effectiveRangeKm": 0.002,
+    "loreEffectDescription": "Nob Big Choppa is the selected primary armament for Ork Nobz Mob. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Orks. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "nob-big-choppa-icon",
+  "artImagePath": "/assets/art/nob_big_choppa.jpg"
+}

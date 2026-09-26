@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `ork-nobz` | orks | shock_infantry | nob-big-choppa |
 | `khorne-berzerkers` | chaos_space_marines | shock_infantry | berzerker-chainaxe |
 | `catachan-jungle-fighters` | astra_militarum | line_infantry | catachan-fang |
 | `jump-pack-intercessors` | adeptus_astartes | fast_attack | astartes-chainsword |
@@ -52,6 +53,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `nob-big-choppa` | orks | melee_crude |
 | `berzerker-chainaxe` | chaos_space_marines | melee_chain |
 | `catachan-fang` | astra_militarum | melee_crude |
 | `astartes-chainsword` | adeptus_astartes | melee_chain |
@@ -92,6 +94,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `ork-nobz-transhuman_dread` | `ork-nobz` | transhuman_dread | Warhammer 40,000 Faction Index: Orks |
 | `khorne-berzerkers-transhuman_dread` | `khorne-berzerkers` | transhuman_dread | Warhammer 40,000 Faction Index: Chaos Space Marines |
 | `catachan-jungle-fighters-weapon_potency` | `catachan-jungle-fighters` | weapon_potency | Warhammer 40,000 Faction Index: Astra Militarum |
 | `jump-pack-intercessors-velocity_discrepancy` | `jump-pack-intercessors` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Astartes |
@@ -159,7 +162,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 15 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 16 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 15 | cadian-shock-trooper |
 | heavy_support | 3 | — |
 | fast_attack | 2 | — |
@@ -173,6 +176,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-26 | `ork-nobz`, `nob-big-choppa`, `ork-nobz-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-25 | `khorne-berzerkers`, `berzerker-chainaxe`, `khorne-berzerkers-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-24 | `catachan-jungle-fighters`, `catachan-fang`, `catachan-jungle-fighters-weapon_potency` | statvault-wiki-agent |
 | 2026-09-23 | `jump-pack-intercessors`, `astartes-chainsword`, `jump-pack-intercessors-velocity_discrepancy` | statvault-wiki-agent |
