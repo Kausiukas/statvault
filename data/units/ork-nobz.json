@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "nob-big-choppa",
-  "tacticalDescription": "Provisional shock infantry profile centred on Nob Big Choppa; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Nob Big Choppa; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/ork-nobz_multiview_0.png",
+    "assets/art/ork-nobz_multiview_1.png",
+    "assets/art/ork-nobz_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/ork-nobz_concept.png",
+  "artImagePath": "assets/art/ork-nobz_concept.png"
 }

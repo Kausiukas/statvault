@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Orks. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "nob-big-choppa-icon",
-  "artImagePath": "/assets/art/nob_big_choppa.jpg"
+  "artImagePath": "assets/art/nob-big-choppa_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/nob-big-choppa_multiview_0.png",
+    "assets/art/nob-big-choppa_multiview_1.png",
+    "assets/art/nob-big-choppa_multiview_2.png"
+  ]
 }
