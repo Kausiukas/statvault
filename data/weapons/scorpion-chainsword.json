@@ -23,5 +23,9 @@
     "citation": "Warhammer 40,000 Faction Index: Aeldari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "scorpion-chainsword-icon",
-  "artImagePath": "/assets/art/scorpion_chainsword.jpg"
+  "artImagePath": "assets/art/scorpion-chainsword_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/scorpion-chainsword_multiview_0.png",
+    "assets/art/scorpion-chainsword_multiview_1.png"
+  ]
 }
