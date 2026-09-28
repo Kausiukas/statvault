@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `tyranid-warriors` | tyranids | line_infantry | warrior-deathspitter |
 | `striking-scorpions` | aeldari | shock_infantry | scorpion-chainsword |
 | `ork-nobz` | orks | shock_infantry | nob-big-choppa |
 | `khorne-berzerkers` | chaos_space_marines | shock_infantry | berzerker-chainaxe |
@@ -54,6 +55,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `warrior-deathspitter` | tyranids | bio_weapon |
 | `scorpion-chainsword` | aeldari | melee_chain |
 | `nob-big-choppa` | orks | melee_crude |
 | `berzerker-chainaxe` | chaos_space_marines | melee_chain |
@@ -96,6 +98,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `tyranid-warriors-weapon_potency` | `tyranid-warriors` | weapon_potency | Warhammer 40,000 Faction Index: Tyranids |
 | `striking-scorpions-transhuman_dread` | `striking-scorpions` | transhuman_dread | Warhammer 40,000 Faction Index: Aeldari |
 | `ork-nobz-transhuman_dread` | `ork-nobz` | transhuman_dread | Warhammer 40,000 Faction Index: Orks |
 | `khorne-berzerkers-transhuman_dread` | `khorne-berzerkers` | transhuman_dread | Warhammer 40,000 Faction Index: Chaos Space Marines |
@@ -166,7 +169,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 17 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 15 | cadian-shock-trooper |
+| line_infantry | 16 | cadian-shock-trooper |
 | heavy_support | 3 | — |
 | fast_attack | 2 | — |
 | monstrous_creature | 0 | — |
@@ -179,6 +182,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-28 | `tyranid-warriors`, `warrior-deathspitter`, `tyranid-warriors-weapon_potency` | statvault-wiki-agent |
 | 2026-09-27 | `striking-scorpions`, `scorpion-chainsword`, `striking-scorpions-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-26 | `ork-nobz`, `nob-big-choppa`, `ork-nobz-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-25 | `khorne-berzerkers`, `berzerker-chainaxe`, `khorne-berzerkers-transhuman_dread` | statvault-wiki-agent |
