@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "warrior-deathspitter",
-  "tacticalDescription": "Provisional line infantry profile centred on Deathspitter; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Deathspitter; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/tyranid-warriors_multiview_0.png",
+    "assets/art/tyranid-warriors_multiview_1.png",
+    "assets/art/tyranid-warriors_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/tyranid-warriors_concept.png",
+  "artImagePath": "assets/art/tyranid-warriors_concept.png"
 }
