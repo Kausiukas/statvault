@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `stealth-battlesuits` | tau_empire | fast_attack | stealth-burst-cannon |
 | `tyranid-warriors` | tyranids | line_infantry | warrior-deathspitter |
 | `striking-scorpions` | aeldari | shock_infantry | scorpion-chainsword |
 | `ork-nobz` | orks | shock_infantry | nob-big-choppa |
@@ -55,6 +56,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `stealth-burst-cannon` | tau_empire | energy_pulse |
 | `warrior-deathspitter` | tyranids | bio_weapon |
 | `scorpion-chainsword` | aeldari | melee_chain |
 | `nob-big-choppa` | orks | melee_crude |
@@ -98,6 +100,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `stealth-battlesuits-velocity_discrepancy` | `stealth-battlesuits` | velocity_discrepancy | Warhammer 40,000 Faction Index: T'au Empire |
 | `tyranid-warriors-weapon_potency` | `tyranid-warriors` | weapon_potency | Warhammer 40,000 Faction Index: Tyranids |
 | `striking-scorpions-transhuman_dread` | `striking-scorpions` | transhuman_dread | Warhammer 40,000 Faction Index: Aeldari |
 | `ork-nobz-transhuman_dread` | `ork-nobz` | transhuman_dread | Warhammer 40,000 Faction Index: Orks |
@@ -171,7 +174,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 17 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 16 | cadian-shock-trooper |
 | heavy_support | 3 | — |
-| fast_attack | 2 | — |
+| fast_attack | 3 | — |
 | monstrous_creature | 0 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -182,6 +185,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-29 | `stealth-battlesuits`, `stealth-burst-cannon`, `stealth-battlesuits-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-28 | `tyranid-warriors`, `warrior-deathspitter`, `tyranid-warriors-weapon_potency` | statvault-wiki-agent |
 | 2026-09-27 | `striking-scorpions`, `scorpion-chainsword`, `striking-scorpions-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-26 | `ork-nobz`, `nob-big-choppa`, `ork-nobz-transhuman_dread` | statvault-wiki-agent |

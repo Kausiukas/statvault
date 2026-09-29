@@ -1,0 +1,18 @@
+{
+  "id": "48b855e9-0f84-4d88-96ee-0f728a2d0e68",
+  "unitSlug": "stealth-battlesuits",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: T'au Empire",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Stealth Battlesuit Team: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-09-29T04:00:41.416Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
