@@ -23,5 +23,9 @@
     "citation": "Warhammer 40,000 Faction Index: Adepta Sororitas. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "anointed-halberd-icon",
-  "artImagePath": "/assets/art/anointed_halberd.jpg"
+  "artImagePath": "assets/art/anointed-halberd_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/anointed-halberd_multiview_0.png",
+    "assets/art/anointed-halberd_multiview_1.png"
+  ]
 }
