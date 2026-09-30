@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `celestian-sacresants` | adepta_sororitas | shock_infantry | anointed-halberd |
 | `stealth-battlesuits` | tau_empire | fast_attack | stealth-burst-cannon |
 | `tyranid-warriors` | tyranids | line_infantry | warrior-deathspitter |
 | `striking-scorpions` | aeldari | shock_infantry | scorpion-chainsword |
@@ -56,6 +57,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `anointed-halberd` | adepta_sororitas | melee_power |
 | `stealth-burst-cannon` | tau_empire | energy_pulse |
 | `warrior-deathspitter` | tyranids | bio_weapon |
 | `scorpion-chainsword` | aeldari | melee_chain |
@@ -100,6 +102,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `celestian-sacresants-transhuman_dread` | `celestian-sacresants` | transhuman_dread | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `stealth-battlesuits-velocity_discrepancy` | `stealth-battlesuits` | velocity_discrepancy | Warhammer 40,000 Faction Index: T'au Empire |
 | `tyranid-warriors-weapon_potency` | `tyranid-warriors` | weapon_potency | Warhammer 40,000 Faction Index: Tyranids |
 | `striking-scorpions-transhuman_dread` | `striking-scorpions` | transhuman_dread | Warhammer 40,000 Faction Index: Aeldari |
@@ -171,7 +174,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 17 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 18 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 16 | cadian-shock-trooper |
 | heavy_support | 3 | — |
 | fast_attack | 3 | — |
@@ -185,6 +188,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-09-30 | `celestian-sacresants`, `anointed-halberd`, `celestian-sacresants-transhuman_dread` | statvault-wiki-agent |
 | 2026-09-29 | `stealth-battlesuits`, `stealth-burst-cannon`, `stealth-battlesuits-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-09-28 | `tyranid-warriors`, `warrior-deathspitter`, `tyranid-warriors-weapon_potency` | statvault-wiki-agent |
 | 2026-09-27 | `striking-scorpions`, `scorpion-chainsword`, `striking-scorpions-transhuman_dread` | statvault-wiki-agent |

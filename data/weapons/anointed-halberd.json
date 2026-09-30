@@ -1,0 +1,27 @@
+{
+  "id": "9ad35b3c-d3df-46c8-a326-8f5a29878054",
+  "slug": "anointed-halberd",
+  "name": "Anointed Halberd",
+  "type": "melee_power",
+  "faction": "adepta_sororitas",
+  "engineDamage": {
+    "baseDamage": 58,
+    "armorPenetration": 55,
+    "attacksPerSecond": 1.7,
+    "rangeMeters": 2,
+    "accuracyPercent": 86,
+    "projectileVelocityMps": 0,
+    "burstCount": 1,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Powered melee edge or impact surface",
+    "propellant": "Disruption-field power cell",
+    "muzzleVelocityMps": 0,
+    "effectiveRangeKm": 0.002,
+    "loreEffectDescription": "Anointed Halberd is the selected primary armament for Celestian Sacresants. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adepta Sororitas. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "anointed-halberd-icon",
+  "artImagePath": "/assets/art/anointed_halberd.jpg"
+}

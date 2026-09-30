@@ -1,0 +1,64 @@
+{
+  "id": "11d273f0-1bcd-42cd-9b1a-4833abf10516",
+  "slug": "celestian-sacresants",
+  "name": "Celestian Sacresants",
+  "faction": "adepta_sororitas",
+  "subFaction": "Adepta Sororitas",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 8,
+    "armor": 90,
+    "speedMps": 4.5,
+    "chargeSpeedMps": 5.6,
+    "acceleration": 4,
+    "massKgPerModel": 162,
+    "leadership": 88,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 110,
+    "sprintSpeedMps": 7.8,
+    "sprintSpeedMph": 17.4,
+    "dreadAuraRadiusM": 8,
+    "dreadShockFactor": 0.2,
+    "armorComposition": "Ceramite power armour sized for an unaugmented human",
+    "armorEquivalentRHAmm": 195,
+    "combatStaminaHours": 24,
+    "citation": "Warhammer 40,000 Faction Index: Adepta Sororitas. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Celestian Sacresants is a Adepta Sororitas shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/celestian-sacresants.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 40,
+      "mobility": 43,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 56,
+      "mass": 27
+    },
+    "loreCanon": {
+      "ehp": 48,
+      "mobility": 79,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 56,
+      "mass": 32
+    }
+  },
+  "primaryWeaponSlug": "anointed-halberd",
+  "tacticalDescription": "Provisional shock infantry profile centred on Anointed Halberd; retain as unapproved until detailed balance and source review."
+}
