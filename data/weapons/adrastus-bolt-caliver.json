@@ -1,0 +1,27 @@
+{
+  "id": "47aa4c72-2a4c-454d-aa97-a21dc92b29bc",
+  "slug": "adrastus-bolt-caliver",
+  "name": "Adrastus Bolt Caliver",
+  "type": "ballistic_slug",
+  "faction": "adeptus_custodes",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Adrastus Bolt Caliver is the selected primary armament for Sagittarum Custodians. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Custodes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "adrastus-bolt-caliver-icon",
+  "artImagePath": "/assets/art/adrastus_bolt_caliver.jpg"
+}
