@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Leagues of Votann. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "eta-carn-plasma-gun-icon",
-  "artImagePath": "/assets/art/eta_carn_plasma_gun.jpg"
+  "artImagePath": "assets/art/eta-carn-plasma-gun_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/eta-carn-plasma-gun_multiview_0.png",
+    "assets/art/eta-carn-plasma-gun_multiview_1.png",
+    "assets/art/eta-carn-plasma-gun_multiview_2.png"
+  ]
 }

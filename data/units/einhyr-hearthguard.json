@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "eta-carn-plasma-gun",
-  "tacticalDescription": "Provisional heavy support profile centred on EtaCarn Plasma Gun; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on EtaCarn Plasma Gun; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/einhyr-hearthguard_multiview_0.png",
+    "assets/art/einhyr-hearthguard_multiview_1.png",
+    "assets/art/einhyr-hearthguard_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/einhyr-hearthguard_concept.png",
+  "artImagePath": "assets/art/einhyr-hearthguard_concept.png"
 }
