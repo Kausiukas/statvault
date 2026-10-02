@@ -1,0 +1,27 @@
+{
+  "id": "90d63a7a-75f3-4176-a008-2ca48f214e70",
+  "slug": "eta-carn-plasma-gun",
+  "name": "EtaCarn Plasma Gun",
+  "type": "energy_plasma",
+  "faction": "leagues_of_votann",
+  "engineDamage": {
+    "baseDamage": 58,
+    "armorPenetration": 52,
+    "attacksPerSecond": 0.7,
+    "rangeMeters": 180,
+    "accuracyPercent": 74,
+    "projectileVelocityMps": 560,
+    "burstCount": 1,
+    "reloadTimeSeconds": 2.8
+  },
+  "loreDescriptor": {
+    "caliber": "Magnetically contained plasma packet",
+    "propellant": "High-energy plasma containment coils",
+    "muzzleVelocityMps": 2800,
+    "effectiveRangeKm": 1,
+    "loreEffectDescription": "EtaCarn Plasma Gun is the selected primary armament for Einhyr Hearthguard. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Leagues of Votann. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "eta-carn-plasma-gun-icon",
+  "artImagePath": "/assets/art/eta_carn_plasma_gun.jpg"
+}
