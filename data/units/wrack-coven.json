@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "wrack-poisoned-blades",
-  "tacticalDescription": "Provisional line infantry profile centred on Poisoned Blades; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Poisoned Blades; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/wrack-coven_multiview_0.png",
+    "assets/art/wrack-coven_multiview_1.png",
+    "assets/art/wrack-coven_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/wrack-coven_concept.png",
+  "artImagePath": "assets/art/wrack-coven_concept.png"
 }
