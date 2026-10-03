@@ -1,0 +1,18 @@
+{
+  "id": "afcbdc64-c7e4-447f-96cd-5a069be5c623",
+  "unitSlug": "wrack-coven",
+  "category": "weapon_potency",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Drukhari",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Wrack Coven: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-03T04:00:41.797Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
