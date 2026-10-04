@@ -1,0 +1,64 @@
+{
+  "id": "e7e0e6b7-8a5c-4402-88c9-bc90952cb81c",
+  "slug": "lychguard",
+  "name": "Lychguard",
+  "faction": "necrons",
+  "subFaction": "Necrons",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 8,
+    "armor": 105,
+    "speedMps": 3.7,
+    "chargeSpeedMps": 4.6,
+    "acceleration": 4,
+    "massKgPerModel": 194,
+    "leadership": 100,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 12,
+    "sprintSpeedMps": 6.5,
+    "sprintSpeedMph": 14.5,
+    "dreadAuraRadiusM": 16,
+    "dreadShockFactor": 0.45,
+    "armorComposition": "Self-repairing living-metal necrodermis",
+    "armorEquivalentRHAmm": 235,
+    "combatStaminaHours": "infinite",
+    "citation": "Warhammer 40,000 Faction Index: Necrons. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Lychguard is a Necrons shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/lychguard.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 46,
+      "mobility": 39,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 76,
+      "mass": 32
+    },
+    "loreCanon": {
+      "ehp": 54,
+      "mobility": 73,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 76,
+      "mass": 39
+    }
+  },
+  "primaryWeaponSlug": "hyperphase-sword",
+  "tacticalDescription": "Provisional shock infantry profile centred on Hyperphase Sword; retain as unapproved until detailed balance and source review."
+}

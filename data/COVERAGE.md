@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `lychguard` | necrons | shock_infantry | hyperphase-sword |
 | `wrack-coven` | drukhari | line_infantry | wrack-poisoned-blades |
 | `einhyr-hearthguard` | leagues_of_votann | heavy_support | eta-carn-plasma-gun |
 | `sagittarum-custodians` | adeptus_custodes | line_infantry | adrastus-bolt-caliver |
@@ -60,6 +61,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `hyperphase-sword` | necrons | melee_power |
 | `wrack-poisoned-blades` | drukhari | bio_weapon |
 | `eta-carn-plasma-gun` | leagues_of_votann | energy_plasma |
 | `adrastus-bolt-caliver` | adeptus_custodes | ballistic_slug |
@@ -108,6 +110,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `lychguard-transhuman_dread` | `lychguard` | transhuman_dread | Warhammer 40,000 Faction Index: Necrons |
 | `wrack-coven-weapon_potency` | `wrack-coven` | weapon_potency | Warhammer 40,000 Faction Index: Drukhari |
 | `einhyr-hearthguard-armor_durability` | `einhyr-hearthguard` | armor_durability | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `sagittarum-custodians-weapon_potency` | `sagittarum-custodians` | weapon_potency | Warhammer 40,000 Faction Index: Adeptus Custodes |
@@ -183,7 +186,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 18 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 19 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 18 | cadian-shock-trooper |
 | heavy_support | 4 | — |
 | fast_attack | 3 | — |
@@ -197,6 +200,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-04 | `lychguard`, `hyperphase-sword`, `lychguard-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-03 | `wrack-coven`, `wrack-poisoned-blades`, `wrack-coven-weapon_potency` | statvault-wiki-agent |
 | 2026-10-02 | `einhyr-hearthguard`, `eta-carn-plasma-gun`, `einhyr-hearthguard-armor_durability` | statvault-wiki-agent |
 | 2026-10-01 | `sagittarum-custodians`, `adrastus-bolt-caliver`, `sagittarum-custodians-weapon_potency` | statvault-wiki-agent |
