@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "hyperphase-sword",
-  "tacticalDescription": "Provisional shock infantry profile centred on Hyperphase Sword; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Hyperphase Sword; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/lychguard_multiview_0.png",
+    "assets/art/lychguard_multiview_1.png",
+    "assets/art/lychguard_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/lychguard_concept.png",
+  "artImagePath": "assets/art/lychguard_concept.png"
 }
