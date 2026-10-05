@@ -1,0 +1,18 @@
+{
+  "id": "e42c1875-6a24-4857-85bc-8442ca4f2881",
+  "unitSlug": "terminator-squad",
+  "category": "armor_durability",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Adeptus Astartes",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Terminator Squad: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-05T04:01:27.997Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

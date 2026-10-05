@@ -1,0 +1,64 @@
+{
+  "id": "0e981a53-44b0-40cd-8d5d-ab6264025efa",
+  "slug": "terminator-squad",
+  "name": "Terminator Squad",
+  "faction": "adeptus_astartes",
+  "subFaction": "Adeptus Astartes",
+  "role": "heavy_support",
+  "engineStats": {
+    "hitPoints": 1500,
+    "modelCount": 5,
+    "armor": 120,
+    "speedMps": 4.2,
+    "chargeSpeedMps": 5.3,
+    "acceleration": 4,
+    "massKgPerModel": 567,
+    "leadership": 92,
+    "baseCostPoints": 900,
+    "collisionRadiusM": 0.7
+  },
+  "loreStats": {
+    "reactionTimeMs": 5,
+    "sprintSpeedMps": 7.4,
+    "sprintSpeedMph": 16.6,
+    "dreadAuraRadiusM": 18,
+    "dreadShockFactor": 0.55,
+    "armorComposition": "Ceramite power armour over a powered fibre-bundle undersuit",
+    "armorEquivalentRHAmm": 280,
+    "combatStaminaHours": 72,
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Astartes. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Terminator Squad is a Adeptus Astartes heavy support formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/terminator-squad.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 68,
+      "mobility": 41,
+      "burstDmg": 64,
+      "sustainedDps": 85,
+      "utility": 70,
+      "mass": 95
+    },
+    "loreCanon": {
+      "ehp": 77,
+      "mobility": 77,
+      "burstDmg": 89,
+      "sustainedDps": 100,
+      "utility": 70,
+      "mass": 100
+    }
+  },
+  "primaryWeaponSlug": "terminator-storm-bolter",
+  "tacticalDescription": "Provisional heavy support profile centred on Terminator Storm Bolter; retain as unapproved until detailed balance and source review."
+}

@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `terminator-squad` | adeptus_astartes | heavy_support | terminator-storm-bolter |
 | `lychguard` | necrons | shock_infantry | hyperphase-sword |
 | `wrack-coven` | drukhari | line_infantry | wrack-poisoned-blades |
 | `einhyr-hearthguard` | leagues_of_votann | heavy_support | eta-carn-plasma-gun |
@@ -61,6 +62,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `terminator-storm-bolter` | adeptus_astartes | ballistic_slug |
 | `hyperphase-sword` | necrons | melee_power |
 | `wrack-poisoned-blades` | drukhari | bio_weapon |
 | `eta-carn-plasma-gun` | leagues_of_votann | energy_plasma |
@@ -110,6 +112,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `terminator-squad-armor_durability` | `terminator-squad` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `lychguard-transhuman_dread` | `lychguard` | transhuman_dread | Warhammer 40,000 Faction Index: Necrons |
 | `wrack-coven-weapon_potency` | `wrack-coven` | weapon_potency | Warhammer 40,000 Faction Index: Drukhari |
 | `einhyr-hearthguard-armor_durability` | `einhyr-hearthguard` | armor_durability | Warhammer 40,000 Faction Index: Leagues of Votann |
@@ -188,7 +191,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 19 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 18 | cadian-shock-trooper |
-| heavy_support | 4 | — |
+| heavy_support | 5 | — |
 | fast_attack | 3 | — |
 | monstrous_creature | 0 | — |
 | vehicle | 0 | — |
@@ -200,6 +203,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-05 | `terminator-squad`, `terminator-storm-bolter`, `terminator-squad-armor_durability` | statvault-wiki-agent |
 | 2026-10-04 | `lychguard`, `hyperphase-sword`, `lychguard-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-03 | `wrack-coven`, `wrack-poisoned-blades`, `wrack-coven-weapon_potency` | statvault-wiki-agent |
 | 2026-10-02 | `einhyr-hearthguard`, `eta-carn-plasma-gun`, `einhyr-hearthguard-armor_durability` | statvault-wiki-agent |

@@ -1,0 +1,27 @@
+{
+  "id": "71dd0b0f-6e99-40bc-a516-84594b61e2fc",
+  "slug": "terminator-storm-bolter",
+  "name": "Terminator Storm Bolter",
+  "type": "ballistic_slug",
+  "faction": "adeptus_astartes",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Terminator Storm Bolter is the selected primary armament for Terminator Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Astartes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "terminator-storm-bolter-icon",
+  "artImagePath": "/assets/art/terminator_storm_bolter.jpg"
+}
