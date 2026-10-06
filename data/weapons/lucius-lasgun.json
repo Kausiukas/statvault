@@ -1,0 +1,27 @@
+{
+  "id": "71397e7b-b733-4fac-86a9-ff451cb87c16",
+  "slug": "lucius-lasgun",
+  "name": "Lucius-Pattern Lasgun",
+  "type": "energy_las",
+  "faction": "astra_militarum",
+  "engineDamage": {
+    "baseDamage": 28,
+    "armorPenetration": 20,
+    "attacksPerSecond": 1.8,
+    "rangeMeters": 220,
+    "accuracyPercent": 78,
+    "projectileVelocityMps": 1200,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.4
+  },
+  "loreDescriptor": {
+    "caliber": "Coherent high-energy light pulse",
+    "propellant": "Rechargeable power cell",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 1.2,
+    "loreEffectDescription": "Lucius-Pattern Lasgun is the selected primary armament for Death Korps of Krieg Infantry. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "lucius-lasgun-icon",
+  "artImagePath": "/assets/art/lucius_lasgun.jpg"
+}

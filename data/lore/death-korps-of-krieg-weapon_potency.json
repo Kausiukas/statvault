@@ -1,0 +1,18 @@
+{
+  "id": "3531de1a-5602-489c-b81b-85ce1d3c19d5",
+  "unitSlug": "death-korps-of-krieg",
+  "category": "weapon_potency",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Astra Militarum",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Death Korps of Krieg Infantry: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-06T04:00:41.690Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

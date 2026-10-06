@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `death-korps-of-krieg` | astra_militarum | line_infantry | lucius-lasgun |
 | `terminator-squad` | adeptus_astartes | heavy_support | terminator-storm-bolter |
 | `lychguard` | necrons | shock_infantry | hyperphase-sword |
 | `wrack-coven` | drukhari | line_infantry | wrack-poisoned-blades |
@@ -62,6 +63,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `lucius-lasgun` | astra_militarum | energy_las |
 | `terminator-storm-bolter` | adeptus_astartes | ballistic_slug |
 | `hyperphase-sword` | necrons | melee_power |
 | `wrack-poisoned-blades` | drukhari | bio_weapon |
@@ -112,6 +114,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `death-korps-of-krieg-weapon_potency` | `death-korps-of-krieg` | weapon_potency | Warhammer 40,000 Faction Index: Astra Militarum |
 | `terminator-squad-armor_durability` | `terminator-squad` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `lychguard-transhuman_dread` | `lychguard` | transhuman_dread | Warhammer 40,000 Faction Index: Necrons |
 | `wrack-coven-weapon_potency` | `wrack-coven` | weapon_potency | Warhammer 40,000 Faction Index: Drukhari |
@@ -190,7 +193,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 19 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 18 | cadian-shock-trooper |
+| line_infantry | 19 | cadian-shock-trooper |
 | heavy_support | 5 | — |
 | fast_attack | 3 | — |
 | monstrous_creature | 0 | — |
@@ -203,6 +206,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-06 | `death-korps-of-krieg`, `lucius-lasgun`, `death-korps-of-krieg-weapon_potency` | statvault-wiki-agent |
 | 2026-10-05 | `terminator-squad`, `terminator-storm-bolter`, `terminator-squad-armor_durability` | statvault-wiki-agent |
 | 2026-10-04 | `lychguard`, `hyperphase-sword`, `lychguard-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-03 | `wrack-coven`, `wrack-poisoned-blades`, `wrack-coven-weapon_potency` | statvault-wiki-agent |
