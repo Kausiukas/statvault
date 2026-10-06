@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "lucius-lasgun",
-  "tacticalDescription": "Provisional line infantry profile centred on Lucius-Pattern Lasgun; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Lucius-Pattern Lasgun; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/death-korps-of-krieg_multiview_0.png",
+    "assets/art/death-korps-of-krieg_multiview_1.png",
+    "assets/art/death-korps-of-krieg_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/death-korps-of-krieg_concept.png",
+  "artImagePath": "assets/art/death-korps-of-krieg_concept.png"
 }

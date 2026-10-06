@@ -23,5 +23,9 @@
     "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "lucius-lasgun-icon",
-  "artImagePath": "/assets/art/lucius_lasgun.jpg"
+  "artImagePath": "assets/art/lucius-lasgun_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/lucius-lasgun_multiview_0.png",
+    "assets/art/lucius-lasgun_multiview_1.png"
+  ]
 }
