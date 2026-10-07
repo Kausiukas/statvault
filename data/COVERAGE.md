@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `plague-marines` | chaos_space_marines | heavy_support | blight-launcher |
 | `death-korps-of-krieg` | astra_militarum | line_infantry | lucius-lasgun |
 | `terminator-squad` | adeptus_astartes | heavy_support | terminator-storm-bolter |
 | `lychguard` | necrons | shock_infantry | hyperphase-sword |
@@ -63,6 +64,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `blight-launcher` | chaos_space_marines | bio_weapon |
 | `lucius-lasgun` | astra_militarum | energy_las |
 | `terminator-storm-bolter` | adeptus_astartes | ballistic_slug |
 | `hyperphase-sword` | necrons | melee_power |
@@ -114,6 +116,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `plague-marines-armor_durability` | `plague-marines` | armor_durability | Warhammer 40,000 Faction Index: Chaos Space Marines |
 | `death-korps-of-krieg-weapon_potency` | `death-korps-of-krieg` | weapon_potency | Warhammer 40,000 Faction Index: Astra Militarum |
 | `terminator-squad-armor_durability` | `terminator-squad` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `lychguard-transhuman_dread` | `lychguard` | transhuman_dread | Warhammer 40,000 Faction Index: Necrons |
@@ -194,7 +197,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 19 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 19 | cadian-shock-trooper |
-| heavy_support | 5 | — |
+| heavy_support | 6 | — |
 | fast_attack | 3 | — |
 | monstrous_creature | 0 | — |
 | vehicle | 0 | — |
@@ -206,6 +209,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-07 | `plague-marines`, `blight-launcher`, `plague-marines-armor_durability` | statvault-wiki-agent |
 | 2026-10-06 | `death-korps-of-krieg`, `lucius-lasgun`, `death-korps-of-krieg-weapon_potency` | statvault-wiki-agent |
 | 2026-10-05 | `terminator-squad`, `terminator-storm-bolter`, `terminator-squad-armor_durability` | statvault-wiki-agent |
 | 2026-10-04 | `lychguard`, `hyperphase-sword`, `lychguard-transhuman_dread` | statvault-wiki-agent |
