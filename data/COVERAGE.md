@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `meganobz` | orks | heavy_support | mega-armour-power-klaw |
 | `plague-marines` | chaos_space_marines | heavy_support | blight-launcher |
 | `death-korps-of-krieg` | astra_militarum | line_infantry | lucius-lasgun |
 | `terminator-squad` | adeptus_astartes | heavy_support | terminator-storm-bolter |
@@ -64,6 +65,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `mega-armour-power-klaw` | orks | melee_power |
 | `blight-launcher` | chaos_space_marines | bio_weapon |
 | `lucius-lasgun` | astra_militarum | energy_las |
 | `terminator-storm-bolter` | adeptus_astartes | ballistic_slug |
@@ -116,6 +118,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `meganobz-armor_durability` | `meganobz` | armor_durability | Warhammer 40,000 Faction Index: Orks |
 | `plague-marines-armor_durability` | `plague-marines` | armor_durability | Warhammer 40,000 Faction Index: Chaos Space Marines |
 | `death-korps-of-krieg-weapon_potency` | `death-korps-of-krieg` | weapon_potency | Warhammer 40,000 Faction Index: Astra Militarum |
 | `terminator-squad-armor_durability` | `terminator-squad` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Astartes |
@@ -197,7 +200,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 19 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 19 | cadian-shock-trooper |
-| heavy_support | 6 | — |
+| heavy_support | 7 | — |
 | fast_attack | 3 | — |
 | monstrous_creature | 0 | — |
 | vehicle | 0 | — |
@@ -209,6 +212,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-08 | `meganobz`, `mega-armour-power-klaw`, `meganobz-armor_durability` | statvault-wiki-agent |
 | 2026-10-07 | `plague-marines`, `blight-launcher`, `plague-marines-armor_durability` | statvault-wiki-agent |
 | 2026-10-06 | `death-korps-of-krieg`, `lucius-lasgun`, `death-korps-of-krieg-weapon_potency` | statvault-wiki-agent |
 | 2026-10-05 | `terminator-squad`, `terminator-storm-bolter`, `terminator-squad-armor_durability` | statvault-wiki-agent |
