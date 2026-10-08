@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "mega-armour-power-klaw",
-  "tacticalDescription": "Provisional heavy support profile centred on Mega-Armour Power Klaw; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on Mega-Armour Power Klaw; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/meganobz_multiview_0.png",
+    "assets/art/meganobz_multiview_1.png",
+    "assets/art/meganobz_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/meganobz_concept.png",
+  "artImagePath": "assets/art/meganobz_concept.png"
 }
