@@ -1,0 +1,27 @@
+{
+  "id": "537b1f84-993d-4ef7-a2a4-68a6b527ee99",
+  "slug": "reaper-launcher",
+  "name": "Reaper Launcher",
+  "type": "explosive_missile",
+  "faction": "aeldari",
+  "engineDamage": {
+    "baseDamage": 76,
+    "armorPenetration": 62,
+    "attacksPerSecond": 0.35,
+    "rangeMeters": 320,
+    "accuracyPercent": 70,
+    "projectileVelocityMps": 390,
+    "burstCount": 1,
+    "reloadTimeSeconds": 4
+  },
+  "loreDescriptor": {
+    "caliber": "Guided or ballistic explosive warhead",
+    "propellant": "Solid-fuel rocket motor",
+    "muzzleVelocityMps": 420,
+    "effectiveRangeKm": 2.5,
+    "loreEffectDescription": "Reaper Launcher is the selected primary armament for Dark Reapers. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Aeldari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "reaper-launcher-icon",
+  "artImagePath": "/assets/art/reaper_launcher.jpg"
+}
