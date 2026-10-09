@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "reaper-launcher",
-  "tacticalDescription": "Provisional heavy support profile centred on Reaper Launcher; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on Reaper Launcher; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/dark-reapers_multiview_0.png",
+    "assets/art/dark-reapers_multiview_1.png",
+    "assets/art/dark-reapers_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/dark-reapers_concept.png",
+  "artImagePath": "assets/art/dark-reapers_concept.png"
 }
