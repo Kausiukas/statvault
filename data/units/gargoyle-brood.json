@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "gargoyle-fleshborer",
-  "tacticalDescription": "Provisional fast attack profile centred on Gargoyle Fleshborer; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional fast attack profile centred on Gargoyle Fleshborer; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/gargoyle-brood_multiview_0.png",
+    "assets/art/gargoyle-brood_multiview_1.png",
+    "assets/art/gargoyle-brood_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/gargoyle-brood_concept.png",
+  "artImagePath": "assets/art/gargoyle-brood_concept.png"
 }
