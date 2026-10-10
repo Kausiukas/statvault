@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `gargoyle-brood` | tyranids | fast_attack | gargoyle-fleshborer |
 | `dark-reapers` | aeldari | heavy_support | reaper-launcher |
 | `meganobz` | orks | heavy_support | mega-armour-power-klaw |
 | `plague-marines` | chaos_space_marines | heavy_support | blight-launcher |
@@ -66,6 +67,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `gargoyle-fleshborer` | tyranids | bio_weapon |
 | `reaper-launcher` | aeldari | explosive_missile |
 | `mega-armour-power-klaw` | orks | melee_power |
 | `blight-launcher` | chaos_space_marines | bio_weapon |
@@ -120,6 +122,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `gargoyle-brood-velocity_discrepancy` | `gargoyle-brood` | velocity_discrepancy | Warhammer 40,000 Faction Index: Tyranids |
 | `dark-reapers-armor_durability` | `dark-reapers` | armor_durability | Warhammer 40,000 Faction Index: Aeldari |
 | `meganobz-armor_durability` | `meganobz` | armor_durability | Warhammer 40,000 Faction Index: Orks |
 | `plague-marines-armor_durability` | `plague-marines` | armor_durability | Warhammer 40,000 Faction Index: Chaos Space Marines |
@@ -204,7 +207,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 19 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 19 | cadian-shock-trooper |
 | heavy_support | 8 | — |
-| fast_attack | 3 | — |
+| fast_attack | 4 | — |
 | monstrous_creature | 0 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -215,6 +218,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-10 | `gargoyle-brood`, `gargoyle-fleshborer`, `gargoyle-brood-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-09 | `dark-reapers`, `reaper-launcher`, `dark-reapers-armor_durability` | statvault-wiki-agent |
 | 2026-10-08 | `meganobz`, `mega-armour-power-klaw`, `meganobz-armor_durability` | statvault-wiki-agent |
 | 2026-10-07 | `plague-marines`, `blight-launcher`, `plague-marines-armor_durability` | statvault-wiki-agent |
