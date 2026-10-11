@@ -1,0 +1,27 @@
+{
+  "id": "c963140d-bd63-49ac-90df-3b312480a964",
+  "slug": "cyclic-ion-blaster",
+  "name": "Cyclic Ion Blaster",
+  "type": "energy_plasma",
+  "faction": "tau_empire",
+  "engineDamage": {
+    "baseDamage": 58,
+    "armorPenetration": 52,
+    "attacksPerSecond": 0.7,
+    "rangeMeters": 180,
+    "accuracyPercent": 74,
+    "projectileVelocityMps": 560,
+    "burstCount": 1,
+    "reloadTimeSeconds": 2.8
+  },
+  "loreDescriptor": {
+    "caliber": "Magnetically contained plasma packet",
+    "propellant": "High-energy plasma containment coils",
+    "muzzleVelocityMps": 2800,
+    "effectiveRangeKm": 1,
+    "loreEffectDescription": "Cyclic Ion Blaster is the selected primary armament for Crisis Battlesuit Team. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: T'au Empire. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "cyclic-ion-blaster-icon",
+  "artImagePath": "/assets/art/cyclic_ion_blaster.jpg"
+}
