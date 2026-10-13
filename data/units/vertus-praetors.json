@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "vertus-salvo-launcher",
-  "tacticalDescription": "Provisional fast attack profile centred on Salvo Launcher; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional fast attack profile centred on Salvo Launcher; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/vertus-praetors_multiview_0.png",
+    "assets/art/vertus-praetors_multiview_1.png",
+    "assets/art/vertus-praetors_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/vertus-praetors_concept.png",
+  "artImagePath": "assets/art/vertus-praetors_concept.png"
 }
