@@ -1,0 +1,18 @@
+{
+  "id": "b54a1d41-67cd-490d-9681-4b4cf9804db1",
+  "unitSlug": "vertus-praetors",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Adeptus Custodes",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Vertus Praetors: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-13T04:00:47.700Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

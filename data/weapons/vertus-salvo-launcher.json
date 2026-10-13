@@ -1,0 +1,27 @@
+{
+  "id": "e86e69ce-81a7-452d-bc77-d3a1a5d09b70",
+  "slug": "vertus-salvo-launcher",
+  "name": "Salvo Launcher",
+  "type": "explosive_missile",
+  "faction": "adeptus_custodes",
+  "engineDamage": {
+    "baseDamage": 76,
+    "armorPenetration": 62,
+    "attacksPerSecond": 0.35,
+    "rangeMeters": 320,
+    "accuracyPercent": 70,
+    "projectileVelocityMps": 390,
+    "burstCount": 1,
+    "reloadTimeSeconds": 4
+  },
+  "loreDescriptor": {
+    "caliber": "Guided or ballistic explosive warhead",
+    "propellant": "Solid-fuel rocket motor",
+    "muzzleVelocityMps": 420,
+    "effectiveRangeKm": 2.5,
+    "loreEffectDescription": "Salvo Launcher is the selected primary armament for Vertus Praetors. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Custodes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "vertus-salvo-launcher-icon",
+  "artImagePath": "/assets/art/vertus_salvo_launcher.jpg"
+}

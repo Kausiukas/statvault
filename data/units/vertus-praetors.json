@@ -1,0 +1,64 @@
+{
+  "id": "e3fa2e1b-a997-4da7-97a9-cce20818d393",
+  "slug": "vertus-praetors",
+  "name": "Vertus Praetors",
+  "faction": "adeptus_custodes",
+  "subFaction": "Adeptus Custodes",
+  "role": "fast_attack",
+  "engineStats": {
+    "hitPoints": 1100,
+    "modelCount": 5,
+    "armor": 140,
+    "speedMps": 10.6,
+    "chargeSpeedMps": 13.3,
+    "acceleration": 4,
+    "massKgPerModel": 572,
+    "leadership": 110,
+    "baseCostPoints": 820,
+    "collisionRadiusM": 0.7
+  },
+  "loreStats": {
+    "reactionTimeMs": 1.5,
+    "sprintSpeedMps": 18.6,
+    "sprintSpeedMph": 41.6,
+    "dreadAuraRadiusM": 28,
+    "dreadShockFactor": 0.72,
+    "armorComposition": "Artificer-wrought auramite plate",
+    "armorEquivalentRHAmm": 428,
+    "combatStaminaHours": 168,
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Custodes. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Vertus Praetors is a Adeptus Custodes fast attack formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/vertus-praetors.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 67,
+      "mobility": 73,
+      "burstDmg": 33,
+      "sustainedDps": 44,
+      "utility": 98,
+      "mass": 95
+    },
+    "loreCanon": {
+      "ehp": 100,
+      "mobility": 100,
+      "burstDmg": 47,
+      "sustainedDps": 58,
+      "utility": 98,
+      "mass": 100
+    }
+  },
+  "primaryWeaponSlug": "vertus-salvo-launcher",
+  "tacticalDescription": "Provisional fast attack profile centred on Salvo Launcher; retain as unapproved until detailed balance and source review."
+}
