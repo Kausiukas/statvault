@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "mass-hammer",
-  "tacticalDescription": "Provisional shock infantry profile centred on Mass Hammer; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Mass Hammer; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/einhyr-champion_multiview_0.png",
+    "assets/art/einhyr-champion_multiview_1.png",
+    "assets/art/einhyr-champion_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/einhyr-champion_concept.png",
+  "artImagePath": "assets/art/einhyr-champion_concept.png"
 }
