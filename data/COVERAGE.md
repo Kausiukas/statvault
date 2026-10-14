@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `einhyr-champion` | leagues_of_votann | shock_infantry | mass-hammer |
 | `vertus-praetors` | adeptus_custodes | fast_attack | vertus-salvo-launcher |
 | `repentia-squad` | adepta_sororitas | shock_infantry | penitent-eviscerator |
 | `crisis-battlesuits` | tau_empire | fast_attack | cyclic-ion-blaster |
@@ -70,6 +71,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `mass-hammer` | leagues_of_votann | melee_power |
 | `vertus-salvo-launcher` | adeptus_custodes | explosive_missile |
 | `penitent-eviscerator` | adepta_sororitas | melee_chain |
 | `cyclic-ion-blaster` | tau_empire | energy_plasma |
@@ -128,6 +130,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `einhyr-champion-transhuman_dread` | `einhyr-champion` | transhuman_dread | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `vertus-praetors-velocity_discrepancy` | `vertus-praetors` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `repentia-squad-transhuman_dread` | `repentia-squad` | transhuman_dread | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `crisis-battlesuits-velocity_discrepancy` | `crisis-battlesuits` | velocity_discrepancy | Warhammer 40,000 Faction Index: T'au Empire |
@@ -213,7 +216,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 20 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 21 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 19 | cadian-shock-trooper |
 | heavy_support | 8 | — |
 | fast_attack | 6 | — |
@@ -227,6 +230,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-14 | `einhyr-champion`, `mass-hammer`, `einhyr-champion-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-13 | `vertus-praetors`, `vertus-salvo-launcher`, `vertus-praetors-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-12 | `repentia-squad`, `penitent-eviscerator`, `repentia-squad-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-11 | `crisis-battlesuits`, `cyclic-ion-blaster`, `crisis-battlesuits-velocity_discrepancy` | statvault-wiki-agent |
