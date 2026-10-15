@@ -1,0 +1,64 @@
+{
+  "id": "84758f2b-5339-46f1-9eae-6f80a858fed8",
+  "slug": "grotesques",
+  "name": "Grotesques",
+  "faction": "drukhari",
+  "subFaction": "Drukhari",
+  "role": "monstrous_creature",
+  "engineStats": {
+    "hitPoints": 3200,
+    "modelCount": 1,
+    "armor": 83,
+    "speedMps": 5.9,
+    "chargeSpeedMps": 7.4,
+    "acceleration": 4,
+    "massKgPerModel": 546,
+    "leadership": 78,
+    "baseCostPoints": 1250,
+    "collisionRadiusM": 1.8
+  },
+  "loreStats": {
+    "reactionTimeMs": 4,
+    "sprintSpeedMps": 10.4,
+    "sprintSpeedMph": 23.3,
+    "dreadAuraRadiusM": 10,
+    "dreadShockFactor": 0.32,
+    "armorComposition": "Lightweight barbed ghostplate and reflex mesh",
+    "armorEquivalentRHAmm": 128,
+    "combatStaminaHours": 18,
+    "citation": "Warhammer 40,000 Faction Index: Drukhari. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Grotesques is a Drukhari monstrous creature formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/grotesques.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 99,
+      "mobility": 50,
+      "burstDmg": 15,
+      "sustainedDps": 20,
+      "utility": 48,
+      "mass": 91
+    },
+    "loreCanon": {
+      "ehp": 100,
+      "mobility": 92,
+      "burstDmg": 21,
+      "sustainedDps": 26,
+      "utility": 48,
+      "mass": 100
+    }
+  },
+  "primaryWeaponSlug": "flesh-gauntlet",
+  "tacticalDescription": "Provisional monstrous creature profile centred on Flesh Gauntlet; retain as unapproved until detailed balance and source review."
+}
