@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "flesh-gauntlet",
-  "tacticalDescription": "Provisional monstrous creature profile centred on Flesh Gauntlet; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional monstrous creature profile centred on Flesh Gauntlet; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/grotesques_multiview_0.png",
+    "assets/art/grotesques_multiview_1.png",
+    "assets/art/grotesques_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/grotesques_concept.png",
+  "artImagePath": "assets/art/grotesques_concept.png"
 }
