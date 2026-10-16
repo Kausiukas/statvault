@@ -1,0 +1,64 @@
+{
+  "id": "91fa54a6-91ba-47c1-8e7d-066cb517697e",
+  "slug": "triarch-praetorians",
+  "name": "Triarch Praetorians",
+  "faction": "necrons",
+  "subFaction": "Necrons",
+  "role": "fast_attack",
+  "engineStats": {
+    "hitPoints": 1100,
+    "modelCount": 5,
+    "armor": 100,
+    "speedMps": 5.3,
+    "chargeSpeedMps": 6.6,
+    "acceleration": 4,
+    "massKgPerModel": 198,
+    "leadership": 100,
+    "baseCostPoints": 820,
+    "collisionRadiusM": 0.7
+  },
+  "loreStats": {
+    "reactionTimeMs": 12,
+    "sprintSpeedMps": 9.3,
+    "sprintSpeedMph": 20.8,
+    "dreadAuraRadiusM": 16,
+    "dreadShockFactor": 0.45,
+    "armorComposition": "Self-repairing living-metal necrodermis",
+    "armorEquivalentRHAmm": 228,
+    "combatStaminaHours": "infinite",
+    "citation": "Warhammer 40,000 Faction Index: Necrons. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Triarch Praetorians is a Necrons fast attack formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/triarch-praetorians.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 40,
+      "mobility": 47,
+      "burstDmg": 63,
+      "sustainedDps": 84,
+      "utility": 76,
+      "mass": 33
+    },
+    "loreCanon": {
+      "ehp": 48,
+      "mobility": 87,
+      "burstDmg": 89,
+      "sustainedDps": 100,
+      "utility": 76,
+      "mass": 40
+    }
+  },
+  "primaryWeaponSlug": "rod-of-covenant",
+  "tacticalDescription": "Provisional fast attack profile centred on Rod of Covenant; retain as unapproved until detailed balance and source review."
+}

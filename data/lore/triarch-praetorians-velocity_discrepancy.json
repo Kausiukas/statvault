@@ -1,0 +1,18 @@
+{
+  "id": "39e5b49e-b8dd-4f4e-9a50-ad249b925e2d",
+  "unitSlug": "triarch-praetorians",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Necrons",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Triarch Praetorians: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-16T04:00:49.234Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

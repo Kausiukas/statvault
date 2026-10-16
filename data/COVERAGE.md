@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `triarch-praetorians` | necrons | fast_attack | rod-of-covenant |
 | `grotesques` | drukhari | monstrous_creature | flesh-gauntlet |
 | `einhyr-champion` | leagues_of_votann | shock_infantry | mass-hammer |
 | `vertus-praetors` | adeptus_custodes | fast_attack | vertus-salvo-launcher |
@@ -72,6 +73,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `rod-of-covenant` | necrons | energy_gauss |
 | `flesh-gauntlet` | drukhari | bio_weapon |
 | `mass-hammer` | leagues_of_votann | melee_power |
 | `vertus-salvo-launcher` | adeptus_custodes | explosive_missile |
@@ -132,6 +134,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `triarch-praetorians-velocity_discrepancy` | `triarch-praetorians` | velocity_discrepancy | Warhammer 40,000 Faction Index: Necrons |
 | `grotesques-transhuman_dread` | `grotesques` | transhuman_dread | Warhammer 40,000 Faction Index: Drukhari |
 | `einhyr-champion-transhuman_dread` | `einhyr-champion` | transhuman_dread | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `vertus-praetors-velocity_discrepancy` | `vertus-praetors` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Custodes |
@@ -222,7 +225,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 21 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 19 | cadian-shock-trooper |
 | heavy_support | 8 | — |
-| fast_attack | 6 | — |
+| fast_attack | 7 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -233,6 +236,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-16 | `triarch-praetorians`, `rod-of-covenant`, `triarch-praetorians-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-15 | `grotesques`, `flesh-gauntlet`, `grotesques-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-14 | `einhyr-champion`, `mass-hammer`, `einhyr-champion-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-13 | `vertus-praetors`, `vertus-salvo-launcher`, `vertus-praetors-velocity_discrepancy` | statvault-wiki-agent |
