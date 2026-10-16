@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "rod-of-covenant",
-  "tacticalDescription": "Provisional fast attack profile centred on Rod of Covenant; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional fast attack profile centred on Rod of Covenant; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/triarch-praetorians_multiview_0.png",
+    "assets/art/triarch-praetorians_multiview_1.png",
+    "assets/art/triarch-praetorians_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/triarch-praetorians_concept.png",
+  "artImagePath": "assets/art/triarch-praetorians_concept.png"
 }

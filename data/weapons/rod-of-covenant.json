@@ -23,5 +23,9 @@
     "citation": "Warhammer 40,000 Faction Index: Necrons. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "rod-of-covenant-icon",
-  "artImagePath": "/assets/art/rod_of_covenant.jpg"
+  "artImagePath": "assets/art/rod-of-covenant_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/rod-of-covenant_multiview_0.png",
+    "assets/art/rod-of-covenant_multiview_1.png"
+  ]
 }
