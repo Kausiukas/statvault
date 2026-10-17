@@ -1,0 +1,27 @@
+{
+  "id": "d3124cab-ec59-419c-91c5-4cf2361c1b25",
+  "slug": "plasma-incinerator",
+  "name": "Plasma Incinerator",
+  "type": "energy_plasma",
+  "faction": "adeptus_astartes",
+  "engineDamage": {
+    "baseDamage": 58,
+    "armorPenetration": 52,
+    "attacksPerSecond": 0.7,
+    "rangeMeters": 180,
+    "accuracyPercent": 74,
+    "projectileVelocityMps": 560,
+    "burstCount": 1,
+    "reloadTimeSeconds": 2.8
+  },
+  "loreDescriptor": {
+    "caliber": "Magnetically contained plasma packet",
+    "propellant": "High-energy plasma containment coils",
+    "muzzleVelocityMps": 2800,
+    "effectiveRangeKm": 1,
+    "loreEffectDescription": "Plasma Incinerator is the selected primary armament for Hellblaster Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Astartes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "plasma-incinerator-icon",
+  "artImagePath": "/assets/art/plasma_incinerator.jpg"
+}

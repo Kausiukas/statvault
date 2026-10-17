@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `hellblaster-squad` | adeptus_astartes | heavy_support | plasma-incinerator |
 | `triarch-praetorians` | necrons | fast_attack | rod-of-covenant |
 | `grotesques` | drukhari | monstrous_creature | flesh-gauntlet |
 | `einhyr-champion` | leagues_of_votann | shock_infantry | mass-hammer |
@@ -73,6 +74,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `plasma-incinerator` | adeptus_astartes | energy_plasma |
 | `rod-of-covenant` | necrons | energy_gauss |
 | `flesh-gauntlet` | drukhari | bio_weapon |
 | `mass-hammer` | leagues_of_votann | melee_power |
@@ -134,6 +136,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `hellblaster-squad-armor_durability` | `hellblaster-squad` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `triarch-praetorians-velocity_discrepancy` | `triarch-praetorians` | velocity_discrepancy | Warhammer 40,000 Faction Index: Necrons |
 | `grotesques-transhuman_dread` | `grotesques` | transhuman_dread | Warhammer 40,000 Faction Index: Drukhari |
 | `einhyr-champion-transhuman_dread` | `einhyr-champion` | transhuman_dread | Warhammer 40,000 Faction Index: Leagues of Votann |
@@ -224,7 +227,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 21 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 19 | cadian-shock-trooper |
-| heavy_support | 8 | — |
+| heavy_support | 9 | — |
 | fast_attack | 7 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
@@ -236,6 +239,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-17 | `hellblaster-squad`, `plasma-incinerator`, `hellblaster-squad-armor_durability` | statvault-wiki-agent |
 | 2026-10-16 | `triarch-praetorians`, `rod-of-covenant`, `triarch-praetorians-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-15 | `grotesques`, `flesh-gauntlet`, `grotesques-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-14 | `einhyr-champion`, `mass-hammer`, `einhyr-champion-transhuman_dread` | statvault-wiki-agent |
