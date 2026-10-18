@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "ogryn-ripper-gun-icon",
-  "artImagePath": "/assets/art/ogryn_ripper_gun.jpg"
+  "artImagePath": "assets/art/ogryn-ripper-gun_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/ogryn-ripper-gun_multiview_0.png",
+    "assets/art/ogryn-ripper-gun_multiview_1.png",
+    "assets/art/ogryn-ripper-gun_multiview_2.png"
+  ]
 }

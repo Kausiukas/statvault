@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "ogryn-ripper-gun",
-  "tacticalDescription": "Provisional shock infantry profile centred on Ogryn Ripper Gun; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Ogryn Ripper Gun; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/ogryn-squad_multiview_0.png",
+    "assets/art/ogryn-squad_multiview_1.png",
+    "assets/art/ogryn-squad_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/ogryn-squad_concept.png",
+  "artImagePath": "assets/art/ogryn-squad_concept.png"
 }
