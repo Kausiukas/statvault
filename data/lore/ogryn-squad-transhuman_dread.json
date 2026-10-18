@@ -1,0 +1,18 @@
+{
+  "id": "7cc4dad5-1557-4638-9341-3d929b0b1926",
+  "unitSlug": "ogryn-squad",
+  "category": "transhuman_dread",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Astra Militarum",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Ogryn Squad: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-18T04:00:51.368Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

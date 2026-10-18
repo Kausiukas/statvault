@@ -1,0 +1,64 @@
+{
+  "id": "392e8957-c3e4-4638-b241-115ecf30b5fa",
+  "slug": "ogryn-squad",
+  "name": "Ogryn Squad",
+  "faction": "astra_militarum",
+  "subFaction": "Astra Militarum",
+  "role": "shock_infantry",
+  "engineStats": {
+    "hitPoints": 1200,
+    "modelCount": 8,
+    "armor": 45,
+    "speedMps": 4.3,
+    "chargeSpeedMps": 5.4,
+    "acceleration": 4,
+    "massKgPerModel": 97,
+    "leadership": 68,
+    "baseCostPoints": 780,
+    "collisionRadiusM": 0.55
+  },
+  "loreStats": {
+    "reactionTimeMs": 180,
+    "sprintSpeedMps": 7.6,
+    "sprintSpeedMph": 17,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0,
+    "armorComposition": "Flak or carapace armour appropriate to the formation",
+    "armorEquivalentRHAmm": 50,
+    "combatStaminaHours": 12,
+    "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Ogryn Squad is a Astra Militarum shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/ogryn-squad.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 28,
+      "mobility": 42,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 28,
+      "mass": 16
+    },
+    "loreCanon": {
+      "ehp": 36,
+      "mobility": 78,
+      "burstDmg": 100,
+      "sustainedDps": 100,
+      "utility": 28,
+      "mass": 19
+    }
+  },
+  "primaryWeaponSlug": "ogryn-ripper-gun",
+  "tacticalDescription": "Provisional shock infantry profile centred on Ogryn Ripper Gun; retain as unapproved until detailed balance and source review."
+}

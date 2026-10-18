@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `ogryn-squad` | astra_militarum | shock_infantry | ogryn-ripper-gun |
 | `hellblaster-squad` | adeptus_astartes | heavy_support | plasma-incinerator |
 | `triarch-praetorians` | necrons | fast_attack | rod-of-covenant |
 | `grotesques` | drukhari | monstrous_creature | flesh-gauntlet |
@@ -74,6 +75,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `ogryn-ripper-gun` | astra_militarum | ballistic_slug |
 | `plasma-incinerator` | adeptus_astartes | energy_plasma |
 | `rod-of-covenant` | necrons | energy_gauss |
 | `flesh-gauntlet` | drukhari | bio_weapon |
@@ -136,6 +138,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `ogryn-squad-transhuman_dread` | `ogryn-squad` | transhuman_dread | Warhammer 40,000 Faction Index: Astra Militarum |
 | `hellblaster-squad-armor_durability` | `hellblaster-squad` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `triarch-praetorians-velocity_discrepancy` | `triarch-praetorians` | velocity_discrepancy | Warhammer 40,000 Faction Index: Necrons |
 | `grotesques-transhuman_dread` | `grotesques` | transhuman_dread | Warhammer 40,000 Faction Index: Drukhari |
@@ -225,7 +228,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 21 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 22 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 19 | cadian-shock-trooper |
 | heavy_support | 9 | — |
 | fast_attack | 7 | — |
@@ -239,6 +242,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-18 | `ogryn-squad`, `ogryn-ripper-gun`, `ogryn-squad-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-17 | `hellblaster-squad`, `plasma-incinerator`, `hellblaster-squad-armor_durability` | statvault-wiki-agent |
 | 2026-10-16 | `triarch-praetorians`, `rod-of-covenant`, `triarch-praetorians-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-15 | `grotesques`, `flesh-gauntlet`, `grotesques-transhuman_dread` | statvault-wiki-agent |
