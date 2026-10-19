@@ -1,0 +1,18 @@
+{
+  "id": "a70c6414-1e4c-4338-ad05-61adf79640db",
+  "unitSlug": "rubric-marines",
+  "category": "warp_corruption",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Chaos Space Marines",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Rubric Marines: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-19T04:00:48.696Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
