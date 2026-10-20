@@ -1,0 +1,18 @@
+{
+  "id": "9b6e314a-e5d9-446b-a9b9-78d51fa0f932",
+  "unitSlug": "stormboyz",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Orks",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Stormboyz: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-20T04:00:49.379Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

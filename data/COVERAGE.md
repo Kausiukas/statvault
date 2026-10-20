@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `stormboyz` | orks | fast_attack | stormboy-choppa |
 | `rubric-marines` | chaos_space_marines | line_infantry | inferno-boltgun |
 | `ogryn-squad` | astra_militarum | shock_infantry | ogryn-ripper-gun |
 | `hellblaster-squad` | adeptus_astartes | heavy_support | plasma-incinerator |
@@ -76,6 +77,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `stormboy-choppa` | orks | melee_crude |
 | `inferno-boltgun` | chaos_space_marines | warp_daemon |
 | `ogryn-ripper-gun` | astra_militarum | ballistic_slug |
 | `plasma-incinerator` | adeptus_astartes | energy_plasma |
@@ -140,6 +142,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `stormboyz-velocity_discrepancy` | `stormboyz` | velocity_discrepancy | Warhammer 40,000 Faction Index: Orks |
 | `rubric-marines-warp_corruption` | `rubric-marines` | warp_corruption | Warhammer 40,000 Faction Index: Chaos Space Marines |
 | `ogryn-squad-transhuman_dread` | `ogryn-squad` | transhuman_dread | Warhammer 40,000 Faction Index: Astra Militarum |
 | `hellblaster-squad-armor_durability` | `hellblaster-squad` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Astartes |
@@ -234,7 +237,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 22 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 20 | cadian-shock-trooper |
 | heavy_support | 9 | — |
-| fast_attack | 7 | — |
+| fast_attack | 8 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -245,6 +248,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-20 | `stormboyz`, `stormboy-choppa`, `stormboyz-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-19 | `rubric-marines`, `inferno-boltgun`, `rubric-marines-warp_corruption` | statvault-wiki-agent |
 | 2026-10-18 | `ogryn-squad`, `ogryn-ripper-gun`, `ogryn-squad-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-17 | `hellblaster-squad`, `plasma-incinerator`, `hellblaster-squad-armor_durability` | statvault-wiki-agent |
