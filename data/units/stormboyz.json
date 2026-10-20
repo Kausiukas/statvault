@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "stormboy-choppa",
-  "tacticalDescription": "Provisional fast attack profile centred on Stormboy Choppa; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional fast attack profile centred on Stormboy Choppa; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/stormboyz_multiview_0.png",
+    "assets/art/stormboyz_multiview_1.png",
+    "assets/art/stormboyz_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/stormboyz_concept.png",
+  "artImagePath": "assets/art/stormboyz_concept.png"
 }
