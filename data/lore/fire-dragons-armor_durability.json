@@ -1,0 +1,18 @@
+{
+  "id": "77081b81-c4db-44f8-ae37-4eb00e1e48f2",
+  "unitSlug": "fire-dragons",
+  "category": "armor_durability",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Aeldari",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Fire Dragons: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-21T04:00:49.436Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

@@ -1,0 +1,27 @@
+{
+  "id": "64b1e52d-d905-4b25-96b4-f828394a01c4",
+  "slug": "aeldari-fusion-gun",
+  "name": "Aeldari Fusion Gun",
+  "type": "energy_melta",
+  "faction": "aeldari",
+  "engineDamage": {
+    "baseDamage": 82,
+    "armorPenetration": 78,
+    "attacksPerSecond": 0.45,
+    "rangeMeters": 90,
+    "accuracyPercent": 76,
+    "projectileVelocityMps": 1000,
+    "burstCount": 1,
+    "reloadTimeSeconds": 3.2
+  },
+  "loreDescriptor": {
+    "caliber": "Short-range thermal beam",
+    "propellant": "Fusion-reactor fuel charge",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 0.25,
+    "loreEffectDescription": "Aeldari Fusion Gun is the selected primary armament for Fire Dragons. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Aeldari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "aeldari-fusion-gun-icon",
+  "artImagePath": "/assets/art/aeldari_fusion_gun.jpg"
+}
