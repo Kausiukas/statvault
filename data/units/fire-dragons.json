@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "aeldari-fusion-gun",
-  "tacticalDescription": "Provisional heavy support profile centred on Aeldari Fusion Gun; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on Aeldari Fusion Gun; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/fire-dragons_multiview_0.png",
+    "assets/art/fire-dragons_multiview_1.png",
+    "assets/art/fire-dragons_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/fire-dragons_concept.png",
+  "artImagePath": "assets/art/fire-dragons_concept.png"
 }
