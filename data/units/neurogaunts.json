@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "neurogaunt-claws",
-  "tacticalDescription": "Provisional line infantry profile centred on Neurogaunt Claws; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Neurogaunt Claws; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/neurogaunts_multiview_0.png",
+    "assets/art/neurogaunts_multiview_1.png",
+    "assets/art/neurogaunts_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/neurogaunts_concept.png",
+  "artImagePath": "assets/art/neurogaunts_concept.png"
 }

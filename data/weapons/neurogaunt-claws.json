@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Tyranids. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "neurogaunt-claws-icon",
-  "artImagePath": "/assets/art/neurogaunt_claws.jpg"
+  "artImagePath": "assets/art/neurogaunt-claws_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/neurogaunt-claws_multiview_0.png",
+    "assets/art/neurogaunt-claws_multiview_1.png",
+    "assets/art/neurogaunt-claws_multiview_2.png"
+  ]
 }
