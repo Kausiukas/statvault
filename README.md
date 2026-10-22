@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Fire Dragons
+## 🌟 Daily Featured Dataslate: Neurogaunt Nodebeasts
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/fire-dragons_concept.png" alt="Fire Dragons in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/neurogaunts_concept.png" alt="Neurogaunt Nodebeasts in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Fire Dragons deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Neurogaunt Nodebeasts deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/fire-dragons_multiview_0.png" alt="Fire Dragons" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/neurogaunts_multiview_0.png" alt="Neurogaunt Nodebeasts" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Fire Dragons</b></h3>
+      <h3><b>Neurogaunt Nodebeasts</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-AELDARI-00cccc?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-HEAVY%20SUPPORT-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-900%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-TYRANIDS-aa33aa?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-LINE%20INFANTRY-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-600%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Provisional heavy support profile centred on Aeldari Fusion Gun; retain as unapproved until detailed balance and source review."</i></p>
+      <i>"Provisional line infantry profile centred on Neurogaunt Claws; retain as unapproved until detailed balance and source review."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 110mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1500 HP (Armor Rating: 70)<br/>
-      • <b>RTS Tactical Speed:</b> 11.0 mph (17.6 km/h)<br/>
-      • <b>Primary Armament:</b> Aeldari Fusion Gun (AP: 78, Base Dmg: 82)<br/>
-      • <b>Lore Phenomenon:</b> Fire Dragons is a Aeldari heavy support formation queued for corpus expansion. Temporary static backlog seed; quantitative values require so...</p>
+      • <b>Lore Armor Protection:</b> 50mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1000 HP (Armor Rating: 40)<br/>
+      • <b>RTS Tactical Speed:</b> 12.8 mph (20.5 km/h)<br/>
+      • <b>Primary Armament:</b> Neurogaunt Claws (AP: 27, Base Dmg: 37)<br/>
+      • <b>Lore Phenomenon:</b> Neurogaunt Nodebeasts is a Tyranids line infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values ...</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,25 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/fire-dragons_multiview_0.png"><img src="assets/art/fire-dragons_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/fire-dragons_multiview_1.png"><img src="assets/art/fire-dragons_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/fire-dragons_multiview_2.png"><img src="assets/art/fire-dragons_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/neurogaunts_multiview_0.png"><img src="assets/art/neurogaunts_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/neurogaunts_multiview_1.png"><img src="assets/art/neurogaunts_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/neurogaunts_multiview_2.png"><img src="assets/art/neurogaunts_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Aeldari Fusion Gun</th>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Neurogaunt Claws</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/aeldari-fusion-gun_multiview_0.png"><img src="assets/art/aeldari-fusion-gun_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/aeldari-fusion-gun_multiview_1.png"><img src="assets/art/aeldari-fusion-gun_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/aeldari-fusion-gun_multiview_2.png"><img src="assets/art/aeldari-fusion-gun_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/neurogaunt-claws_multiview_0.png"><img src="assets/art/neurogaunt-claws_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/neurogaunt-claws_multiview_1.png"><img src="assets/art/neurogaunt-claws_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/neurogaunt-claws_multiview_2.png"><img src="assets/art/neurogaunt-claws_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/fire-dragons.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/aeldari-fusion-gun.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/neurogaunts.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/neurogaunt-claws.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
