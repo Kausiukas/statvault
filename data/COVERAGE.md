@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `neurogaunts` | tyranids | line_infantry | neurogaunt-claws |
 | `fire-dragons` | aeldari | heavy_support | aeldari-fusion-gun |
 | `stormboyz` | orks | fast_attack | stormboy-choppa |
 | `rubric-marines` | chaos_space_marines | line_infantry | inferno-boltgun |
@@ -78,6 +79,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `neurogaunt-claws` | tyranids | bio_weapon |
 | `aeldari-fusion-gun` | aeldari | energy_melta |
 | `stormboy-choppa` | orks | melee_crude |
 | `inferno-boltgun` | chaos_space_marines | warp_daemon |
@@ -144,6 +146,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `neurogaunts-weapon_potency` | `neurogaunts` | weapon_potency | Warhammer 40,000 Faction Index: Tyranids |
 | `fire-dragons-armor_durability` | `fire-dragons` | armor_durability | Warhammer 40,000 Faction Index: Aeldari |
 | `stormboyz-velocity_discrepancy` | `stormboyz` | velocity_discrepancy | Warhammer 40,000 Faction Index: Orks |
 | `rubric-marines-warp_corruption` | `rubric-marines` | warp_corruption | Warhammer 40,000 Faction Index: Chaos Space Marines |
@@ -238,7 +241,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 22 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 20 | cadian-shock-trooper |
+| line_infantry | 21 | cadian-shock-trooper |
 | heavy_support | 10 | — |
 | fast_attack | 8 | — |
 | monstrous_creature | 1 | — |
@@ -251,6 +254,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-22 | `neurogaunts`, `neurogaunt-claws`, `neurogaunts-weapon_potency` | statvault-wiki-agent |
 | 2026-10-21 | `fire-dragons`, `aeldari-fusion-gun`, `fire-dragons-armor_durability` | statvault-wiki-agent |
 | 2026-10-20 | `stormboyz`, `stormboy-choppa`, `stormboyz-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-19 | `rubric-marines`, `inferno-boltgun`, `rubric-marines-warp_corruption` | statvault-wiki-agent |
