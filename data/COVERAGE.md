@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `broadside-battlesuit` | tau_empire | heavy_support | heavy-rail-rifle |
 | `neurogaunts` | tyranids | line_infantry | neurogaunt-claws |
 | `fire-dragons` | aeldari | heavy_support | aeldari-fusion-gun |
 | `stormboyz` | orks | fast_attack | stormboy-choppa |
@@ -79,6 +80,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `heavy-rail-rifle` | tau_empire | energy_pulse |
 | `neurogaunt-claws` | tyranids | bio_weapon |
 | `aeldari-fusion-gun` | aeldari | energy_melta |
 | `stormboy-choppa` | orks | melee_crude |
@@ -146,6 +148,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `broadside-battlesuit-armor_durability` | `broadside-battlesuit` | armor_durability | Warhammer 40,000 Faction Index: T'au Empire |
 | `neurogaunts-weapon_potency` | `neurogaunts` | weapon_potency | Warhammer 40,000 Faction Index: Tyranids |
 | `fire-dragons-armor_durability` | `fire-dragons` | armor_durability | Warhammer 40,000 Faction Index: Aeldari |
 | `stormboyz-velocity_discrepancy` | `stormboyz` | velocity_discrepancy | Warhammer 40,000 Faction Index: Orks |
@@ -242,7 +245,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 22 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 21 | cadian-shock-trooper |
-| heavy_support | 10 | — |
+| heavy_support | 11 | — |
 | fast_attack | 8 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
@@ -254,6 +257,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-23 | `broadside-battlesuit`, `heavy-rail-rifle`, `broadside-battlesuit-armor_durability` | statvault-wiki-agent |
 | 2026-10-22 | `neurogaunts`, `neurogaunt-claws`, `neurogaunts-weapon_potency` | statvault-wiki-agent |
 | 2026-10-21 | `fire-dragons`, `aeldari-fusion-gun`, `fire-dragons-armor_durability` | statvault-wiki-agent |
 | 2026-10-20 | `stormboyz`, `stormboy-choppa`, `stormboyz-velocity_discrepancy` | statvault-wiki-agent |
