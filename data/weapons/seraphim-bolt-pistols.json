@@ -1,0 +1,27 @@
+{
+  "id": "eaf0e4d8-8840-460c-a23a-a9d464559f97",
+  "slug": "seraphim-bolt-pistols",
+  "name": "Seraphim Bolt Pistols",
+  "type": "ballistic_slug",
+  "faction": "adepta_sororitas",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Seraphim Bolt Pistols is the selected primary armament for Seraphim Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adepta Sororitas. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "seraphim-bolt-pistols-icon",
+  "artImagePath": "/assets/art/seraphim_bolt_pistols.jpg"
+}

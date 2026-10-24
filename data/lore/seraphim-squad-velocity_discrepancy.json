@@ -1,0 +1,18 @@
+{
+  "id": "bc4e94fb-9082-441a-9c04-9a440545c228",
+  "unitSlug": "seraphim-squad",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Adepta Sororitas",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Seraphim Squad: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-24T04:00:53.115Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

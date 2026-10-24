@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `seraphim-squad` | adepta_sororitas | fast_attack | seraphim-bolt-pistols |
 | `broadside-battlesuit` | tau_empire | heavy_support | heavy-rail-rifle |
 | `neurogaunts` | tyranids | line_infantry | neurogaunt-claws |
 | `fire-dragons` | aeldari | heavy_support | aeldari-fusion-gun |
@@ -80,6 +81,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `seraphim-bolt-pistols` | adepta_sororitas | ballistic_slug |
 | `heavy-rail-rifle` | tau_empire | energy_pulse |
 | `neurogaunt-claws` | tyranids | bio_weapon |
 | `aeldari-fusion-gun` | aeldari | energy_melta |
@@ -148,6 +150,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `seraphim-squad-velocity_discrepancy` | `seraphim-squad` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `broadside-battlesuit-armor_durability` | `broadside-battlesuit` | armor_durability | Warhammer 40,000 Faction Index: T'au Empire |
 | `neurogaunts-weapon_potency` | `neurogaunts` | weapon_potency | Warhammer 40,000 Faction Index: Tyranids |
 | `fire-dragons-armor_durability` | `fire-dragons` | armor_durability | Warhammer 40,000 Faction Index: Aeldari |
@@ -246,7 +249,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 22 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 21 | cadian-shock-trooper |
 | heavy_support | 11 | — |
-| fast_attack | 8 | — |
+| fast_attack | 9 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -257,6 +260,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-24 | `seraphim-squad`, `seraphim-bolt-pistols`, `seraphim-squad-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-23 | `broadside-battlesuit`, `heavy-rail-rifle`, `broadside-battlesuit-armor_durability` | statvault-wiki-agent |
 | 2026-10-22 | `neurogaunts`, `neurogaunt-claws`, `neurogaunts-weapon_potency` | statvault-wiki-agent |
 | 2026-10-21 | `fire-dragons`, `aeldari-fusion-gun`, `fire-dragons-armor_durability` | statvault-wiki-agent |
