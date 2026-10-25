@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "executioner-greatblade",
-  "tacticalDescription": "Provisional shock infantry profile centred on Executioner Greatblade; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional shock infantry profile centred on Executioner Greatblade; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/sisters-of-silence-vigilators_multiview_0.png",
+    "assets/art/sisters-of-silence-vigilators_multiview_1.png",
+    "assets/art/sisters-of-silence-vigilators_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/sisters-of-silence-vigilators_concept.png",
+  "artImagePath": "assets/art/sisters-of-silence-vigilators_concept.png"
 }

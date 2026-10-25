@@ -23,5 +23,9 @@
     "citation": "Warhammer 40,000 Faction Index: Adeptus Custodes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "executioner-greatblade-icon",
-  "artImagePath": "/assets/art/executioner_greatblade.jpg"
+  "artImagePath": "assets/art/executioner-greatblade_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/executioner-greatblade_multiview_0.png",
+    "assets/art/executioner-greatblade_multiview_1.png"
+  ]
 }
