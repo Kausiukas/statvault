@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `sisters-of-silence-vigilators` | adeptus_custodes | shock_infantry | executioner-greatblade |
 | `seraphim-squad` | adepta_sororitas | fast_attack | seraphim-bolt-pistols |
 | `broadside-battlesuit` | tau_empire | heavy_support | heavy-rail-rifle |
 | `neurogaunts` | tyranids | line_infantry | neurogaunt-claws |
@@ -81,6 +82,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `executioner-greatblade` | adeptus_custodes | melee_power |
 | `seraphim-bolt-pistols` | adepta_sororitas | ballistic_slug |
 | `heavy-rail-rifle` | tau_empire | energy_pulse |
 | `neurogaunt-claws` | tyranids | bio_weapon |
@@ -150,6 +152,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `sisters-of-silence-vigilators-transhuman_dread` | `sisters-of-silence-vigilators` | transhuman_dread | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `seraphim-squad-velocity_discrepancy` | `seraphim-squad` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `broadside-battlesuit-armor_durability` | `broadside-battlesuit` | armor_durability | Warhammer 40,000 Faction Index: T'au Empire |
 | `neurogaunts-weapon_potency` | `neurogaunts` | weapon_potency | Warhammer 40,000 Faction Index: Tyranids |
@@ -246,7 +249,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 22 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 23 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 21 | cadian-shock-trooper |
 | heavy_support | 11 | — |
 | fast_attack | 9 | — |
@@ -260,6 +263,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-25 | `sisters-of-silence-vigilators`, `executioner-greatblade`, `sisters-of-silence-vigilators-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-24 | `seraphim-squad`, `seraphim-bolt-pistols`, `seraphim-squad-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-23 | `broadside-battlesuit`, `heavy-rail-rifle`, `broadside-battlesuit-armor_durability` | statvault-wiki-agent |
 | 2026-10-22 | `neurogaunts`, `neurogaunt-claws`, `neurogaunts-weapon_potency` | statvault-wiki-agent |
