@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `brokhyr-thunderkyn` | leagues_of_votann | heavy_support | thunderkyn-bolt-cannon |
 | `sisters-of-silence-vigilators` | adeptus_custodes | shock_infantry | executioner-greatblade |
 | `seraphim-squad` | adepta_sororitas | fast_attack | seraphim-bolt-pistols |
 | `broadside-battlesuit` | tau_empire | heavy_support | heavy-rail-rifle |
@@ -82,6 +83,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `thunderkyn-bolt-cannon` | leagues_of_votann | ballistic_slug |
 | `executioner-greatblade` | adeptus_custodes | melee_power |
 | `seraphim-bolt-pistols` | adepta_sororitas | ballistic_slug |
 | `heavy-rail-rifle` | tau_empire | energy_pulse |
@@ -152,6 +154,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `brokhyr-thunderkyn-armor_durability` | `brokhyr-thunderkyn` | armor_durability | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `sisters-of-silence-vigilators-transhuman_dread` | `sisters-of-silence-vigilators` | transhuman_dread | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `seraphim-squad-velocity_discrepancy` | `seraphim-squad` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `broadside-battlesuit-armor_durability` | `broadside-battlesuit` | armor_durability | Warhammer 40,000 Faction Index: T'au Empire |
@@ -251,7 +254,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 23 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 21 | cadian-shock-trooper |
-| heavy_support | 11 | — |
+| heavy_support | 12 | — |
 | fast_attack | 9 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
@@ -263,6 +266,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-26 | `brokhyr-thunderkyn`, `thunderkyn-bolt-cannon`, `brokhyr-thunderkyn-armor_durability` | statvault-wiki-agent |
 | 2026-10-25 | `sisters-of-silence-vigilators`, `executioner-greatblade`, `sisters-of-silence-vigilators-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-24 | `seraphim-squad`, `seraphim-bolt-pistols`, `seraphim-squad-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-23 | `broadside-battlesuit`, `heavy-rail-rifle`, `broadside-battlesuit-armor_durability` | statvault-wiki-agent |

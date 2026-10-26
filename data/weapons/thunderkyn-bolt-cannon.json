@@ -1,0 +1,27 @@
+{
+  "id": "493da0a0-0d8a-4e76-9e6e-fb9cf9d3ecce",
+  "slug": "thunderkyn-bolt-cannon",
+  "name": "Bolt Cannon",
+  "type": "ballistic_slug",
+  "faction": "leagues_of_votann",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Bolt Cannon is the selected primary armament for Brokhyr Thunderkyn. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Leagues of Votann. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "thunderkyn-bolt-cannon-icon",
+  "artImagePath": "/assets/art/thunderkyn_bolt_cannon.jpg"
+}

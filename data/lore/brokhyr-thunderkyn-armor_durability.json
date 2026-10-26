@@ -1,0 +1,18 @@
+{
+  "id": "be52f023-1a63-4c13-b1ee-2f2caeaaecc6",
+  "unitSlug": "brokhyr-thunderkyn",
+  "category": "armor_durability",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Leagues of Votann",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Brokhyr Thunderkyn: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-26T05:00:52.600Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
