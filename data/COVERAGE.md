@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `scourges` | drukhari | fast_attack | haywire-blaster |
 | `brokhyr-thunderkyn` | leagues_of_votann | heavy_support | thunderkyn-bolt-cannon |
 | `sisters-of-silence-vigilators` | adeptus_custodes | shock_infantry | executioner-greatblade |
 | `seraphim-squad` | adepta_sororitas | fast_attack | seraphim-bolt-pistols |
@@ -83,6 +84,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `haywire-blaster` | drukhari | energy_gauss |
 | `thunderkyn-bolt-cannon` | leagues_of_votann | ballistic_slug |
 | `executioner-greatblade` | adeptus_custodes | melee_power |
 | `seraphim-bolt-pistols` | adepta_sororitas | ballistic_slug |
@@ -154,6 +156,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `scourges-velocity_discrepancy` | `scourges` | velocity_discrepancy | Warhammer 40,000 Faction Index: Drukhari |
 | `brokhyr-thunderkyn-armor_durability` | `brokhyr-thunderkyn` | armor_durability | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `sisters-of-silence-vigilators-transhuman_dread` | `sisters-of-silence-vigilators` | transhuman_dread | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `seraphim-squad-velocity_discrepancy` | `seraphim-squad` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adepta Sororitas |
@@ -255,7 +258,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 23 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 21 | cadian-shock-trooper |
 | heavy_support | 12 | — |
-| fast_attack | 9 | — |
+| fast_attack | 10 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -266,6 +269,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-27 | `scourges`, `haywire-blaster`, `scourges-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-26 | `brokhyr-thunderkyn`, `thunderkyn-bolt-cannon`, `brokhyr-thunderkyn-armor_durability` | statvault-wiki-agent |
 | 2026-10-25 | `sisters-of-silence-vigilators`, `executioner-greatblade`, `sisters-of-silence-vigilators-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-24 | `seraphim-squad`, `seraphim-bolt-pistols`, `seraphim-squad-velocity_discrepancy` | statvault-wiki-agent |

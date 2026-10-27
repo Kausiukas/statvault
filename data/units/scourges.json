@@ -1,0 +1,64 @@
+{
+  "id": "bcbde977-eea0-4f47-a2d0-b10ff635be06",
+  "slug": "scourges",
+  "name": "Scourges",
+  "faction": "drukhari",
+  "subFaction": "Drukhari",
+  "role": "fast_attack",
+  "engineStats": {
+    "hitPoints": 1100,
+    "modelCount": 5,
+    "armor": 53,
+    "speedMps": 9.8,
+    "chargeSpeedMps": 12.3,
+    "acceleration": 4,
+    "massKgPerModel": 86,
+    "leadership": 78,
+    "baseCostPoints": 820,
+    "collisionRadiusM": 0.7
+  },
+  "loreStats": {
+    "reactionTimeMs": 4,
+    "sprintSpeedMps": 17.1,
+    "sprintSpeedMph": 38.3,
+    "dreadAuraRadiusM": 10,
+    "dreadShockFactor": 0.32,
+    "armorComposition": "Lightweight barbed ghostplate and reflex mesh",
+    "armorEquivalentRHAmm": 83,
+    "combatStaminaHours": 18,
+    "citation": "Warhammer 40,000 Faction Index: Drukhari. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Scourges is a Drukhari fast attack formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/scourges.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 27,
+      "mobility": 69,
+      "burstDmg": 63,
+      "sustainedDps": 84,
+      "utility": 48,
+      "mass": 14
+    },
+    "loreCanon": {
+      "ehp": 35,
+      "mobility": 100,
+      "burstDmg": 89,
+      "sustainedDps": 100,
+      "utility": 48,
+      "mass": 17
+    }
+  },
+  "primaryWeaponSlug": "haywire-blaster",
+  "tacticalDescription": "Provisional fast attack profile centred on Haywire Blaster; retain as unapproved until detailed balance and source review."
+}
