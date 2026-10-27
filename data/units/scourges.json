@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "haywire-blaster",
-  "tacticalDescription": "Provisional fast attack profile centred on Haywire Blaster; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional fast attack profile centred on Haywire Blaster; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/scourges_multiview_0.png",
+    "assets/art/scourges_multiview_1.png",
+    "assets/art/scourges_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/scourges_concept.png",
+  "artImagePath": "assets/art/scourges_concept.png"
 }
