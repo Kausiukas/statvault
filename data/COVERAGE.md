@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `flayed-ones` | necrons | shock_infantry | flayer-claws |
 | `scourges` | drukhari | fast_attack | haywire-blaster |
 | `brokhyr-thunderkyn` | leagues_of_votann | heavy_support | thunderkyn-bolt-cannon |
 | `sisters-of-silence-vigilators` | adeptus_custodes | shock_infantry | executioner-greatblade |
@@ -84,6 +85,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `flayer-claws` | necrons | melee_crude |
 | `haywire-blaster` | drukhari | energy_gauss |
 | `thunderkyn-bolt-cannon` | leagues_of_votann | ballistic_slug |
 | `executioner-greatblade` | adeptus_custodes | melee_power |
@@ -156,6 +158,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `flayed-ones-transhuman_dread` | `flayed-ones` | transhuman_dread | Warhammer 40,000 Faction Index: Necrons |
 | `scourges-velocity_discrepancy` | `scourges` | velocity_discrepancy | Warhammer 40,000 Faction Index: Drukhari |
 | `brokhyr-thunderkyn-armor_durability` | `brokhyr-thunderkyn` | armor_durability | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `sisters-of-silence-vigilators-transhuman_dread` | `sisters-of-silence-vigilators` | transhuman_dread | Warhammer 40,000 Faction Index: Adeptus Custodes |
@@ -255,7 +258,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 23 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 21 | cadian-shock-trooper |
 | heavy_support | 12 | — |
 | fast_attack | 10 | — |
@@ -269,6 +272,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-28 | `flayed-ones`, `flayer-claws`, `flayed-ones-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-27 | `scourges`, `haywire-blaster`, `scourges-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-26 | `brokhyr-thunderkyn`, `thunderkyn-bolt-cannon`, `brokhyr-thunderkyn-armor_durability` | statvault-wiki-agent |
 | 2026-10-25 | `sisters-of-silence-vigilators`, `executioner-greatblade`, `sisters-of-silence-vigilators-transhuman_dread` | statvault-wiki-agent |

@@ -1,0 +1,27 @@
+{
+  "id": "ba313f3c-5ba5-482e-97c1-c59b05dc455a",
+  "slug": "flayer-claws",
+  "name": "Flayer Claws",
+  "type": "melee_crude",
+  "faction": "necrons",
+  "engineDamage": {
+    "baseDamage": 39,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.6,
+    "rangeMeters": 2,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 0,
+    "burstCount": 1,
+    "reloadTimeSeconds": 0
+  },
+  "loreDescriptor": {
+    "caliber": "Heavy hand-forged melee implement",
+    "propellant": "User strength",
+    "muzzleVelocityMps": 0,
+    "effectiveRangeKm": 0.002,
+    "loreEffectDescription": "Flayer Claws is the selected primary armament for Flayed Ones. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Necrons. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "flayer-claws-icon",
+  "artImagePath": "/assets/art/flayer_claws.jpg"
+}
