@@ -1,0 +1,27 @@
+{
+  "id": "7f23c7bb-9344-4133-b8fe-903e3cae77f8",
+  "slug": "flamestorm-gauntlets",
+  "name": "Flamestorm Gauntlets",
+  "type": "energy_flamer",
+  "faction": "adeptus_astartes",
+  "engineDamage": {
+    "baseDamage": 45,
+    "armorPenetration": 20,
+    "attacksPerSecond": 2.2,
+    "rangeMeters": 75,
+    "accuracyPercent": 95,
+    "projectileVelocityMps": 75,
+    "burstCount": 4,
+    "reloadTimeSeconds": 2.5
+  },
+  "loreDescriptor": {
+    "caliber": "Projected incendiary stream",
+    "propellant": "Pressurised fuel and ignition system",
+    "muzzleVelocityMps": 55,
+    "effectiveRangeKm": 0.12,
+    "loreEffectDescription": "Flamestorm Gauntlets is the selected primary armament for Aggressor Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Astartes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "flamestorm-gauntlets-icon",
+  "artImagePath": "/assets/art/flamestorm_gauntlets.jpg"
+}

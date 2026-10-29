@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `aggressor-squad` | adeptus_astartes | heavy_support | flamestorm-gauntlets |
 | `flayed-ones` | necrons | shock_infantry | flayer-claws |
 | `scourges` | drukhari | fast_attack | haywire-blaster |
 | `brokhyr-thunderkyn` | leagues_of_votann | heavy_support | thunderkyn-bolt-cannon |
@@ -85,6 +86,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `flamestorm-gauntlets` | adeptus_astartes | energy_flamer |
 | `flayer-claws` | necrons | melee_crude |
 | `haywire-blaster` | drukhari | energy_gauss |
 | `thunderkyn-bolt-cannon` | leagues_of_votann | ballistic_slug |
@@ -158,6 +160,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `aggressor-squad-armor_durability` | `aggressor-squad` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `flayed-ones-transhuman_dread` | `flayed-ones` | transhuman_dread | Warhammer 40,000 Faction Index: Necrons |
 | `scourges-velocity_discrepancy` | `scourges` | velocity_discrepancy | Warhammer 40,000 Faction Index: Drukhari |
 | `brokhyr-thunderkyn-armor_durability` | `brokhyr-thunderkyn` | armor_durability | Warhammer 40,000 Faction Index: Leagues of Votann |
@@ -260,7 +263,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 21 | cadian-shock-trooper |
-| heavy_support | 12 | — |
+| heavy_support | 13 | — |
 | fast_attack | 10 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
@@ -272,6 +275,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-29 | `aggressor-squad`, `flamestorm-gauntlets`, `aggressor-squad-armor_durability` | statvault-wiki-agent |
 | 2026-10-28 | `flayed-ones`, `flayer-claws`, `flayed-ones-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-27 | `scourges`, `haywire-blaster`, `scourges-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-10-26 | `brokhyr-thunderkyn`, `thunderkyn-bolt-cannon`, `brokhyr-thunderkyn-armor_durability` | statvault-wiki-agent |
