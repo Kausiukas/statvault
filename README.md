@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Flayed Ones
+## 🌟 Daily Featured Dataslate: Aggressor Squad
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/flayed-ones_concept.png" alt="Flayed Ones in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/aggressor-squad_concept.png" alt="Aggressor Squad in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Flayed Ones deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Aggressor Squad deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/flayed-ones_multiview_0.png" alt="Flayed Ones" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/aggressor-squad_multiview_0.png" alt="Aggressor Squad" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Flayed Ones</b></h3>
+      <h3><b>Aggressor Squad</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-NECRONS-00ff66?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-SHOCK%20INFANTRY-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-780%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-ADEPTUS%20ASTARTES-0055aa?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-HEAVY%20SUPPORT-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-900%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Provisional shock infantry profile centred on Flayer Claws; retain as unapproved until detailed balance and source review."</i></p>
+      <i>"Provisional heavy support profile centred on Flamestorm Gauntlets; retain as unapproved until detailed balance and source review."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 235mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1200 HP (Armor Rating: 105)<br/>
-      • <b>RTS Tactical Speed:</b> 8.3 mph (13.3 km/h)<br/>
-      • <b>Primary Armament:</b> Flayer Claws (AP: 24, Base Dmg: 39)<br/>
-      • <b>Lore Phenomenon:</b> Flayed Ones is a Necrons shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require so...</p>
+      • <b>Lore Armor Protection:</b> 280mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1500 HP (Armor Rating: 120)<br/>
+      • <b>RTS Tactical Speed:</b> 9.4 mph (15.1 km/h)<br/>
+      • <b>Primary Armament:</b> Flamestorm Gauntlets (AP: 20, Base Dmg: 45)<br/>
+      • <b>Lore Phenomenon:</b> Aggressor Squad is a Adeptus Astartes heavy support formation queued for corpus expansion. Temporary static backlog seed; quantitative value...</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,25 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/flayed-ones_multiview_0.png"><img src="assets/art/flayed-ones_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/flayed-ones_multiview_1.png"><img src="assets/art/flayed-ones_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/flayed-ones_multiview_2.png"><img src="assets/art/flayed-ones_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/aggressor-squad_multiview_0.png"><img src="assets/art/aggressor-squad_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/aggressor-squad_multiview_1.png"><img src="assets/art/aggressor-squad_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/aggressor-squad_multiview_2.png"><img src="assets/art/aggressor-squad_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Flayer Claws</th>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Flamestorm Gauntlets</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/flayer-claws_multiview_0.png"><img src="assets/art/flayer-claws_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/flayer-claws_multiview_1.png"><img src="assets/art/flayer-claws_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/flayer-claws_multiview_2.png"><img src="assets/art/flayer-claws_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/flamestorm-gauntlets_multiview_0.png"><img src="assets/art/flamestorm-gauntlets_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/flamestorm-gauntlets_multiview_1.png"><img src="assets/art/flamestorm-gauntlets_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/flamestorm-gauntlets_multiview_2.png"><img src="assets/art/flamestorm-gauntlets_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/flayed-ones.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/flayer-claws.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/aggressor-squad.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/flamestorm-gauntlets.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
