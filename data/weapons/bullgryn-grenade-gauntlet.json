@@ -1,0 +1,27 @@
+{
+  "id": "222784a5-cd85-40b0-afc9-fa1f2eedf427",
+  "slug": "bullgryn-grenade-gauntlet",
+  "name": "Bullgryn Grenade Gauntlet",
+  "type": "explosive_missile",
+  "faction": "astra_militarum",
+  "engineDamage": {
+    "baseDamage": 76,
+    "armorPenetration": 62,
+    "attacksPerSecond": 0.35,
+    "rangeMeters": 320,
+    "accuracyPercent": 70,
+    "projectileVelocityMps": 390,
+    "burstCount": 1,
+    "reloadTimeSeconds": 4
+  },
+  "loreDescriptor": {
+    "caliber": "Guided or ballistic explosive warhead",
+    "propellant": "Solid-fuel rocket motor",
+    "muzzleVelocityMps": 420,
+    "effectiveRangeKm": 2.5,
+    "loreEffectDescription": "Bullgryn Grenade Gauntlet is the selected primary armament for Bullgryn Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "bullgryn-grenade-gauntlet-icon",
+  "artImagePath": "/assets/art/bullgryn_grenade_gauntlet.jpg"
+}

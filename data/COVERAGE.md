@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `bullgryn-squad` | astra_militarum | heavy_support | bullgryn-grenade-gauntlet |
 | `aggressor-squad` | adeptus_astartes | heavy_support | flamestorm-gauntlets |
 | `flayed-ones` | necrons | shock_infantry | flayer-claws |
 | `scourges` | drukhari | fast_attack | haywire-blaster |
@@ -86,6 +87,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `bullgryn-grenade-gauntlet` | astra_militarum | explosive_missile |
 | `flamestorm-gauntlets` | adeptus_astartes | energy_flamer |
 | `flayer-claws` | necrons | melee_crude |
 | `haywire-blaster` | drukhari | energy_gauss |
@@ -160,6 +162,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `bullgryn-squad-armor_durability` | `bullgryn-squad` | armor_durability | Warhammer 40,000 Faction Index: Astra Militarum |
 | `aggressor-squad-armor_durability` | `aggressor-squad` | armor_durability | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `flayed-ones-transhuman_dread` | `flayed-ones` | transhuman_dread | Warhammer 40,000 Faction Index: Necrons |
 | `scourges-velocity_discrepancy` | `scourges` | velocity_discrepancy | Warhammer 40,000 Faction Index: Drukhari |
@@ -263,7 +266,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 21 | cadian-shock-trooper |
-| heavy_support | 13 | — |
+| heavy_support | 14 | — |
 | fast_attack | 10 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
@@ -275,6 +278,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-10-30 | `bullgryn-squad`, `bullgryn-grenade-gauntlet`, `bullgryn-squad-armor_durability` | statvault-wiki-agent |
 | 2026-10-29 | `aggressor-squad`, `flamestorm-gauntlets`, `aggressor-squad-armor_durability` | statvault-wiki-agent |
 | 2026-10-28 | `flayed-ones`, `flayer-claws`, `flayed-ones-transhuman_dread` | statvault-wiki-agent |
 | 2026-10-27 | `scourges`, `haywire-blaster`, `scourges-velocity_discrepancy` | statvault-wiki-agent |

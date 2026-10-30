@@ -1,0 +1,18 @@
+{
+  "id": "66d5505f-b8ba-4f54-962e-682097cf5ae6",
+  "unitSlug": "bullgryn-squad",
+  "category": "armor_durability",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Astra Militarum",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Bullgryn Squad: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-10-30T05:00:58.912Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
