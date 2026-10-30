@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "bullgryn-grenade-gauntlet",
-  "tacticalDescription": "Provisional heavy support profile centred on Bullgryn Grenade Gauntlet; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on Bullgryn Grenade Gauntlet; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/bullgryn-squad_multiview_0.png",
+    "assets/art/bullgryn-squad_multiview_1.png",
+    "assets/art/bullgryn-squad_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/bullgryn-squad_concept.png",
+  "artImagePath": "assets/art/bullgryn-squad_concept.png"
 }
