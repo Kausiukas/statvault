@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Orks. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "ork-burna-icon",
-  "artImagePath": "/assets/art/ork_burna.jpg"
+  "artImagePath": "assets/art/ork-burna_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/ork-burna_multiview_0.png",
+    "assets/art/ork-burna_multiview_1.png",
+    "assets/art/ork-burna_multiview_2.png"
+  ]
 }

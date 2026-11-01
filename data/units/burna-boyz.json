@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "ork-burna",
-  "tacticalDescription": "Provisional line infantry profile centred on Ork Burna; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Ork Burna; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/burna-boyz_multiview_0.png",
+    "assets/art/burna-boyz_multiview_1.png",
+    "assets/art/burna-boyz_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/burna-boyz_concept.png",
+  "artImagePath": "assets/art/burna-boyz_concept.png"
 }
