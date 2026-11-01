@@ -1,0 +1,27 @@
+{
+  "id": "7c7e605a-4191-45cc-adb2-895600ec57a5",
+  "slug": "ork-burna",
+  "name": "Ork Burna",
+  "type": "energy_flamer",
+  "faction": "orks",
+  "engineDamage": {
+    "baseDamage": 45,
+    "armorPenetration": 20,
+    "attacksPerSecond": 2.2,
+    "rangeMeters": 75,
+    "accuracyPercent": 95,
+    "projectileVelocityMps": 75,
+    "burstCount": 4,
+    "reloadTimeSeconds": 2.5
+  },
+  "loreDescriptor": {
+    "caliber": "Projected incendiary stream",
+    "propellant": "Pressurised fuel and ignition system",
+    "muzzleVelocityMps": 55,
+    "effectiveRangeKm": 0.12,
+    "loreEffectDescription": "Ork Burna is the selected primary armament for Burna Boyz. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Orks. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "ork-burna-icon",
+  "artImagePath": "/assets/art/ork_burna.jpg"
+}
