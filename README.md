@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Noise Marines
+## 🌟 Daily Featured Dataslate: Burna Boyz
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/noise-marines_concept.png" alt="Noise Marines in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/burna-boyz_concept.png" alt="Burna Boyz in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Noise Marines deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Burna Boyz deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/noise-marines_multiview_0.png" alt="Noise Marines" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/burna-boyz_multiview_0.png" alt="Burna Boyz" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Noise Marines</b></h3>
+      <h3><b>Burna Boyz</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-CHAOS%20SPACE%20MARINES-cc2222?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-ORKS-228822?style=flat-square" />
         <img src="https://img.shields.io/badge/Role-LINE%20INFANTRY-blue?style=flat-square" />
         <img src="https://img.shields.io/badge/Engine_Cost-600%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Provisional line infantry profile centred on Sonic Blaster; retain as unapproved until detailed balance and source review."</i></p>
+      <i>"Provisional line infantry profile centred on Ork Burna; retain as unapproved until detailed balance and source review."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 260mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1000 HP (Armor Rating: 105)<br/>
-      • <b>RTS Tactical Speed:</b> 11.4 mph (18.4 km/h)<br/>
-      • <b>Primary Armament:</b> Sonic Blaster (AP: 31, Base Dmg: 40)<br/>
-      • <b>Lore Phenomenon:</b> Noise Marines is a Chaos Space Marines line infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative valu...</p>
+      • <b>Lore Armor Protection:</b> 55mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1000 HP (Armor Rating: 45)<br/>
+      • <b>RTS Tactical Speed:</b> 10.3 mph (16.6 km/h)<br/>
+      • <b>Primary Armament:</b> Ork Burna (AP: 20, Base Dmg: 45)<br/>
+      • <b>Lore Phenomenon:</b> Burna Boyz is a Orks line infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-...</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,25 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/noise-marines_multiview_0.png"><img src="assets/art/noise-marines_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/noise-marines_multiview_1.png"><img src="assets/art/noise-marines_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/noise-marines_multiview_2.png"><img src="assets/art/noise-marines_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/burna-boyz_multiview_0.png"><img src="assets/art/burna-boyz_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/burna-boyz_multiview_1.png"><img src="assets/art/burna-boyz_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/burna-boyz_multiview_2.png"><img src="assets/art/burna-boyz_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Sonic Blaster</th>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Ork Burna</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/sonic-blaster_multiview_0.png"><img src="assets/art/sonic-blaster_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/sonic-blaster_multiview_1.png"><img src="assets/art/sonic-blaster_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/sonic-blaster_multiview_2.png"><img src="assets/art/sonic-blaster_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/ork-burna_multiview_0.png"><img src="assets/art/ork-burna_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/ork-burna_multiview_1.png"><img src="assets/art/ork-burna_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/ork-burna_multiview_2.png"><img src="assets/art/ork-burna_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/noise-marines.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/sonic-blaster.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/burna-boyz.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/ork-burna.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
