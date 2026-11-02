@@ -1,0 +1,64 @@
+{
+  "id": "f3775b7c-cc04-48de-8fcd-eb1b4a141ee8",
+  "slug": "swooping-hawks",
+  "name": "Swooping Hawks",
+  "faction": "aeldari",
+  "subFaction": "Aeldari",
+  "role": "fast_attack",
+  "engineStats": {
+    "hitPoints": 1100,
+    "modelCount": 5,
+    "armor": 55,
+    "speedMps": 9.3,
+    "chargeSpeedMps": 11.6,
+    "acceleration": 4,
+    "massKgPerModel": 90,
+    "leadership": 82,
+    "baseCostPoints": 820,
+    "collisionRadiusM": 0.7
+  },
+  "loreStats": {
+    "reactionTimeMs": 4.5,
+    "sprintSpeedMps": 16.3,
+    "sprintSpeedMph": 36.5,
+    "dreadAuraRadiusM": 0,
+    "dreadShockFactor": 0,
+    "armorComposition": "Psychoreactive mesh and shaped thermoplas plates",
+    "armorEquivalentRHAmm": 88,
+    "combatStaminaHours": 16,
+    "citation": "Warhammer 40,000 Faction Index: Aeldari. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Swooping Hawks is a Aeldari fast attack formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/swooping-hawks.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 28,
+      "mobility": 67,
+      "burstDmg": 63,
+      "sustainedDps": 84,
+      "utility": 42,
+      "mass": 15
+    },
+    "loreCanon": {
+      "ehp": 35,
+      "mobility": 100,
+      "burstDmg": 88,
+      "sustainedDps": 100,
+      "utility": 42,
+      "mass": 18
+    }
+  },
+  "primaryWeaponSlug": "hawk-lasblaster",
+  "tacticalDescription": "Provisional fast attack profile centred on Lasblaster; retain as unapproved until detailed balance and source review."
+}

@@ -1,0 +1,27 @@
+{
+  "id": "02035f65-85ae-4085-af9d-cbff53ccd802",
+  "slug": "hawk-lasblaster",
+  "name": "Lasblaster",
+  "type": "energy_las",
+  "faction": "aeldari",
+  "engineDamage": {
+    "baseDamage": 28,
+    "armorPenetration": 20,
+    "attacksPerSecond": 1.8,
+    "rangeMeters": 220,
+    "accuracyPercent": 78,
+    "projectileVelocityMps": 1200,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.4
+  },
+  "loreDescriptor": {
+    "caliber": "Coherent high-energy light pulse",
+    "propellant": "Rechargeable power cell",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 1.2,
+    "loreEffectDescription": "Lasblaster is the selected primary armament for Swooping Hawks. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Aeldari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "hawk-lasblaster-icon",
+  "artImagePath": "/assets/art/hawk_lasblaster.jpg"
+}

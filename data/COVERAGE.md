@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `swooping-hawks` | aeldari | fast_attack | hawk-lasblaster |
 | `burna-boyz` | orks | line_infantry | ork-burna |
 | `noise-marines` | chaos_space_marines | line_infantry | sonic-blaster |
 | `bullgryn-squad` | astra_militarum | heavy_support | bullgryn-grenade-gauntlet |
@@ -89,6 +90,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `hawk-lasblaster` | aeldari | energy_las |
 | `ork-burna` | orks | energy_flamer |
 | `sonic-blaster` | chaos_space_marines | energy_pulse |
 | `bullgryn-grenade-gauntlet` | astra_militarum | explosive_missile |
@@ -166,6 +168,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `swooping-hawks-velocity_discrepancy` | `swooping-hawks` | velocity_discrepancy | Warhammer 40,000 Faction Index: Aeldari |
 | `burna-boyz-weapon_potency` | `burna-boyz` | weapon_potency | Warhammer 40,000 Faction Index: Orks |
 | `noise-marines-weapon_potency` | `noise-marines` | weapon_potency | Warhammer 40,000 Faction Index: Chaos Space Marines |
 | `bullgryn-squad-armor_durability` | `bullgryn-squad` | armor_durability | Warhammer 40,000 Faction Index: Astra Militarum |
@@ -273,7 +276,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 23 | cadian-shock-trooper |
 | heavy_support | 14 | — |
-| fast_attack | 10 | — |
+| fast_attack | 11 | — |
 | monstrous_creature | 1 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -284,6 +287,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-02 | `swooping-hawks`, `hawk-lasblaster`, `swooping-hawks-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-01 | `burna-boyz`, `ork-burna`, `burna-boyz-weapon_potency` | statvault-wiki-agent |
 | 2026-10-31 | `noise-marines`, `sonic-blaster`, `noise-marines-weapon_potency` | statvault-wiki-agent |
 | 2026-10-30 | `bullgryn-squad`, `bullgryn-grenade-gauntlet`, `bullgryn-squad-armor_durability` | statvault-wiki-agent |
