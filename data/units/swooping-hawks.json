@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "hawk-lasblaster",
-  "tacticalDescription": "Provisional fast attack profile centred on Lasblaster; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional fast attack profile centred on Lasblaster; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/swooping-hawks_multiview_0.png",
+    "assets/art/swooping-hawks_multiview_1.png",
+    "assets/art/swooping-hawks_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/swooping-hawks_concept.png",
+  "artImagePath": "assets/art/swooping-hawks_concept.png"
 }

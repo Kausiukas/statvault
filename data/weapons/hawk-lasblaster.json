@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Aeldari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "hawk-lasblaster-icon",
-  "artImagePath": "/assets/art/hawk_lasblaster.jpg"
+  "artImagePath": "assets/art/hawk-lasblaster_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/hawk-lasblaster_multiview_0.png",
+    "assets/art/hawk-lasblaster_multiview_1.png",
+    "assets/art/hawk-lasblaster_multiview_2.png"
+  ]
 }
