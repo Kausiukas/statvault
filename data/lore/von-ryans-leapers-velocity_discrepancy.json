@@ -1,0 +1,18 @@
+{
+  "id": "6981d08d-34ee-4d80-b9c2-b7141b1d6142",
+  "unitSlug": "von-ryans-leapers",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Tyranids",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Von Ryan's Leapers: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-03T05:00:49.533Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
