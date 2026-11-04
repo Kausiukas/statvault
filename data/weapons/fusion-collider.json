@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: T'au Empire. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "fusion-collider-icon",
-  "artImagePath": "/assets/art/fusion_collider.jpg"
+  "artImagePath": "assets/art/fusion-collider_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/fusion-collider_multiview_0.png",
+    "assets/art/fusion-collider_multiview_1.png",
+    "assets/art/fusion-collider_multiview_2.png"
+  ]
 }

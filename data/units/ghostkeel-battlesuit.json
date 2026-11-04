@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "fusion-collider",
-  "tacticalDescription": "Provisional monstrous creature profile centred on Fusion Collider; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional monstrous creature profile centred on Fusion Collider; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/ghostkeel-battlesuit_multiview_0.png",
+    "assets/art/ghostkeel-battlesuit_multiview_1.png",
+    "assets/art/ghostkeel-battlesuit_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/ghostkeel-battlesuit_concept.png",
+  "artImagePath": "assets/art/ghostkeel-battlesuit_concept.png"
 }
