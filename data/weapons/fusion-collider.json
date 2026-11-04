@@ -1,0 +1,27 @@
+{
+  "id": "930400ec-e37c-4b4d-b5d5-10dc245c98c0",
+  "slug": "fusion-collider",
+  "name": "Fusion Collider",
+  "type": "energy_melta",
+  "faction": "tau_empire",
+  "engineDamage": {
+    "baseDamage": 82,
+    "armorPenetration": 78,
+    "attacksPerSecond": 0.45,
+    "rangeMeters": 90,
+    "accuracyPercent": 76,
+    "projectileVelocityMps": 1000,
+    "burstCount": 1,
+    "reloadTimeSeconds": 3.2
+  },
+  "loreDescriptor": {
+    "caliber": "Short-range thermal beam",
+    "propellant": "Fusion-reactor fuel charge",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 0.25,
+    "loreEffectDescription": "Fusion Collider is the selected primary armament for Ghostkeel Battlesuit. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: T'au Empire. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "fusion-collider-icon",
+  "artImagePath": "/assets/art/fusion_collider.jpg"
+}
