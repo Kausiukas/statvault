@@ -23,5 +23,9 @@
     "citation": "Warhammer 40,000 Faction Index: Adepta Sororitas. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "zephyrim-power-sword-icon",
-  "artImagePath": "/assets/art/zephyrim_power_sword.jpg"
+  "artImagePath": "assets/art/zephyrim-power-sword_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/zephyrim-power-sword_multiview_0.png",
+    "assets/art/zephyrim-power-sword_multiview_1.png"
+  ]
 }
