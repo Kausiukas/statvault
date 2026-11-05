@@ -1,0 +1,18 @@
+{
+  "id": "de9eb396-36a8-419e-8ee3-33b7000eb386",
+  "unitSlug": "zephyrim-squad",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Adepta Sororitas",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Zephyrim Squad: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-05T05:00:56.282Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

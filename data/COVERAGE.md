@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `zephyrim-squad` | adepta_sororitas | fast_attack | zephyrim-power-sword |
 | `ghostkeel-battlesuit` | tau_empire | monstrous_creature | fusion-collider |
 | `von-ryans-leapers` | tyranids | fast_attack | leaper-mantis-claws |
 | `swooping-hawks` | aeldari | fast_attack | hawk-lasblaster |
@@ -92,6 +93,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `zephyrim-power-sword` | adepta_sororitas | melee_power |
 | `fusion-collider` | tau_empire | energy_melta |
 | `leaper-mantis-claws` | tyranids | bio_weapon |
 | `hawk-lasblaster` | aeldari | energy_las |
@@ -172,6 +174,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `zephyrim-squad-velocity_discrepancy` | `zephyrim-squad` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `ghostkeel-battlesuit-transhuman_dread` | `ghostkeel-battlesuit` | transhuman_dread | Warhammer 40,000 Faction Index: T'au Empire |
 | `von-ryans-leapers-velocity_discrepancy` | `von-ryans-leapers` | velocity_discrepancy | Warhammer 40,000 Faction Index: Tyranids |
 | `swooping-hawks-velocity_discrepancy` | `swooping-hawks` | velocity_discrepancy | Warhammer 40,000 Faction Index: Aeldari |
@@ -282,7 +285,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 23 | cadian-shock-trooper |
 | heavy_support | 14 | — |
-| fast_attack | 12 | — |
+| fast_attack | 13 | — |
 | monstrous_creature | 2 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -293,6 +296,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-05 | `zephyrim-squad`, `zephyrim-power-sword`, `zephyrim-squad-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-04 | `ghostkeel-battlesuit`, `fusion-collider`, `ghostkeel-battlesuit-transhuman_dread` | statvault-wiki-agent |
 | 2026-11-03 | `von-ryans-leapers`, `leaper-mantis-claws`, `von-ryans-leapers-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-02 | `swooping-hawks`, `hawk-lasblaster`, `swooping-hawks-velocity_discrepancy` | statvault-wiki-agent |
