@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `brokhyr-iron-master` | leagues_of_votann | line_infantry | graviton-rifle |
 | `sisters-of-silence-witchseekers` | adeptus_custodes | line_infantry | witchseeker-flamer |
 | `zephyrim-squad` | adepta_sororitas | fast_attack | zephyrim-power-sword |
 | `ghostkeel-battlesuit` | tau_empire | monstrous_creature | fusion-collider |
@@ -94,6 +95,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `graviton-rifle` | leagues_of_votann | energy_gauss |
 | `witchseeker-flamer` | adeptus_custodes | energy_flamer |
 | `zephyrim-power-sword` | adepta_sororitas | melee_power |
 | `fusion-collider` | tau_empire | energy_melta |
@@ -176,6 +178,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `brokhyr-iron-master-weapon_potency` | `brokhyr-iron-master` | weapon_potency | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `sisters-of-silence-witchseekers-weapon_potency` | `sisters-of-silence-witchseekers` | weapon_potency | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `zephyrim-squad-velocity_discrepancy` | `zephyrim-squad` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `ghostkeel-battlesuit-transhuman_dread` | `ghostkeel-battlesuit` | transhuman_dread | Warhammer 40,000 Faction Index: T'au Empire |
@@ -286,7 +289,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 24 | cadian-shock-trooper |
+| line_infantry | 25 | cadian-shock-trooper |
 | heavy_support | 14 | — |
 | fast_attack | 13 | — |
 | monstrous_creature | 2 | — |
@@ -299,6 +302,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-07 | `brokhyr-iron-master`, `graviton-rifle`, `brokhyr-iron-master-weapon_potency` | statvault-wiki-agent |
 | 2026-11-06 | `sisters-of-silence-witchseekers`, `witchseeker-flamer`, `sisters-of-silence-witchseekers-weapon_potency` | statvault-wiki-agent |
 | 2026-11-05 | `zephyrim-squad`, `zephyrim-power-sword`, `zephyrim-squad-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-04 | `ghostkeel-battlesuit`, `fusion-collider`, `ghostkeel-battlesuit-transhuman_dread` | statvault-wiki-agent |

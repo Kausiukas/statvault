@@ -1,0 +1,18 @@
+{
+  "id": "7fbf6581-ac39-445e-a7e6-b9072a1035b9",
+  "unitSlug": "brokhyr-iron-master",
+  "category": "weapon_potency",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Leagues of Votann",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Brokhyr Iron-Master: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-07T05:01:07.739Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
