@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "graviton-rifle",
-  "tacticalDescription": "Provisional line infantry profile centred on Graviton Rifle; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Graviton Rifle; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/brokhyr-iron-master_multiview_0.png",
+    "assets/art/brokhyr-iron-master_multiview_1.png",
+    "assets/art/brokhyr-iron-master_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/brokhyr-iron-master_concept.png",
+  "artImagePath": "assets/art/brokhyr-iron-master_concept.png"
 }
