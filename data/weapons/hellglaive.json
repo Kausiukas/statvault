@@ -23,5 +23,9 @@
     "citation": "Warhammer 40,000 Faction Index: Drukhari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "hellglaive-icon",
-  "artImagePath": "/assets/art/hellglaive.jpg"
+  "artImagePath": "assets/art/hellglaive_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/hellglaive_multiview_0.png",
+    "assets/art/hellglaive_multiview_1.png"
+  ]
 }
