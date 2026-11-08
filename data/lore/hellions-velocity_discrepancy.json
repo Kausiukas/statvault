@@ -1,0 +1,18 @@
+{
+  "id": "50154663-d7f3-44aa-8bfd-f249ec74ef7a",
+  "unitSlug": "hellions",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Drukhari",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Hellions: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-08T05:00:39.754Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
