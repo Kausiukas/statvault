@@ -1,0 +1,27 @@
+{
+  "id": "37f8e49b-9acb-4a85-aea9-5d73fa46c0e2",
+  "slug": "assault-bolters",
+  "name": "Assault Bolters",
+  "type": "ballistic_slug",
+  "faction": "adeptus_astartes",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Assault Bolters is the selected primary armament for Inceptor Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Astartes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "assault-bolters-icon",
+  "artImagePath": "/assets/art/assault_bolters.jpg"
+}

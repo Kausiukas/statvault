@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `inceptor-squad` | adeptus_astartes | fast_attack | assault-bolters |
 | `lokhust-destroyers` | necrons | fast_attack | lokhust-gauss-cannon |
 | `hellions` | drukhari | fast_attack | hellglaive |
 | `brokhyr-iron-master` | leagues_of_votann | line_infantry | graviton-rifle |
@@ -97,6 +98,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `assault-bolters` | adeptus_astartes | ballistic_slug |
 | `lokhust-gauss-cannon` | necrons | energy_gauss |
 | `hellglaive` | drukhari | melee_power |
 | `graviton-rifle` | leagues_of_votann | energy_gauss |
@@ -182,6 +184,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `inceptor-squad-velocity_discrepancy` | `inceptor-squad` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `lokhust-destroyers-velocity_discrepancy` | `lokhust-destroyers` | velocity_discrepancy | Warhammer 40,000 Faction Index: Necrons |
 | `hellions-velocity_discrepancy` | `hellions` | velocity_discrepancy | Warhammer 40,000 Faction Index: Drukhari |
 | `brokhyr-iron-master-weapon_potency` | `brokhyr-iron-master` | weapon_potency | Warhammer 40,000 Faction Index: Leagues of Votann |
@@ -297,7 +300,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 25 | cadian-shock-trooper |
 | heavy_support | 14 | — |
-| fast_attack | 15 | — |
+| fast_attack | 16 | — |
 | monstrous_creature | 2 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -308,6 +311,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-10 | `inceptor-squad`, `assault-bolters`, `inceptor-squad-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-09 | `lokhust-destroyers`, `lokhust-gauss-cannon`, `lokhust-destroyers-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-08 | `hellions`, `hellglaive`, `hellions-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-07 | `brokhyr-iron-master`, `graviton-rifle`, `brokhyr-iron-master-weapon_potency` | statvault-wiki-agent |
