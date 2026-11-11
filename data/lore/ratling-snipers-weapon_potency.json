@@ -1,0 +1,18 @@
+{
+  "id": "0857fd10-9dfe-46d6-8b6f-54ed41877124",
+  "unitSlug": "ratling-snipers",
+  "category": "weapon_potency",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Astra Militarum",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Ratling Snipers: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-11T05:01:04.440Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

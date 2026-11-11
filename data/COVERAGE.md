@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `ratling-snipers` | astra_militarum | line_infantry | ratling-long-las |
 | `inceptor-squad` | adeptus_astartes | fast_attack | assault-bolters |
 | `lokhust-destroyers` | necrons | fast_attack | lokhust-gauss-cannon |
 | `hellions` | drukhari | fast_attack | hellglaive |
@@ -98,6 +99,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `ratling-long-las` | astra_militarum | energy_las |
 | `assault-bolters` | adeptus_astartes | ballistic_slug |
 | `lokhust-gauss-cannon` | necrons | energy_gauss |
 | `hellglaive` | drukhari | melee_power |
@@ -184,6 +186,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `ratling-snipers-weapon_potency` | `ratling-snipers` | weapon_potency | Warhammer 40,000 Faction Index: Astra Militarum |
 | `inceptor-squad-velocity_discrepancy` | `inceptor-squad` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `lokhust-destroyers-velocity_discrepancy` | `lokhust-destroyers` | velocity_discrepancy | Warhammer 40,000 Faction Index: Necrons |
 | `hellions-velocity_discrepancy` | `hellions` | velocity_discrepancy | Warhammer 40,000 Faction Index: Drukhari |
@@ -298,7 +301,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 25 | cadian-shock-trooper |
+| line_infantry | 26 | cadian-shock-trooper |
 | heavy_support | 14 | — |
 | fast_attack | 16 | — |
 | monstrous_creature | 2 | — |
@@ -311,6 +314,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-11 | `ratling-snipers`, `ratling-long-las`, `ratling-snipers-weapon_potency` | statvault-wiki-agent |
 | 2026-11-10 | `inceptor-squad`, `assault-bolters`, `inceptor-squad-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-09 | `lokhust-destroyers`, `lokhust-gauss-cannon`, `lokhust-destroyers-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-08 | `hellions`, `hellglaive`, `hellions-velocity_discrepancy` | statvault-wiki-agent |

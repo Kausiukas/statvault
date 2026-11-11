@@ -1,0 +1,27 @@
+{
+  "id": "dcfc1693-0be6-42b9-9ab9-e44f1a8185cf",
+  "slug": "ratling-long-las",
+  "name": "Ratling Long-Las",
+  "type": "energy_las",
+  "faction": "astra_militarum",
+  "engineDamage": {
+    "baseDamage": 28,
+    "armorPenetration": 20,
+    "attacksPerSecond": 1.8,
+    "rangeMeters": 220,
+    "accuracyPercent": 78,
+    "projectileVelocityMps": 1200,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.4
+  },
+  "loreDescriptor": {
+    "caliber": "Coherent high-energy light pulse",
+    "propellant": "Rechargeable power cell",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 1.2,
+    "loreEffectDescription": "Ratling Long-Las is the selected primary armament for Ratling Snipers. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "ratling-long-las-icon",
+  "artImagePath": "/assets/art/ratling_long_las.jpg"
+}
