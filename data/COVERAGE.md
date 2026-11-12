@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `havoc-squad` | chaos_space_marines | heavy_support | reaper-chaincannon |
 | `ratling-snipers` | astra_militarum | line_infantry | ratling-long-las |
 | `inceptor-squad` | adeptus_astartes | fast_attack | assault-bolters |
 | `lokhust-destroyers` | necrons | fast_attack | lokhust-gauss-cannon |
@@ -99,6 +100,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `reaper-chaincannon` | chaos_space_marines | ballistic_slug |
 | `ratling-long-las` | astra_militarum | energy_las |
 | `assault-bolters` | adeptus_astartes | ballistic_slug |
 | `lokhust-gauss-cannon` | necrons | energy_gauss |
@@ -186,6 +188,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `havoc-squad-armor_durability` | `havoc-squad` | armor_durability | Warhammer 40,000 Faction Index: Chaos Space Marines |
 | `ratling-snipers-weapon_potency` | `ratling-snipers` | weapon_potency | Warhammer 40,000 Faction Index: Astra Militarum |
 | `inceptor-squad-velocity_discrepancy` | `inceptor-squad` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `lokhust-destroyers-velocity_discrepancy` | `lokhust-destroyers` | velocity_discrepancy | Warhammer 40,000 Faction Index: Necrons |
@@ -302,7 +305,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 26 | cadian-shock-trooper |
-| heavy_support | 14 | — |
+| heavy_support | 15 | — |
 | fast_attack | 16 | — |
 | monstrous_creature | 2 | — |
 | vehicle | 0 | — |
@@ -314,6 +317,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-12 | `havoc-squad`, `reaper-chaincannon`, `havoc-squad-armor_durability` | statvault-wiki-agent |
 | 2026-11-11 | `ratling-snipers`, `ratling-long-las`, `ratling-snipers-weapon_potency` | statvault-wiki-agent |
 | 2026-11-10 | `inceptor-squad`, `assault-bolters`, `inceptor-squad-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-09 | `lokhust-destroyers`, `lokhust-gauss-cannon`, `lokhust-destroyers-velocity_discrepancy` | statvault-wiki-agent |

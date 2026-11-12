@@ -1,0 +1,27 @@
+{
+  "id": "a3fde6f9-d1a3-4dbf-ac08-fbe94acbe8d5",
+  "slug": "reaper-chaincannon",
+  "name": "Reaper Chaincannon",
+  "type": "ballistic_slug",
+  "faction": "chaos_space_marines",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Reaper Chaincannon is the selected primary armament for Chaos Havoc Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Chaos Space Marines. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "reaper-chaincannon-icon",
+  "artImagePath": "/assets/art/reaper_chaincannon.jpg"
+}
