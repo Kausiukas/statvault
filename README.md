@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Chaos Havoc Squad
+## 🌟 Daily Featured Dataslate: Lootas
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/havoc-squad_concept.png" alt="Chaos Havoc Squad in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/lootas_concept.png" alt="Lootas in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Chaos Havoc Squad deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Lootas deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/havoc-squad_multiview_0.png" alt="Chaos Havoc Squad" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/lootas_multiview_0.png" alt="Lootas" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Chaos Havoc Squad</b></h3>
+      <h3><b>Lootas</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-CHAOS%20SPACE%20MARINES-cc2222?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-ORKS-228822?style=flat-square" />
         <img src="https://img.shields.io/badge/Role-HEAVY%20SUPPORT-blue?style=flat-square" />
         <img src="https://img.shields.io/badge/Engine_Cost-900%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Provisional heavy support profile centred on Reaper Chaincannon; retain as unapproved until detailed balance and source review."</i></p>
+      <i>"Provisional heavy support profile centred on Deffgun; retain as unapproved until detailed balance and source review."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 290mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1500 HP (Armor Rating: 125)<br/>
-      • <b>RTS Tactical Speed:</b> 9.4 mph (15.1 km/h)<br/>
-      • <b>Primary Armament:</b> Reaper Chaincannon (AP: 24, Base Dmg: 34)<br/>
-      • <b>Lore Phenomenon:</b> Chaos Havoc Squad is a Chaos Space Marines heavy support formation queued for corpus expansion. Temporary static backlog seed; quantitative ...</p>
+      • <b>Lore Armor Protection:</b> 85mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1500 HP (Armor Rating: 65)<br/>
+      • <b>RTS Tactical Speed:</b> 8.5 mph (13.7 km/h)<br/>
+      • <b>Primary Armament:</b> Deffgun (AP: 24, Base Dmg: 34)<br/>
+      • <b>Lore Phenomenon:</b> Lootas is a Orks heavy support formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-s...</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,25 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/havoc-squad_multiview_0.png"><img src="assets/art/havoc-squad_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/havoc-squad_multiview_1.png"><img src="assets/art/havoc-squad_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/havoc-squad_multiview_2.png"><img src="assets/art/havoc-squad_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/lootas_multiview_0.png"><img src="assets/art/lootas_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/lootas_multiview_1.png"><img src="assets/art/lootas_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/lootas_multiview_2.png"><img src="assets/art/lootas_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Reaper Chaincannon</th>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Deffgun</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/reaper-chaincannon_multiview_0.png"><img src="assets/art/reaper-chaincannon_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/reaper-chaincannon_multiview_1.png"><img src="assets/art/reaper-chaincannon_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/reaper-chaincannon_multiview_2.png"><img src="assets/art/reaper-chaincannon_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/deffgun_multiview_0.png"><img src="assets/art/deffgun_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/deffgun_multiview_1.png"><img src="assets/art/deffgun_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/deffgun_multiview_2.png"><img src="assets/art/deffgun_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/havoc-squad.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/reaper-chaincannon.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/lootas.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/deffgun.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
