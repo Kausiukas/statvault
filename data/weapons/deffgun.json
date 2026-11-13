@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Orks. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "deffgun-icon",
-  "artImagePath": "/assets/art/deffgun.jpg"
+  "artImagePath": "assets/art/deffgun_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/deffgun_multiview_0.png",
+    "assets/art/deffgun_multiview_1.png",
+    "assets/art/deffgun_multiview_2.png"
+  ]
 }
