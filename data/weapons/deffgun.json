@@ -1,0 +1,27 @@
+{
+  "id": "a946725e-1f11-44a8-a987-bc57e8aee3f7",
+  "slug": "deffgun",
+  "name": "Deffgun",
+  "type": "ballistic_slug",
+  "faction": "orks",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Deffgun is the selected primary armament for Lootas. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Orks. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "deffgun-icon",
+  "artImagePath": "/assets/art/deffgun.jpg"
+}

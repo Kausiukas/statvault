@@ -1,0 +1,18 @@
+{
+  "id": "5d3f8ed2-9333-408c-b303-e0c277d3ed5a",
+  "unitSlug": "lootas",
+  "category": "armor_durability",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Orks",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Lootas: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-13T05:00:52.571Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
