@@ -1,0 +1,27 @@
+{
+  "id": "604cfe9c-0d59-473b-a326-524465e8fa22",
+  "slug": "death-spinner",
+  "name": "Death Spinner",
+  "type": "energy_shuriken",
+  "faction": "aeldari",
+  "engineDamage": {
+    "baseDamage": 32,
+    "armorPenetration": 29,
+    "attacksPerSecond": 2.1,
+    "rangeMeters": 155,
+    "accuracyPercent": 80,
+    "projectileVelocityMps": 680,
+    "burstCount": 3,
+    "reloadTimeSeconds": 1.2
+  },
+  "loreDescriptor": {
+    "caliber": "Monomolecular disc or splinter projectile",
+    "propellant": "Gravitic or electromagnetic accelerator",
+    "muzzleVelocityMps": 2200,
+    "effectiveRangeKm": 0.8,
+    "loreEffectDescription": "Death Spinner is the selected primary armament for Warp Spiders. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Aeldari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "death-spinner-icon",
+  "artImagePath": "/assets/art/death_spinner.jpg"
+}

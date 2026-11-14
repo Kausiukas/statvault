@@ -1,0 +1,18 @@
+{
+  "id": "f3d198a7-3040-4637-891b-4b750c98a0f0",
+  "unitSlug": "warp-spiders",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Aeldari",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Warp Spiders: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-14T05:01:28.464Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
