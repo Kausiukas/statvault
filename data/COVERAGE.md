@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `barbgaunts` | tyranids | heavy_support | barbgaunt-bio-cannon |
 | `warp-spiders` | aeldari | fast_attack | death-spinner |
 | `lootas` | orks | heavy_support | deffgun |
 | `havoc-squad` | chaos_space_marines | heavy_support | reaper-chaincannon |
@@ -102,6 +103,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `barbgaunt-bio-cannon` | tyranids | bio_weapon |
 | `death-spinner` | aeldari | energy_shuriken |
 | `deffgun` | orks | ballistic_slug |
 | `reaper-chaincannon` | chaos_space_marines | ballistic_slug |
@@ -192,6 +194,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `barbgaunts-armor_durability` | `barbgaunts` | armor_durability | Warhammer 40,000 Faction Index: Tyranids |
 | `warp-spiders-velocity_discrepancy` | `warp-spiders` | velocity_discrepancy | Warhammer 40,000 Faction Index: Aeldari |
 | `lootas-armor_durability` | `lootas` | armor_durability | Warhammer 40,000 Faction Index: Orks |
 | `havoc-squad-armor_durability` | `havoc-squad` | armor_durability | Warhammer 40,000 Faction Index: Chaos Space Marines |
@@ -311,7 +314,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 24 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 26 | cadian-shock-trooper |
-| heavy_support | 16 | — |
+| heavy_support | 17 | — |
 | fast_attack | 17 | — |
 | monstrous_creature | 2 | — |
 | vehicle | 0 | — |
@@ -323,6 +326,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-15 | `barbgaunts`, `barbgaunt-bio-cannon`, `barbgaunts-armor_durability` | statvault-wiki-agent |
 | 2026-11-14 | `warp-spiders`, `death-spinner`, `warp-spiders-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-13 | `lootas`, `deffgun`, `lootas-armor_durability` | statvault-wiki-agent |
 | 2026-11-12 | `havoc-squad`, `reaper-chaincannon`, `havoc-squad-armor_durability` | statvault-wiki-agent |

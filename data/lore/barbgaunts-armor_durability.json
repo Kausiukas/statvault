@@ -1,0 +1,18 @@
+{
+  "id": "848945c2-f8c8-4a09-b7ea-bdeed52047c5",
+  "unitSlug": "barbgaunts",
+  "category": "armor_durability",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Tyranids",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Barbgaunt Brood: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-15T05:00:42.891Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
