@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "barbgaunt-bio-cannon",
-  "tacticalDescription": "Provisional heavy support profile centred on Barblauncher; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on Barblauncher; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/barbgaunts_multiview_0.png",
+    "assets/art/barbgaunts_multiview_1.png",
+    "assets/art/barbgaunts_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/barbgaunts_concept.png",
+  "artImagePath": "assets/art/barbgaunts_concept.png"
 }
