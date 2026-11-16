@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Barbgaunt Brood
+## 🌟 Daily Featured Dataslate: Riptide Battlesuit
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/barbgaunts_concept.png" alt="Barbgaunt Brood in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/riptide-battlesuit_concept.png" alt="Riptide Battlesuit in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Barbgaunt Brood deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Riptide Battlesuit deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/barbgaunts_multiview_0.png" alt="Barbgaunt Brood" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/riptide-battlesuit_multiview_0.png" alt="Riptide Battlesuit" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Barbgaunt Brood</b></h3>
+      <h3><b>Riptide Battlesuit</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-TYRANIDS-aa33aa?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-HEAVY%20SUPPORT-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-900%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-TAU%20EMPIRE-555555?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-MONSTROUS%20CREATURE-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-1250%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Provisional heavy support profile centred on Barblauncher; retain as unapproved until detailed balance and source review."</i></p>
+      <i>"Provisional monstrous creature profile centred on Heavy Burst Cannon; retain as unapproved until detailed balance and source review."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 80mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1500 HP (Armor Rating: 60)<br/>
-      • <b>RTS Tactical Speed:</b> 10.5 mph (16.9 km/h)<br/>
-      • <b>Primary Armament:</b> Barblauncher (AP: 27, Base Dmg: 37)<br/>
-      • <b>Lore Phenomenon:</b> Barbgaunt Brood is a Tyranids heavy support formation queued for corpus expansion. Temporary static backlog seed; quantitative values requir...</p>
+      • <b>Lore Armor Protection:</b> 158mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 3200 HP (Armor Rating: 90)<br/>
+      • <b>RTS Tactical Speed:</b> 8.3 mph (13.3 km/h)<br/>
+      • <b>Primary Armament:</b> Heavy Burst Cannon (AP: 31, Base Dmg: 40)<br/>
+      • <b>Lore Phenomenon:</b> Riptide Battlesuit is a T'au Empire monstrous creature formation queued for corpus expansion. Temporary static backlog seed; quantitative va...</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,25 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/barbgaunts_multiview_0.png"><img src="assets/art/barbgaunts_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/barbgaunts_multiview_1.png"><img src="assets/art/barbgaunts_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/barbgaunts_multiview_2.png"><img src="assets/art/barbgaunts_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/riptide-battlesuit_multiview_0.png"><img src="assets/art/riptide-battlesuit_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/riptide-battlesuit_multiview_1.png"><img src="assets/art/riptide-battlesuit_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/riptide-battlesuit_multiview_2.png"><img src="assets/art/riptide-battlesuit_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Barblauncher</th>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Heavy Burst Cannon</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/barbgaunt-bio-cannon_multiview_0.png"><img src="assets/art/barbgaunt-bio-cannon_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/barbgaunt-bio-cannon_multiview_1.png"><img src="assets/art/barbgaunt-bio-cannon_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/barbgaunt-bio-cannon_multiview_2.png"><img src="assets/art/barbgaunt-bio-cannon_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/heavy-burst-cannon_multiview_0.png"><img src="assets/art/heavy-burst-cannon_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/heavy-burst-cannon_multiview_1.png"><img src="assets/art/heavy-burst-cannon_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/heavy-burst-cannon_multiview_2.png"><img src="assets/art/heavy-burst-cannon_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/barbgaunts.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/barbgaunt-bio-cannon.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/riptide-battlesuit.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/heavy-burst-cannon.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
