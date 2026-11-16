@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `riptide-battlesuit` | tau_empire | monstrous_creature | heavy-burst-cannon |
 | `barbgaunts` | tyranids | heavy_support | barbgaunt-bio-cannon |
 | `warp-spiders` | aeldari | fast_attack | death-spinner |
 | `lootas` | orks | heavy_support | deffgun |
@@ -103,6 +104,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `heavy-burst-cannon` | tau_empire | energy_pulse |
 | `barbgaunt-bio-cannon` | tyranids | bio_weapon |
 | `death-spinner` | aeldari | energy_shuriken |
 | `deffgun` | orks | ballistic_slug |
@@ -194,6 +196,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `riptide-battlesuit-transhuman_dread` | `riptide-battlesuit` | transhuman_dread | Warhammer 40,000 Faction Index: T'au Empire |
 | `barbgaunts-armor_durability` | `barbgaunts` | armor_durability | Warhammer 40,000 Faction Index: Tyranids |
 | `warp-spiders-velocity_discrepancy` | `warp-spiders` | velocity_discrepancy | Warhammer 40,000 Faction Index: Aeldari |
 | `lootas-armor_durability` | `lootas` | armor_durability | Warhammer 40,000 Faction Index: Orks |
@@ -316,7 +319,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | line_infantry | 26 | cadian-shock-trooper |
 | heavy_support | 17 | — |
 | fast_attack | 17 | — |
-| monstrous_creature | 2 | — |
+| monstrous_creature | 3 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
 
@@ -326,6 +329,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-16 | `riptide-battlesuit`, `heavy-burst-cannon`, `riptide-battlesuit-transhuman_dread` | statvault-wiki-agent |
 | 2026-11-15 | `barbgaunts`, `barbgaunt-bio-cannon`, `barbgaunts-armor_durability` | statvault-wiki-agent |
 | 2026-11-14 | `warp-spiders`, `death-spinner`, `warp-spiders-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-13 | `lootas`, `deffgun`, `lootas-armor_durability` | statvault-wiki-agent |
