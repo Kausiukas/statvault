@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "yaegir-bolt-shotgun",
-  "tacticalDescription": "Provisional line infantry profile centred on Bolt Shotgun; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional line infantry profile centred on Bolt Shotgun; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/hernkyn-yaegirs_multiview_0.png",
+    "assets/art/hernkyn-yaegirs_multiview_1.png",
+    "assets/art/hernkyn-yaegirs_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/hernkyn-yaegirs_concept.png",
+  "artImagePath": "assets/art/hernkyn-yaegirs_concept.png"
 }
