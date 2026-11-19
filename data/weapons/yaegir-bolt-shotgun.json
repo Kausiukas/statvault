@@ -1,0 +1,27 @@
+{
+  "id": "eb13ff9c-eeac-401c-907a-11eb79e42a14",
+  "slug": "yaegir-bolt-shotgun",
+  "name": "Bolt Shotgun",
+  "type": "ballistic_slug",
+  "faction": "leagues_of_votann",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Bolt Shotgun is the selected primary armament for Hernkyn Yaegirs. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Leagues of Votann. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "yaegir-bolt-shotgun-icon",
+  "artImagePath": "/assets/art/yaegir_bolt_shotgun.jpg"
+}

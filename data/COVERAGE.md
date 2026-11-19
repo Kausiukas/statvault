@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `hernkyn-yaegirs` | leagues_of_votann | line_infantry | yaegir-bolt-shotgun |
 | `venatari-custodians` | adeptus_custodes | fast_attack | kinetic-destroyer |
 | `arco-flagellants` | adepta_sororitas | shock_infantry | arco-flails |
 | `riptide-battlesuit` | tau_empire | monstrous_creature | heavy-burst-cannon |
@@ -106,6 +107,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `yaegir-bolt-shotgun` | leagues_of_votann | ballistic_slug |
 | `kinetic-destroyer` | adeptus_custodes | ballistic_slug |
 | `arco-flails` | adepta_sororitas | melee_crude |
 | `heavy-burst-cannon` | tau_empire | energy_pulse |
@@ -200,6 +202,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `hernkyn-yaegirs-weapon_potency` | `hernkyn-yaegirs` | weapon_potency | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `venatari-custodians-velocity_discrepancy` | `venatari-custodians` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `arco-flagellants-transhuman_dread` | `arco-flagellants` | transhuman_dread | Warhammer 40,000 Faction Index: Adepta Sororitas |
 | `riptide-battlesuit-transhuman_dread` | `riptide-battlesuit` | transhuman_dread | Warhammer 40,000 Faction Index: T'au Empire |
@@ -322,7 +325,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | Role | Count | Example |
 |------|-------|---------|
 | shock_infantry | 25 | intercessor, kasrkin, ork-boyz, chaos-chosen |
-| line_infantry | 26 | cadian-shock-trooper |
+| line_infantry | 27 | cadian-shock-trooper |
 | heavy_support | 17 | — |
 | fast_attack | 18 | — |
 | monstrous_creature | 3 | — |
@@ -335,6 +338,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-19 | `hernkyn-yaegirs`, `yaegir-bolt-shotgun`, `hernkyn-yaegirs-weapon_potency` | statvault-wiki-agent |
 | 2026-11-18 | `venatari-custodians`, `kinetic-destroyer`, `venatari-custodians-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-17 | `arco-flagellants`, `arco-flails`, `arco-flagellants-transhuman_dread` | statvault-wiki-agent |
 | 2026-11-16 | `riptide-battlesuit`, `heavy-burst-cannon`, `riptide-battlesuit-transhuman_dread` | statvault-wiki-agent |
