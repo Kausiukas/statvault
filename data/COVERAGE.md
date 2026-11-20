@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `reaver-jetbikes` | drukhari | fast_attack | reaver-splinter-pods |
 | `hernkyn-yaegirs` | leagues_of_votann | line_infantry | yaegir-bolt-shotgun |
 | `venatari-custodians` | adeptus_custodes | fast_attack | kinetic-destroyer |
 | `arco-flagellants` | adepta_sororitas | shock_infantry | arco-flails |
@@ -107,6 +108,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `reaver-splinter-pods` | drukhari | energy_shuriken |
 | `yaegir-bolt-shotgun` | leagues_of_votann | ballistic_slug |
 | `kinetic-destroyer` | adeptus_custodes | ballistic_slug |
 | `arco-flails` | adepta_sororitas | melee_crude |
@@ -202,6 +204,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `reaver-jetbikes-velocity_discrepancy` | `reaver-jetbikes` | velocity_discrepancy | Warhammer 40,000 Faction Index: Drukhari |
 | `hernkyn-yaegirs-weapon_potency` | `hernkyn-yaegirs` | weapon_potency | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `venatari-custodians-velocity_discrepancy` | `venatari-custodians` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Custodes |
 | `arco-flagellants-transhuman_dread` | `arco-flagellants` | transhuman_dread | Warhammer 40,000 Faction Index: Adepta Sororitas |
@@ -327,7 +330,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 25 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 27 | cadian-shock-trooper |
 | heavy_support | 17 | — |
-| fast_attack | 18 | — |
+| fast_attack | 19 | — |
 | monstrous_creature | 3 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -338,6 +341,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-20 | `reaver-jetbikes`, `reaver-splinter-pods`, `reaver-jetbikes-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-19 | `hernkyn-yaegirs`, `yaegir-bolt-shotgun`, `hernkyn-yaegirs-weapon_potency` | statvault-wiki-agent |
 | 2026-11-18 | `venatari-custodians`, `kinetic-destroyer`, `venatari-custodians-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-17 | `arco-flagellants`, `arco-flails`, `arco-flagellants-transhuman_dread` | statvault-wiki-agent |

@@ -1,0 +1,27 @@
+{
+  "id": "73009b35-336d-4bcd-9316-3d3094628c02",
+  "slug": "reaver-splinter-pods",
+  "name": "Splinter Pods",
+  "type": "energy_shuriken",
+  "faction": "drukhari",
+  "engineDamage": {
+    "baseDamage": 32,
+    "armorPenetration": 29,
+    "attacksPerSecond": 2.1,
+    "rangeMeters": 155,
+    "accuracyPercent": 80,
+    "projectileVelocityMps": 680,
+    "burstCount": 3,
+    "reloadTimeSeconds": 1.2
+  },
+  "loreDescriptor": {
+    "caliber": "Monomolecular disc or splinter projectile",
+    "propellant": "Gravitic or electromagnetic accelerator",
+    "muzzleVelocityMps": 2200,
+    "effectiveRangeKm": 0.8,
+    "loreEffectDescription": "Splinter Pods is the selected primary armament for Reaver Jetbikes. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Drukhari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "reaver-splinter-pods-icon",
+  "artImagePath": "/assets/art/reaver_splinter_pods.jpg"
+}
