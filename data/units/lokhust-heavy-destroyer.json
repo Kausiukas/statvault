@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "gauss-destructor",
-  "tacticalDescription": "Provisional heavy support profile centred on Gauss Destructor; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on Gauss Destructor; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/lokhust-heavy-destroyer_multiview_0.png",
+    "assets/art/lokhust-heavy-destroyer_multiview_1.png",
+    "assets/art/lokhust-heavy-destroyer_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/lokhust-heavy-destroyer_concept.png",
+  "artImagePath": "assets/art/lokhust-heavy-destroyer_concept.png"
 }
