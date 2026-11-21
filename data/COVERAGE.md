@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `lokhust-heavy-destroyer` | necrons | heavy_support | gauss-destructor |
 | `reaver-jetbikes` | drukhari | fast_attack | reaver-splinter-pods |
 | `hernkyn-yaegirs` | leagues_of_votann | line_infantry | yaegir-bolt-shotgun |
 | `venatari-custodians` | adeptus_custodes | fast_attack | kinetic-destroyer |
@@ -108,6 +109,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `gauss-destructor` | necrons | energy_gauss |
 | `reaver-splinter-pods` | drukhari | energy_shuriken |
 | `yaegir-bolt-shotgun` | leagues_of_votann | ballistic_slug |
 | `kinetic-destroyer` | adeptus_custodes | ballistic_slug |
@@ -204,6 +206,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `lokhust-heavy-destroyer-armor_durability` | `lokhust-heavy-destroyer` | armor_durability | Warhammer 40,000 Faction Index: Necrons |
 | `reaver-jetbikes-velocity_discrepancy` | `reaver-jetbikes` | velocity_discrepancy | Warhammer 40,000 Faction Index: Drukhari |
 | `hernkyn-yaegirs-weapon_potency` | `hernkyn-yaegirs` | weapon_potency | Warhammer 40,000 Faction Index: Leagues of Votann |
 | `venatari-custodians-velocity_discrepancy` | `venatari-custodians` | velocity_discrepancy | Warhammer 40,000 Faction Index: Adeptus Custodes |
@@ -329,7 +332,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 25 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 27 | cadian-shock-trooper |
-| heavy_support | 17 | — |
+| heavy_support | 18 | — |
 | fast_attack | 19 | — |
 | monstrous_creature | 3 | — |
 | vehicle | 0 | — |
@@ -341,6 +344,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-21 | `lokhust-heavy-destroyer`, `gauss-destructor`, `lokhust-heavy-destroyer-armor_durability` | statvault-wiki-agent |
 | 2026-11-20 | `reaver-jetbikes`, `reaver-splinter-pods`, `reaver-jetbikes-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-19 | `hernkyn-yaegirs`, `yaegir-bolt-shotgun`, `hernkyn-yaegirs-weapon_potency` | statvault-wiki-agent |
 | 2026-11-18 | `venatari-custodians`, `kinetic-destroyer`, `venatari-custodians-velocity_discrepancy` | statvault-wiki-agent |

@@ -1,0 +1,18 @@
+{
+  "id": "4518dc22-e119-4c67-b916-a38c8a493123",
+  "unitSlug": "lokhust-heavy-destroyer",
+  "category": "armor_durability",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Necrons",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Lokhust Heavy Destroyer: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-21T05:00:50.962Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
