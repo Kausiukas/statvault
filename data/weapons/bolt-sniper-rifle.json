@@ -1,0 +1,27 @@
+{
+  "id": "bc1b178b-f8ce-426a-b4b7-cd52213fafdb",
+  "slug": "bolt-sniper-rifle",
+  "name": "Bolt Sniper Rifle",
+  "type": "ballistic_slug",
+  "faction": "adeptus_astartes",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Bolt Sniper Rifle is the selected primary armament for Eliminator Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Adeptus Astartes. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "bolt-sniper-rifle-icon",
+  "artImagePath": "/assets/art/bolt_sniper_rifle.jpg"
+}
