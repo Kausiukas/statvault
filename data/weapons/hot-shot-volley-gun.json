@@ -23,5 +23,10 @@
     "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
   },
   "iconSlug": "hot-shot-volley-gun-icon",
-  "artImagePath": "/assets/art/hot_shot_volley_gun.jpg"
+  "artImagePath": "assets/art/hot-shot-volley-gun_multiview_0.png",
+  "multiviewImages": [
+    "assets/art/hot-shot-volley-gun_multiview_0.png",
+    "assets/art/hot-shot-volley-gun_multiview_1.png",
+    "assets/art/hot-shot-volley-gun_multiview_2.png"
+  ]
 }
