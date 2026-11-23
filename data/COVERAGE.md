@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `tempestus-scion-squad` | astra_militarum | shock_infantry | hot-shot-volley-gun |
 | `eliminator-squad` | adeptus_astartes | line_infantry | bolt-sniper-rifle |
 | `lokhust-heavy-destroyer` | necrons | heavy_support | gauss-destructor |
 | `reaver-jetbikes` | drukhari | fast_attack | reaver-splinter-pods |
@@ -110,6 +111,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `hot-shot-volley-gun` | astra_militarum | energy_las |
 | `bolt-sniper-rifle` | adeptus_astartes | ballistic_slug |
 | `gauss-destructor` | necrons | energy_gauss |
 | `reaver-splinter-pods` | drukhari | energy_shuriken |
@@ -208,6 +210,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `tempestus-scion-squad-transhuman_dread` | `tempestus-scion-squad` | transhuman_dread | Warhammer 40,000 Faction Index: Astra Militarum |
 | `eliminator-squad-weapon_potency` | `eliminator-squad` | weapon_potency | Warhammer 40,000 Faction Index: Adeptus Astartes |
 | `lokhust-heavy-destroyer-armor_durability` | `lokhust-heavy-destroyer` | armor_durability | Warhammer 40,000 Faction Index: Necrons |
 | `reaver-jetbikes-velocity_discrepancy` | `reaver-jetbikes` | velocity_discrepancy | Warhammer 40,000 Faction Index: Drukhari |
@@ -333,7 +336,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Role | Count | Example |
 |------|-------|---------|
-| shock_infantry | 25 | intercessor, kasrkin, ork-boyz, chaos-chosen |
+| shock_infantry | 26 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 28 | cadian-shock-trooper |
 | heavy_support | 18 | — |
 | fast_attack | 19 | — |
@@ -347,6 +350,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-23 | `tempestus-scion-squad`, `hot-shot-volley-gun`, `tempestus-scion-squad-transhuman_dread` | statvault-wiki-agent |
 | 2026-11-22 | `eliminator-squad`, `bolt-sniper-rifle`, `eliminator-squad-weapon_potency` | statvault-wiki-agent |
 | 2026-11-21 | `lokhust-heavy-destroyer`, `gauss-destructor`, `lokhust-heavy-destroyer-armor_durability` | statvault-wiki-agent |
 | 2026-11-20 | `reaver-jetbikes`, `reaver-splinter-pods`, `reaver-jetbikes-velocity_discrepancy` | statvault-wiki-agent |

@@ -1,0 +1,27 @@
+{
+  "id": "eb61cc5d-5303-4a56-9e90-fdc5d29af67b",
+  "slug": "hot-shot-volley-gun",
+  "name": "Hot-Shot Volley Gun",
+  "type": "energy_las",
+  "faction": "astra_militarum",
+  "engineDamage": {
+    "baseDamage": 28,
+    "armorPenetration": 20,
+    "attacksPerSecond": 1.8,
+    "rangeMeters": 220,
+    "accuracyPercent": 78,
+    "projectileVelocityMps": 1200,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.4
+  },
+  "loreDescriptor": {
+    "caliber": "Coherent high-energy light pulse",
+    "propellant": "Rechargeable power cell",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 1.2,
+    "loreEffectDescription": "Hot-Shot Volley Gun is the selected primary armament for Tempestus Scion Squad. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Astra Militarum. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "hot-shot-volley-gun-icon",
+  "artImagePath": "/assets/art/hot_shot_volley_gun.jpg"
+}
