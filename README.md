@@ -34,15 +34,15 @@
 <!-- FEATURED_HEADER_START -->
 <div align="center">
 
-## 🌟 Daily Featured Dataslate: Tempestus Scion Squad
+## 🌟 Daily Featured Dataslate: Chaos Raptors
 *Autonomous Ingestion Pipeline — Canonical Lore Research, Multi-View Asset Suite & Battlefield Concept Art*
 
 <table>
   <tr>
     <td align="center">
-      <img src="assets/art/tempestus-scion-squad_concept.png" alt="Tempestus Scion Squad in Action" width="100%" style="border-radius: 8px;" />
+      <img src="assets/art/chaos-raptors_concept.png" alt="Chaos Raptors in Action" width="100%" style="border-radius: 8px;" />
       <br/>
-      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Tempestus Scion Squad deployed in active battlefield engagement</i></sub>
+      <sub><b>⚔️ Tactical Reconnaissance Visual:</b> <i>Chaos Raptors deployed in active battlefield engagement</i></sub>
     </td>
   </tr>
 </table>
@@ -50,25 +50,25 @@
 <table>
   <tr>
     <td width="38%" align="center" valign="middle">
-      <img src="assets/art/tempestus-scion-squad_multiview_0.png" alt="Tempestus Scion Squad" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
+      <img src="assets/art/chaos-raptors_multiview_0.png" alt="Chaos Raptors" width="100%" style="border-radius: 8px; max-height: 320px; object-fit: contain;" />
       <br/>
       <sub><b>StatVault Asset:</b> Primary Tactical Profile</sub>
     </td>
     <td width="62%" valign="top">
-      <h3><b>Tempestus Scion Squad</b></h3>
+      <h3><b>Chaos Raptors</b></h3>
       <p>
-        <img src="https://img.shields.io/badge/Faction-ASTRA%20MILITARUM-446633?style=flat-square" />
-        <img src="https://img.shields.io/badge/Role-SHOCK%20INFANTRY-blue?style=flat-square" />
-        <img src="https://img.shields.io/badge/Engine_Cost-780%20pts-gold?style=flat-square" />
+        <img src="https://img.shields.io/badge/Faction-CHAOS%20SPACE%20MARINES-cc2222?style=flat-square" />
+        <img src="https://img.shields.io/badge/Role-FAST%20ATTACK-blue?style=flat-square" />
+        <img src="https://img.shields.io/badge/Engine_Cost-820%20pts-gold?style=flat-square" />
       </p>
       <p><b>📖 Tactical Analysis:</b><br/>
-      <i>"Provisional shock infantry profile centred on Hot-Shot Volley Gun; retain as unapproved until detailed balance and source review."</i></p>
+      <i>"Provisional fast attack profile centred on Raptor Plasma Pistol; retain as unapproved until detailed balance and source review."</i></p>
       <p><b>⚡ Dual-Lens Engine vs Lore Balance:</b><br/>
-      • <b>Lore Armor Protection:</b> 50mm RHAe<br/>
-      • <b>In-Engine Durability:</b> 1200 HP (Armor Rating: 45)<br/>
-      • <b>RTS Tactical Speed:</b> 9.6 mph (15.5 km/h)<br/>
-      • <b>Primary Armament:</b> Hot-Shot Volley Gun (AP: 20, Base Dmg: 28)<br/>
-      • <b>Lore Phenomenon:</b> Tempestus Scion Squad is a Astra Militarum shock infantry formation queued for corpus expansion. Temporary static backlog seed; quantitative...</p>
+      • <b>Lore Armor Protection:</b> 268mm RHAe<br/>
+      • <b>In-Engine Durability:</b> 1100 HP (Armor Rating: 110)<br/>
+      • <b>RTS Tactical Speed:</b> 17.9 mph (28.8 km/h)<br/>
+      • <b>Primary Armament:</b> Raptor Plasma Pistol (AP: 52, Base Dmg: 58)<br/>
+      • <b>Lore Phenomenon:</b> Chaos Raptors is a Chaos Space Marines fast attack formation queued for corpus expansion. Temporary static backlog seed; quantitative values...</p>
     </td>
   </tr>
 </table>
@@ -78,25 +78,25 @@
     <th colspan="3" align="center">🧬 Unit Orthographic Multi-View (3 Angles)</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/tempestus-scion-squad_multiview_0.png"><img src="assets/art/tempestus-scion-squad_multiview_0.png" width="150" alt="Front Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/tempestus-scion-squad_multiview_1.png"><img src="assets/art/tempestus-scion-squad_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/tempestus-scion-squad_multiview_2.png"><img src="assets/art/tempestus-scion-squad_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Front Profile (0°)</b></sub><br/><br/><a href="assets/art/chaos-raptors_multiview_0.png"><img src="assets/art/chaos-raptors_multiview_0.png" width="150" alt="Front Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Flank Profile (90°)</b></sub><br/><br/><a href="assets/art/chaos-raptors_multiview_1.png"><img src="assets/art/chaos-raptors_multiview_1.png" width="150" alt="Flank Profile" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Profile (180°)</b></sub><br/><br/><a href="assets/art/chaos-raptors_multiview_2.png"><img src="assets/art/chaos-raptors_multiview_2.png" width="150" alt="Dorsal Profile" /></a></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Hot-Shot Volley Gun</th>
+    <th colspan="3" align="center">⚔️ Primary Armament Multi-View: Raptor Plasma Pistol</th>
   </tr>
   <tr>
-    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/hot-shot-volley-gun_multiview_0.png"><img src="assets/art/hot-shot-volley-gun_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
-    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/hot-shot-volley-gun_multiview_1.png"><img src="assets/art/hot-shot-volley-gun_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
-    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/hot-shot-volley-gun_multiview_2.png"><img src="assets/art/hot-shot-volley-gun_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
+    <td width="33%" align="center"><sub><b>Lateral Aspect</b></sub><br/><br/><a href="assets/art/raptor-plasma-pistol_multiview_0.png"><img src="assets/art/raptor-plasma-pistol_multiview_0.png" width="90" alt="Weapon View 1" /></a></td>
+    <td width="33%" align="center"><sub><b>Dorsal Aspect</b></sub><br/><br/><a href="assets/art/raptor-plasma-pistol_multiview_1.png"><img src="assets/art/raptor-plasma-pistol_multiview_1.png" width="90" alt="Weapon View 2" /></a></td>
+    <td width="33%" align="center"><sub><b>Cutting/Barrel Aspect</b></sub><br/><br/><a href="assets/art/raptor-plasma-pistol_multiview_2.png"><img src="assets/art/raptor-plasma-pistol_multiview_2.png" width="90" alt="Weapon View 3" /></a></td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="data/units/tempestus-scion-squad.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/hot-shot-volley-gun.json"><b>💥 Weapon Specs (.json)</b></a>
+  <a href="data/units/chaos-raptors.json"><b>📄 Inspect Unit Dataslate (.json)</b></a> • <a href="data/weapons/raptor-plasma-pistol.json"><b>💥 Weapon Specs (.json)</b></a>
 </p>
 
 </div>
