@@ -1,0 +1,27 @@
+{
+  "id": "6ad2ec89-927a-4f7e-a76a-39ddf5b73026",
+  "slug": "raptor-plasma-pistol",
+  "name": "Raptor Plasma Pistol",
+  "type": "energy_plasma",
+  "faction": "chaos_space_marines",
+  "engineDamage": {
+    "baseDamage": 58,
+    "armorPenetration": 52,
+    "attacksPerSecond": 0.7,
+    "rangeMeters": 180,
+    "accuracyPercent": 74,
+    "projectileVelocityMps": 560,
+    "burstCount": 1,
+    "reloadTimeSeconds": 2.8
+  },
+  "loreDescriptor": {
+    "caliber": "Magnetically contained plasma packet",
+    "propellant": "High-energy plasma containment coils",
+    "muzzleVelocityMps": 2800,
+    "effectiveRangeKm": 1,
+    "loreEffectDescription": "Raptor Plasma Pistol is the selected primary armament for Chaos Raptors. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Chaos Space Marines. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "raptor-plasma-pistol-icon",
+  "artImagePath": "/assets/art/raptor_plasma_pistol.jpg"
+}

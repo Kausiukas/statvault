@@ -1,0 +1,64 @@
+{
+  "id": "e52d4be5-9f72-424f-a801-25cbe6cc70a0",
+  "slug": "chaos-raptors",
+  "name": "Chaos Raptors",
+  "faction": "chaos_space_marines",
+  "subFaction": "Chaos Space Marines",
+  "role": "fast_attack",
+  "engineStats": {
+    "hitPoints": 1100,
+    "modelCount": 5,
+    "armor": 110,
+    "speedMps": 8,
+    "chargeSpeedMps": 10,
+    "acceleration": 4,
+    "massKgPerModel": 484,
+    "leadership": 90,
+    "baseCostPoints": 820,
+    "collisionRadiusM": 0.7
+  },
+  "loreStats": {
+    "reactionTimeMs": 5,
+    "sprintSpeedMps": 14,
+    "sprintSpeedMph": 31.3,
+    "dreadAuraRadiusM": 22,
+    "dreadShockFactor": 0.65,
+    "armorComposition": "Warp-scarred ceramite power armour",
+    "armorEquivalentRHAmm": 268,
+    "combatStaminaHours": 96,
+    "citation": "Warhammer 40,000 Faction Index: Chaos Space Marines. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "loreSummary": "Chaos Raptors is a Chaos Space Marines fast attack formation queued for corpus expansion. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "asset3d": {
+    "optimizedGlbPath": "/models/chaos-raptors.opt.glb",
+    "dracoCompressionRatio": 0.91,
+    "vramFootprintMb": 7.2,
+    "polyCount": 20000,
+    "textureResolution": "2048x2048",
+    "ktx2Formats": [
+      "BC7",
+      "ASTC",
+      "ETC1S"
+    ]
+  },
+  "upiScores": {
+    "inEngine": {
+      "ehp": 44,
+      "mobility": 60,
+      "burstDmg": 51,
+      "sustainedDps": 68,
+      "utility": 72,
+      "mass": 81
+    },
+    "loreCanon": {
+      "ehp": 54,
+      "mobility": 100,
+      "burstDmg": 71,
+      "sustainedDps": 88,
+      "utility": 72,
+      "mass": 97
+    }
+  },
+  "primaryWeaponSlug": "raptor-plasma-pistol",
+  "tacticalDescription": "Provisional fast attack profile centred on Raptor Plasma Pistol; retain as unapproved until detailed balance and source review."
+}
