@@ -1,0 +1,27 @@
+{
+  "id": "d35ec546-a345-4c15-9c2e-6ec630dac339",
+  "slug": "snazzgun",
+  "name": "Snazzgun",
+  "type": "ballistic_slug",
+  "faction": "orks",
+  "engineDamage": {
+    "baseDamage": 34,
+    "armorPenetration": 24,
+    "attacksPerSecond": 1.5,
+    "rangeMeters": 190,
+    "accuracyPercent": 72,
+    "projectileVelocityMps": 700,
+    "burstCount": 2,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Solid, explosive or mass-reactive projectile",
+    "propellant": "Chemical or electromagnetic launch system",
+    "muzzleVelocityMps": 900,
+    "effectiveRangeKm": 0.9,
+    "loreEffectDescription": "Snazzgun is the selected primary armament for Flash Gitz. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Orks. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "snazzgun-icon",
+  "artImagePath": "/assets/art/snazzgun.jpg"
+}

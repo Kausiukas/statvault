@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `flash-gitz` | orks | heavy_support | snazzgun |
 | `chaos-raptors` | chaos_space_marines | fast_attack | raptor-plasma-pistol |
 | `tempestus-scion-squad` | astra_militarum | shock_infantry | hot-shot-volley-gun |
 | `eliminator-squad` | adeptus_astartes | line_infantry | bolt-sniper-rifle |
@@ -112,6 +113,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `snazzgun` | orks | ballistic_slug |
 | `raptor-plasma-pistol` | chaos_space_marines | energy_plasma |
 | `hot-shot-volley-gun` | astra_militarum | energy_las |
 | `bolt-sniper-rifle` | adeptus_astartes | ballistic_slug |
@@ -212,6 +214,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `flash-gitz-armor_durability` | `flash-gitz` | armor_durability | Warhammer 40,000 Faction Index: Orks |
 | `chaos-raptors-velocity_discrepancy` | `chaos-raptors` | velocity_discrepancy | Warhammer 40,000 Faction Index: Chaos Space Marines |
 | `tempestus-scion-squad-transhuman_dread` | `tempestus-scion-squad` | transhuman_dread | Warhammer 40,000 Faction Index: Astra Militarum |
 | `eliminator-squad-weapon_potency` | `eliminator-squad` | weapon_potency | Warhammer 40,000 Faction Index: Adeptus Astartes |
@@ -341,7 +344,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 |------|-------|---------|
 | shock_infantry | 26 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 28 | cadian-shock-trooper |
-| heavy_support | 18 | — |
+| heavy_support | 19 | — |
 | fast_attack | 20 | — |
 | monstrous_creature | 3 | — |
 | vehicle | 0 | — |
@@ -353,6 +356,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-25 | `flash-gitz`, `snazzgun`, `flash-gitz-armor_durability` | statvault-wiki-agent |
 | 2026-11-24 | `chaos-raptors`, `raptor-plasma-pistol`, `chaos-raptors-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-23 | `tempestus-scion-squad`, `hot-shot-volley-gun`, `tempestus-scion-squad-transhuman_dread` | statvault-wiki-agent |
 | 2026-11-22 | `eliminator-squad`, `bolt-sniper-rifle`, `eliminator-squad-weapon_potency` | statvault-wiki-agent |
