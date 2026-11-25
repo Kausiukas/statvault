@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "snazzgun",
-  "tacticalDescription": "Provisional heavy support profile centred on Snazzgun; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on Snazzgun; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/flash-gitz_multiview_0.png",
+    "assets/art/flash-gitz_multiview_1.png",
+    "assets/art/flash-gitz_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/flash-gitz_concept.png",
+  "artImagePath": "assets/art/flash-gitz_concept.png"
 }
