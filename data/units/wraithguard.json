@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "wraithcannon",
-  "tacticalDescription": "Provisional heavy support profile centred on Wraithcannon; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional heavy support profile centred on Wraithcannon; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/wraithguard_multiview_0.png",
+    "assets/art/wraithguard_multiview_1.png",
+    "assets/art/wraithguard_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/wraithguard_concept.png",
+  "artImagePath": "assets/art/wraithguard_concept.png"
 }
