@@ -1,0 +1,18 @@
+{
+  "id": "b54c9923-822d-4d0f-9db7-37fe149d6e17",
+  "unitSlug": "wraithguard",
+  "category": "warp_corruption",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Aeldari",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Wraithguard: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-26T05:01:13.796Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}

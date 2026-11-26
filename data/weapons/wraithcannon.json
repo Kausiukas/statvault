@@ -1,0 +1,27 @@
+{
+  "id": "f6e0772e-a2a3-4163-a55d-005d9527e6b0",
+  "slug": "wraithcannon",
+  "name": "Wraithcannon",
+  "type": "warp_daemon",
+  "faction": "aeldari",
+  "engineDamage": {
+    "baseDamage": 64,
+    "armorPenetration": 60,
+    "attacksPerSecond": 1.35,
+    "rangeMeters": 24,
+    "accuracyPercent": 76,
+    "projectileVelocityMps": 260,
+    "burstCount": 1,
+    "reloadTimeSeconds": 1.8
+  },
+  "loreDescriptor": {
+    "caliber": "Warp-charged manifestation",
+    "propellant": "Immaterium resonance",
+    "muzzleVelocityMps": 0,
+    "effectiveRangeKm": 0.12,
+    "loreEffectDescription": "Wraithcannon is the selected primary armament for Wraithguard. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: Aeldari. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "wraithcannon-icon",
+  "artImagePath": "/assets/art/wraithcannon.jpg"
+}
