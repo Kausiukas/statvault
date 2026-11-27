@@ -1,0 +1,18 @@
+{
+  "id": "3a1bec31-12f0-42a9-b757-912ff9e008df",
+  "unitSlug": "raveners",
+  "category": "velocity_discrepancy",
+  "citation": {
+    "title": "Warhammer 40,000 Faction Index: Tyranids",
+    "author": "Games Workshop",
+    "publisher": "Games Workshop",
+    "publicationYear": 2023,
+    "pageOrChapter": "Faction datasheet; exact page pending moderator verification"
+  },
+  "excerpt": "Editorial research note for Ravener Brood: this provisional annotation maps its battlefield identity and primary armament to a Warcore estimate. Verify the quantitative claims against the current official datasheet and a supporting narrative source before approval.",
+  "discrepancyFactor": 1.5,
+  "approvedByModerator": false,
+  "submittedAt": "2026-11-27T05:00:58.288Z",
+  "submittedBy": "statvault-wiki-agent",
+  "upvotes": 0
+}
