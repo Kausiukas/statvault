@@ -12,6 +12,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Role | Primary weapon |
 |------|---------|------|----------------|
+| `piranha-skimmer` | tau_empire | fast_attack | piranha-fusion-blaster |
 | `raveners` | tyranids | fast_attack | thoracic-devourer |
 | `wraithguard` | aeldari | heavy_support | wraithcannon |
 | `flash-gitz` | orks | heavy_support | snazzgun |
@@ -115,6 +116,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Faction | Type |
 |------|---------|------|
+| `piranha-fusion-blaster` | tau_empire | energy_melta |
 | `thoracic-devourer` | tyranids | bio_weapon |
 | `wraithcannon` | aeldari | warp_daemon |
 | `snazzgun` | orks | ballistic_slug |
@@ -218,6 +220,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Slug | Unit | Category | Source |
 |------|------|----------|--------|
+| `piranha-skimmer-velocity_discrepancy` | `piranha-skimmer` | velocity_discrepancy | Warhammer 40,000 Faction Index: T'au Empire |
 | `raveners-velocity_discrepancy` | `raveners` | velocity_discrepancy | Warhammer 40,000 Faction Index: Tyranids |
 | `wraithguard-warp_corruption` | `wraithguard` | warp_corruption | Warhammer 40,000 Faction Index: Aeldari |
 | `flash-gitz-armor_durability` | `flash-gitz` | armor_durability | Warhammer 40,000 Faction Index: Orks |
@@ -351,7 +354,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 | shock_infantry | 26 | intercessor, kasrkin, ork-boyz, chaos-chosen |
 | line_infantry | 28 | cadian-shock-trooper |
 | heavy_support | 20 | — |
-| fast_attack | 21 | — |
+| fast_attack | 22 | — |
 | monstrous_creature | 3 | — |
 | vehicle | 0 | — |
 | lord_of_war | 0 | — |
@@ -362,6 +365,7 @@ Tracks which units, weapons, and lore annotations exist in the corpus. The daily
 
 | Date | Slug | Added by |
 |------|------|----------|
+| 2026-11-28 | `piranha-skimmer`, `piranha-fusion-blaster`, `piranha-skimmer-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-27 | `raveners`, `thoracic-devourer`, `raveners-velocity_discrepancy` | statvault-wiki-agent |
 | 2026-11-26 | `wraithguard`, `wraithcannon`, `wraithguard-warp_corruption` | statvault-wiki-agent |
 | 2026-11-25 | `flash-gitz`, `snazzgun`, `flash-gitz-armor_durability` | statvault-wiki-agent |

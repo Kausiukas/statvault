@@ -1,0 +1,27 @@
+{
+  "id": "7b578217-bf79-4898-8d19-23634969c173",
+  "slug": "piranha-fusion-blaster",
+  "name": "Piranha Fusion Blaster",
+  "type": "energy_melta",
+  "faction": "tau_empire",
+  "engineDamage": {
+    "baseDamage": 82,
+    "armorPenetration": 78,
+    "attacksPerSecond": 0.45,
+    "rangeMeters": 90,
+    "accuracyPercent": 76,
+    "projectileVelocityMps": 1000,
+    "burstCount": 1,
+    "reloadTimeSeconds": 3.2
+  },
+  "loreDescriptor": {
+    "caliber": "Short-range thermal beam",
+    "propellant": "Fusion-reactor fuel charge",
+    "muzzleVelocityMps": 299792458,
+    "effectiveRangeKm": 0.25,
+    "loreEffectDescription": "Piranha Fusion Blaster is the selected primary armament for T'au Piranha. Temporary static backlog seed; quantitative values require source-by-source moderator verification.",
+    "citation": "Warhammer 40,000 Faction Index: T'au Empire. Temporary static backlog seed; quantitative values require source-by-source moderator verification."
+  },
+  "iconSlug": "piranha-fusion-blaster-icon",
+  "artImagePath": "/assets/art/piranha_fusion_blaster.jpg"
+}
