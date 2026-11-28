@@ -60,5 +60,12 @@
     }
   },
   "primaryWeaponSlug": "piranha-fusion-blaster",
-  "tacticalDescription": "Provisional fast attack profile centred on Piranha Fusion Blaster; retain as unapproved until detailed balance and source review."
+  "tacticalDescription": "Provisional fast attack profile centred on Piranha Fusion Blaster; retain as unapproved until detailed balance and source review.",
+  "multiviewImages": [
+    "assets/art/piranha-skimmer_multiview_0.png",
+    "assets/art/piranha-skimmer_multiview_1.png",
+    "assets/art/piranha-skimmer_multiview_2.png"
+  ],
+  "conceptArtPath": "assets/art/piranha-skimmer_concept.png",
+  "artImagePath": "assets/art/piranha-skimmer_concept.png"
 }
